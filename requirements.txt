@@ -37,7 +37,7 @@ jiter==0.8.2
 joblib==1.4.2
 kubernetes==32.0.1
 langchain
-langchain-chroma
+langchain-chroma>=0.1.0
 langchain-community
 langchain-openai
 lxml==5.3.1
