@@ -18,7 +18,7 @@ import openai
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
 if not openai_api_key:
-    raise ValueError("❌ ERROR: No se encontró la API Key en Railway.")
+    raise ValueError("\u274c ERROR: No se encontró la API Key en Railway.")
 
 openai.api_key = openai_api_key  # Asegurarse de que OpenAI la reconozca
 
@@ -34,7 +34,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# 📂 Servir archivos estáticos (HTML, CSS, JS)
+# 📚 Servir archivos estáticos (HTML, CSS, JS)
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get("/")
@@ -54,7 +54,7 @@ def load_vector_store():
         retriever = vector_store.as_retriever()
         return retriever
     except FileNotFoundError:
-        print("⚠️ No se encontró la base de datos vectorial. El bot responderá sin documentos.")
+        print("\u26a0\ufe0f No se encontró la base de datos vectorial. El bot responderá sin documentos.")
         return None
 
 retriever = load_vector_store()
@@ -75,4 +75,8 @@ async def chat(message: Message):
         respuesta = chain.invoke({"question": message.text, "chat_history": []})
         return {"response": respuesta}
     else:
-        return {"response": "⚠️ No hay base de datos cargada. Usa solo GPT-4."}
+        return {"response": openai.ChatCompletion.create(
+            model="gpt-4",
+            messages=[{"role": "system", "content": "Eres un asistente experto en OpenText Exstream."},
+                      {"role": "user", "content": message.text}]
+        )["choices"][0]["message"]["content"]}
