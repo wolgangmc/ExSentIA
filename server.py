@@ -40,8 +40,8 @@ def load_vector_store():
         with open("documents.pkl", "rb") as f:
             texts = pickle.load(f)
 
-        embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
-        vector_store = FAISS(index, embeddings, texts)
+        embeddings = OpenAIEmbeddings()
+        vector_store = FAISS(index, embeddings, {}, texts)
         retriever = vector_store.as_retriever()
         return retriever
     except FileNotFoundError:
@@ -62,7 +62,7 @@ def generate_response_with_docs(question):
         chain = (
             {"context": retriever, "question": RunnablePassthrough()}
             | prompt
-            | OpenAIEmbeddings(openai_api_key=openai_api_key)
+            | OpenAIEmbeddings()
             | StrOutputParser()
         )
         return chain.invoke(question)
