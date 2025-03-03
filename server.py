@@ -72,7 +72,7 @@ class Message(BaseModel):
 async def chat(message: Message):
     """Recibe una pregunta y responde con la mejor opción disponible."""
     if chain:
-        respuesta = chain.invoke(message.text)
+        respuesta = chain.invoke({"question": message.text, "chat_history": []})
         return {"response": respuesta}
     else:
         return {"response": "⚠️ No hay base de datos cargada. Usa solo GPT-4."}
