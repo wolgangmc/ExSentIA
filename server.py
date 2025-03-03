@@ -52,3 +52,19 @@ async def chat(message: Message):
     except Exception as e:
         return {"error": f"❌ Error inesperado: {str(e)}"}
 
+import os
+from fastapi import FastAPI
+
+app = FastAPI()
+
+# 🔥 FORZAR CARGA Y DEBUG 🔥
+openai_api_key = os.getenv("OPENAI_API_KEY")
+
+if not openai_api_key:
+    print("❌ ERROR: No se encontró la API Key en Railway.")
+else:
+    print(f"✅ API Key detectada en Railway: {openai_api_key[:5]}******")
+
+@app.get("/env")
+async def get_env():
+    return {"OPENAI_API_KEY": openai_api_key}
