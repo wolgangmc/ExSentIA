@@ -8,7 +8,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain_chroma import Chroma
-
 import openai
 
 # 📌 Cargar la API Key de OpenAI
@@ -47,13 +46,13 @@ def load_vector_store():
 
         retriever = vector_store.as_retriever(search_type="similarity", search_kwargs={"k": 5})
         print("✅ Base de datos ChromaDB cargada correctamente.")
-        return retriever
+        return vector_store, retriever
     except Exception as e:
         print(f"⚠️ No se pudo cargar ChromaDB. Usando solo GPT-4. Error: {e}")
-        return None
+        return None, None
 
 # 🔍 Inicializar ChromaDB
-retriever = load_vector_store()
+vector_store, retriever = load_vector_store()
 if retriever is None:
     print("⚠️ No se pudo cargar ChromaDB. Usando solo GPT-4.")
 
@@ -72,7 +71,8 @@ async def chat(message: Message):
     try:
         if chain:
             respuesta = chain.invoke({"question": message.text, "chat_history": []})
-            return {"response": str(respuesta)}
+            return {"response": respuesta["answer"] if isinstance(respuesta, dict) and "answer" in respuesta else str(respuesta)}
+
         else:
             response = client.chat.completions.create(
                 model="gpt-4",
@@ -85,3 +85,11 @@ async def chat(message: Message):
     except Exception as e:
         print(f"❌ Error en el chat: {e}")
         return {"response": "❌ Ocurrió un error. Inténtalo de nuevo más tarde."}
+
+# 🛠️ Endpoint de prueba para verificar documentos en ChromaDB
+@app.get("/test-db")
+def test_db():
+    if vector_store:
+        return {"document_count": vector_store._collection.count()}
+    else:
+        return {"error": "ChromaDB no está cargado"}
