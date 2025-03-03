@@ -9,6 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain_community.vectorstores import FAISS
+from langchain_community.docstore import InMemoryDocstore
 import openai
 
 # 📌 Cargar la API Key de OpenAI
@@ -17,7 +18,8 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 if not openai_api_key:
     raise ValueError("❌ ERROR: No se encontró la API Key en Railway.")
 
-openai.api_key = openai_api_key  # Asegurarse de que OpenAI la reconozca
+# Inicializar OpenAI correctamente
+client = openai.OpenAI(api_key=openai_api_key)
 
 # Inicializar FastAPI
 app = FastAPI()
@@ -48,10 +50,13 @@ def load_vector_store():
 
         embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
 
-        # ✅ Corregido: FAISS solo necesita el índice y la función de embeddings
+        # ✅ Corregido: FAISS necesita `docstore` con los textos
+        docstore = InMemoryDocstore({str(i): texts[i] for i in range(len(texts))})
+
         vector_store = FAISS(
             index=index,
-            embedding_function=embeddings,  # PASAR EMBEDDINGS CORRECTAMENTE
+            embedding_function=embeddings,
+            docstore=docstore,  # ✅ Agregado para evitar el error
             index_to_docstore_id={i: str(i) for i in range(len(texts))}
         )
 
@@ -86,14 +91,14 @@ async def chat(message: Message):
             respuesta = chain.invoke({"question": message.text, "chat_history": []})
             return {"response": respuesta}
         else:
-            response = openai.ChatCompletion.create(
+            response = client.chat.completions.create(
                 model="gpt-4",
                 messages=[
                     {"role": "system", "content": "Eres un asistente experto en OpenText Exstream."},
                     {"role": "user", "content": message.text}
                 ]
             )
-            return {"response": response["choices"][0]["message"]["content"]}
+            return {"response": response.choices[0].message.content}
     except Exception as e:
         print(f"❌ Error en el chat: {e}")
         return {"response": "❌ Ocurrió un error. Inténtalo de nuevo más tarde."}
