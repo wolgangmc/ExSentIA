@@ -50,14 +50,21 @@ def load_vector_store():
             texts = pickle.load(f)
 
         embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
-        vector_store = FAISS(index, embeddings, texts, index_to_docstore_id={i: i for i in range(len(texts))})
+        
+        # ✅ Corregido: FAISS espera embedding_function correctamente asignado
+        vector_store = FAISS(
+            embedding_function=embeddings,  # PASAR EMBEDDINGS CORRECTAMENTE
+            index=index,
+            documents=texts,
+            index_to_docstore_id={i: str(i) for i in range(len(texts))}
+        )
+
         retriever = vector_store.as_retriever()
         return retriever
     except FileNotFoundError:
-        print("\u26a0\ufe0f No se encontró la base de datos vectorial. El bot responderá sin documentos.")
+        print("⚠️ No se encontró la base de datos vectorial. El bot responderá sin documentos.")
         return None
 
-retriever = load_vector_store()
 
 # 🔍 Generar respuestas basadas en la base vectorial
 llm = ChatOpenAI(openai_api_key=openai_api_key, model_name="gpt-4")
