@@ -124,3 +124,8 @@ langchain
 pypdf
 faiss-cpu
 langchain-openai
+faiss-cpu
+langchain
+langchain-community
+langchain-openai
+pypdf
