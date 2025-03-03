@@ -5,16 +5,15 @@ import os
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 
-# Cargar API Key de OpenAI desde .env
+# Cargar API Key de OpenAI desde las variables de entorno
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-app = FastAPI()
+# Verificar si la API Key está cargada correctamente
+if not openai.api_key:
+    raise ValueError("❌ ERROR: La API Key de OpenAI no está configurada. Verifica la variable de entorno en Railway.")
 
-# 🚀 NUEVA RUTA PARA EVITAR ERROR 404 EN RAILWAY
-@app.get("/")
-def read_root():
-    return {"message": "¡El bot está corriendo correctamente!"}
+app = FastAPI()
 
 # Permitir peticiones desde cualquier navegador
 app.add_middleware(
@@ -28,11 +27,28 @@ app.add_middleware(
 class Message(BaseModel):
     text: str
 
+@app.get("/")
+async def root():
+    return {"message": "¡Bienvenido al chatbot de ExSentIA!"}
+
+@app.get("/env")
+async def get_env():
+    """Endpoint temporal para verificar si Railway está detectando la API Key"""
+    return {"OPENAI_API_KEY": os.getenv("OPENAI_API_KEY")}
+
 @app.post("/chat")
 async def chat(message: Message):
     """Recibe un mensaje y responde con GPT (compatible con OpenAI 1.0+)"""
-    response = openai.chat.completions.create(
-        model="gpt-4",
-        messages=[{"role": "user", "content": message.text}]
-    )
-    return {"response": response.choices[0].message.content}
+    try:
+        response = openai.chat.completions.create(
+            model="gpt-4",
+            messages=[{"role": "user", "content": message.text}]
+        )
+        return {"response": response.choices[0].message.content}
+    
+    except openai.OpenAIError as e:
+        return {"error": f"❌ Error con OpenAI: {str(e)}"}
+    
+    except Exception as e:
+        return {"error": f"❌ Error inesperado: {str(e)}"}
+
