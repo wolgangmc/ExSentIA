@@ -1,0 +1,14 @@
+# Ignorar entorno virtual y dependencias
+venv/
+__pycache__/
+
+# Ignorar base de datos vectorial
+vector_db/
+
+# Ignorar documentos y archivos pesados
+Documentos Exstream/
+docsexs.zip
+*.pdf
+*.docx
+*.zip
+.env
