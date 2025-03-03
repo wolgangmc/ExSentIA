@@ -7,7 +7,8 @@ from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
+
 import openai
 
 # 📌 Cargar la API Key de OpenAI
