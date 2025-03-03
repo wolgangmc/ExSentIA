@@ -7,9 +7,6 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
-from langchain_core.prompts import PromptTemplate
-from langchain_core.runnables import RunnablePassthrough
-from langchain_core.output_parsers import StrOutputParser
 from langchain.chains import ConversationalRetrievalChain
 from langchain_community.vectorstores import FAISS
 import openai
@@ -51,11 +48,10 @@ def load_vector_store():
 
         embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
 
-        # ✅ Corregido: FAISS espera embedding_function correctamente asignado
+        # ✅ Corregido: FAISS solo necesita el índice y la función de embeddings
         vector_store = FAISS(
-            embedding_function=embeddings,  # PASAR EMBEDDINGS CORRECTAMENTE
             index=index,
-            documents=texts,
+            embedding_function=embeddings,  # PASAR EMBEDDINGS CORRECTAMENTE
             index_to_docstore_id={i: str(i) for i in range(len(texts))}
         )
 
