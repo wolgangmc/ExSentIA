@@ -2,6 +2,7 @@ import os
 import faiss
 import pickle
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
@@ -17,7 +18,7 @@ import openai
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
 if not openai_api_key:
-    raise ValueError("\u274c ERROR: No se encontró la API Key en Railway.")
+    raise ValueError("❌ ERROR: No se encontró la API Key en Railway.")
 
 openai.api_key = openai_api_key  # Asegurarse de que OpenAI la reconozca
 
@@ -33,8 +34,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Servir archivos estáticos (HTML, CSS, JS)
+# 📂 Servir archivos estáticos (HTML, CSS, JS)
 app.mount("/static", StaticFiles(directory="static"), name="static")
+
+@app.get("/")
+async def serve_index():
+    return FileResponse("static/index.html")
 
 # 📂 Cargar la base de datos vectorial
 def load_vector_store():
@@ -45,11 +50,11 @@ def load_vector_store():
             texts = pickle.load(f)
 
         embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
-        vector_store = FAISS(index=index, embedding_function=embeddings, docstore=texts, index_to_docstore_id={})
+        vector_store = FAISS(index, embeddings, texts, index_to_docstore_id={i: i for i in range(len(texts))})
         retriever = vector_store.as_retriever()
         return retriever
     except FileNotFoundError:
-        print("\u26a0️ No se encontró la base de datos vectorial. El bot responderá sin documentos.")
+        print("⚠️ No se encontró la base de datos vectorial. El bot responderá sin documentos.")
         return None
 
 retriever = load_vector_store()
@@ -68,11 +73,6 @@ async def chat(message: Message):
     """Recibe una pregunta y responde con la mejor opción disponible."""
     if chain:
         respuesta = chain.invoke(message.text)
+        return {"response": respuesta}
     else:
-        respuesta = "No se encontraron documentos, pero puedo responder preguntas generales."
-    return {"response": respuesta}
-
-# 🏰 Servir la interfaz web
-@app.get("/")
-async def serve_index():
-    return StaticFiles(directory="static").lookup_path("index.html")
+        return {"response": "⚠️ No hay base de datos cargada. Usa solo GPT-4."}
