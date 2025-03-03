@@ -72,7 +72,7 @@ async def chat(message: Message):
     try:
         if chain:
             respuesta = chain.invoke({"question": message.text, "chat_history": []})
-            return {"response": respuesta}
+            return {"response": str(respuesta)}
         else:
             response = client.chat.completions.create(
                 model="gpt-4",
