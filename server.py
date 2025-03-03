@@ -11,6 +11,11 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 app = FastAPI()
 
+# 🚀 NUEVA RUTA PARA EVITAR ERROR 404 EN RAILWAY
+@app.get("/")
+def read_root():
+    return {"message": "¡El bot está corriendo correctamente!"}
+
 # Permitir peticiones desde cualquier navegador
 app.add_middleware(
     CORSMiddleware,
@@ -31,4 +36,3 @@ async def chat(message: Message):
         messages=[{"role": "user", "content": message.text}]
     )
     return {"response": response.choices[0].message.content}
-
