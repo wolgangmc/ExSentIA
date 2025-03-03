@@ -4,6 +4,7 @@ import pickle
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnablePassthrough
@@ -31,6 +32,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Montar la carpeta 'static' para servir archivos HTML, CSS, JS
+app.mount("/", StaticFiles(directory="static", html=True), name="static")
 
 # 📂 Cargar la base de datos vectorial
 def load_vector_store():
@@ -64,4 +68,3 @@ async def chat(message: Message):
     """Recibe una pregunta y responde con la mejor opción disponible."""
     respuesta = chain.invoke(message.text)
     return {"response": respuesta}
-
