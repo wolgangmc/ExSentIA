@@ -50,17 +50,20 @@ def load_vector_store():
 
         embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
 
-        # ✅ Corregido: FAISS necesita `docstore` con los textos
+        # ✅ Verificar si FAISS tiene datos antes de buscar
+        if index.ntotal == 0:
+            raise ValueError("❌ FAISS no tiene datos cargados. Verifica los embeddings.")
+
         docstore = InMemoryDocstore({str(i): texts[i] for i in range(len(texts))})
 
         vector_store = FAISS(
             index=index,
             embedding_function=embeddings,
-            docstore=docstore,  # ✅ Agregado para evitar el error
+            docstore=docstore,
             index_to_docstore_id={i: str(i) for i in range(len(texts))}
         )
 
-        retriever = vector_store.as_retriever()
+        retriever = vector_store.as_retriever(search_type="similarity", search_kwargs={"k": 5})
         return retriever
     except FileNotFoundError:
         print("⚠️ No se encontró la base de datos vectorial. El bot responderá sin documentos.")
