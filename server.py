@@ -4,11 +4,11 @@ import pickle
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
-from langchain_openai import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
-from langchain.chains import RetrievalQA
+from langchain.chains import ConversationalRetrievalChain
 from langchain_community.vectorstores import FAISS
 import openai
 
@@ -40,8 +40,8 @@ def load_vector_store():
         with open("documents.pkl", "rb") as f:
             texts = pickle.load(f)
 
-        embeddings = OpenAIEmbeddings()
-        vector_store = FAISS(index, embeddings, {}, texts)
+        embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
+        vector_store = FAISS(index, embeddings, texts)
         retriever = vector_store.as_retriever()
         return retriever
     except FileNotFoundError:
@@ -51,32 +51,8 @@ def load_vector_store():
 retriever = load_vector_store()
 
 # 🔍 Generar respuestas basadas en la base vectorial
-def generate_response_with_docs(question):
-    """Usa la base vectorial si está disponible, de lo contrario responde con GPT."""
-    if retriever:
-        prompt_template = """Eres un asistente experto en OpenText Exstream. Responde la siguiente pregunta basándote en los documentos:
-        {context}
-        Pregunta: {question}
-        """
-        prompt = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
-        chain = (
-            {"context": retriever, "question": RunnablePassthrough()}
-            | prompt
-            | OpenAIEmbeddings()
-            | StrOutputParser()
-        )
-        return chain.invoke(question)
-    else:
-        return generate_response_gpt(question)
-
-# 🔥 Generar respuestas solo con GPT si no hay base vectorial
-def generate_response_gpt(question):
-    """Consulta GPT-4 directamente cuando no hay documentos disponibles."""
-    response = openai.chat.completions.create(
-        model="gpt-4",
-        messages=[{"role": "user", "content": question}]
-    )
-    return response.choices[0].message.content
+llm = ChatOpenAI(openai_api_key=openai_api_key, model_name="gpt-4")
+chain = ConversationalRetrievalChain.from_llm(llm, retriever)
 
 # 📩 Modelo de mensaje recibido
 class Message(BaseModel):
@@ -86,5 +62,6 @@ class Message(BaseModel):
 @app.post("/chat")
 async def chat(message: Message):
     """Recibe una pregunta y responde con la mejor opción disponible."""
-    respuesta = generate_response_with_docs(message.text)
+    respuesta = chain.invoke(message.text)
     return {"response": respuesta}
+
