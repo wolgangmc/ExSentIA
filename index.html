@@ -3,37 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot Web</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; background: #f4f4f4; }
-        #chatbox { width: 80%; height: 400px; border: 1px solid #ccc; background: white; margin: auto; padding: 10px; overflow-y: auto; }
-        #userInput { width: 70%; padding: 10px; }
-        button { padding: 10px; cursor: pointer; }
-    </style>
+    <title>Chat ExSentIA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <h2>Chatbot Web</h2>
-    <div id="chatbox"></div>
-    <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
-    <button onclick="sendMessage()">Enviar</button>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center h-screen">
+
+    <div class="w-full max-w-2xl bg-gray-800 shadow-lg rounded-lg p-4 flex flex-col h-[600px]">
+        <!-- Header -->
+        <div class="flex items-center border-b border-gray-700 pb-3">
+            <img src="https://via.placeholder.com/40" alt="Avatar Exstream" class="w-10 h-10 rounded-full">
+            <h2 class="text-lg font-semibold ml-3">ExSentIA - Asistente de Exstream</h2>
+        </div>
+
+        <!-- Chat Window -->
+        <div id="chat-box" class="flex-1 overflow-y-auto p-3 space-y-2">
+            <div class="text-center text-gray-400 text-sm">Bienvenido al chat de ExSentIA. Pregunta lo que necesites.</div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="flex mt-3">
+            <input id="user-input" type="text" placeholder="Escribe tu pregunta..." 
+                class="flex-1 bg-gray-700 text-white p-2 rounded-lg border border-gray-600 focus:outline-none">
+            <button onclick="sendMessage()" class="ml-2 bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg">
+                Enviar
+            </button>
+        </div>
+    </div>
 
     <script>
         async function sendMessage() {
-            let userInput = document.getElementById("userInput").value;
-            let chatbox = document.getElementById("chatbox");
+            let inputField = document.getElementById("user-input");
+            let message = inputField.value.trim();
+            if (!message) return;
 
-            chatbox.innerHTML += `<p><strong>Tú:</strong> ${userInput}</p>`;
+            // Mostrar mensaje del usuario
+            appendMessage("Tú", message, "text-right");
 
-            let response = await fetch("http://localhost:8000/chat", {
+            inputField.value = "";
+
+            // Enviar al backend
+            let response = await fetch("https://web-production-676c.up.railway.app/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ text: userInput })
+                body: JSON.stringify({ text: message })
             });
 
             let data = await response.json();
-            chatbox.innerHTML += `<p><strong>Bot:</strong> ${data.response}</p>`;
-            document.getElementById("userInput").value = "";
+            appendMessage("ExSentIA", data.response, "text-left");
+        }
+
+        function appendMessage(sender, text, alignment) {
+            let chatBox = document.getElementById("chat-box");
+            let messageElement = document.createElement("div");
+            messageElement.className = `p-2 rounded-lg w-fit max-w-xs ${alignment} bg-gray-700`;
+            messageElement.innerHTML = `<strong>${sender}:</strong> ${text}`;
+            chatBox.appendChild(messageElement);
+            chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll
         }
     </script>
+
 </body>
 </html>
