@@ -123,3 +123,4 @@ faiss-cpu
 langchain
 pypdf
 faiss-cpu
+langchain-openai
