@@ -1,5 +1,4 @@
 import os
-import faiss
 import pickle
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
@@ -8,8 +7,7 @@ from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
-from langchain_community.vectorstores import FAISS
-from langchain_community.docstore import InMemoryDocstore
+from langchain_community.vectorstores import Chroma
 import openai
 
 # 📌 Cargar la API Key de OpenAI
@@ -18,7 +16,7 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 if not openai_api_key:
     raise ValueError("❌ ERROR: No se encontró la API Key en Railway.")
 
-# Inicializar OpenAI correctamente
+# Inicializar OpenAI
 client = openai.OpenAI(api_key=openai_api_key)
 
 # Inicializar FastAPI
@@ -40,42 +38,23 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 async def serve_index():
     return FileResponse("static/index.html")
 
-# 📂 Cargar la base de datos vectorial
+# 📂 Cargar la base de datos vectorial con ChromaDB
 def load_vector_store():
     try:
-        with open("faiss_index.pkl", "rb") as f:
-            index = pickle.load(f)
-        with open("documents.pkl", "rb") as f:
-            texts = pickle.load(f)
-
         embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
-
-        # ✅ Verificar si FAISS tiene datos antes de buscar
-        if index.ntotal == 0:
-            raise ValueError("❌ FAISS no tiene datos cargados. Verifica los embeddings.")
-
-        docstore = InMemoryDocstore({str(i): texts[i] for i in range(len(texts))})
-
-        vector_store = FAISS(
-            index=index,
-            embedding_function=embeddings,
-            docstore=docstore,
-            index_to_docstore_id={i: str(i) for i in range(len(texts))}
-        )
+        vector_store = Chroma(persist_directory="chroma_db", embedding_function=embeddings)
 
         retriever = vector_store.as_retriever(search_type="similarity", search_kwargs={"k": 5})
+        print("✅ Base de datos ChromaDB cargada correctamente.")
         return retriever
-    except FileNotFoundError:
-        print("⚠️ No se encontró la base de datos vectorial. El bot responderá sin documentos.")
-        return None
     except Exception as e:
-        print(f"❌ Error cargando FAISS: {e}")
+        print(f"⚠️ No se pudo cargar ChromaDB. Usando solo GPT-4. Error: {e}")
         return None
 
-# 🔍 Inicializar FAISS
+# 🔍 Inicializar ChromaDB
 retriever = load_vector_store()
 if retriever is None:
-    print("⚠️ No se pudo cargar FAISS. Usando solo GPT-4.")
+    print("⚠️ No se pudo cargar ChromaDB. Usando solo GPT-4.")
 
 # 🔍 Generar respuestas basadas en la base vectorial
 llm = ChatOpenAI(openai_api_key=openai_api_key, model_name="gpt-4")
