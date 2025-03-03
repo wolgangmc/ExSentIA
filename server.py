@@ -18,7 +18,7 @@ import openai
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
 if not openai_api_key:
-    raise ValueError("\u274c ERROR: No se encontró la API Key en Railway.")
+    raise ValueError("❌ ERROR: No se encontró la API Key en Railway.")
 
 openai.api_key = openai_api_key  # Asegurarse de que OpenAI la reconozca
 
@@ -50,7 +50,7 @@ def load_vector_store():
             texts = pickle.load(f)
 
         embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
-        
+
         # ✅ Corregido: FAISS espera embedding_function correctamente asignado
         vector_store = FAISS(
             embedding_function=embeddings,  # PASAR EMBEDDINGS CORRECTAMENTE
@@ -64,7 +64,14 @@ def load_vector_store():
     except FileNotFoundError:
         print("⚠️ No se encontró la base de datos vectorial. El bot responderá sin documentos.")
         return None
+    except Exception as e:
+        print(f"❌ Error cargando FAISS: {e}")
+        return None
 
+# 🔍 Inicializar FAISS
+retriever = load_vector_store()
+if retriever is None:
+    print("⚠️ No se pudo cargar FAISS. Usando solo GPT-4.")
 
 # 🔍 Generar respuestas basadas en la base vectorial
 llm = ChatOpenAI(openai_api_key=openai_api_key, model_name="gpt-4")
@@ -78,12 +85,19 @@ class Message(BaseModel):
 @app.post("/chat")
 async def chat(message: Message):
     """Recibe una pregunta y responde con la mejor opción disponible."""
-    if chain:
-        respuesta = chain.invoke({"question": message.text, "chat_history": []})
-        return {"response": respuesta}
-    else:
-        return {"response": openai.ChatCompletion.create(
-            model="gpt-4",
-            messages=[{"role": "system", "content": "Eres un asistente experto en OpenText Exstream."},
-                      {"role": "user", "content": message.text}]
-        )["choices"][0]["message"]["content"]}
+    try:
+        if chain:
+            respuesta = chain.invoke({"question": message.text, "chat_history": []})
+            return {"response": respuesta}
+        else:
+            response = openai.ChatCompletion.create(
+                model="gpt-4",
+                messages=[
+                    {"role": "system", "content": "Eres un asistente experto en OpenText Exstream."},
+                    {"role": "user", "content": message.text}
+                ]
+            )
+            return {"response": response["choices"][0]["message"]["content"]}
+    except Exception as e:
+        print(f"❌ Error en el chat: {e}")
+        return {"response": "❌ Ocurrió un error. Inténtalo de nuevo más tarde."}
