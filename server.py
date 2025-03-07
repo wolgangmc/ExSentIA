@@ -45,8 +45,8 @@ def load_vector_store():
         
         # 🚀 Conectar a ChromaDB a través de NGROK (SUSTITUIR URL)
         chroma_client = Chroma(
-            client_settings={"chroma_server": "https://14d0-2806-107e-1b-c506-5aa7-2e03-12a8-e683.ngrok-free.app"}
-        )
+    chroma_server_host="https://14d0-2806-107e-1b-c506-5aa7-2e03-12a8-e683.ngrok-free.app"
+)
         
         retriever = chroma_client.as_retriever(search_type="similarity", search_kwargs={"k": 5})
         print("✅ Conectado a ChromaDB a través de NGROK.")
