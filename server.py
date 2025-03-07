@@ -46,7 +46,7 @@ def load_vector_store():
         
         # 🚀 Conectar a ChromaDB a través de NGROK (SUSTITUIR URL CON LA ACTUAL DE NGROK)
         chroma_client = HttpClient(
-            host="14d0-2806-107e-1b-c506-5aa7-2e03-12a8-e683.ngrok-free.app",
+            host="bec4-2806-107e-1b-c506-5aa7-2e03-12a8-e683.ngrok-free.app",
             port=443
         )
 
