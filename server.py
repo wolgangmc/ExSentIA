@@ -9,6 +9,7 @@ from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain_chroma import Chroma
 import openai
+from chromadb import HttpClient  # ✅ Se importa HttpClient
 
 # 📌 Cargar la API Key de OpenAI
 openai_api_key = os.getenv("OPENAI_API_KEY")
@@ -43,14 +44,17 @@ def load_vector_store():
     try:
         embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
         
-        # 🚀 Conectar a ChromaDB a través de NGROK (SUSTITUIR URL)
-        chroma_client = Chroma(
-    chroma_server_host="https://14d0-2806-107e-1b-c506-5aa7-2e03-12a8-e683.ngrok-free.app"
-)
-        
-        retriever = chroma_client.as_retriever(search_type="similarity", search_kwargs={"k": 5})
+        # 🚀 Conectar a ChromaDB a través de NGROK (SUSTITUIR URL CON LA ACTUAL DE NGROK)
+        chroma_client = HttpClient(
+            host="14d0-2806-107e-1b-c506-5aa7-2e03-12a8-e683.ngrok-free.app",
+            port=443
+        )
+
+        vector_store = Chroma(client=chroma_client, embedding_function=embeddings)
+        retriever = vector_store.as_retriever(search_type="similarity", search_kwargs={"k": 5})
+
         print("✅ Conectado a ChromaDB a través de NGROK.")
-        return chroma_client, retriever
+        return vector_store, retriever
     except Exception as e:
         print(f"⚠️ No se pudo conectar a ChromaDB en NGROK. Usando solo GPT-4. Error: {e}")
         return None, None
