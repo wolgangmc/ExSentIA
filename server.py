@@ -38,23 +38,27 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 async def serve_index():
     return FileResponse("static/index.html")
 
-# 📂 Cargar la base de datos vectorial con ChromaDB
+# 📂 Cargar la base de datos vectorial con ChromaDB desde NGROK
 def load_vector_store():
     try:
         embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
-        vector_store = Chroma(persist_directory="chroma_db", embedding_function=embeddings)
-
-        retriever = vector_store.as_retriever(search_type="similarity", search_kwargs={"k": 5})
-        print("✅ Base de datos ChromaDB cargada correctamente.")
-        return vector_store, retriever
+        
+        # 🚀 Conectar a ChromaDB a través de NGROK (SUSTITUIR URL)
+        chroma_client = Chroma(
+            client_settings={"chroma_server": "https://14d0-2806-107e-1b-c506-5aa7-2e03-12a8-e683.ngrok-free.app"}
+        )
+        
+        retriever = chroma_client.as_retriever(search_type="similarity", search_kwargs={"k": 5})
+        print("✅ Conectado a ChromaDB a través de NGROK.")
+        return chroma_client, retriever
     except Exception as e:
-        print(f"⚠️ No se pudo cargar ChromaDB. Usando solo GPT-4. Error: {e}")
+        print(f"⚠️ No se pudo conectar a ChromaDB en NGROK. Usando solo GPT-4. Error: {e}")
         return None, None
 
-# 🔍 Inicializar ChromaDB
+# 🔍 Inicializar ChromaDB desde NGROK
 vector_store, retriever = load_vector_store()
 if retriever is None:
-    print("⚠️ No se pudo cargar ChromaDB. Usando solo GPT-4.")
+    print("⚠️ No se pudo conectar a ChromaDB en NGROK. Usando solo GPT-4.")
 
 # 🔍 Generar respuestas basadas en la base vectorial
 llm = ChatOpenAI(openai_api_key=openai_api_key, model_name="gpt-4")
