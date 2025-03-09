@@ -1,0 +1,358 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="2.2.2.1 ">2.2.2.1 Creating new tenants and associating service schemas</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="creatingtenantsinui.html" title="2.2.2 &nbsp; Creating tenants in System management view"> -->
+      <link rel="prev" href="creatingtenantsinui.html" title="2.2.2 &nbsp; Creating tenants in System management view">
+      <link rel="next" href="indicators-color.html" title="2.2.2.2 &nbsp; Understanding the color indicators for tenants">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbrbt4wvym-f-453fae6ce-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9cee29e9","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":60876,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741379340","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==us1A5dt6//lWpSOi4XYHWUDCthiXmlnrkjwJJ7+ZfRqyaINu3xwsl+BZpTqeUApPrT3Y23uCNvJsrHBr+L29yHi4H2/gFtyf+hz5NM0k21lJV8F+kP5+z3yCBWoEBMJU/CQhf5l+Ee2A25LwQJcOvIugthqsz1zwMVp3whGr1Lei1dNyK8Td68d7rWTXGpxmf+YDy+R9247LUERlGYjfWOwlp21LIDNa+jbS96RjxNYzgl8CyZZd44PpD5YSGZlMLZw+bt7yL63F8XGX6zZXu3UcXEs58mQhXTbvH530LecOqoV5c9kejHzhChTgsPNtscuLv8f1FXXQLfYNLgL/RlDsm+VHgTOzyEWpgHi1ioRKdva1pfQM3dE17TlnTJ8HkOf5ujB3RQqeC+CUlsMGsqqd1V8GEPSZrLWp3iHzubw=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="newtenants">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.2.2.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating new tenants
+            and associating
+            service schemas</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.2.2 &nbsp; Creating&#xA;tenants in System management view" aria-label="Preceding page: 2.2.2 &nbsp; Creating&#xA;tenants in System management view" href="creatingtenantsinui.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.2.2 &nbsp; Creating&#xA;tenants in System management view" aria-label="Section one level up: 2.2.2 &nbsp; Creating&#xA;tenants in System management view" href="creatingtenantsinui.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.2.2.2 &nbsp; Understanding the color&#xA;indicators for tenants" aria-label="Next page: 2.2.2.2 &nbsp; Understanding the color&#xA;indicators for tenants" href="indicators-color.html">Next</a></div>
+      </div>
+      <div class="sect3 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="newtenants" id="newtenants"></a><span class="otsLbl"><span class="otlbl-num">2.2.2.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating new tenants
+                     and associating
+                     service schemas</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid1406" id="tmpid1406"></a>If you are using System management view to add a new tenant, you use
+            the tenant creation wizard to add the new tenant to <span class="namestring" data-cid="OTDS">OTDS</span> first.
+         </p>
+         <p><a name="tmpid1408" id="tmpid1408"></a>Next, if your deployment has <a class="link" href="aboutsystemadministration.html#autoschemamgtenabled">automatic schema management enabled</a>, you use the tenant wizard
+            to add new service schemas and their database tables to the tenant.
+            The wizard can either create schemas and their tables for you, or
+            you can specify existing schemas and let the wizard create the tables.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref10" id="tmp4ref10"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid1411" id="tmpid1411"></a>Alternatively, you can use <a class="link" href="bootstrappingtenants.html" title="2.2.3 &nbsp; Creating tenants with a bootstrap configuration">a Helm command and bootstrap configuration</a> to add a new tenant
+               to <span class="namestring" data-cid="OTDS">OTDS</span> and to add new service schemas and tables to a tenant.
+            </p>
+         </div>
+         <p><a name="tmpid1414" id="tmpid1414"></a>If you are using manual schema management for your <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> databases,
+            you use the tenant wizard to associate manually created service schemas
+            and tables in the database with the new tenant.
+         </p>
+         <div class="itemizedlist">
+            <p><a name="tmpid1418" id="tmpid1418"></a>In a typical <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> deployment, you can add and associate schemas
+               and tables for the following services:
+            </p>
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid1422" id="tmpid1422"></a><strong class="guilabel" data-cid="Design">Design</strong></p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid1425" id="tmpid1425"></a><strong class="guilabel" data-cid="Interactive"><span class="namestring">Interactive</span></strong></p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid1429" id="tmpid1429"></a><strong class="guilabel" data-cid="Orchestration">Orchestration</strong></p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid1432" id="tmpid1432"></a><strong class="guilabel" data-cid="Journey">Journey</strong></p>
+               </li>
+            </ul>
+         </div>
+         <div class="procedure"><h2 class="title"><a name="addnewtenantotds" id="addnewtenantotds"></a><b><span class="otlbl-ttl">Adding a new tenant to <span class="namestring" data-cid="OTDS">OTDS</span> in System management view</span></b></h2>
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid1442" id="tmpid1442"></a>Sign in to the <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> web client as an <span class="namestring" data-cid="OTDS">OTDS</span> administrator
+                     user at the following URL:
+                  </p>
+                  <p><a name="tmpid1450" id="tmpid1450"></a><strong class="command"><code>https://&lt;host&gt;:&lt;optionalPort&gt;/design?tenant=system</code></strong>         
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid1453" id="tmpid1453"></a>On the <strong class="guilabel" data-cid="Tenants_and_services">Tenants and services</strong> panel,
+                     click <strong class="guilabel" data-cid="Add_tenant">Add tenant</strong>.
+                  </p>
+                  <div class="note">
+                     <p class="title"><strong><a name="tmp4ref11" id="tmp4ref11"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                     </strong></p>
+                     <p><a name="tmpid1457" id="tmpid1457"></a>Tenant names can contain up to 40 alphanumeric and underscore
+                        characters. <span class="namestring" data-cid="OpenText">OpenText</span> recommends that tenant names begin with
+                        a letter.
+                     </p>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid1460" id="tmpid1460"></a>On the opening page of the tenant creation wizard, in
+                     the <strong class="guilabel" data-cid="Tenant_name">Tenant name</strong> field, enter a name for the tenant,
+                     and then click <strong class="guilabel" data-cid="Proceed">Proceed</strong>.<br>
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid1464" id="tmpid1464"></a>On the <strong class="guilabel" data-cid="OTDS"><span class="namestring">OTDS</span></strong> page, enter
+                     a new <span class="namestring" data-cid="OTDS">OTDS</span> administrator user name and password for the new <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> tenant,
+                     and then click <strong class="guilabel" data-cid="Create">Create</strong>.
+                  </p>
+                  <p><a name="tmpid1471" id="tmpid1471"></a>After you click <strong class="guilabel" data-cid="Create">Create</strong>, the <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> tenant
+                     exists in <span class="namestring" data-cid="OTDS">OTDS</span>. However, you must add at lease one service
+                     schema to the tenant before the tenant appears on the <strong class="guilabel" data-cid="Tenants_and_services">Tenants
+                        and services</strong> panel.
+                  </p>
+               </li>
+            </ol>
+         </div>
+         <div class="procedure"><h2 class="title"><a name="d0e2463" id="d0e2463"></a><b><span class="otlbl-ttl">Adding service schemas to a tenant in System management view</span></b></h2>
+            <div class="note">
+               <p class="title"><strong><a name="tmp4ref12" id="tmp4ref12"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+               </strong></p>
+               <p><a name="tmpid1480" id="tmpid1480"></a>Your deployment must have automatic schema management enabled
+                  to perform this procedure.
+               </p>
+            </div>
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid1482" id="tmpid1482"></a>If you did not add a new tenant to <span class="namestring" data-cid="OTDS">OTDS</span> using
+                     a <a class="link" href="bootstrappingtenants.html" title="2.2.3 &nbsp; Creating tenants with a bootstrap configuration">Helm command and bootstrap
+                        configuration</a>, in System management view, <a class="link" href="newtenants.html#addnewtenantotds" title="Adding a new tenant to OTDS in System management view">add a new tenant to <span class="namestring" data-cid="OTDS">OTDS</span></a>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid1488" id="tmpid1488"></a>In the tenant wizard, on the details page for each service
+                     in your deployment, do one of the following:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid1491" id="tmpid1491"></a>If the service database has no schema name or database
+                              credentials configured for the tenant, click <strong class="guilabel" data-cid="Create">Create</strong>. The wizard creates the schema, database credentials, and resource
+                              tables for the service and then associates them with the tenant.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid1495" id="tmpid1495"></a>If the service database has a schema name and database
+                              credentials for the tenant, but no tables in the schema, do the following:
+                           </p>
+                           <div class="orderedlist">
+                              <ol class="orderedlist" type="a">
+                                 <li class="listitem">
+                                    <p><a name="tmpid1498" id="tmpid1498"></a>Select the <strong class="guilabel" data-cid="Use_existing_schema">Use existing schema</strong> check box.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid1501" id="tmpid1501"></a>In the <strong class="guilabel" data-cid="Schema_name">Schema name</strong>, <strong class="guilabel" data-cid="Database_user_name">Database user name</strong>, and <strong class="guilabel" data-cid="Database_password">Database password</strong> boxes, enter the values that are configured for the tenant in the
+                                       service database.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid1506" id="tmpid1506"></a>Click <strong class="guilabel" data-cid="Create">Create</strong>. The wizard creates
+                                       the tables in the schema and then associates the schema and tables
+                                       with the tenant.
+                                    </p>
+                                    <p><a name="tmpid1508" id="tmpid1508"></a>If the wizard returns an error, verify that the schema name
+                                       and database credentials for the tenant in the service database match
+                                       the values that you entered in the wizard.
+                                    </p>
+                                 </li>
+                              </ol>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid1510" id="tmpid1510"></a><span class="boxed-text optional">Optional</span> To update a service schema, its
+                     tables, or its database credentials in the tenant, do the following:
+                  </p>
+                  <ol type="a" class="substeps">
+                     <li class="step">
+                        <p><a name="tmpid1513" id="tmpid1513"></a>Click <strong class="guilabel" data-cid="Previous">Previous</strong> or <strong class="guilabel" data-cid="Next">Next</strong> to go to the details page for the service.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid1517" id="tmpid1517"></a>Click <strong class="guilabel" data-cid="Delete">Delete</strong> to remove the service
+                           schema, its tables, and its database credentials from the tenant wizard
+                           and the tenant configuration in the service database.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid1520" id="tmpid1520"></a><span class="boxed-text optional">Optional</span> Manually update the schema name
+                           and database credentials for the tenant in the service database.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid1522" id="tmpid1522"></a>Repeat step 2 above, but click <strong class="guilabel" data-cid="Update">Update</strong> instead of <strong class="guilabel" data-cid="Create">Create</strong>.
+                        </p>
+                        <p><a name="tmpid1525" id="tmpid1525"></a>If the wizard returns an error, verify that the values on the
+                           service details page match the values configured for the tenant in
+                           the service database.
+                        </p>
+                     </li>
+                  </ol>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid1527" id="tmpid1527"></a><span class="boxed-text optional">Optional</span> To remove a service schema, its
+                     tables, and its database credentials from a tenant, click <strong class="guilabel" data-cid="Previous">Previous</strong> or <strong class="guilabel" data-cid="Next">Next</strong> to go to the details
+                     page for the service, and then click <strong class="guilabel" data-cid="Delete">Delete</strong>.
+                  </p>
+                  <div class="important">
+                     <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Important</span></span></strong></p>
+                     <p><a name="tmpid1532" id="tmpid1532"></a>Clicking <strong class="guilabel" data-cid="Delete">Delete</strong> in the wizard also deletes
+                        the service schema, its tables, and its database credentials from
+                        the tenant configuration in the service database.
+                     </p>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid1535" id="tmpid1535"></a>On the <strong class="guilabel" data-cid="Overview">Overview</strong> page, review the
+                     schema names for each added service and then click <strong class="guilabel" data-cid="Close">Close</strong>. The tenant appears in the <strong class="guilabel" data-cid="Tenants_and_services">Tenants and services</strong> panel in System management view with a green <a class="link" href="indicators-color.html" title="2.2.2.2 &nbsp; Understanding the color indicators for tenants">indicator</a> for each service schema that you added.
+                  </p>
+               </li>
+            </ol>
+         </div>
+         <div class="procedure"><h2 class="title"><a name="d0e2596" id="d0e2596"></a><b><span class="otlbl-ttl">Associating manually created service schemas with a tenant
+                  in System management view</span></b></h2>
+            <div class="note">
+               <p class="title"><strong><a name="tmp4ref13" id="tmp4ref13"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+               </strong></p>
+               <p><a name="tmpid1543" id="tmpid1543"></a>Perform this procedure for a service schema only if the schema,
+                  its tables, and its database credentials exist in the service database.
+               </p>
+            </div>
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid1545" id="tmpid1545"></a>If you did not add a new tenant to <span class="namestring" data-cid="OTDS">OTDS</span> using
+                     a <a class="link" href="bootstrappingtenants.html" title="2.2.3 &nbsp; Creating tenants with a bootstrap configuration">Helm command and bootstrap
+                        configuration</a>, in System management view, <a class="link" href="newtenants.html#addnewtenantotds" title="Adding a new tenant to OTDS in System management view">add a new tenant to <span class="namestring" data-cid="OTDS">OTDS</span></a>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid1551" id="tmpid1551"></a>In the tenant wizard, on the details page for each service
+                     that has a manually created schema with tables and database credentials
+                     in the database, do the following:
+                  </p>
+                  <ol type="a" class="substeps">
+                     <li class="step">
+                        <p><a name="tmpid1554" id="tmpid1554"></a>In the <strong class="guilabel" data-cid="Schema_name">Schema name</strong>, <strong class="guilabel" data-cid="Database_user_name">Database
+                              user name</strong>, and <strong class="guilabel" data-cid="Database_password">Database password</strong> boxes,
+                           enter the values for these settings as configured in the database.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid1559" id="tmpid1559"></a>Click <strong class="guilabel" data-cid="Associate">Associate</strong>. The wizard associates
+                           the schema, its tables, and its database credentials with the tenant.
+                        </p>
+                     </li>
+                  </ol>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid1562" id="tmpid1562"></a><span class="boxed-text optional">Optional</span> To update a manually created service
+                     schema, its tables, or its database credentials in the tenant, do
+                     the following:
+                  </p>
+                  <ol type="a" class="substeps">
+                     <li class="step">
+                        <p><a name="tmpid1565" id="tmpid1565"></a>Click <strong class="guilabel" data-cid="Previous">Previous</strong> or <strong class="guilabel" data-cid="Next">Next</strong> to go to the details page for the service.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid1569" id="tmpid1569"></a>Click <strong class="guilabel" data-cid="Delete">Delete</strong>.
+                        </p>
+                        <div class="note">
+                           <p class="title"><strong><a name="tmp4ref14" id="tmp4ref14"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                           </strong></p>
+                           <p><a name="tmpid1572" id="tmpid1572"></a>If automatic schema management is disabled, clicking <strong class="guilabel" data-cid="Delete">Delete</strong> breaks the association between the service and
+                              the tenant. However, it does not clear the schema, tables, and database
+                              credentials for the tenant in the service database.
+                           </p>
+                        </div>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid1575" id="tmpid1575"></a>In the service database, manually update the schema and
+                           database credentials for the tenant.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid1577" id="tmpid1577"></a>Use Liquibase to create the tables in the updated schema.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid1579" id="tmpid1579"></a>Repeat step 2 above.
+                        </p>
+                        <p><a name="tmpid1580" id="tmpid1580"></a>If the wizard returns an error, verify that the values on the
+                           service details page match the values configured for the tenant in
+                           the service database.
+                        </p>
+                     </li>
+                  </ol>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid1582" id="tmpid1582"></a><span class="boxed-text optional">Optional</span> To remove a service schema, its
+                     tables, and its database credentials from a tenant, perform steps
+                     3a and 3b above.
+                  </p>
+                  <p><a name="tmpid1583" id="tmpid1583"></a>If automatic schema management is disabled, clear the schema,
+                     tables, and database credentials for the tenant in the service database.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid1585" id="tmpid1585"></a>In the wizard, on the final <strong class="guilabel" data-cid="Overview">Overview</strong> page, review the newly associated service schema names and then
+                     click <strong class="guilabel" data-cid="Close">Close</strong>. The tenant appears in the <strong class="guilabel" data-cid="Tenants_and_services">Tenants and services</strong> panel in System management view with a green <a class="link" href="indicators-color.html" title="2.2.2.2 &nbsp; Understanding the color indicators for tenants">indicator</a> for each associated service
+                     schema.
+                  </p>
+               </li>
+            </ol>
+         </div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.2.2.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating new tenants
+            and associating
+            service schemas</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.2.2 &nbsp; Creating&#xA;tenants in System management view" aria-label="Preceding page: 2.2.2 &nbsp; Creating&#xA;tenants in System management view" href="creatingtenantsinui.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.2.2 &nbsp; Creating&#xA;tenants in System management view" aria-label="Section one level up: 2.2.2 &nbsp; Creating&#xA;tenants in System management view" href="creatingtenantsinui.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.2.2.2 &nbsp; Understanding the color&#xA;indicators for tenants" aria-label="Next page: 2.2.2.2 &nbsp; Understanding the color&#xA;indicators for tenants" href="indicators-color.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

@@ -1,0 +1,1033 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="2.2.3.1 ">2.2.3.1 Specifying bootstrap configuration parameters</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="bootstrappingtenants.html" title="2.2.3 &nbsp; Creating tenants with a bootstrap configuration"> -->
+      <link rel="prev" href="bootstrappingtenants.html" title="2.2.3 &nbsp; Creating tenants with a bootstrap configuration">
+      <link rel="next" href="creatingtenantswithbootstrap.html" title="2.2.3.2 &nbsp; Running a Helm upgrade with the bootstrap configuration">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbrbt4wvyo-f-45a0027fa-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9cee4cc9","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":60881,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741379342","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==yRIJraQlrg9iRETALRCtzmr54ufHp1rJX5aktHeIdSk4ibXUsJ+rQ1P+lqe+95GUUzqz/REVREXXiDD71t+4BgqQmPgBqHNyw9u/bvg6Gd/+57tzRSfORAQFansb+zC7eM90yM1S+gRtcYzDEoLItJlP5RFTEOdPaP6g3ZL/yKRUhC3hqrnqxz8Vi6MmV8zZKuzVj8Xm+kzkl3x2iY+8U0yM1bconi/NrZXZCT3BZBJ3fDcvSlcTUtnlGA19dN2W7DC+pkCqSvXwTSp6WZjm6zQrlZflGKyiZHaX8ZQ0gE3Epqa6zoRKyVstMlor34CjBRdQNFD5fAwQcf8Qaa9Q5fGgqLwakrSkizSZB9sn3GFxQ0gmd7ogKqlFjWxiS1Q8hCz+geY7VtV2Qksl/EqjHhP+6D77aeQdp9UwaFof5ls=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="bootstrapconfigurationparameter">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.2.3.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Specifying bootstrap
+            configuration parameters</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.2.3 &nbsp; Creating&#xA;tenants with a bootstrap configuration" aria-label="Preceding page: 2.2.3 &nbsp; Creating&#xA;tenants with a bootstrap configuration" href="bootstrappingtenants.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.2.3 &nbsp; Creating&#xA;tenants with a bootstrap configuration" aria-label="Section one level up: 2.2.3 &nbsp; Creating&#xA;tenants with a bootstrap configuration" href="bootstrappingtenants.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.2.3.2 &nbsp; Running a Helm upgrade&#xA;with the bootstrap configuration" aria-label="Next page: 2.2.3.2 &nbsp; Running a Helm upgrade&#xA;with the bootstrap configuration" href="creatingtenantswithbootstrap.html">Next</a></div>
+      </div>
+      <div class="sect3 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="bootstrapconfigurationparameter" id="bootstrapconfigurationparameter"></a><span class="otsLbl"><span class="otlbl-num">2.2.3.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Specifying bootstrap
+                     configuration parameters</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid1817" id="tmpid1817"></a>At a very high level, the bootstrap configuration is provided
+            in the following format:
+         </p>
+         <div class="example"><p class="title"><a name="tmp4ref17" id="tmp4ref17"></a><b><span class="otLbl"><span class="otlbl-kw">Example</span> <span class="otlbl-num">2.4</span>: </span><span class="otlbl-ttl">Bootstrap parameter
+                  block</span></b></p>
+            <div class="example-contents"><pre class="screen noinltag">bootstrap:
+	enabled: true
+	config:
+		otdsAdmin:
+			&lt;OTDS administrator credentials&gt;
+		createOauthClients: true | false
+		tenants:
+			&lt;tenant&gt;:
+				&lt;Custom configuration for the new tenant&gt;</pre></div>
+         </div><br class="example-break"><p><a name="tmpid1822" id="tmpid1822"></a>Use the following information as a handy reference for specific
+            parameter values and formatting as you create your custom bootstrap
+            configuration.</p>
+         <div class="vl2formalsect-list vl2bhseq" id="aid4pidiv15">
+         <h2 class="bridgehead subheading2"><a name="aid-696" id="aid-696"></a>bootstrap.config.otdsAdmin
+         </h2>
+         <p><a name="tmpid1827" id="tmpid1827"></a>In <strong class="command"><code>bootstrap.config.otdsAdmin</code></strong>, you provide <span class="namestring" data-cid="OTDS">OTDS</span> system
+            administrator credentials that the bootstrap can use to access your <span class="namestring" data-cid="OTDS">OTDS</span> instance.
+            The following table describes the parameters in this parameter block.
+         </p>
+         <div class="table"><p class="title"><a name="tbl-26397" id="tbl-26397"></a><b><span class="otLbl"><span class="otlbl-kw">Table</span> <span class="otlbl-num">2.4</span>: </span><span class="otlbl-ttl">Parameter descriptions</span></b></p>
+            <div class="table-contents">
+               <table summary="Parameter descriptions" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                  <colgroup>
+                     <col class="col1">
+                     <col class="col2">
+                  </colgroup>
+                  <thead>
+                     <tr class="row">
+                        <th style=""><a name="tmpid1838" id="tmpid1838"></a>Parameter
+                        </th>
+                        <th style=""><a name="tmpid1839" id="tmpid1839"></a>Description
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr class="row">
+                        <td style=""><a name="tmpid1842" id="tmpid1842"></a><strong class="guilabel" data-cid="username">username</strong></td>
+                        <td style=""><p><a name="tmpid1844" id="tmpid1844"></a><a name="tmpid1845" id="tmpid1845"></a>Enter the user name of the <span class="namestring" data-cid="OTDS">OTDS</span> system administrator
+                              user. For example: <strong class="command"><code>otadmin@otds.admin</code></strong></p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid1849" id="tmpid1849"></a><strong class="guilabel" data-cid="password">password</strong></td>
+                        <td style=""><p><a name="tmpid1851" id="tmpid1851"></a><a name="tmpid1852" id="tmpid1852"></a>Enter the password of the <span class="namestring" data-cid="OTDS">OTDS</span> system administrator
+                              user.
+                           </p>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div><br class="table-break"></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv16"><h2 class="bridgehead subheading2"><a name="aid-698" id="aid-698"></a>bootstrap.config.createOauthClients
+         </h2>
+         <p><a name="tmpid1857" id="tmpid1857"></a>The <strong class="command"><code>bootstrap.config.createOauthClients</code></strong> parameter
+            determines how you create OAuth clients for the new tenants that will
+            be created with the bootstrap configuration. You can set <strong class="command"><code>bootstrap.config.createOauthClients</code></strong> to one of the following
+            values:
+         </p>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid1862" id="tmpid1862"></a><strong class="guilabel" data-cid="true">true</strong>—Automatically creates
+                     OAuth clients in <span class="namestring" data-cid="OTDS">OTDS</span> for the new tenants as needed. This
+                     is the default value if you do not explicitly set a value.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid1866" id="tmpid1866"></a><strong class="guilabel" data-cid="false">false</strong>—Does not create OAuth
+                     clients in <span class="namestring" data-cid="OTDS">OTDS</span> for the new tenants
+                  </p>
+               </li>
+            </ul>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv17">
+         <h2 class="bridgehead subheading2"><a name="aid-700" id="aid-700"></a>bootstrap.config.tenants
+         </h2>
+         <p><a name="tmpid1872" id="tmpid1872"></a>In <strong class="command"><code>bootstrap.config.tenants</code></strong>, you provide
+            the configuration information for each new tenant that you want to
+            create. Tenant configuration parameters are provided in the following
+            parameter block:
+         </p>
+         <div class="example"><p class="title"><a name="tmp4ref18" id="tmp4ref18"></a><b><span class="otLbl"><span class="otlbl-kw">Example</span> <span class="otlbl-num">2.5</span>: </span><span class="otlbl-ttl">Tenant configuration
+                  parameter block</span></b></p>
+            <div class="example-contents"><pre class="screen noinltag">tenants:
+	&lt;tenant&gt;:
+		otds:
+			&lt;OTDS tenant configuration settings&gt;
+		das:
+			&lt;Design tenant configuration settings&gt;
+		orchestration:
+			&lt;Orchestration tenant configuration settings&gt;
+		empower:
+			&lt;Empower tenant configuration settings&gt;</pre></div>
+         </div><br class="example-break"><p><a name="tmpid1877" id="tmpid1877"></a>To create multiple tenants using the same bootstrap configuration,
+            use the following format to add the configuration parameters for each
+            tenant in separate blocks:
+         </p>
+         <div class="example"><p class="title"><a name="tmp4ref19" id="tmp4ref19"></a><b><span class="otLbl"><span class="otlbl-kw">Example</span> <span class="otlbl-num">2.6</span>: </span><span class="otlbl-ttl">Multiple tenant configuration</span></b></p>
+            <div class="example-contents"><pre class="screen noinltag">tenants:
+	&lt;tenant1&gt;:
+		&lt;Configuration settings for tenant1&gt;
+	&lt;tenant2&gt;:
+		&lt;Configuration settings for tenant2&gt;
+	.
+	.
+	.
+	&lt;tenantN&gt;:
+		&lt;Configuration settings for tenantN&gt;</pre></div>
+         </div><br class="example-break"><div class="tip">
+            <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Tip</span></span></strong></p>
+            <p><a name="tmpid1882" id="tmpid1882"></a>When creating multiple tenants, you can alternatively use separate
+               YAML files for each tenant.
+            </p>
+         </div>
+         <p><a name="tmpid1883" id="tmpid1883"></a>The following sections describe the configuration settings that
+            you specify in each <strong class="command"><code>bootstrap.config.tenants.&lt;tenant&gt;</code></strong> block.
+         </p>
+         <div class="variablelist standard lvl1 lvlmax1">
+            <dl class="variablelist standard">
+               <dt class="varlistentry"><a name="dl2vl-066" id="dl2vl-066"></a><span class="term"><a name="tmpid1887" id="tmpid1887"></a>bootstrap.config.tenants.&lt;tenant&gt;.otds</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid1889" id="tmpid1889"></a>In <strong class="command"><code>bootstrap.config.tenants.&lt;tenant&gt;.otds</code></strong>, you provide the <span class="namestring" data-cid="OTDS">OTDS</span> information that is required to configure
+                     the tenant in <span class="namestring" data-cid="OTDS">OTDS</span>. These tenant configuration settings are
+                     provided in the following format:
+                  </p>
+                  <div class="example"><p class="title"><a name="tmp4ref20" id="tmp4ref20"></a><b><span class="otLbl"><span class="otlbl-kw">Example</span> <span class="otlbl-num">2.7</span>: </span><span class="otlbl-ttl">OTDS tenant configuration</span></b></p>
+                     <div class="example-contents"><pre class="screen noinltag">otds:
+	admin:
+		username:
+		password:
+	exstreamAdmin:
+		username:
+		password:
+	partitions:
+		&lt;partition&gt;:
+			groups:
+				- name:
+			users:
+				- username
+				password:
+				membership: [ &lt;group1&gt;,&lt;group2&gt;,...,&lt;groupN&gt; ]
+	resources:
+		- name:
+		description:
+		licenses:
+			- username:
+			partition:
+			prodLicense:
+			file:</pre></div>
+                  </div><br class="example-break"><p><a name="tmpid1896" id="tmpid1896"></a>The following table describes the parameters in this parameter
+                     block.
+                  </p>
+                  <div class="table"><p class="title"><a name="tbl-84967" id="tbl-84967"></a><b><span class="otLbl"><span class="otlbl-kw">Table</span> <span class="otlbl-num">2.5</span>: </span><span class="otlbl-ttl">Parameter descriptions</span></b></p>
+                     <div class="table-contents">
+                        <table summary="Parameter descriptions" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                           <colgroup>
+                              <col class="col1">
+                              <col class="col2">
+                           </colgroup>
+                           <thead>
+                              <tr class="row">
+                                 <th style=""><a name="tmpid1904" id="tmpid1904"></a>Parameter
+                                 </th>
+                                 <th style=""><a name="tmpid1905" id="tmpid1905"></a>Description
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid1908" id="tmpid1908"></a><strong class="guilabel" data-cid="admin">admin</strong></td>
+                                 <td style=""><p><a name="tmpid1910" id="tmpid1910"></a><a name="tmpid1911" id="tmpid1911"></a>Creates a new&nbsp;<span class="namestring" data-cid="OTDS">OTDS</span> system administrator
+                                       user that will be created in the new tenant. This user is a member
+                                       of the <strong class="guilabel" data-cid="otadmins@otds.admin">otadmins@otds.admin</strong> group in the new tenant
+                                       and can manage the <span class="namestring" data-cid="OTDS">OTDS</span> tenants. Specify the following parameters:
+                                    </p> 
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid1917" id="tmpid1917"></a><strong class="guilabel" data-cid="username">username</strong>—Enter the user
+                                                name of the new user.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid1920" id="tmpid1920"></a><strong class="guilabel" data-cid="password">password</strong>—Enter the password
+                                                of the new user.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid1923" id="tmpid1923"></a><strong class="guilabel" data-cid="exstreamAdmin">exstreamAdmin</strong></td>
+                                 <td style=""><p><a name="tmpid1925" id="tmpid1925"></a><a name="tmpid1926" id="tmpid1926"></a>Creates a new <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> tenant administrator user that
+                                       will be created in the new tenant. This user is a member of the <strong class="guilabel" data-cid="tenantadmins@otds.admin">tenantadmins@otds.admin</strong> group in the new tenant and can
+                                       manage the <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> tenant environment. Specify the following parameters:
+                                    </p> 
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid1934" id="tmpid1934"></a><strong class="guilabel" data-cid="username">username</strong>—Enter the user
+                                                name of the new user.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid1937" id="tmpid1937"></a><strong class="guilabel" data-cid="password">password</strong>—Enter the password
+                                                of the new user.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid1940" id="tmpid1940"></a><strong class="guilabel" data-cid="partitions">partitions</strong></td>
+                                 <td style=""><p><a name="tmpid1942" id="tmpid1942"></a><a name="tmpid1943" id="tmpid1943"></a>Creates a partition in the new tenant that will contain
+                                       the users and groups for the tenant. In the <strong class="command"><code>partitions.&lt;partition&gt;</code></strong> block, specify the following parameters to configure the new partition:
+                                    </p> 
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="partitions" id="partitions"></a><strong class="guilabel" data-cid="groups">groups</strong>—Specify
+                                                the following parameter to create a new group, and repeat it for each
+                                                subsequent group that you want to create:
+                                             </p>
+                                             <div class="itemizedlist">
+                                                <ul class="itemizedlist">
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid1951" id="tmpid1951"></a><strong class="guilabel" data-cid="name">name</strong>—Enter the name of
+                                                         the new group.
+                                                      </p>
+                                                   </li>
+                                                </ul>
+                                             </div>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid1954" id="tmpid1954"></a><strong class="guilabel" data-cid="users">users</strong>—Specify the following
+                                                parameters to create a new user and assign it to an <span class="namestring" data-cid="OTDS">OTDS</span> group,
+                                                and repeat them for each subsequent user that you want to create:
+                                             </p>
+                                             <div class="itemizedlist">
+                                                <ul class="itemizedlist">
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid1959" id="tmpid1959"></a><strong class="guilabel" data-cid="username">username</strong>—Enter the name
+                                                         of the new user.
+                                                      </p>
+                                                   </li>
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid1962" id="tmpid1962"></a><strong class="guilabel" data-cid="password">password</strong>—Enter the password
+                                                         of the new user.
+                                                      </p>
+                                                   </li>
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid1965" id="tmpid1965"></a><strong class="guilabel" data-cid="membership">membership</strong>—Enter the <span class="namestring" data-cid="OTDS">OTDS</span> groups
+                                                         to which the new user belongs.
+                                                      </p>
+                                                   </li>
+                                                </ul>
+                                             </div>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid1969" id="tmpid1969"></a><strong class="guilabel" data-cid="resources">resources</strong></td>
+                                 <td style=""><p><a name="tmpid1971" id="tmpid1971"></a><a name="tmpid1972" id="tmpid1972"></a>Creates an <span class="namestring" data-cid="OTDS">OTDS</span> resource that will be used to
+                                       store the <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> <span class="namestring" data-cid="OTDS">OTDS</span> product key for the new tenant. Specify
+                                       the following parameters to create a resource, and repeat them for
+                                       each subsequent resource that you want to create:
+                                    </p> 
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid1979" id="tmpid1979"></a><strong class="guilabel" data-cid="name">name</strong>—Enter a name for the
+                                                new resource.
+                                             </p>
+                                             <p><a name="tmpid1981" id="tmpid1981"></a>Names do not support the following special characters: <code class="literal">&amp; / : * ! ? &gt; &lt; | + # %</code> 
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid1984" id="tmpid1984"></a><strong class="guilabel" data-cid="description">description</strong>—Optionally,
+                                                enter a description for the resource.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid1987" id="tmpid1987"></a><strong class="guilabel" data-cid="licenses">licenses</strong>—Specify the product
+                                                key with the following parameters:
+                                             </p>
+                                             <div class="itemizedlist">
+                                                <ul class="itemizedlist">
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid1991" id="tmpid1991"></a><strong class="guilabel" data-cid="username">username</strong>—Enter the user
+                                                         name of a tenant administrator user for this tenant. This can be the
+                                                         same as the user name that you specified in the <strong class="command"><code>exstreamAdmin</code></strong> parameter block.
+                                                      </p>
+                                                   </li>
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid1995" id="tmpid1995"></a><strong class="guilabel" data-cid="partition">partition</strong>—Enter the partition
+                                                         in which to create the <span class="namestring" data-cid="OTDS">OTDS</span> resource for this product key.
+                                                      </p>
+                                                   </li>
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid1999" id="tmpid1999"></a><strong class="guilabel" data-cid="prodLicense">prodLicense</strong>—Set to <strong class="command"><code>true</code></strong> if the resource will be assigned a production key.
+                                                         Otherwise, set to <strong class="command"><code>false</code></strong>.
+                                                      </p>
+                                                   </li>
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid2004" id="tmpid2004"></a><strong class="guilabel" data-cid="name">name</strong>—Enter the name for
+                                                         the product key. This parameter is especially useful if you create
+                                                         non-production and production license key objects in OTDS for the
+                                                         same tenant. Specify a separate parameter for each key file that you
+                                                         are installing in the tenant.
+                                                      </p>
+                                                   </li>
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid2007" id="tmpid2007"></a><strong class="guilabel" data-cid="file">file</strong>—Enter the contents
+                                                         of the key file to be installed in this tenant, or use <strong class="command"><code>--set-file</code></strong> in your Helm command to set a product key as this parameter value.
+                                                      </p>
+                                                      <div class="note">
+                                                         <p class="title"><strong><a name="tmp4ref21" id="tmp4ref21"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                                                         </strong></p>
+                                                         <p><a name="tmpid2011" id="tmpid2011"></a>If you use this parameter with <strong class="command"><code>--set-file</code></strong>, make sure you comment it out in the bootstrap configuration.
+                                                         </p>
+                                                      </div>
+                                                   </li>
+                                                </ul>
+                                             </div>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div><br class="table-break"></dd>
+               <dt class="varlistentry"><a name="dl2vl-068" id="dl2vl-068"></a><span class="term"><a name="tmpid2014" id="tmpid2014"></a>bootstrap.config.tenants.&lt;tenant&gt;.das</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid2016" id="tmpid2016"></a>In <strong class="command"><code>bootstrap.config.tenants.&lt;tenant&gt;.das</code></strong>, you provide the information that is required to configure the tenant
+                     for the Design service. These tenant configuration settings are provided
+                     in the following parameter block:
+                  </p>
+                  <div class="example"><p class="title"><a name="tmp4ref22" id="tmp4ref22"></a><b><span class="otLbl"><span class="otlbl-kw">Example</span> <span class="otlbl-num">2.8</span>: </span><span class="otlbl-ttl">Design tenant configuration</span></b></p>
+                     <div class="example-contents"><pre class="screen noinltag">das:
+	databaseInfo:
+		schema:
+		username:
+		password:
+	roles:
+		- name:
+		appPermissions: [ ALL or &lt;app1&gt;,&lt;app2&gt;,...,&lt;appN&gt; ]
+		permissions:
+			- permissions: [ ALL or CREATE, READ, WRITE, DELETE, APPROVE ]
+			types: [ ALL or &lt;type1&gt;,&lt;type2&gt;,...,&lt;typeN&gt; ]
+	domains:
+		- id:
+		production: true | false
+		roleMappings:
+			- role:
+			groups:</pre></div>
+                  </div><br class="example-break"><p><a name="tmpid2021" id="tmpid2021"></a>The following table describes the parameters in this parameter
+                     block.
+                  </p>
+                  <div class="table"><p class="title"><a name="tbl-78619" id="tbl-78619"></a><b><span class="otLbl"><span class="otlbl-kw">Table</span> <span class="otlbl-num">2.6</span>: </span><span class="otlbl-ttl">Parameter descriptions</span></b></p>
+                     <div class="table-contents">
+                        <table summary="Parameter descriptions" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                           <colgroup>
+                              <col class="col1">
+                              <col class="col2">
+                           </colgroup>
+                           <thead>
+                              <tr class="row">
+                                 <th style=""><a name="tmpid2029" id="tmpid2029"></a>Parameter
+                                 </th>
+                                 <th style=""><a name="tmpid2030" id="tmpid2030"></a>Description
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid2033" id="tmpid2033"></a><strong class="guilabel" data-cid="databaseInfo">databaseInfo</strong></td>
+                                 <td style=""><p><a name="tmpid2035" id="tmpid2035"></a><a name="tmpid2036" id="tmpid2036"></a>Provides the Design tenant schema information for the
+                                       tenant. This parameter block is required only if you are using manual
+                                       schema management for your <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> databases. You must have first <a class="link" href="settinguptenantschemas.html" title="2.2.1 &nbsp; Creating tenant schemas in the database">created the tenant schemas</a> in your database. If you are using automatic schema management,
+                                       the bootstrap process creates the tenant schemas for the new tenant.
+                                    </p> 
+                                    <p><a name="tmpid2040" id="tmpid2040"></a>Specify the schema information in the following parameters:&nbsp;
+                                    </p> 
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid2043" id="tmpid2043"></a><strong class="guilabel" data-cid="schema">schema</strong>—Enter the name of
+                                                the Design tenant schema.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid2046" id="tmpid2046"></a><strong class="guilabel" data-cid="username">username</strong>—Enter the user
+                                                name of the schema owner.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid2049" id="tmpid2049"></a><strong class="guilabel" data-cid="password">password</strong>—Enter the password
+                                                of the new user.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid2052" id="tmpid2052"></a><strong class="guilabel" data-cid="roles"><a name="roles" id="roles"></a>roles</strong></td>
+                                 <td style=""><p><a name="tmpid2054" id="tmpid2054"></a><a name="tmpid2055" id="tmpid2055"></a>Creates <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> roles that are used to define user permissions
+                                       in each domain in the tenant. Specify the following parameters to
+                                       create a role, and repeat them for each subsequent role that you want
+                                       to create:
+                                    </p> 
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid2060" id="tmpid2060"></a><strong class="guilabel" data-cid="name">name</strong>—Enter a name for the
+                                                new role.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid2063" id="tmpid2063"></a><strong class="guilabel" data-cid="appPermissions">appPermissions</strong>—Enter the
+                                                specific application permissions that you want to assign to the new
+                                                role. To assign all permissions, enter <strong class="command"><code>ALL</code></strong>. Otherwise,
+                                                select from the following supported application permissions to enable
+                                                access:
+                                             </p>
+                                             <div class="itemizedlist">
+                                                <ul class="itemizedlist">
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid2068" id="tmpid2068"></a><strong class="guilabel" data-cid="COMM__DESIGNER">COMM_DESIGNER</strong>—<span class="namestring" data-cid="Designer">Designer</span></p>
+                                                   </li>
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid2072" id="tmpid2072"></a><strong class="guilabel" data-cid="CONTENT__AUTHOR">CONTENT_AUTHOR</strong>—<span class="namestring" data-cid="Content_Author">Content Author</span></p>
+                                                   </li>
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid2076" id="tmpid2076"></a><strong class="guilabel" data-cid="DATA__MAPPER">DATA_MAPPER</strong>—Communication asset library view
+                                                      </p>
+                                                   </li>
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid2079" id="tmpid2079"></a><strong class="guilabel" data-cid="DESIGNER__ASSET__MANAGER">DESIGNER_ASSET_MANAGER</strong>—Design asset library view
+                                                      </p>
+                                                   </li>
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid2082" id="tmpid2082"></a><strong class="guilabel" data-cid="ORCHESTRATION__MANAGEMENT">ORCHESTRATION_MANAGEMENT</strong>—Orchestration asset library view
+                                                      </p>
+                                                   </li>
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid2085" id="tmpid2085"></a><strong class="guilabel" data-cid="ORCHESTRATOR">ORCHESTRATOR</strong>—<span class="namestring" data-cid="Orchestrator">Orchestrator</span></p>
+                                                   </li>
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid2089" id="tmpid2089"></a><strong class="guilabel" data-cid="MONITOR">MONITOR</strong>—Monitor view
+                                                      </p>
+                                                   </li>
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid2092" id="tmpid2092"></a><strong class="guilabel" data-cid="MONITOR__JOB__FILES">MONITOR_JOB_FILES</strong>—Orchestration
+                                                         job input files and generated output files
+                                                      </p>
+                                                   </li>
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid2095" id="tmpid2095"></a><strong class="guilabel" data-cid="EDIT__CATEGORIES">EDIT_CATEGORIES</strong>—Creating
+                                                         category tags in supported views
+                                                      </p>
+                                                   </li>
+                                                </ul>
+                                             </div>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid2098" id="tmpid2098"></a><strong class="guilabel" data-cid="permissions">permissions</strong>—Specify resource
+                                                permissions with the following parameters:
+                                             </p>
+                                             <div class="itemizedlist">
+                                                <ul class="itemizedlist">
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid2102" id="tmpid2102"></a><strong class="guilabel" data-cid="permissions">permissions</strong>—Enter the specific
+                                                         resource permissions that you want to assign to the new role. To assign
+                                                         all permissions, enter <strong class="command"><code>ALL</code></strong>. Otherwise, select from <strong class="command"><code>CREATE</code></strong>, <strong class="command"><code>READ</code></strong>, <strong class="command"><code>WRITE</code></strong>, <strong class="command"><code>DELETE</code></strong>, and <strong class="command"><code>APPROVE</code></strong>.
+                                                      </p>
+                                                   </li>
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid2111" id="tmpid2111"></a><strong class="guilabel" data-cid="types">types</strong>—Enter the resource
+                                                         types to which you want to apply the selected permissions. To apply
+                                                         permissions to all DAS&nbsp;resource types, enter <strong class="command"><code>ALL</code></strong>. Otherwise, select from the following supported resource types to
+                                                         enable permissions to that resource:
+                                                      </p>
+                                                      <div class="itemizedlist">
+                                                         <ul class="itemizedlist">
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2116" id="tmpid2116"></a><strong class="guilabel" data-cid="documentdefinition">documentdefinition</strong>—<span class="namestring" data-cid="Content_Author">Content Author</span> communications
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2120" id="tmpid2120"></a><strong class="guilabel" data-cid="enginerundef">enginerundef</strong>—Engine run
+                                                                  definitions
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2123" id="tmpid2123"></a><strong class="guilabel" data-cid="exstrapplication">exstrapplication</strong>—<span class="namestring" data-cid="Designer">Designer</span> communications
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2127" id="tmpid2127"></a><strong class="guilabel" data-cid="exstrbarcode">exstrbarcode</strong>—Barcodes
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2130" id="tmpid2130"></a><strong class="guilabel" data-cid="exstrcolorfamily">exstrcolorfamily</strong>—Color
+                                                                  families
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2133" id="tmpid2133"></a><strong class="guilabel" data-cid="exstrcommunicationset">exstrcommunicationset</strong>—Communication
+                                                                  sets
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2136" id="tmpid2136"></a><strong class="guilabel" data-cid="exstrcomponentobj">exstrcomponentobj</strong>—<span class="namestring" data-cid="Designer">Designer</span> components
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2140" id="tmpid2140"></a><strong class="guilabel" data-cid="exstrdatasource">exstrdatasource</strong>—Data sources
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2143" id="tmpid2143"></a><strong class="guilabel" data-cid="exstrdocument">exstrdocument</strong>—<span class="namestring" data-cid="Designer">Designer</span> documents
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2147" id="tmpid2147"></a><strong class="guilabel" data-cid="exstremail">exstremail</strong>—<span class="namestring" data-cid="Designer">Designer</span> email
+                                                                  designs
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2151" id="tmpid2151"></a><strong class="guilabel" data-cid="exstrengine">exstrengine</strong>—<span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> engines
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2156" id="tmpid2156"></a><strong class="guilabel" data-cid="exstrevent">exstrevent</strong>—Events
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2159" id="tmpid2159"></a><strong class="guilabel" data-cid="exstrgraphicalmessage">exstrgraphicalmessage</strong>—<span class="namestring" data-cid="Content_Author">Content Author</span> graphic
+                                                                  messages
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2163" id="tmpid2163"></a><strong class="guilabel" data-cid="exstrhtml5">exstrhtml5</strong>—<span class="namestring" data-cid="Designer">Designer</span> web
+                                                                  designs
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2167" id="tmpid2167"></a><strong class="guilabel" data-cid="exstrlanguage">exstrlanguage</strong>—Languages
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2170" id="tmpid2170"></a><strong class="guilabel" data-cid="exstrlocale">exstrlocale</strong>—Locales
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2173" id="tmpid2173"></a><strong class="guilabel" data-cid="exstrmessagetype">exstrmessagetype</strong>—Message
+                                                                  types
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2176" id="tmpid2176"></a><strong class="guilabel" data-cid="exstrmessaging">exstrmessaging</strong>—Plain text
+                                                                  SMS messages
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2179" id="tmpid2179"></a><strong class="guilabel" data-cid="exstrmessagingauthor">exstrmessagingauthor</strong>—<span class="namestring" data-cid="Content_Author">Content Author</span> SMS
+                                                                  messages
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2183" id="tmpid2183"></a><strong class="guilabel" data-cid="exstrmetadata">exstrmetadata</strong>—Metadata
+                                                                  tags
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2186" id="tmpid2186"></a><strong class="guilabel" data-cid="exstrmigrationset">exstrmigrationset</strong>—Migration
+                                                                  sets
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2189" id="tmpid2189"></a><strong class="guilabel" data-cid="exstrnamedcolor">exstrnamedcolor</strong>—Colors
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2192" id="tmpid2192"></a><strong class="guilabel" data-cid="exstroutput">exstroutput</strong>—DAS outputs
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2195" id="tmpid2195"></a><strong class="guilabel" data-cid="exstroutputqueue">exstroutputqueue</strong>—DAS output
+                                                                  queues
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2198" id="tmpid2198"></a><strong class="guilabel" data-cid="exstrpackage">exstrpackage</strong>—<span class="namestring" data-cid="Design_Manager">Design Manager</span> application
+                                                                  package files and subpackage files.
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2202" id="tmpid2202"></a><strong class="guilabel" data-cid="exstrpage">exstrpage</strong>—<span class="namestring" data-cid="Designer">Designer</span> page
+                                                                  designs
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2206" id="tmpid2206"></a><strong class="guilabel" data-cid="exstrpapertype">exstrpapertype</strong>—Paper types
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2209" id="tmpid2209"></a><strong class="guilabel" data-cid="exstrparagraph">exstrparagraph</strong>—<span class="namestring" data-cid="Content_Author">Content Author</span> clauses
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2213" id="tmpid2213"></a><strong class="guilabel" data-cid="exstrparagraphsection">exstrparagraphsection</strong>—<span class="namestring" data-cid="Content_Author">Content Author</span> sections
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2217" id="tmpid2217"></a><strong class="guilabel" data-cid="exstrrule">exstrrule</strong>—Rules
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2220" id="tmpid2220"></a><strong class="guilabel" data-cid="exstrstyle">exstrstyle</strong>—Styles
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2223" id="tmpid2223"></a><strong class="guilabel" data-cid="exstrstylesheet">exstrstylesheet</strong>—Style sheets
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2226" id="tmpid2226"></a><strong class="guilabel" data-cid="exstrtextmessage">exstrtextmessage</strong>—<span class="namestring" data-cid="Content_Author">Content Author</span> text
+                                                                  messages
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2230" id="tmpid2230"></a><strong class="guilabel" data-cid="exstrvariablebase">exstrvariablebase</strong>—DAS variables
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2233" id="tmpid2233"></a><strong class="guilabel" data-cid="flowmodel">flowmodel</strong>—Flow models
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2236" id="tmpid2236"></a><strong class="guilabel" data-cid="flowscript">flowscript</strong>—Flow scripts
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2239" id="tmpid2239"></a><strong class="guilabel" data-cid="font">font</strong>—DAS font faces
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2242" id="tmpid2242"></a><strong class="guilabel" data-cid="fontdefinition">fontdefinition</strong>—Fonts
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2245" id="tmpid2245"></a><strong class="guilabel" data-cid="image">image</strong>—Images
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2248" id="tmpid2248"></a><strong class="guilabel" data-cid="orcsettings">orcsettings</strong>—Flow contexts
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2251" id="tmpid2251"></a><strong class="guilabel" data-cid="resourcepack">resourcepack</strong>—Design packs
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2254" id="tmpid2254"></a><strong class="guilabel" data-cid="samplefile">samplefile</strong>—Sample files
+                                                               </p>
+                                                            </li>
+                                                            <li class="listitem">
+                                                               <p><a name="tmpid2257" id="tmpid2257"></a><strong class="guilabel" data-cid="versionedtemplate">versionedtemplate</strong>—Templates
+                                                               </p>
+                                                            </li>
+                                                         </ul>
+                                                      </div>
+                                                   </li>
+                                                </ul>
+                                             </div>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid2260" id="tmpid2260"></a><strong class="guilabel" data-cid="domains">domains</strong></td>
+                                 <td style=""><p><a name="tmpid2262" id="tmpid2262"></a><a name="tmpid2263" id="tmpid2263"></a>Creates and configures the domains in the new tenant.
+                                       Specify the following parameters to create a domain and repeat them
+                                       for each subsequent domain that you want to create:
+                                    </p> 
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid2266" id="tmpid2266"></a><strong class="guilabel" data-cid="id">id</strong>—Enter the name of the
+                                                new domain.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid2269" id="tmpid2269"></a><strong class="guilabel" data-cid="production">production</strong>—Set to <strong class="command"><code>true</code></strong> if the domain will be used for production engine runs.
+                                                Otherwise, set to <strong class="command"><code>false</code></strong>.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid2274" id="tmpid2274"></a><strong class="guilabel" data-cid="roleMappings">roleMappings</strong>—Specify the
+                                                following parameters to assign a specific role to one or more <span class="namestring" data-cid="OTDS">OTDS</span> groups
+                                                and repeat them for each subsequent role that you want to assign to <span class="namestring" data-cid="OTDS">OTDS</span> groups:
+                                             </p>
+                                             <div class="itemizedlist">
+                                                <ul class="itemizedlist">
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid2280" id="tmpid2280"></a><strong class="guilabel" data-cid="role">role</strong>—Enter a role that
+                                                         exists in this tenant. You use the <a class="link" href="bootstrapconfigurationparameter.html#roles"><strong class="guilabel" data-cid="roles">roles</strong> parameter block</a> to create roles in the tenant.
+                                                      </p>
+                                                   </li>
+                                                   <li class="listitem">
+                                                      <p><a name="tmpid2285" id="tmpid2285"></a><strong class="guilabel" data-cid="groups">groups</strong>—Enter the existing <span class="namestring" data-cid="OTDS">OTDS</span> groups
+                                                         to which this role should be assigned, separating each group name
+                                                         with a comma. You use <a class="link" href="bootstrapconfigurationparameter.html#partitions">the <strong class="guilabel" data-cid="groups">groups</strong> parameter</a> in the <strong class="command"><code>partitions</code></strong> parameter block in the <span class="namestring" data-cid="OTDS">OTDS</span> tenant
+                                                         configuration to create new groups in <span class="namestring" data-cid="OTDS">OTDS</span></p>
+                                                   </li>
+                                                </ul>
+                                             </div>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div><br class="table-break"></dd>
+               <dt class="varlistentry"><a name="dl2vl-070" id="dl2vl-070"></a><span class="term"><a name="tmpid2294" id="tmpid2294"></a>bootstrap.config.tenants.&lt;tenant&gt;.orchestation</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid2296" id="tmpid2296"></a>In <strong class="command"><code>bootstrap.config.tenants.&lt;tenant&gt;.orchestration</code></strong>, you provide the information that is required to configure the tenant
+                     for the Orchestration service. These tenant configuration settings
+                     are provided in the following parameter block:
+                  </p>
+                  <div class="example"><p class="title"><a name="tmp4ref23" id="tmp4ref23"></a><b><span class="otLbl"><span class="otlbl-kw">Example</span> <span class="otlbl-num">2.9</span>: </span><span class="otlbl-ttl">Orchestration tenant
+                           configuration</span></b></p>
+                     <div class="example-contents"><pre class="screen noinltag">orchestration:
+	databaseInfo:
+		schema:
+		username:
+		password:</pre></div>
+                  </div><br class="example-break"><p><a name="tmpid2301" id="tmpid2301"></a>The following table describes the parameters in this parameter
+                     block.
+                  </p>
+                  <div class="table"><p class="title"><a name="tbl-65521" id="tbl-65521"></a><b><span class="otLbl"><span class="otlbl-kw">Table</span> <span class="otlbl-num">2.7</span>: </span><span class="otlbl-ttl">Parameter descriptions</span></b></p>
+                     <div class="table-contents">
+                        <table summary="Parameter descriptions" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                           <colgroup>
+                              <col class="col1">
+                              <col class="col2">
+                           </colgroup>
+                           <thead>
+                              <tr class="row">
+                                 <th style=""><a name="tmpid2309" id="tmpid2309"></a>Parameter
+                                 </th>
+                                 <th style=""><a name="tmpid2310" id="tmpid2310"></a>Description
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid2313" id="tmpid2313"></a><strong class="guilabel" data-cid="databaseInfo">databaseInfo</strong></td>
+                                 <td style=""><p><a name="tmpid2315" id="tmpid2315"></a><a name="tmpid2316" id="tmpid2316"></a>Provides the Orchestration tenant schema information
+                                       for the tenant. This parameter block is required only if you are using
+                                       manual schema management for your <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> databases. You must have
+                                       first <a class="link" href="settinguptenantschemas.html" title="2.2.1 &nbsp; Creating tenant schemas in the database">created the tenant schemas</a> in your database. If you are using automatic schema management,
+                                       the bootstrap process creates the tenant schemas for the new tenant.
+                                    </p> 
+                                    <p><a name="tmpid2320" id="tmpid2320"></a>Specify the schema information in the following parameters:&nbsp;
+                                    </p> 
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid2323" id="tmpid2323"></a><strong class="guilabel" data-cid="schema">schema</strong>—Enter the name of
+                                                the tenant schema.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid2326" id="tmpid2326"></a><strong class="guilabel" data-cid="username">username</strong>—Enter the user
+                                                name of the schema owner.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid2329" id="tmpid2329"></a><strong class="guilabel" data-cid="password">password</strong>—Enter the password
+                                                of the new user.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div><br class="table-break"></dd>
+               <dt class="varlistentry"><a name="dl2vl-072" id="dl2vl-072"></a><span class="term"><a name="tmpid2332" id="tmpid2332"></a>bootstrap.config.tenants.&lt;tenant&gt;.empower</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid2334" id="tmpid2334"></a>In <strong class="command"><code>bootstrap.config.tenants.&lt;tenant&gt;.empower</code></strong>, you provide the information that is required to configure the tenant
+                     for the <span class="namestring" data-cid="Interactive">Interactive</span> service.
+                  </p>
+                  <div class="note">
+                     <p class="title"><strong><a name="tmp4ref24" id="tmp4ref24"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                     </strong></p>
+                     <p><a name="tmpid2338" id="tmpid2338"></a>This section is required only if your <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> deployment includes <span class="namestring" data-cid="Interactive">Interactive</span>.
+                        Otherwise, remove this section or comment it out in your bootstrap
+                        configuration.
+                     </p>
+                  </div>
+                  <p><a name="tmpid2342" id="tmpid2342"></a>These tenant configuration settings are provided in the following
+                     parameter block:
+                  </p>
+                  <div class="example"><p class="title"><a name="tmp4ref25" id="tmp4ref25"></a><b><span class="otLbl"><span class="otlbl-kw">Example</span> <span class="otlbl-num">2.10</span>: </span><span class="otlbl-ttl">Interactive tenant
+                           configuration</span></b></p>
+                     <div class="example-contents"><pre class="screen noinltag">empower:
+	databaseInfo:
+		schema:
+		username:
+		password:</pre></div>
+                  </div><br class="example-break"><p><a name="tmpid2347" id="tmpid2347"></a>The following table describes the parameters in this parameter
+                     block.
+                  </p>
+                  <div class="table"><p class="title"><a name="tbl-23449" id="tbl-23449"></a><b><span class="otLbl"><span class="otlbl-kw">Table</span> <span class="otlbl-num">2.8</span>: </span><span class="otlbl-ttl">Parameter descriptions</span></b></p>
+                     <div class="table-contents">
+                        <table summary="Parameter descriptions" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                           <colgroup>
+                              <col class="col1">
+                              <col class="col2">
+                           </colgroup>
+                           <thead>
+                              <tr class="row">
+                                 <th style=""><a name="tmpid2355" id="tmpid2355"></a>Parameter
+                                 </th>
+                                 <th style=""><a name="tmpid2356" id="tmpid2356"></a>Description
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid2359" id="tmpid2359"></a><strong class="guilabel" data-cid="databaseInfo">databaseInfo</strong></td>
+                                 <td style=""><p><a name="tmpid2361" id="tmpid2361"></a><a name="tmpid2362" id="tmpid2362"></a>Provides the <span class="namestring" data-cid="Interactive">Interactive</span> tenant schema information for
+                                       the tenant. This parameter block is required only if you are using
+                                       manual schema management for your <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> databases. You must have
+                                       first <a class="link" href="settinguptenantschemas.html" title="2.2.1 &nbsp; Creating tenant schemas in the database">created the tenant schemas</a> in your database. If you are using automatic schema management,
+                                       the bootstrap process creates the tenant schemas for the new tenant.
+                                    </p> 
+                                    <p><a name="tmpid2367" id="tmpid2367"></a>Specify the schema information in the following parameters:&nbsp;
+                                    </p> 
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid2370" id="tmpid2370"></a><strong class="guilabel" data-cid="schema">schema</strong>—Enter the name of
+                                                the tenant schema.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid2373" id="tmpid2373"></a><strong class="guilabel" data-cid="username">username</strong>—Enter the user
+                                                name of the schema owner.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid2376" id="tmpid2376"></a><strong class="guilabel" data-cid="password">password</strong>—Enter the password
+                                                of the new user.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div><br class="table-break"></dd>
+               <dt class="varlistentry"><a name="vle2s1732631747-088" id="vle2s1732631747-088"></a><span class="term"><a name="tmpid2379" id="tmpid2379"></a>bootstrap.config.tenants.&lt;tenant&gt;.ei</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid2381" id="tmpid2381"></a>In <strong class="command"><code>bootstrap.config.tenants.&lt;tenant&gt;.ei</code></strong>, you provide the information that is required to configure the tenant
+                     for the <span class="namestring" data-cid="OpenText_Core_Journey">OpenText Core Journey</span> integration service.
+                  </p>
+                  <div class="note">
+                     <p class="title"><strong><a name="tmp4ref26" id="tmp4ref26"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                     </strong></p>
+                     <p><a name="tmpid2387" id="tmpid2387"></a>This section is required only if your <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> deployment includes <span class="namestring" data-cid="OpenText_Core_Journey">OpenText Core Journey</span> integration.
+                        Otherwise, remove this section or comment it out in your bootstrap
+                        configuration.
+                     </p>
+                  </div>
+                  <p><a name="tmpid2393" id="tmpid2393"></a>These tenant configuration settings are provided in the following
+                     parameter block:
+                  </p>
+                  <div class="example"><p class="title"><a name="tmp4ref27" id="tmp4ref27"></a><b><span class="otLbl"><span class="otlbl-kw">Example</span> <span class="otlbl-num">2.11</span>: </span><span class="otlbl-ttl">Journey integration
+                           tenant configuration</span></b></p>
+                     <div class="example-contents"><pre class="screen noinltag">ei:
+	databaseInfo:
+		schema:
+		username:
+		password:</pre></div>
+                  </div><br class="example-break"><p><a name="tmpid2397" id="tmpid2397"></a>The following table describes the parameters in this parameter
+                     block.
+                  </p>
+                  <div class="table"><p class="title"><a name="tbl-77108" id="tbl-77108"></a><b><span class="otLbl"><span class="otlbl-kw">Table</span> <span class="otlbl-num">2.9</span>: </span><span class="otlbl-ttl">Parameter descriptions</span></b></p>
+                     <div class="table-contents">
+                        <table summary="Parameter descriptions" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                           <colgroup>
+                              <col class="col1">
+                              <col class="col2">
+                           </colgroup>
+                           <thead>
+                              <tr class="row">
+                                 <th style=""><a name="tmpid2405" id="tmpid2405"></a>Parameter
+                                 </th>
+                                 <th style=""><a name="tmpid2406" id="tmpid2406"></a>Description
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid2409" id="tmpid2409"></a><strong class="guilabel" data-cid="databaseInfo">databaseInfo</strong></td>
+                                 <td style=""><p><a name="tmpid2411" id="tmpid2411"></a><a name="tmpid2412" id="tmpid2412"></a>Provides the <span class="namestring" data-cid="OpenText_Core_Journey">OpenText Core Journey</span> tenant schema information
+                                       for the tenant. This parameter block is required only if you are using
+                                       manual schema management for your <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> databases. You must have
+                                       first <a class="link" href="settinguptenantschemas.html" title="2.2.1 &nbsp; Creating tenant schemas in the database">created the tenant schemas</a> in your database. If you are using automatic schema management,
+                                       the bootstrap process creates the tenant schemas for the new tenant.
+                                    </p> 
+                                    <p><a name="tmpid2419" id="tmpid2419"></a>Specify the schema information in the following parameters:&nbsp;
+                                    </p> 
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid2422" id="tmpid2422"></a><strong class="guilabel" data-cid="schema">schema</strong>—Enter the name of
+                                                the tenant schema.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid2425" id="tmpid2425"></a><strong class="guilabel" data-cid="username">username</strong>—Enter the user
+                                                name of the schema owner.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid2428" id="tmpid2428"></a><strong class="guilabel" data-cid="password">password</strong>—Enter the password
+                                                of the new user.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div><br class="table-break"></dd>
+            </dl>
+         </div></div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.2.3.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Specifying bootstrap
+            configuration parameters</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.2.3 &nbsp; Creating&#xA;tenants with a bootstrap configuration" aria-label="Preceding page: 2.2.3 &nbsp; Creating&#xA;tenants with a bootstrap configuration" href="bootstrappingtenants.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.2.3 &nbsp; Creating&#xA;tenants with a bootstrap configuration" aria-label="Section one level up: 2.2.3 &nbsp; Creating&#xA;tenants with a bootstrap configuration" href="bootstrappingtenants.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.2.3.2 &nbsp; Running a Helm upgrade&#xA;with the bootstrap configuration" aria-label="Next page: 2.2.3.2 &nbsp; Running a Helm upgrade&#xA;with the bootstrap configuration" href="creatingtenantswithbootstrap.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

@@ -1,0 +1,705 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="2.3.2.5 ">2.3.2.5 Scheduling tasks for a domain</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="creatingandconfiguringdomains.html" title="2.3.2 &nbsp; Creating and configuring domains"> -->
+      <link rel="prev" href="dl2vl-110.html" title="2.3.2.4 &nbsp; Removing an OTDS group assignment from a domain">
+      <link rel="next" href="cron2.html" title="2.3.2.6 &nbsp; Supported cron expressions">
+   <link rel="stylesheet" type="text/css" href="../../../../../ccwc/v250100/ccwc-h-ugd/en/ofh/dynData/condstyles.css">
+
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wwhq-f-e10084f07-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":6,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d1ef60f","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61164,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741379824","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==Q8vUw0OQDjdtB77T61DLV2kqlDDPykhL4M1wnZsCeVDJIVxRyWoo6YT8vjVHSehqrLL7jM91G/zr2Xv5HL+euhcQOKUiG050Sd1d9OVksZWnXkvXfjXns/F0XsgpfDaDrvrUc7oyqPvtY5alc9YB7bQTt7zK4A9awQQCjzhyNWalzL3sz5vSUX2XDmeWm01SxRe6APMifQhJyWXpqSYbbVSHGZKGoSSYGsjvNPRcItbtQmBCZQdESgoPLit6Qq4A7rM2EjWTd7sfCkqIVNqeLBLZHMmtn21AKNF85bmLq2PF9srPLEbsbjtcSnIfgL6n7HGc/SCy1MBhIvuIyM51KMywB/xsCOG8I2tBU+yxj5aHv2pKkp5MJXKHIQCygpOpUFvpDeFytKLh51WoZE27eR/gH7XV1Uml9eLZfEXLaNI=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="schedulingtasks">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.3.2.5</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Scheduling
+            tasks for a domain</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.3.2.4 &nbsp; Removing an OTDS group assignment from a domain" aria-label="Preceding page: 2.3.2.4 &nbsp; Removing an OTDS group assignment from a domain" href="dl2vl-110.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.3.2 &nbsp; Creating and configuring&#xA;domains" aria-label="Section one level up: 2.3.2 &nbsp; Creating and configuring&#xA;domains" href="creatingandconfiguringdomains.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.3.2.6 &nbsp; Supported cron&#xA;expressions" aria-label="Next page: 2.3.2.6 &nbsp; Supported cron&#xA;expressions" href="cron2.html">Next</a></div>
+      </div>
+      <div class="sect3 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="schedulingtasks" id="schedulingtasks"></a><span class="otsLbl"><span class="otlbl-num">2.3.2.5</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Scheduling
+                     tasks for a domain</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <div class="procedure">
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid4096" id="tmpid4096"></a>In the <strong class="guilabel" data-cid="Domains">Domains</strong> panel in Tenant management view,
+                     select the domain for which you want to add a scheduled task.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid4099" id="tmpid4099"></a>In the <strong class="guilabel" data-cid="Scheduled_tasks">Scheduled tasks</strong> tab in the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, click the <strong class="guilabel" data-cid="Add_scheduled_task">Add scheduled task</strong> button <img src="./img/b_WebApps_AddListItem.png" class="igrph" alt="" width="30" height="30">.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid4105" id="tmpid4105"></a>In the <strong class="guilabel" data-cid="Scheduled_task">Scheduled task</strong> dialog box,
+                     specify a name for your task, then specify a <a class="link" href="cron2.html" title="2.3.2.6 &nbsp; Supported cron expressions">cron expression</a> and a type of action:
+                  </p>
+                  <div class="variablelist standard lvl1 lvlmax1">
+                     <dl class="variablelist standard">
+                        <dt class="varlistentry"><a name="dl2vl-114" id="dl2vl-114"></a><span class="term"><a name="tmpid4110" id="tmpid4110"></a>Expire sorting assets</span></dt>
+                        <dd class="varlistentry">
+                           <p><a name="tmpid4112" id="tmpid4112"></a>This task expires the sort data and sort index data sources
+                              from a pre-sort run and those stored in the sorting repository. This
+                              is used to prevent outdated sorting assets from being processed. Once
+                              expired, the assets are not processed anymore.
+                           </p>
+                           <p><a name="tmpid4113" id="tmpid4113"></a>When you select this action, the following additional options
+                              become available:
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid4116" id="tmpid4116"></a><strong class="guilabel" data-cid="Created">Created</strong>—Specify the creation
+                                       dates for the orchestration jobs that you want to process.
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid4120" id="tmpid4120"></a><strong class="guilabel" data-cid="More_than_..._days_before">More than ... days before</strong>—Specify
+                                                the number of days that an orchestration job was created before the
+                                                scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4123" id="tmpid4123"></a><strong class="guilabel" data-cid="More_than_..._hours_before">More than ... hours before</strong>—Specify the number of hours that an orchestration job was
+                                                created before the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4126" id="tmpid4126"></a><strong class="guilabel" data-cid="More_than_..._minutes_before">More than ... minutes
+                                                   before</strong>—Specify the number of minutes that an orchestration
+                                                job was created before the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4129" id="tmpid4129"></a><strong class="guilabel" data-cid="Fixed_dates">Fixed dates</strong>—Select a specific
+                                                range of dates during which an orchestration job was created. When
+                                                you select this option, you can use the calendar controls in the <strong class="guilabel" data-cid="From">From</strong> and <strong class="guilabel" data-cid="To">To</strong> fields to select specific
+                                                dates.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4134" id="tmpid4134"></a><strong class="guilabel" data-cid="Flow_model">Flow model</strong>—Specify the
+                                       ID of the flow model in the pre-sort run that produced the sorting
+                                       assets that should be expired.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4137" id="tmpid4137"></a><strong class="guilabel" data-cid="Communication">Communication</strong>—Specify the
+                                       ID of the communication in the pre-sort run that produced the sorting
+                                       assets that should be expired.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4140" id="tmpid4140"></a><strong class="guilabel" data-cid="Pre-sort_queue_name">Pre-sort queue name</strong>—Specify
+                                       the name of the pre-sort queue in the pre-sort run that produced the
+                                       sorting assets that should be expired.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </dd>
+                        <dt class="varlistentry"><a name="dl2vl-115" id="dl2vl-115"></a><span class="term"><a name="tmpid4143" id="tmpid4143"></a>Mark jobs for deletion</span></dt>
+                        <dd class="varlistentry">
+                           <p><a name="tmpid4145" id="tmpid4145"></a>When you select <strong class="guilabel" data-cid="Mark_jobs_for_deletion">Mark jobs for deletion</strong>,
+                              any qualifying jobs are tagged for removal but not removed from the
+                              database. When you select this action, the following additional options
+                              become available:
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid4149" id="tmpid4149"></a><strong class="guilabel" data-cid="Start">Start</strong>—The <strong class="guilabel" data-cid="Start">Start</strong> options let you specify the start dates for the orchestration jobs
+                                       that you want to process.
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid4154" id="tmpid4154"></a><strong class="guilabel" data-cid="More_than_..._days_before">More than ... days before</strong>—Specify
+                                                the number of days that an orchestration job started before the scheduled
+                                                task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4157" id="tmpid4157"></a><strong class="guilabel" data-cid="More_than_..._hours_before">More than ... hours before</strong>—Specify the number of hours that an orchestration job started
+                                                before the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4160" id="tmpid4160"></a><strong class="guilabel" data-cid="More_than_..._minutes_before">More than ... minutes
+                                                   before</strong>—Specify the number of minutes that an orchestration
+                                                job started before the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4163" id="tmpid4163"></a><strong class="guilabel" data-cid="Fixed_dates">Fixed dates</strong>—Select a specific
+                                                range of dates during which an orchestration job started. When you
+                                                select this option, you can use the calendar controls in the <strong class="guilabel" data-cid="From">From</strong> and <strong class="guilabel" data-cid="To">To</strong> fields to select specific
+                                                dates.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4168" id="tmpid4168"></a><strong class="guilabel" data-cid="Finish">Finish</strong>—The <strong class="guilabel" data-cid="Finish">Finish</strong> options let you specify the completion dates for the orchestration
+                                       jobs that you want to process.
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid4173" id="tmpid4173"></a><strong class="guilabel" data-cid="More_than_..._days_before">More than ... days before</strong>—Specify
+                                                the number of days that an orchestration job completed before the
+                                                scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4176" id="tmpid4176"></a><strong class="guilabel" data-cid="More_than_..._hours_before">More than ... hours before</strong>—Specify the number of hours that an orchestration job completed
+                                                before the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4179" id="tmpid4179"></a><strong class="guilabel" data-cid="More_than_..._minutes_before">More than ... minutes
+                                                   before</strong>—Specify the number of minutes that an orchestration
+                                                job completed before the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4182" id="tmpid4182"></a><strong class="guilabel" data-cid="Fixed_dates">Fixed dates</strong>—Select a specific
+                                                range of dates during which an orchestration job completed. When you
+                                                select this option, you can use the calendar controls in the <strong class="guilabel" data-cid="From">From</strong> and <strong class="guilabel" data-cid="To">To</strong> fields to select specific
+                                                dates.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4187" id="tmpid4187"></a><strong class="guilabel" data-cid="Mode">Mode</strong>—The <strong class="guilabel" data-cid="Mode">Mode</strong> options let you specify which types of orchestration jobs should
+                                       be processed whenever the scheduled task runs.
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid4192" id="tmpid4192"></a><strong class="guilabel" data-cid="Any">Any</strong>—Select this option
+                                                to process all jobs (batch and on-demand)&nbsp;that meet the criteria
+                                                for the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4195" id="tmpid4195"></a><strong class="guilabel" data-cid="Batch">Batch</strong>—Select this option
+                                                to process only batch jobs that meet the criteria for the scheduled
+                                                task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4198" id="tmpid4198"></a><strong class="guilabel" data-cid="On_demand">On demand</strong>—Select this option
+                                                to process only on-demand jobs that meet the criteria for the scheduled
+                                                task.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4201" id="tmpid4201"></a><strong class="guilabel" data-cid="Statuses">Statuses</strong>—You can use the <strong class="guilabel" data-cid="Statuses">Statuses</strong> options to specify whether to process jobs that
+                                       ran successfully or unsuccessfully as part of your scheduled task.
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid4206" id="tmpid4206"></a><strong class="guilabel" data-cid="Complete">Complete</strong>—Select this option
+                                                to process only orchestration jobs that completed successfully.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4209" id="tmpid4209"></a><strong class="guilabel" data-cid="Error">Error</strong>—Select this option
+                                                to process only orchestration jobs that encountered errors when they
+                                                ran.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4212" id="tmpid4212"></a><strong class="guilabel" data-cid="Canceled">Canceled</strong>—Select this option
+                                                to process only orchestration jobs that have been canceled.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                        </dd>
+                        <dt class="varlistentry"><a name="vle2s1732631747-035" id="vle2s1732631747-035"></a><span class="term"><a name="tmpid4215" id="tmpid4215"></a>Cancel non-finished jobs</span></dt>
+                        <dd class="varlistentry">
+                           <p><a name="tmpid4217" id="tmpid4217"></a>This task cancels jobs that are in a non-finished state. When
+                              you select this action, the following additional options become available:
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid4220" id="tmpid4220"></a><strong class="guilabel" data-cid="Start">Start</strong>—The <strong class="guilabel" data-cid="Start">Start</strong> options let you specify the start dates for the orchestration jobs
+                                       that you want to process.
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid4225" id="tmpid4225"></a><strong class="guilabel" data-cid="More_than_..._days_before">More than ... days before</strong>—Specify
+                                                the number of days that an orchestration job started before the scheduled
+                                                task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4228" id="tmpid4228"></a><strong class="guilabel" data-cid="More_than_..._hours_before">More than ... hours before</strong>—Specify the number of hours that an orchestration job started
+                                                before the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4231" id="tmpid4231"></a><strong class="guilabel" data-cid="More_than_..._minutes_before">More than ... minutes
+                                                   before</strong>—Specify the number of minutes that an orchestration
+                                                job started before the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4234" id="tmpid4234"></a><strong class="guilabel" data-cid="Fixed_dates">Fixed dates</strong>—Select a specific
+                                                range of dates during which an orchestration job started. When you
+                                                select this option, you can use the calendar controls in the <strong class="guilabel" data-cid="From">From</strong> and <strong class="guilabel" data-cid="To">To</strong> fields to select specific
+                                                dates.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4239" id="tmpid4239"></a><strong class="guilabel" data-cid="Mode">Mode</strong>—The <strong class="guilabel" data-cid="Mode">Mode</strong> options let you specify which types of orchestration jobs should
+                                       be processed whenever the scheduled task runs.
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid4244" id="tmpid4244"></a><strong class="guilabel" data-cid="Any">Any</strong>—Select this option
+                                                to process all jobs (batch and on-demand)&nbsp;that meet the criteria
+                                                for the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4247" id="tmpid4247"></a><strong class="guilabel" data-cid="Batch">Batch</strong>—Select this option
+                                                to process only batch jobs that meet the criteria for the scheduled
+                                                task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4250" id="tmpid4250"></a><strong class="guilabel" data-cid="On_demand">On demand</strong>—Select this option
+                                                to process only on-demand jobs that meet the criteria for the scheduled
+                                                task.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4253" id="tmpid4253"></a><strong class="guilabel" data-cid="Statuses">Statuses</strong>—You can use the <strong class="guilabel" data-cid="Statuses">Statuses</strong> options to specify whether to process jobs that
+                                       ran successfully or unsuccessfully as part of your scheduled task.
+                                       Both options will be processed if you select neither check box or
+                                       both check boxes.
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid4258" id="tmpid4258"></a><strong class="guilabel" data-cid="Started">Started</strong>—Select this option
+                                                to wipe only the assets that have been started but not yet finished.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4261" id="tmpid4261"></a><strong class="guilabel" data-cid="Waiting">Waiting</strong>—Select this option
+                                                to wipe only the assets that are in a waiting state.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4264" id="tmpid4264"></a><strong class="guilabel" data-cid="Holding">Holding</strong>—Select this option
+                                                to wipe only the assets that are in a holding state.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                        </dd>
+                        <dt class="varlistentry"><a name="dl2vl-116" id="dl2vl-116"></a><span class="term"><a name="tmpid4267" id="tmpid4267"></a>Service call</span></dt>
+                        <dd class="varlistentry">
+                           <p><a name="tmpid4269" id="tmpid4269"></a>Initiates an orchestration job run at a regularly scheduled
+                              interval. This is done by sending an HTTP request to a published HTTPS
+                              input channel. The HTTPS input channel must use the input selector
+                              processor as an after-event in order to process the body of the HTTP
+                              request properly. The body of the HTTP request contains the input
+                              channel used to retrieve the driver file for triggering the job and
+                              the relative path to the driver file. Optionally, the retrieved driver
+                              file can be cached for a specified number of days. The input selector
+                              processor uses this information to make the driver file available
+                              to the orchestration job.
+                           </p>
+                           <p><a name="tmpid4270" id="tmpid4270"></a>When you select this action, the following additional options
+                              become available:
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid4273" id="tmpid4273"></a><strong class="guilabel" data-cid="Service_name">Service name</strong>—Select the
+                                       HTTP connector to associate with the task.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4276" id="tmpid4276"></a><strong class="guilabel" data-cid="Input_channel">Input channel</strong>—Select the
+                                       input connector used to retrieve the file in the input path.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4279" id="tmpid4279"></a><strong class="guilabel" data-cid="Input_path">Input path</strong>—The path to
+                                       the file to retrieve; this is the relative path to what is defined
+                                       in the input channel.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4282" id="tmpid4282"></a><strong class="guilabel" data-cid="Caching">Caching</strong>—Specify the number
+                                       of days for the caching timeout.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="note">
+                              <p class="title"><strong><a name="tmp4ref60" id="tmp4ref60"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                              </strong></p>
+                              <p><a name="tmpid4285" id="tmpid4285"></a>The <strong class="guilabel" data-cid="Service_name">Service name</strong> and <strong class="guilabel" data-cid="Input_channel">Input channel</strong> lists are auto-populated with any published connectors in the flow
+                                 context. For information about publishing flows, see 
+                                 <data-xpi><data-xproc name="ExtXrefStart" href="ccwc250100-h-ugd.publishingflows" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                                    ><A class="otModuleHide if-ccwc-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../ccwc/v250100/ccwc-h-ugd/en/ofh/publishingflows.html"
+                                    ><span class="otsLbl"
+                                    ><span class="otlbl-num">section 9.2</span
+                                    ><span class="otlbl-sep"> </span></span
+                                    ><span class="otlbl-ttl">"Publishing orchestration flows"</span> in <i>OpenText Communications - Web Client User Help (CCWC250100-H-UGD)</i></A
+                                    ><SPAN class="otModuleShow if-ccwc-h-ugd-hide"
+                                    ><span class="otsLbl"
+                                    ><span class="otlbl-num">section 9.2</span
+                                    ><span class="otlbl-sep"> </span></span
+                                    ><span class="otlbl-ttl">"Publishing orchestration flows"</span> in <i>OpenText Communications - Web Client User Help (CCWC250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccwc250100-h-ugd.publishingflows" fmt=""></data-xproc></data-xpi>.
+                              </p>
+                           </div>
+                           <p><a name="tmpid4289" id="tmpid4289"></a>To complete setting up a service call, follow these steps:
+                           </p>
+                           <div class="procedure">
+                              <ol class="procedure" type="1">
+                                 <li class="step">
+                                    <p><a name="tmpid4292" id="tmpid4292"></a>Click <strong class="guilabel" data-cid="Next">Next</strong>.
+                                    </p>
+                                 </li>
+                                 <li class="step">
+                                    <p><a name="tmpid4295" id="tmpid4295"></a>If you want to add one or more key-value pairs to the
+                                       request header, click the <strong class="guilabel" data-cid="Request_headers">Request headers</strong> button <img src="./img/b_WebApps_AddListItem.png" class="igrph" alt="" width="30" height="30"> and fill out the following fields:
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid4300" id="tmpid4300"></a><strong class="guilabel" data-cid="Key">Key</strong>—Specify the key name
+                                                for the request header element. This is the name of the orchestration
+                                                system variable (created in <a class="link" href="index.html#bookbiblref" target="_blank"><span class="namestring" data-cid="Orchestrator">Orchestrator</span></a>).
+                                             </p>
+                                             <div class="note">
+                                                <p class="title"><strong><a name="tmp4ref61" id="tmp4ref61"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                                                </strong></p>
+                                                <p><a name="tmpid4305" id="tmpid4305"></a>Keys in the header request are case-insensitive and must be
+                                                   unique. An error is issued if the user attempts to specify a duplicate
+                                                   key.
+                                                </p>
+                                             </div>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4307" id="tmpid4307"></a><strong class="guilabel" data-cid="Value">Value</strong>—Specify the value
+                                                of the request header element. This is the value assigned to the orchestration
+                                                system variable (created in <a class="link" href="index.html#bookbiblref" target="_blank"><span class="namestring" data-cid="Orchestrator">Orchestrator</span></a>).
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <li class="step">
+                                    <p><a name="tmpid4312" id="tmpid4312"></a>Click <strong class="guilabel" data-cid="Add">Add</strong>.
+                                    </p>
+                                 </li>
+                                 <li class="step">
+                                    <p><a name="tmpid4315" id="tmpid4315"></a>Click <strong class="guilabel" data-cid="OK">OK</strong>.
+                                    </p>
+                                 </li>
+                              </ol>
+                           </div>
+                        </dd>
+                        <dt class="varlistentry"><a name="dl2vl-117" id="dl2vl-117"></a><span class="term"><a name="tmpid4318" id="tmpid4318"></a>Sorting &amp; bundling</span></dt>
+                        <dd class="varlistentry">
+                           <p><a name="tmpid4320" id="tmpid4320"></a>This task is used to initiate the post-sort run for the sorting
+                              and bundling element. That is, the orchestration service picks sorting
+                              assets from the repository that are part of the pre-sort run, merges
+                              files, and sorts the assets according to the settings of the sort
+                              element. A post-sort run then produces the final documents.
+                           </p>
+                           <p><a name="tmpid4321" id="tmpid4321"></a>When you select this action, the following additional options
+                              become available:
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid4324" id="tmpid4324"></a><strong class="guilabel" data-cid="Created">Created</strong>—Specify the creation
+                                       dates for the orchestration jobs that you want to process.
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid4328" id="tmpid4328"></a><strong class="guilabel" data-cid="More_than_..._days_before">More than ... days before</strong>—Specify
+                                                the number of days that an orchestration job was created before the
+                                                scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4331" id="tmpid4331"></a><strong class="guilabel" data-cid="More_than_..._hours_before">More than ... hours before</strong>—Specify the number of hours that an orchestration job was
+                                                created before the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4334" id="tmpid4334"></a><strong class="guilabel" data-cid="More_than_..._minutes_before">More than ... minutes
+                                                   before</strong>—Specify the number of minutes that an orchestration
+                                                job was created before the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4337" id="tmpid4337"></a><strong class="guilabel" data-cid="Fixed_dates">Fixed dates</strong>—Select a specific
+                                                range of dates during which an orchestration job was created. When
+                                                you select this option, you can use the calendar controls in the <strong class="guilabel" data-cid="From">From</strong> and <strong class="guilabel" data-cid="To">To</strong> fields to select specific
+                                                dates.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4342" id="tmpid4342"></a><strong class="guilabel" data-cid="Dry_run">Dry run</strong>—A dry run is typically
+                                       used to test settings. If enabled, the processing state of sorting
+                                       assets is not affected after the dry run, and thus the assets can
+                                       still be picked up for additional post-sort runs.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4345" id="tmpid4345"></a><strong class="guilabel" data-cid="Consolidate_multiple_applications">Consolidate multiple applications</strong>—This setting configures if batch aggregation or application
+                                       consolidation is used during the post-sort run. If enabled, multiple
+                                       communications can be selected and are consolidated in the post-sort
+                                       run.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4348" id="tmpid4348"></a><strong class="guilabel" data-cid="Flow_model">Flow model</strong>—Specify the
+                                       ID of the flow model that produced the sorting assets in the pre-sort
+                                       run.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4351" id="tmpid4351"></a><strong class="guilabel" data-cid="Communication">Communication</strong>—Specify the
+                                       ID of the communication that produced the sorting assets in the pre-sort
+                                       run. If <strong class="guilabel" data-cid="Consolidate_multiple_applications">Consolidate multiple applications</strong> is
+                                       checked, you can select multiple communications.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4355" id="tmpid4355"></a><strong class="guilabel" data-cid="Pre-sort_queue_name">Pre-sort queue name</strong>—Specify
+                                       the name of the pre-sort queue that produced the sorting assets in
+                                       the pre-sort run. This can be used to pick up pre-sort assets for
+                                       a certain desired output format.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4358" id="tmpid4358"></a><strong class="guilabel" data-cid="Post-sort_queue_name">Post-sort queue name</strong>—Specify
+                                       the post-sort queue name to use in the post-sort run. If you don't
+                                       specify a post-sort queue name, then all post-sort queues will be
+                                       included in the run.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </dd>
+                        <dt class="varlistentry"><a name="dl2vl-118" id="dl2vl-118"></a><span class="term"><a name="tmpid4361" id="tmpid4361"></a>Update expiration time</span></dt>
+                        <dd class="varlistentry">
+                           <p><a name="tmpid4363" id="tmpid4363"></a>When run, the <strong class="guilabel" data-cid="Update_expiration_time">Update expiration time</strong> task
+                              adjusts the earliest expiration time within all the waiting jobs by
+                              propagating upwards from flow steps, through flow instances, to the
+                              job. The expiration time can be seen by enabling the <strong class="guilabel" data-cid="Expiration_date">Expiration
+                                 date</strong> column in the Monitor view. This option runs according
+                              to the cron expression that you specify and does not have additional
+                              settings associated with it.
+                           </p>
+                        </dd>
+                        <dt class="varlistentry"><a name="dl2vl-119" id="dl2vl-119"></a><span class="term"><a name="tmpid4367" id="tmpid4367"></a>Wipe jobs</span></dt>
+                        <dd class="varlistentry">
+                           <p><a name="tmpid4369" id="tmpid4369"></a>This action removes from the database any qualifying jobs that
+                              have previously been marked for deletion. Additionally, wiping a job
+                              deletes any files and folders from NFS that are associated with the
+                              job. This option runs according to the cron expression that you specify
+                              and does not have additional settings associated with it.
+                           </p>
+                        </dd>
+                        <dt class="varlistentry"><a name="dl2vl-120" id="dl2vl-120"></a><span class="term"><a name="tmpid4371" id="tmpid4371"></a>Wipe sorting assets</span></dt>
+                        <dd class="varlistentry">
+                           <p><a name="tmpid4373" id="tmpid4373"></a>This action removes any sorting assets from the database that
+                              have previously been marked for deletion.
+                           </p>
+                           <p><a name="tmpid4374" id="tmpid4374"></a>When you select this action, the following additional options
+                              become available:
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid4377" id="tmpid4377"></a><strong class="guilabel" data-cid="Created">Created</strong>—Specify the creation
+                                       dates for the orchestration jobs that you want to process.
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid4381" id="tmpid4381"></a><strong class="guilabel" data-cid="More_than_..._days_before">More than ... days before</strong>—Specify
+                                                the number of days that an orchestration job was created before the
+                                                scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4384" id="tmpid4384"></a><strong class="guilabel" data-cid="More_than_..._hours_before">More than ... hours before</strong>—Specify the number of hours that an orchestration job was
+                                                created before the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4387" id="tmpid4387"></a><strong class="guilabel" data-cid="More_than_..._minutes_before">More than ... minutes
+                                                   before</strong>—Specify the number of minutes that an orchestration
+                                                job was created before the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4390" id="tmpid4390"></a><strong class="guilabel" data-cid="Fixed_dates">Fixed dates</strong>—Select a specific
+                                                range of dates during which an orchestration job was created. When
+                                                you select this option, you can use the calendar controls in the <strong class="guilabel" data-cid="From">From</strong> and <strong class="guilabel" data-cid="To">To</strong> fields to select specific
+                                                dates.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4395" id="tmpid4395"></a><strong class="guilabel" data-cid="Statuses">Statuses</strong>—You can use the <strong class="guilabel" data-cid="Statuses">Statuses</strong> options to specify whether to process jobs that
+                                       ran successfully or unsuccessfully as part of your scheduled task.
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid4400" id="tmpid4400"></a><strong class="guilabel" data-cid="Processed">Processed</strong>—Select this option
+                                                to wipe only the assets that have been processed.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4403" id="tmpid4403"></a><strong class="guilabel" data-cid="Waiting">Waiting</strong>—Select this option
+                                                to wipe only the assets that are in a waiting state.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4406" id="tmpid4406"></a><strong class="guilabel" data-cid="Expired">Expired</strong>—Select this option
+                                                to wipe only the assets that are expired.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid4409" id="tmpid4409"></a><strong class="guilabel" data-cid="Canceled">Canceled</strong>—Select this option
+                                                to wipe only the assets that have been canceled.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4412" id="tmpid4412"></a><strong class="guilabel" data-cid="Flow_model">Flow model</strong>—Specifies the
+                                       ID of the flow model in the pre-sort run that produced the sorting
+                                       assets that should be wiped.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4415" id="tmpid4415"></a><strong class="guilabel" data-cid="Communication">Communication</strong>—Specify the
+                                       ID of the communication in the pre-sort run that produced the sorting
+                                       assets that should be wiped.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid4418" id="tmpid4418"></a><strong class="guilabel" data-cid="Pre-sort_queue_name">Pre-sort queue name</strong>—Specify
+                                       the name of the pre-sort queue in the pre-sort run that produced the
+                                       sorting assets that should be wiped.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </dd>
+                     </dl>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid4421" id="tmpid4421"></a>Click <strong class="guilabel" data-cid="OK">OK</strong>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid4424" id="tmpid4424"></a>Click <strong class="guilabel" data-cid="Save">Save</strong>.
+                  </p>
+               </li>
+            </ol>
+         </div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.3.2.5</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Scheduling
+            tasks for a domain</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.3.2.4 &nbsp; Removing an OTDS group assignment from a domain" aria-label="Preceding page: 2.3.2.4 &nbsp; Removing an OTDS group assignment from a domain" href="dl2vl-110.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.3.2 &nbsp; Creating and configuring&#xA;domains" aria-label="Section one level up: 2.3.2 &nbsp; Creating and configuring&#xA;domains" href="creatingandconfiguringdomains.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.3.2.6 &nbsp; Supported cron&#xA;expressions" aria-label="Next page: 2.3.2.6 &nbsp; Supported cron&#xA;expressions" href="cron2.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

@@ -1,0 +1,285 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="2.3.1.2 ">2.3.1.2 Configuring permissions for a role</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="managinguserpermissions.html" title="2.3.1 &nbsp; Configuring roles and permissions"> -->
+      <link rel="prev" href="creating.html" title="2.3.1.1 &nbsp; Creating a new role in a tenant">
+      <link rel="next" href="vle2s1732631747-033.html" title="2.3.1.3 &nbsp; Duplicating a role">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wwah-f-abf7d27d6-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d07f56a","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61037,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741379591","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==nj33XezJRdiRzmHf+3ySXMpCjg8BnA1xDOeQnnEvvBtZUBtUHcvtjWT7X4SevyNDbRmRAinU+UDQLY+ToRHKPc9mIf5etrlJFX39RXxS2iISRi4suHSvZq4ipf+kVCSyVOURpS+Uc4aWYt9KA+J0dFWglLoDY+egrpiGlsPGk8qcvHsz34ugDXTooTk1EYYef7hYj9kNbryALbn/AirOIlx7XIXvnX3QphLkuEKdDnydrB61t/tvyAoNFLL3YsMRDPnjaFGTe17HuZGSddnmjg31DapwMkvn0dolQvcLxj2rQeTh2ou2sTDsCMFiUKXpbom0CZxQMK3r99QD6lowZF8JVpMh9vvwgXTlq4PV7BttD4m/NCA4UL1/6uKLBLG4HE0a5WsbfAUasjloaAm8CEBDMqJgWBQn07WuqAoPDzo=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="configur">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.3.1.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Configuring permissions
+            for a role</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.3.1.1 &nbsp; Creating a new role in&#xA;a tenant" aria-label="Preceding page: 2.3.1.1 &nbsp; Creating a new role in&#xA;a tenant" href="creating.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.3.1 &nbsp; Configuring roles and&#xA;permissions" aria-label="Section one level up: 2.3.1 &nbsp; Configuring roles and&#xA;permissions" href="managinguserpermissions.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.3.1.3 &nbsp; Duplicating&#xA;a role" aria-label="Next page: 2.3.1.3 &nbsp; Duplicating&#xA;a role" href="vle2s1732631747-033.html">Next</a></div>
+      </div>
+      <div class="sect3 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="configur" id="configur"></a><span class="otsLbl"><span class="otlbl-num">2.3.1.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Configuring permissions
+                     for a role</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <div class="procedure">
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid3695" id="tmpid3695"></a>In the <strong class="guilabel" data-cid="Roles">Roles</strong> panel in Tenant management view,
+                     select the role.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid3698" id="tmpid3698"></a>In the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, click the <strong class="guilabel" data-cid="Permissions">Permissions</strong> tab.
+                  </p>
+                  <div class="orderedlist">
+                     <ol class="orderedlist" type="a">
+                        <li class="listitem">
+                           <p><a name="tmpid3703" id="tmpid3703"></a>In the <strong class="guilabel" data-cid="Web_client_access">Web client access</strong> area,
+                              select the permission check boxes for each item in the <strong class="guilabel" data-cid="Type">Type</strong> list as needed. Note that if you want to provide <strong class="guilabel" data-cid="Creator">Creator</strong> or <strong class="guilabel" data-cid="Approver">Approver</strong> permissions to a user, you must
+                              also provide <strong class="guilabel" data-cid="Access">Access</strong> permission to them.
+                           </p>
+                           <p><a name="tmpid3709" id="tmpid3709"></a>The following table describes the permissions that are granted
+                              in the web client for each permission type<span class="phrase">, and whether a Named User Seat is required. If a Named User Seat
+                                 is required, you must allocate either a <span class="namestring" data-cid="Designer">Designer</span> or&nbsp;<span class="namestring" data-cid="Content_Author">Content Author</span> <a class="link" href="allocateusersgroupspartitions.html" title="2.2.5.4 &nbsp; Step 4: Allocate users, groups, or partitions to the product key in OTDS">counter</a>&nbsp;to the
+                                 user in the <span class="namestring" data-cid="OTDS">OTDS</span> tenant</span>.
+                           </p>
+                           <div class="note">
+                              <p class="title"><strong><a name="tmp4ref57" id="tmp4ref57"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                              </strong></p>
+                              <p><a name="tmpid3716" id="tmpid3716"></a>When you assign the <strong class="guilabel" data-cid="Creator">Creator</strong> permission
+                                 for some of the asset library types, the <strong class="guilabel" data-cid="Approver">Approver</strong> permission for auto-approved resources in that library type is automatically
+                                 assigned.
+                              </p>
+                              <div class="itemizedlist">
+                                 <ul class="itemizedlist">
+                                    <li class="listitem">
+                                       <p><a name="tmpid3721" id="tmpid3721"></a>When you assign the <strong class="guilabel" data-cid="Creator">Creator</strong> permission
+                                          for some of the asset library types, the <strong class="guilabel" data-cid="Approver">Approver</strong> permission for auto-approved resources in that library type is automatically
+                                          assigned.
+                                       </p>
+                                    </li>
+                                    <li class="listitem">
+                                       <p><a name="tmpid3725" id="tmpid3725"></a>When you select a check box, permissions for the corresponding
+                                          resources are automatically selected in the <a class="link" href="configur.html#permissionresourceaccess"><strong class="guilabel" data-cid="Resource_access">Resource access</strong></a> area. A partial selection icon <img src="./img/b_WebApps_Checkbox_PartialSelect.png" class="igrph" alt="" width="18" height="18"> indicates that some of the corresponding resources in the list
+                                          are checked, but not all of them.
+                                       </p>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <p><a name="tmpid3729" id="tmpid3729"></a>The following table describes the default permissions that are
+                              assigned to a role. Default permissions can be modified by an administrator&nbsp;to
+                              add or remove access to features for a user role.
+                           </p>
+                           <div class="informaltable">
+                              <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                                 <colgroup>
+                                    <col style="width: 1.30in;" class="col1-RoleType">
+                                    <col style="width: 1.30in;" class="col3-RoleAccess">
+                                    <col style="width: 1.30in;" class="col4-RoleCreator">
+                                    <col style="width: 1.30in;" class="col5-RoleApprover">
+                                 </colgroup>
+                                 <thead>
+                                    <tr class="row">
+                                       <th style=""><a name="tmpid3738" id="tmpid3738"></a>Type
+                                       </th>
+                                       <th style=""><a name="tmpid3739" id="tmpid3739"></a>Access
+                                       </th>
+                                       <th style=""><a name="tmpid3740" id="tmpid3740"></a>Creator
+                                       </th>
+                                       <th style=""><a name="tmpid3741" id="tmpid3741"></a>Approver
+                                       </th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr class="row">
+                                       <td style=""><a name="tmpid3744" id="tmpid3744"></a><strong class="guilabel" data-cid="Designer_"><span class="namestring">Designer</span></strong></td>
+                                       <td style=""><a name="tmpid3747" id="tmpid3747"></a>Enables the <span class="namestring" data-cid="Designer">Designer</span> launcher panel in Communication launcher view and
+                                          the <strong class="guilabel" data-cid="Design">Design</strong> tab in the Design asset library view, and
+                                          allows users to open communications in <span class="namestring" data-cid="Designer">Designer</span> 
+                                       </td>
+                                       <td style=""><a name="tmpid3751" id="tmpid3751"></a>Allows users to create, update, and delete <span class="namestring" data-cid="Designer">Designer</span> resources
+                                       </td>
+                                       <td style=""><a name="tmpid3753" id="tmpid3753"></a>Allows users to approve <span class="namestring" data-cid="Designer">Designer</span> resources
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><a name="tmpid3756" id="tmpid3756"></a><strong class="guilabel" data-cid="Content_Author"><span class="namestring">Content Author</span></strong></td>
+                                       <td style=""><a name="tmpid3759" id="tmpid3759"></a>Enables the <span class="namestring" data-cid="Content_Author">Content Author</span> launcher panel in Communication launcher view and
+                                          the <strong class="guilabel" data-cid="Author">Author</strong> tab in the Design asset library view, and
+                                          allows users to open communications in <span class="namestring" data-cid="Content_Author">Content Author</span></td>
+                                       <td style=""><a name="tmpid3763" id="tmpid3763"></a>Allows users to create, update, and delete <span class="namestring" data-cid="Content_Author">Content Author</span> resources
+                                       </td>
+                                       <td style=""><a name="tmpid3765" id="tmpid3765"></a>Allows users to approve <span class="namestring" data-cid="Content_Author">Content Author</span> resources
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><a name="tmpid3768" id="tmpid3768"></a><strong class="guilabel" data-cid="Communication_asset_library">Communication asset library</strong></td>
+                                       <td style=""><a name="tmpid3770" id="tmpid3770"></a>Allows users to access Communication asset library view and Mapping view
+                                       </td>
+                                       <td style=""><a name="tmpid3771" id="tmpid3771"></a>Allows users to create, update, and delete resources in Communication asset library view and
+                                          to map data sources in Mapping view
+                                       </td>
+                                       <td style=""><a name="tmpid3772" id="tmpid3772"></a>Allows users to approve resources in Communication asset library view and Mapping view
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><a name="tmpid3774" id="tmpid3774"></a><strong class="guilabel" data-cid="Design_asset_library">Design asset library</strong></td>
+                                       <td style=""><a name="tmpid3776" id="tmpid3776"></a>Allows users to access Design asset library view
+                                       </td>
+                                       <td style=""><a name="tmpid3777" id="tmpid3777"></a>Allows users to create, update, and delete resources on the <strong class="guilabel" data-cid="Common">Common</strong> tab in Design asset library view
+                                       </td>
+                                       <td style=""><a name="tmpid3779" id="tmpid3779"></a>Allows users to approve resources on the <strong class="guilabel" data-cid="Common">Common</strong> tab in Design asset library view
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><a name="tmpid3782" id="tmpid3782"></a><strong class="guilabel" data-cid="Orchestration_asset_library">Orchestration asset library</strong></td>
+                                       <td style=""><a name="tmpid3784" id="tmpid3784"></a>Allows users to access Orchestration asset library view
+                                       </td>
+                                       <td style=""><a name="tmpid3785" id="tmpid3785"></a>Allows users to create, update, and delete resources in Orchestration asset library view
+                                       </td>
+                                       <td style=""><a name="tmpid3786" id="tmpid3786"></a>Allows users to approve resources in Orchestration asset library view
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><a name="tmpid3788" id="tmpid3788"></a><strong class="guilabel" data-cid="Rationalization_asset_library">Rationalization asset library</strong> <sup>1</sup></td>
+                                       <td style=""><a name="tmpid3791" id="tmpid3791"></a>Allows <span class="namestring" data-cid="Designer">Designer</span> or&nbsp;<span class="namestring" data-cid="Content_Author">Content Author</span> users to access Rationalization asset library view
+                                       </td>
+                                       <td style=""><a name="tmpid3794" id="tmpid3794"></a>Allows a <span class="namestring" data-cid="Designer">Designer</span> or&nbsp;<span class="namestring" data-cid="Content_Author">Content Author</span> user to create, update,
+                                          and delete resources in Rationalization asset library view.
+                                       </td>
+                                       <td style=""><a name="tmpid3797" id="tmpid3797"></a>Allows a <span class="namestring" data-cid="Designer">Designer</span> or&nbsp;<span class="namestring" data-cid="Content_Author">Content Author</span> user to approve resources
+                                          in Rationalization asset library view.
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><a name="tmpid3801" id="tmpid3801"></a><strong class="guilabel" data-cid="Monitor">Monitor</strong></td>
+                                       <td style=""><a name="tmpid3803" id="tmpid3803"></a>Allows users to access Monitor view
+                                       </td>
+                                       <td style=""><a name="tmpid3804" id="tmpid3804"></a>Not available
+                                       </td>
+                                       <td style=""><a name="tmpid3805" id="tmpid3805"></a>Not available
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><a name="tmpid3807" id="tmpid3807"></a><strong class="guilabel" data-cid="monitorjobfiles"><a name="monitorjobfiles" id="monitorjobfiles"></a>Monitor job files</strong></td>
+                                       <td style=""><a name="tmpid3809" id="tmpid3809"></a>Allows users to access orchestration job input and output files
+                                          <div class="note">
+                                             <p class="title"><strong><a name="tmp4ref58" id="tmp4ref58"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                                             </strong></p>
+                                             <p><a name="tmpid3811" id="tmpid3811"></a>This option protects sensitive data—such as Personal Identifiable
+                                                Information&nbsp;(PII)—by only allowing specific roles access
+                                                to engine input files, delivery reports, and output files.
+                                             </p>
+                                          </div>
+                                       </td>
+                                       <td style=""><a name="tmpid3812" id="tmpid3812"></a>Not available
+                                       </td>
+                                       <td style=""><a name="tmpid3813" id="tmpid3813"></a>Not available
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><a name="tmpid3815" id="tmpid3815"></a><strong class="guilabel" data-cid="Categories">Categories</strong></td>
+                                       <td style=""><a name="tmpid3817" id="tmpid3817"></a>Allows users to create new category tags outside of Tenant management view
+                                       </td>
+                                       <td style=""><a name="tmpid3818" id="tmpid3818"></a>Not available
+                                       </td>
+                                       <td style=""><a name="tmpid3819" id="tmpid3819"></a>Not available
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><a name="tmpid3821" id="tmpid3821"></a><strong class="guilabel" data-cid="Dashboard">Dashboard</strong></td>
+                                       <td style=""><a name="tmpid3823" id="tmpid3823"></a>Allows users to access Dashboards view
+                                       </td>
+                                       <td style=""><a name="tmpid3824" id="tmpid3824"></a>Not available
+                                       </td>
+                                       <td style=""><a name="tmpid3825" id="tmpid3825"></a>Not available
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style="" colspan="4"><p><a name="tmpid3827" id="tmpid3827"></a><a name="tmpid3828" id="tmpid3828"></a><sup>1</sup> Rationalization must be enabled in your
+                                             product key. In order to create migration sets and work with content
+                                             fragments, you must have a Named User Seat for <span class="namestring" data-cid="Designer">Designer</span> or&nbsp;<span class="namestring" data-cid="Content_Author">Content Author</span>.
+                                          </p>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </li>
+                     </ol>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="permissionresourceaccess" id="permissionresourceaccess"></a><span class="boxed-text optional">Optional</span> To
+                     set specific resource permissions, expand the <strong class="guilabel" data-cid="Advanced">Advanced</strong> section in the <strong class="guilabel" data-cid="Resource_access">Resource access</strong> area, then select <strong class="guilabel" data-cid="Create">Create</strong>, <strong class="guilabel" data-cid="Write">Write</strong>, <strong class="guilabel" data-cid="Delete">Delete</strong>, and <strong class="guilabel" data-cid="Approve">Approve</strong> permissions for individual resource
+                     types as needed.
+                  </p>
+                  <div class="tip">
+                     <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Tip</span></span></strong></p>
+                     <p><a name="tmpid3841" id="tmpid3841"></a>To apply a selected permission option to all resources in the
+                        DAS&nbsp;asset library, select the <strong class="guilabel" data-cid="All">All</strong> check
+                        box in the <strong class="guilabel" data-cid="Resource_type">Resource type</strong> list.
+                     </p>
+                     <p><a name="tmpid3844" id="tmpid3844"></a>Keep in mind that you do not need to explicitly set permissions
+                        to read resources in a domain. A user that is assigned a role that
+                        has any permission in a domain, for example, <strong class="guilabel" data-cid="Access">Access</strong> permission for <strong class="guilabel" data-cid="Design_asset_library">Design asset library</strong>—or
+                        even no permission at all—will also have read access to all
+                        resources in that domain.
+                     </p>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid3848" id="tmpid3848"></a>Click <strong class="guilabel" data-cid="Save">Save</strong>.
+                  </p>
+               </li>
+            </ol>
+         </div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.3.1.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Configuring permissions
+            for a role</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.3.1.1 &nbsp; Creating a new role in&#xA;a tenant" aria-label="Preceding page: 2.3.1.1 &nbsp; Creating a new role in&#xA;a tenant" href="creating.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.3.1 &nbsp; Configuring roles and&#xA;permissions" aria-label="Section one level up: 2.3.1 &nbsp; Configuring roles and&#xA;permissions" href="managinguserpermissions.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.3.1.3 &nbsp; Duplicating&#xA;a role" aria-label="Next page: 2.3.1.3 &nbsp; Duplicating&#xA;a role" href="vle2s1732631747-033.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

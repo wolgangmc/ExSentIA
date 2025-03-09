@@ -1,0 +1,234 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="2.5.3.2 ">2.5.3.2 Event JSON file</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="enablingcxi.html" title="2.5.3 &nbsp; Enabling OpenText Core Journey integration"> -->
+      <link rel="prev" href="configuringeiingration.html" title="2.5.3.1 &nbsp; Configuring OpenText Core Journey integration">
+      <link rel="next" href="sample.html" title="2.5.3.2.1 &nbsp; Sample email event">
+   <link rel="stylesheet" type="text/css" href="../../../../../ccdpdi/v250100/ccdpdi-h-ugd/en/ofh/dynData/condstyles.css">
+
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbrbt4wwnc-f-c638fb372-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":6,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d30e6b4","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61293,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741380002","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==EX8NsjOPGq9AoGNEsfa4BosdUYU6z2N+2eDEyv3w02b8JQwvnmVLCnKxN6tIdXnjMVxdyuu9Q3ibimwZTwbu97kY9yhpR7zhtU+bOJaGpDXAPwhB+oTV84s0mRjxHmRlef/7eAmoWzTTAPl6aZ7rIbsYEQ3C+GXUpcv8U9UWKjd4x+CRsywXnHKpjgpMTsWWGJU5eafczzSjmIPXMO6bDmSQKMi5rp913WkHF7yHdXCiZrOE31/SE2iLWqwzEiI0H2lepeNZ4BCF7kwZM+h+d4YIY6o9/whjaQkfXaHEzgZqPlreEftdZgrvmTVCAeM+EiHUsRqSBBESTMbKbNTaiG9rVJQxxGLfAOYKFT4Fe2aY/e39nV8O2Nt3lMWaN+HCX/wbPtAWnGXWYnv8tcdHCboTYbfL1KeVj327VBzKOM0=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="eventjson">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.5.3.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Event JSON file</span></div>
+         <div class="pgPrev"><a title="Preceding page: 2.5.3.1 &nbsp; Configuring OpenText Core Journey integration" aria-label="Preceding page: 2.5.3.1 &nbsp; Configuring OpenText Core Journey integration" href="configuringeiingration.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.5.3 &nbsp; Enabling OpenText Core Journey integration" aria-label="Section one level up: 2.5.3 &nbsp; Enabling OpenText Core Journey integration" href="enablingcxi.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.5.3.2.1 &nbsp; Sample email event" aria-label="Next page: 2.5.3.2.1 &nbsp; Sample email event" href="sample.html">Next</a></div>
+      </div>
+      <div class="sect3 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="eventjson" id="eventjson"></a><span class="otsLbl"><span class="otlbl-num">2.5.3.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Event JSON file</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid7822" id="tmpid7822"></a>When the Orchestration service executes a flow model that contains
+            tracking-enabled communications or output channels, event data from <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> is
+            sent to <span class="namestring" data-cid="OpenText_Core_Journey">OpenText Core Journey</span>.&nbsp;This event information is sent
+            through a JSON file, with the following attributes:
+         </p>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid7830" id="tmpid7830"></a>The <strong class="command"><code>schemaType</code></strong> parameter is set
+                     dynamically depending on the event type. The following table lists
+                     the supported event types. The examples that follow provide the sample
+                     JSON&nbsp;for an <a class="link" href="sample.html" title="2.5.3.2.1 &nbsp; Sample email event">email event</a> and a <a class="link" href="sample2.html" title="2.5.3.2.2 &nbsp; Sample file channel event">file channel event</a>.
+                  </p>
+                  <div class="informaltable">
+                     <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                        <colgroup>
+                           <col class="col1">
+                           <col class="col2">
+                           <col class="col3">
+                        </colgroup>
+                        <thead>
+                           <tr class="row">
+                              <th style=""><a name="tmpid7841" id="tmpid7841"></a>Event type
+                              </th>
+                              <th style=""><a name="tmpid7842" id="tmpid7842"></a>Schema type
+                              </th>
+                              <th style=""><a name="tmpid7843" id="tmpid7843"></a>Event description
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid7846" id="tmpid7846"></a><a name="tmpid7847" id="tmpid7847"></a><span class="namestring" data-cid="Document_Generation">Document Generation</span> event
+                                 </p>
+                              </td>
+                              <td style=""><p><a name="tmpid7849" id="tmpid7849"></a><a name="tmpid7850" id="tmpid7850"></a><strong class="guilabel" data-cid="OpenText_Communications-Generated"><span class="namestring">OpenText</span> <span class="namestring">Communications</span>-Generated</strong></p>
+                              </td>
+                              <td style=""><p><a name="tmpid7854" id="tmpid7854"></a><a name="tmpid7855" id="tmpid7855"></a>Document generated.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" rowspan="2"><p><a name="tmpid7857" id="tmpid7857"></a><a name="tmpid7858" id="tmpid7858"></a>Delivery events
+                                 </p>
+                              </td>
+                              <td style=""><p><a name="tmpid7859" id="tmpid7859"></a><a name="tmpid7860" id="tmpid7860"></a><strong class="guilabel" data-cid="OpenText_Communications-Email-Submit"><span class="namestring">OpenText</span> <span class="namestring">Communications</span>-Email-Submit</strong></p>
+                              </td>
+                              <td style=""><p><a name="tmpid7864" id="tmpid7864"></a><a name="tmpid7865" id="tmpid7865"></a>Email delivered through a Notifications email channel.
+                                 </p>
+                                 <p><a name="tmpid7866" id="tmpid7866"></a>The email is submitted to the <span class="namestring" data-cid="OpenText">OpenText</span> Notifications Service
+                                    for processing.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid7869" id="tmpid7869"></a><a name="tmpid7870" id="tmpid7870"></a><strong class="guilabel" data-cid="OpenText_Communications-<channelname&gt;"><span class="namestring">OpenText</span> <span class="namestring">Communications</span>-&lt;channelName&gt;</strong></p>
+                              </td>
+                              <td style=""><p><a name="tmpid7874" id="tmpid7874"></a><a name="tmpid7875" id="tmpid7875"></a>Document delivered through any output channel, except
+                                    the Notifications email channel.
+                                 </p>
+                                 <p><a name="tmpid7876" id="tmpid7876"></a>The communication is
+                                    delivered to its intended destination. For example, for an output
+                                    file delivered using the File channel, this indicates that the file
+                                    has been created in the specified output directory.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid7878" id="tmpid7878"></a><a name="tmpid7879" id="tmpid7879"></a>Delivery failure events
+                                 </p>
+                              </td>
+                              <td style=""><p><a name="tmpid7880" id="tmpid7880"></a><a name="tmpid7881" id="tmpid7881"></a><strong class="guilabel" data-cid="OpenText_Communications-<channelname&gt;-Failed"><span class="namestring">OpenText</span> <span class="namestring">Communications</span>-&lt;channelName&gt;-Failed</strong></p>
+                              </td>
+                              <td style=""><p><a name="tmpid7885" id="tmpid7885"></a><a name="tmpid7886" id="tmpid7886"></a>Document delivery through an output channel failed.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" rowspan="3"><p><a name="tmpid7888" id="tmpid7888"></a><a name="tmpid7889" id="tmpid7889"></a><span class="namestring" data-cid="OpenText">OpenText</span> Notifications events
+                                 </p>
+                              </td>
+                              <td style=""><p><a name="tmpid7891" id="tmpid7891"></a><a name="tmpid7892" id="tmpid7892"></a><strong class="guilabel" data-cid="OpenText_Communications-Email-POST"><span class="namestring">OpenText</span> <span class="namestring">Communications</span>-Email-POST</strong></p>
+                              </td>
+                              <td style=""><p><a name="tmpid7896" id="tmpid7896"></a><a name="tmpid7897" id="tmpid7897"></a>Email posted to recipient.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid7899" id="tmpid7899"></a><a name="tmpid7900" id="tmpid7900"></a><strong class="guilabel" data-cid="OpenText_Communications-Email-OPEN"><span class="namestring">OpenText</span> <span class="namestring">Communications</span>-Email-OPEN</strong></p>
+                              </td>
+                              <td style=""><p><a name="tmpid7904" id="tmpid7904"></a><a name="tmpid7905" id="tmpid7905"></a>Email opened by recipient.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid7907" id="tmpid7907"></a><a name="tmpid7908" id="tmpid7908"></a><strong class="guilabel" data-cid="OpenText_Communications-Email-<status&gt;"><span class="namestring">OpenText</span> <span class="namestring">Communications</span>-Email-&lt;status&gt;</strong></p>
+                              </td>
+                              <td style=""><p><a name="tmpid7912" id="tmpid7912"></a><a name="tmpid7913" id="tmpid7913"></a>Email delivery status. For example, <strong class="guilabel" data-cid="OpenText_Communications-Email-NDLV"><span class="namestring">OpenText</span> <span class="namestring">Communications</span>-Email-NDLV</strong> indicates that the email was not delivered.
+                                 </p>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid7918" id="tmpid7918"></a>The <strong class="command"><code>schemaSource</code></strong> parameter is set
+                     based on the schema source name that is provided in the <a class="link" href="configuringeiingration.html" title="2.5.3.1 &nbsp; Configuring OpenText Core Journey integration"><span class="namestring" data-cid="OpenText_Core_Journey">OpenText Core Journey</span> configuration</a> for the corresponding domain.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid7925" id="tmpid7925"></a>The <strong class="guilabel" data-cid="user">user</strong> namespace includes information
+                     from the output manifest, which is a structured data file that contains
+                     a comprehensive list of the output composed in an engine run. By default,
+                     the file describes the relationship between customers that are included
+                     in an engine run and the output files that are generated during that
+                     run. The output manifest can also include additional customer-specific
+                     data—such as customer name, email address and so on—or
+                     additional information about the communications that are being processed,
+                     such as campaign IDs. This data can come from the following sources:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid7929" id="tmpid7929"></a>Information on the <strong class="guilabel" data-cid="Delivery">Delivery</strong> tab
+                              of any object properties in <span class="namestring" data-cid="Design_Manager">Design Manager</span></p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid7933" id="tmpid7933"></a>Information that is defined on the Delivery tag of
+                              email designs in <span class="namestring" data-cid="Designer">Designer</span></p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid7936" id="tmpid7936"></a>Metadata that is defined on output queue objects in
+                              DAS or in <span class="namestring" data-cid="Design_Manager">Design Manager</span></p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid7939" id="tmpid7939"></a>Metadata that is defined on DAS&nbsp;resources, and
+                              that is marked for inclusion in the output manifest.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+                  <p><a name="tmpid7940" id="tmpid7940"></a>For information about defining metadata in <span class="namestring" data-cid="Design_Manager">Design Manager</span>, see 
+                     <data-xpi><data-xproc name="ExtXrefStart" href="ccdpdi250100-h-ugd.usingmetadatatotagobjectsindesi" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                        ><A class="otModuleHide if-ccdpdi-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../ccdpdi/v250100/ccdpdi-h-ugd/en/ofh/usingmetadatatotagobjectsindesi.html"
+                        ><span class="otsLbl"
+                        ><span class="otlbl-num">section 1.22</span
+                        ><span class="otlbl-sep"> </span></span
+                        ><span class="otlbl-ttl">"Using metadata to tag objects in Design Manager and Designer"</span> in <i>OpenText Exstream Design and Production - Design and Import Help (CCDPDI250100-H-UGD)</i></A
+                        ><SPAN class="otModuleShow if-ccdpdi-h-ugd-hide"
+                        ><span class="otsLbl"
+                        ><span class="otlbl-num">section 1.22</span
+                        ><span class="otlbl-sep"> </span></span
+                        ><span class="otlbl-ttl">"Using metadata to tag objects in Design Manager and Designer"</span> in <i>OpenText Exstream Design and Production - Design and Import Help (CCDPDI250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccdpdi250100-h-ugd.usingmetadatatotagobjectsindesi" fmt=""></data-xproc></data-xpi>. For more
+                     information about defining metadata in DAS, see <a class="link" href="applyingmetadata.html" title="3.5 &nbsp; Applying metadata tags to resources">Applying metadata tags to resources</a>.
+                  </p>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div id="localtocBottom" data-piref="xlm_LclTocBtm" role="navigation" aria-label="Link list to sub sections">
+         <div class="title"><h2 class="dfltlabel">Table of Contents</h2></div>
+         <ul>
+            <li><a href="sample.html">Sample email event</a></li>
+            <li><a href="sample2.html">Sample file channel event</a></li>
+         </ul>
+      </div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.5.3.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Event JSON file</span></div>
+         <div class="pgPrev"><a title="Preceding page: 2.5.3.1 &nbsp; Configuring OpenText Core Journey integration" aria-label="Preceding page: 2.5.3.1 &nbsp; Configuring OpenText Core Journey integration" href="configuringeiingration.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.5.3 &nbsp; Enabling OpenText Core Journey integration" aria-label="Section one level up: 2.5.3 &nbsp; Enabling OpenText Core Journey integration" href="enablingcxi.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.5.3.2.1 &nbsp; Sample email event" aria-label="Next page: 2.5.3.2.1 &nbsp; Sample email event" href="sample.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

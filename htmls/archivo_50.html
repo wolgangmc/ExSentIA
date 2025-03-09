@@ -1,0 +1,125 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="2.3 ">2.3 Managing roles and domains in a tenant</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="aboutsystemadministration.html" title="Chapter 2 – System administration"> -->
+      <link rel="prev" href="deletingtenants.html" title="2.2.6 &nbsp; Deleting tenants">
+      <link rel="next" href="managinguserpermissions.html" title="2.3.1 &nbsp; Configuring roles and permissions">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wwag-f-bdec25488-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":5,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d07d33e","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61033,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741379590","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==BAn+kWPir1VQfyePI4MYQqXnABxS87rkIhWnF3hTTZ2CeWuQ5+cETg16r9Eflj8s/MBlBETFC9Kgliupx0BY5zfnnhAKpTiqnjGzjfr9VLdkD3KTqp8xQddHjMkZsvGm4oslABQfUZjUHAfcJcnMO2t8JwDAYlIDBl83GQATDtmq3ZrGkwiFVpM1/aG2p9a/duG1E3X/E71aGjfX60evkxZU5TWUQE0w9fJ4PefsyZrvduMmsuRI4MGE4MPh+cuAusnFBARGqVWq35exRblYc09bWYW3ZxzpSoFf5AMmhjufWNRz0pLp23tf2Scf4+XkZRE4u+FajO2jK/JR8meFUHfzC2BaGo59XJNLeG0AWeowF6mYu+UOqJujkMX+rnwzhlBpzoSr0LBwtv5JYoBsZyYDt4B+yZosvHGHxD5Uqt0=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="managingtenantenvironments">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Managing roles and
+            domains in a tenant</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.2.6 &nbsp; Deleting&#xA;tenants" aria-label="Preceding page: 2.2.6 &nbsp; Deleting&#xA;tenants" href="deletingtenants.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 2 – System administration" aria-label="Section one level up: Chapter 2 – System administration" href="aboutsystemadministration.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.3.1 &nbsp; Configuring roles and&#xA;permissions" aria-label="Next page: 2.3.1 &nbsp; Configuring roles and&#xA;permissions" href="managinguserpermissions.html">Next</a></div>
+      </div>
+      <div class="sect1 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="managingtenantenvironments" id="managingtenantenvironments"></a><span class="otsLbl"><span class="otlbl-num">2.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Managing roles and
+                     domains in a tenant</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref53" id="tmp4ref53"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid3588" id="tmpid3588"></a>To manage roles and domains, you must be a <span class="phrase">member of the <strong class="guilabel" data-cid="tenantadmins">tenantadmins</strong> group in the corresponding <span class="namestring" data-cid="OTDS">OTDS</span> tenant</span>.
+            </p>
+         </div>
+         <p><a name="tmpid3593" id="tmpid3593"></a>As a tenant administrator, when you first sign in<span class="phrase"> to a tenant</span>, you must create domains
+            that let users logically separate resources in the DAS asset library<span class="phrase"> for that tenant</span>. You need at least
+            one domain to enable users to work in the tenant. You must also configure
+            the roles that define the access permissions for applications and
+            resources in that tenant. You use the Tenant management view in the <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> web client to manage your tenant environment.
+         </p>
+         <p><a name="tmpid3602" id="tmpid3602"></a>To open the Tenant management view for a tenant, sign in to the <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> web client as a tenant administrator, then click the <strong class="guilabel" data-cid="Tenant_management">Tenant
+               management</strong> button <img src="./img/b_WebApps_AppToolbar_AdminIcon.png" class="igrph" alt="" width="30" height="30"> on the tenant home page or from the application toolbar on the
+            domain home page.
+         </p>
+         <div class="note">
+            <p class="title"><strong>Notes</strong></p>
+            <div class="itemizedlist">
+               <ul class="itemizedlist">
+                  <li class="listitem">
+                     <p><a name="tmp4ref54" id="tmp4ref54"></a><a name="tmpid3612" id="tmpid3612"></a>You cannot change the access permissions that are required to
+                        open the Tenant management view. Any <span class="phrase">tenant
+                           administrator </span>user who will create domains and assign user
+                        permissions <span class="phrase">in a tenant must always be
+                           a member of a <strong class="guilabel" data-cid="tenantadmins">tenantadmins</strong> group in each tenant
+                           that they want to manage. For information about creating <span class="namestring" data-cid="OTDS">OTDS</span> groups
+                           and users, see <em class="emphasis"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Directory_Services">Directory Services</span> Web Client Help (OTDS-H-AWC)</em>.</span></p>
+                  </li>
+                  <li class="listitem">
+                     <p><a name="tmp4ref55" id="tmp4ref55"></a><a name="tmpid3622" id="tmpid3622"></a>For information about <span class="namestring" data-cid="OpenText">OpenText</span> product
+                        compatibility, see the <span class="namestring" data-cid="OpenText">OpenText</span> compatibly information provided
+                        in the release notes for the product. <span class="phrase">Release
+                           notes are available on My Support.</span></p>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <p><a name="tmpid3631" id="tmpid3631"></a>The Tenant management view is domain-agnostic. That is, the options
+            that are available in this view are not dependent on the user permissions
+            defined for a specific domain. A tenant administrator user can specify
+            access permissions for that domain even if they do not have access
+            to any applications in that domain.
+         </p>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div id="localtocBottom" data-piref="xlm_LclTocBtm" role="navigation" aria-label="Link list to sub sections">
+         <div class="title"><h2 class="dfltlabel">Table of Contents</h2></div>
+         <ul>
+            <li><a href="managinguserpermissions.html">Configuring roles and
+                  permissions</a></li>
+            <li><a href="creatingandconfiguringdomains.html">Creating and configuring
+                  domains</a></li>
+            <li><a href="configdomainworkflows.html">Configuring domain workflows</a></li>
+         </ul>
+      </div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Managing roles and
+            domains in a tenant</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.2.6 &nbsp; Deleting&#xA;tenants" aria-label="Preceding page: 2.2.6 &nbsp; Deleting&#xA;tenants" href="deletingtenants.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 2 – System administration" aria-label="Section one level up: Chapter 2 – System administration" href="aboutsystemadministration.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.3.1 &nbsp; Configuring roles and&#xA;permissions" aria-label="Next page: 2.3.1 &nbsp; Configuring roles and&#xA;permissions" href="managinguserpermissions.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

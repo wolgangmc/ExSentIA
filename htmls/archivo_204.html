@@ -1,0 +1,548 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="5.14.1 ">5.14.1 Creating communication set-based style sheets</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="addingstyles.html" title="5.14 &nbsp; Using style sheets to enforce corporate styles"> -->
+      <link rel="prev" href="addingstyles.html" title="5.14 &nbsp; Using style sheets to enforce corporate styles">
+      <link rel="next" href="designerres.html" title="5.15 &nbsp; Managing Designer resources">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wyol-f-c93a58e53-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9e01314e","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":62537,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741382091","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==eiGWgELjyRaQjZmhJwxzb9M6GsEwf9hhnqDFaTv8wluVVf0rY3PMsYgdxjHbmx1eICR0xXWMOt3iJfC5JGIBr+wuzwOnvEn0fWJaVnViseyGYT345mnno/M4+jb/uzKLg05AxcFWlOz33DfOJNv3ZxQHxcTz4NC1pZkR1lEnBUeCtd01+auOZ+rM1huv4rWBiakPR708qJL0Q/KR+z3MA/brNafY6v0ojZkgsA9qlZe3+/37KT/lRXUTdew2NAjmZLRoq638ElTt+sw9vMA2q+OMXXlvfCd2RJVSPmrLFWPbUPZKfbT4zBicCa3LvIu56uADwGbpmDHrw3ErZdD+OWk6MRrkMyb2O3bfNnVYEu70jVLcNlhMbVmOClfEs/qOoSFGSck4n7kFva9Ef2c8n+7tdlEpQWROCFMz7VvbYYw=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="addstylesheet">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">5.14.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating communication
+            set-based
+            style sheets</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 5.14 &nbsp; Using style sheets to enforce corporate&#xA;styles" aria-label="Preceding page: 5.14 &nbsp; Using style sheets to enforce corporate&#xA;styles" href="addingstyles.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 5.14 &nbsp; Using style sheets to enforce corporate&#xA;styles" aria-label="Section one level up: 5.14 &nbsp; Using style sheets to enforce corporate&#xA;styles" href="addingstyles.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 5.15 &nbsp; Managing Designer resources" aria-label="Next page: 5.15 &nbsp; Managing Designer resources" href="designerres.html">Next</a></div>
+      </div>
+      <div class="sect2 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="addstylesheet" id="addstylesheet"></a><span class="otsLbl"><span class="otlbl-num">5.14.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating communication
+                     set-based
+                     style sheets</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid20971" id="tmpid20971"></a>To use communication set-based style sheets, you first create
+            a standard set of style objects that defines the formatting and appearance
+            of paragraphs and text. Then you add those style objects to a style
+            sheet. For example,&nbsp;you could create style objects such as <code class="literal">Heading1</code>,&nbsp;<code class="literal">Footnote</code>,&nbsp;<code class="literal">Emphasis</code>, <code class="literal">TableText</code>, and so on.
+         </p>
+         <p><a name="tmpid20976" id="tmpid20976"></a>When you produce HTML or HTML Email output from a&nbsp;communication&nbsp;that
+            uses style sheets, the engine uses the paragraph and text styles that
+            you apply as the&nbsp;class&nbsp;names for the elements, and wraps the text
+            in the resulting HTML output. 
+         </p>
+         <div class="informalexample">
+            <p><a name="tmpid20978" id="tmpid20978"></a><b class="title"><span class="otLbl"><span class="otlbl-kw">Example</span>: </span></b>For example, if you create a paragraph style named&nbsp;<code class="literal">headline</code>, and apply that style to a paragraph in&nbsp;<span class="namestring" data-cid="Designer">Designer</span>,
+               the HTML output will include&nbsp;<code class="literal">class="headline"</code>.
+               Likewise, if you apply a text style named&nbsp;<code class="literal">small_print</code>, the HTML output will include&nbsp;<code class="literal">class="small_print"</code>.
+            </p>
+         </div>
+         <p><a name="tmpid20984" id="tmpid20984"></a>Optionally, when you create a style sheet, you can also create
+            alternate versions of that style sheet that are controlled by the
+            customer's data. This set up allows the styles you use in the design
+            to change based on the information in the customer data. 
+         </p>
+         <div class="informalexample">
+            <p><a name="tmpid20986" id="tmpid20986"></a><b class="title"><span class="otLbl"><span class="otlbl-kw">Example</span>: </span></b>For example, you might want the colors in the output to be different
+               depending on the type of account purchased by the customer, or you
+               might want to change the font size based on a standard request for
+               large print. 
+            </p>
+         </div>
+         <p><a name="tmpid20987" id="tmpid20987"></a>To use style sheets to enforce corporate styles, you must complete
+            the following high level tasks:
+         </p>
+         <div class="procedure">
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid20990" id="tmpid20990"></a><a class="link" href="addstylesheet.html#textparastyle" title="Creating text and paragraph styles">Create text and paragraph
+                        styles</a>.
+                  </p>
+                  <div class="important">
+                     <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Important</span></span></strong></p>
+                     <p><a name="tmpid20993" id="tmpid20993"></a>You must create at least one paragraph style before you can
+                        create a style sheet.
+                     </p>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid20995" id="tmpid20995"></a><a class="link" href="addstylesheet.html#createss" title="Creating a style sheet">Create a style sheet</a>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid20998" id="tmpid20998"></a><span class="boxed-text optional">Optional</span> <a class="link" href="addstylesheet.html#caltss" title="Creating an alternate style sheet">Create alternate
+                        style sheets</a>.
+                  </p>
+               </li>
+            </ol>
+         </div>
+         <p><a name="tmpid21000" id="tmpid21000"></a>If you are creating style sheets for use with Content Author,
+            you must complete additional tasks to associate the style sheet with
+            your Content Author communication set and optionally define how styles
+            are enforced in Content Author. For more information, see <a href="addstylesheet.html#castyles" class="xref2 bridgehead auto xstd"><span class="otlbl-ttl">Using style sheets with Content
+               Author</span></a>.</p>
+         <div class="vl2formalsect-list vl2bhseq" id="aid4pidiv164">
+         <h2 class="bridgehead subheading2"><a name="textparastyle" id="textparastyle"></a>Creating text and paragraph
+            styles
+         </h2>
+         <p><a name="tmpid21006" id="tmpid21006"></a>Styles define text characteristics that affect the appearance
+            of documents. Styles are implemented only if they are part of a style
+            sheet. Prior to creating a style sheet, consider how styles work together.
+         </p>
+         <div class="itemizedlist">
+            <h3 class="title"><b><span class="otlbl-ttl">There are two types of styles:</span></b></h3>
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid21010" id="tmpid21010"></a><b class="title">Paragraph styles – </b>Applies formatting
+                     and text characteristics, such as font type, size, color, and styling,
+                     to an entire paragraph. Applies paragraph-specific characteristics,
+                     such as layout, spacing, indent, and splitting to an entire paragraph. 
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid21013" id="tmpid21013"></a><b class="title">Text styles – </b>Applies formatting and text
+                     characteristics, such as font type, size, color, and styling, to selected
+                     text.
+                  </p>
+                  <div class="note">
+                     <p class="title"><strong><a name="tmp4ref243" id="tmp4ref243"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                     </strong></p>
+                     <p><a name="tmpid21016" id="tmpid21016"></a>You can apply text styles to selected text within a paragraph
+                        that has a paragraph style applied to it. However, text styles cannot
+                        overlap.
+                     </p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+         <div class="important">
+            <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Important</span></span></strong></p>
+            <p><a name="tmpid21018" id="tmpid21018"></a>If you modify and approve an existing style, the changes are
+               applied everywhere that style is used. For Communication Designer,
+               changes are visible the next time you run the engine or open any design
+               in the editor that uses the modified style. For Content Author, changes
+               are visible the next time you run the engine; however because the
+               styles are included based on the communication, you must open individual
+               objects such as messages and clauses from within a communication in
+               order to view any style changes. 
+            </p>
+         </div>
+         <div class="procedure"><h3 class="title"><a name="d0e36143" id="d0e36143"></a><b><span class="otlbl-ttl">To create a style:</span></b></h3>
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid21022" id="tmpid21022"></a>In the Design asset library, click the <strong class="guilabel" data-cid="Common">Common</strong> tab.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21025" id="tmpid21025"></a>Click <strong class="guilabel" data-cid="Add_&gt;_Style">Add<span class="uipsep" aria-label="then"> &gt; </span>Style</strong>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21028" id="tmpid21028"></a>In the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, add a name
+                     and optionally a description.
+                  </p>
+                  <p><a name="tmpid21030" id="tmpid21030"></a>Names do not support the following special characters: <code class="literal">&amp; / : * ! ? &gt; &lt; | + # %</code> 
+                  </p>
+                  <div class="important">
+                     <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Important</span></span></strong></p>
+                     <p><a name="tmpid21033" id="tmpid21033"></a>If you are producing HTML output, you must follow HTML naming
+                        conventions for style names, since they are used as&nbsp;class&nbsp;names in
+                        the HTML output. This means that each style name must be unique, begin
+                        with an alphabetic character, and contain only alphanumeric characters,
+                        hyphens (-), and underscores (_).
+                     </p>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21035" id="tmpid21035"></a>In the <strong class="guilabel" data-cid="Style_type">Style type</strong> list, select whether
+                     you are creating a <strong class="guilabel" data-cid="Paragraph">Paragraph</strong> or <strong class="guilabel" data-cid="Text">Text</strong> style.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21040" id="tmpid21040"></a>To define the appearance of the style in page-based layouts,
+                     click the <strong class="guilabel" data-cid="Page">Page</strong> tab and complete the following
+                     steps:
+                  </p>
+                  <ol type="a" class="substeps">
+                     <li class="step"><p><a name="steptext" id="steptext"></a><a name="tmpid21044" id="tmpid21044"></a><b class="title">To define the text properties of the style – </b>In
+                           the <strong class="guilabel" data-cid="Text">Text</strong> area, specify the font properties, such
+                           as font type, color, point size, and styling. Text properties can
+                           be created for both text and paragraph style types. The options you
+                           select change the appearance in the <strong class="guilabel" data-cid="Preview">Preview</strong> area.
+                        </p>
+                        <div class="note">
+                           <p class="title"><strong><a name="tmp4ref244" id="tmp4ref244"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                           </strong></p>
+                           <p><a name="tmpid21049" id="tmpid21049"></a>The preview area is intended as a sample of the selected style
+                              and is not an exact representation. For example, some font styling
+                              and line spacing options may not be shown accurately.
+                           </p>
+                        </div>
+                     </li>
+                     <li class="step"><p><a name="steppara" id="steppara"></a><a name="tmpid21051" id="tmpid21051"></a><b class="title">To define the paragraph properties of the style – </b>In the <strong class="guilabel" data-cid="Paragraph">Paragraph</strong> area, specify the paragraph
+                           properties, such as layout, margins, spacing, justification, tab sizing,
+                           and splitting options. Paragraph properties can be created only for
+                           paragraph style types.
+                        </p>
+                        <div class="itemizedlist">
+                           <ul class="itemizedlist">
+                              <li class="listitem">
+                                 <p><a name="tmpid21056" id="tmpid21056"></a>If you specify a <strong class="guilabel" data-cid="Line_spacing">Line spacing</strong> of <strong class="guilabel" data-cid="Minimum">Minimum</strong>, the lines must be at least the
+                                    distance set in the adjacent <strong class="guilabel" data-cid="Amount">Amount</strong> box. The
+                                    space is increased if the font requires more room.
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21061" id="tmpid21061"></a>If you specify a <strong class="guilabel" data-cid="Line_spacing">Line spacing</strong> of <strong class="guilabel" data-cid="Exactly">Exactly</strong>, the lines are always spaced the
+                                    distance set in the&nbsp;adjacent <strong class="guilabel" data-cid="Amount">Amount</strong> box, even
+                                    if the text overlaps. The spacing is applied after the line of text.
+                                 </p>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                  </ol>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21066" id="tmpid21066"></a>If you want the style to appear different in HTML-based
+                     designs, click the <strong class="guilabel" data-cid="HTML">HTML</strong> tab and complete the
+                     following steps:
+                  </p>
+                  <ol type="a" class="substeps">
+                     <li class="step">
+                        <p><a name="tmpid21070" id="tmpid21070"></a>Clear the <strong class="guilabel" data-cid="Use_page_styling">Use page styling</strong> check
+                           box. 
+                        </p>
+                     </li>
+                     <li class="step"><p><a name="repeatsteptext" id="repeatsteptext"></a><a name="tmpid11000000021044" id="tmpid11000000021044"></a><b class="title">To define the text properties of the style – </b>In
+                           the <strong class="guilabel" data-cid="Text">Text</strong> area, specify the font properties, such
+                           as font type, color, point size, and styling. Text properties can
+                           be created for both text and paragraph style types. The options you
+                           select change the appearance in the <strong class="guilabel" data-cid="Preview">Preview</strong> area.
+                        </p>
+                        <div class="note">
+                           <p class="title"><strong><a name="steptext1--repeatsteptext--tmp4ref244" id="steptext1--repeatsteptext--tmp4ref244"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                           </strong></p>
+                           <p><a name="tmpid11000000021049" id="tmpid11000000021049"></a>The preview area is intended as a sample of the selected style
+                              and is not an exact representation. For example, some font styling
+                              and line spacing options may not be shown accurately.
+                           </p>
+                        </div>
+                     </li>
+                     <li class="step"><p><a name="repeatsteppara" id="repeatsteppara"></a><a name="tmpid11100000021051" id="tmpid11100000021051"></a><b class="title">To define the paragraph properties of the style – </b>In the <strong class="guilabel" data-cid="Paragraph">Paragraph</strong> area, specify the paragraph
+                           properties, such as layout, margins, spacing, justification, tab sizing,
+                           and splitting options. Paragraph properties can be created only for
+                           paragraph style types.
+                        </p>
+                        <div class="itemizedlist">
+                           <ul class="itemizedlist">
+                              <li class="listitem">
+                                 <p><a name="tmpid11100000021056" id="tmpid11100000021056"></a>If you specify a <strong class="guilabel" data-cid="Line_spacing">Line spacing</strong> of <strong class="guilabel" data-cid="Minimum">Minimum</strong>, the lines must be at least the
+                                    distance set in the adjacent <strong class="guilabel" data-cid="Amount">Amount</strong> box. The
+                                    space is increased if the font requires more room.
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid11100000021061" id="tmpid11100000021061"></a>If you specify a <strong class="guilabel" data-cid="Line_spacing">Line spacing</strong> of <strong class="guilabel" data-cid="Exactly">Exactly</strong>, the lines are always spaced the
+                                    distance set in the&nbsp;adjacent <strong class="guilabel" data-cid="Amount">Amount</strong> box, even
+                                    if the text overlaps. The spacing is applied after the line of text.
+                                 </p>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                  </ol>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21075" id="tmpid21075"></a>Click <strong class="guilabel" data-cid="Create">Create</strong>.
+                  </p>
+               </li>
+            </ol>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv165">
+         <h2 class="bridgehead subheading2"><a name="createss" id="createss"></a>Creating a style sheet
+         </h2>
+         <p><a name="tmpid21080" id="tmpid21080"></a>A style sheet is a collection of styles. You must&nbsp;add a style
+            to a style sheet&nbsp;before it can be applied to text in <span class="namestring" data-cid="Designer">Designer</span>. In <span class="namestring" data-cid="Designer">Designer</span>,
+            you associate a style sheet with a communication design using the
+            Properties panel in the <strong class="guilabel" data-cid="Communication_Composer">Communication Composer</strong>.
+         </p>
+         <p><a name="tmpid21084" id="tmpid21084"></a><b class="title">Before you create a style sheet you must have completed
+               the following tasks: – </b></p>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid21088" id="tmpid21088"></a>You must have created at least one paragraph style.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid21090" id="tmpid21090"></a>Any styles that you want to include in the style sheet
+                     must be approved. 
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <div class="procedure"><h3 class="title"><a name="d0e36329" id="d0e36329"></a><b><span class="otlbl-ttl">To create a style sheet:</span></b></h3>
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid21094" id="tmpid21094"></a>In the Design asset library, click the <strong class="guilabel" data-cid="Common">Common</strong> tab.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21097" id="tmpid21097"></a>Click <strong class="guilabel" data-cid="Add_&gt;_Style_sheet">Add<span class="uipsep" aria-label="then"> &gt; </span>Style sheet</strong>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21100" id="tmpid21100"></a>In the properties panel, add a name and optionally a description.
+                  </p>
+                  <p><a name="tmpid21101" id="tmpid21101"></a>Names do not support the following special characters: <code class="literal">&amp; / : * ! ? &gt; &lt; | + # %</code> 
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21104" id="tmpid21104"></a><span class="boxed-text optional">Optional</span> To restrict Content Author users
+                     to only styles from this style sheet, select the <strong class="guilabel" data-cid="Allow_only_styles_from_this_style_sheet_when_Content_Author_uses_this_style_sheet">Allow only
+                        styles from this style sheet when Content Author uses this style sheet</strong>. If this option is not selected, users in Content Author can apply
+                     custom formatting to designs. 
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21107" id="tmpid21107"></a>To add styles to the style sheet, complete the following
+                     steps:
+                  </p>
+                  <ol type="a" class="substeps">
+                     <li class="step">
+                        <p><a name="tmpid21110" id="tmpid21110"></a>In the <strong class="guilabel" data-cid="Included_styles">Included styles</strong> area, click <strong class="guilabel" data-cid="Edit_list">Edit list</strong>.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid21114" id="tmpid21114"></a>In the <strong class="guilabel" data-cid="Styles">Styles</strong> dialog box, in the <strong class="guilabel" data-cid="Available_styles">Available styles</strong> list, click + to add a style to the style
+                           sheet. Paragraph styles are identified with a paragraph icon <span class="highlight"><strong>¶</strong></span> and text styles are identified with an <span class="highlight"><strong>a</strong></span> icon . You must select at least one paragraph style.
+                        </p>
+                        <div class="tip">
+                           <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Tip</span></span></strong></p>
+                           <p><a name="tmpid21120" id="tmpid21120"></a>You can preview a style by clicking the style name.
+                           </p>
+                        </div>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid21122" id="tmpid21122"></a>You must identify a default paragraph style. To identify
+                           a default paragraph style, in the selected styles list, select the
+                           star icon <img src="./img/b_WebApps_Star-Active.png" class="igrph" alt="" width="16" height="15"> adjacent to the paragraph style that you want to use as a default.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid21125" id="tmpid21125"></a>Click <strong class="guilabel" data-cid="Apply">Apply</strong>.
+                        </p>
+                     </li>
+                  </ol>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21128" id="tmpid21128"></a>Click <strong class="guilabel" data-cid="Create">Create</strong>.
+                  </p>
+               </li>
+            </ol>
+         </div>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref245" id="tmp4ref245"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid21131" id="tmpid21131"></a>If a style is <a class="link" href="usingassetlibraryviews.html#hiddenresources" title=" Hiding resources in the asset library ">hidden</a> after
+               being added to a style sheet, the style name appears in gray italics
+               in the style sheet properties. As with other hidden resources, if
+               a style is in use and then subsequently&nbsp;hidden, it will still be visible
+               where used, but will not be available for use in a new instance.
+            </p>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv166">
+         <h2 class="bridgehead subheading2"><a name="caltss" id="caltss"></a>Creating an alternate style sheet
+         </h2>
+         <p><a name="tmpid21136" id="tmpid21136"></a>Optionally, when you create a style sheet, you can also create
+            alternate versions of that style sheet that are controlled by the
+            customer's data. Alternate style sheets use the same styles as the
+            default style sheet, but allow you to apply different formatting properties.
+            For example, your organization might use style sheets to reflect different
+            appearances due to marketing, campaigns, or branding. Because default
+            style sheets and alternate style sheets share styles, designers would
+            only have to apply a heading once, and then that heading would appear
+            with different fonts, colors, or alignment depending on the style
+            sheet that was applied to the customer output.
+         </p>
+         <div class="procedure"><h3 class="title"><a name="d0e36420" id="d0e36420"></a><b><span class="otlbl-ttl">To create alternate style sheets:</span></b></h3>
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid21140" id="tmpid21140"></a><a class="link" href="addstylesheet.html#createss" title="Creating a style sheet">Create a style sheet</a>.
+                     You must create a style sheet and add a default set of styles before
+                     you can create alternate style sheets.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21143" id="tmpid21143"></a>In the properties panel, select the <strong class="guilabel" data-cid="Allow_alternate_style_sheets">Allow alternate
+                        style sheets</strong> check box.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21146" id="tmpid21146"></a>Adjacent to the <strong class="guilabel" data-cid="Select_an_alternate_style_sheet">Select an alternate style sheet</strong> box, click the <strong class="guilabel" data-cid="Alternate_style_sheet_selection">Alternate style sheet selection</strong> button <img src="./img/b_altstyleselection.png" class="igrph" alt="" width="20" height="22"> and
+                     select the variable that contains the static selection list that you
+                     want to use to control style sheet selection.
+                  </p>
+               </li>
+               <li class="step"><p><a name="selectaltss" id="selectaltss"></a><a name="tmpid21151" id="tmpid21151"></a>To create a new alternate style sheet,
+                     complete the following steps:
+                  </p>
+                  <ol type="a" class="substeps">
+                     <li class="step">
+                        <p><a name="tmpid21154" id="tmpid21154"></a>In the <strong class="guilabel" data-cid="Alternate_style_sheets">Alternate style sheets</strong> area,
+                           click <strong class="guilabel" data-cid="Add">Add</strong>.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid21158" id="tmpid21158"></a>Enter a name for the alternate style sheet and select
+                           the static selection list value which specifies when this alternate
+                           style sheet should be used.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid21160" id="tmpid21160"></a>Click <strong class="guilabel" data-cid="Add">Add</strong>.
+                        </p>
+                     </li>
+                  </ol>
+               </li>
+               <li class="step"><p><a name="modstyles" id="modstyles"></a><a name="tmpid21163" id="tmpid21163"></a>To modify the styles for an alternate style
+                     sheet complete the following steps:
+                  </p>
+                  <ol type="a" class="substeps">
+                     <li class="step">
+                        <p><a name="tmpid21166" id="tmpid21166"></a>In the <strong class="guilabel" data-cid="Alternate_style_sheet">Alternate style sheet</strong> list,
+                           select the name of the style sheet that you want to modify. 
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid21169" id="tmpid21169"></a>In the <strong class="guilabel" data-cid="Included_styles">Included styles</strong> list, select
+                           the style that you want to modify.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid21172" id="tmpid21172"></a>Click <strong class="guilabel" data-cid="Modify_style">Modify style</strong>.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid21175" id="tmpid21175"></a>In the <strong class="guilabel" data-cid="Style_editor">Style editor</strong> dialog box, modify
+                           the style as needed.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid21178" id="tmpid21178"></a>Click <strong class="guilabel" data-cid="Update">Update</strong>. A <strong class="guilabel" data-cid="_modified_">(modified)</strong> tag is appended to any styles that are changed for the alternate
+                           style sheet.
+                        </p>
+                     </li>
+                  </ol>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21182" id="tmpid21182"></a>Repeat <a href="addstylesheet.html#selectaltss" class="xref2 step label-only xstd"><span class="otlbl-kw">step</span>&nbsp;<span class="otlbl-num">4</span></a> through <a href="addstylesheet.html#modstyles" class="xref2 step label-only xstd"><span class="otlbl-kw">step</span>&nbsp;<span class="otlbl-num">5</span></a> for
+                     each additional alternate style sheet you want to create.
+                  </p>
+               </li>
+            </ol>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv167">
+         <h2 class="bridgehead subheading2"><a name="castyles" id="castyles"></a>Using style sheets with Content
+            Author
+         </h2>
+         <p><a name="tmpid21188" id="tmpid21188"></a>With Content Author communications, you can use style sheets
+            to enforce text branding in communication output. To specify how style
+            sheets are applied in Content Author communications, you must complete
+            the following tasks.
+         </p>
+         <div class="procedure"><h3 class="title"><a name="d0e36517" id="d0e36517"></a><b><span class="otlbl-ttl">To enforce style sheet formatting and prevent manual formatting
+                  in Content Author:</span></b></h3>
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid21192" id="tmpid21192"></a><a class="link" href="addstylesheet.html#createss" title="Creating a style sheet">Complete the basic creation of
+                        the style sheet</a>. 
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21195" id="tmpid21195"></a><a class="link" href="addstylesheet.html#caltss" title="Creating an alternate style sheet">Add any alternate style sheets</a>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21198" id="tmpid21198"></a>Select <strong class="guilabel" data-cid="Allow_only_styles_from_this_style_sheet_when_Content_Author_uses_this_style_sheet">Allow only styles from this style sheet
+                        when Content Author uses this style sheet</strong>. 
+                  </p>
+               </li>
+            </ol>
+         </div>
+         <div class="procedure"><h3 class="title"><a name="d0e36536" id="d0e36536"></a><b><span class="otlbl-ttl">To make a style sheet available inontent Author:</span></b></h3>
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid21203" id="tmpid21203"></a>In the Communication asset library, click on the <strong class="guilabel" data-cid="Communication_sets">Communication sets</strong> tab.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21206" id="tmpid21206"></a>Double-click the communication set to which you want to
+                     add the style sheet. 
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21208" id="tmpid21208"></a>Click <strong class="guilabel" data-cid="Add_&gt;_Style_sheet">Add<span class="uipsep" aria-label="then"> &gt; </span>Style sheet</strong>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21211" id="tmpid21211"></a>In the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, select the
+                     style sheet you want to use. 
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21214" id="tmpid21214"></a>Click <strong class="guilabel" data-cid="Insert">Insert</strong>. The style sheet you
+                     select is added to the <strong class="guilabel" data-cid="Branding">Branding</strong> area. 
+                  </p>
+               </li>
+            </ol>
+         </div></div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">5.14.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating communication
+            set-based
+            style sheets</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 5.14 &nbsp; Using style sheets to enforce corporate&#xA;styles" aria-label="Preceding page: 5.14 &nbsp; Using style sheets to enforce corporate&#xA;styles" href="addingstyles.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 5.14 &nbsp; Using style sheets to enforce corporate&#xA;styles" aria-label="Section one level up: 5.14 &nbsp; Using style sheets to enforce corporate&#xA;styles" href="addingstyles.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 5.15 &nbsp; Managing Designer resources" aria-label="Next page: 5.15 &nbsp; Managing Designer resources" href="designerres.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

@@ -1,0 +1,457 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="4.9.2 ">4.9.2 AFP output</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="settingupoutputs.html" title="4.9 &nbsp; Setting up outputs"> -->
+      <link rel="prev" href="creatinganoutputobject.html" title="4.9.1 &nbsp; Creating an output object">
+      <link rel="next" href="docxoutput.html" title="4.9.3 &nbsp; DOCX output">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wybz-f-0dffd2be3-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":3,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9dd7ac6d","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":62295,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741381689","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==GWufNkXUItveJhG0EQ81z07BqVNv+uWFnoclxGUVgjTIW/VwhaX7XjpaMUqUMSG6LHEcL0ZH0j+/7eYaNEAfEB5bZmazv3Cqo1Qq86vxiIAr60y7DPMVIshviFufFHIhiB1buqTpZzfeWHZnnt8wqdPLknqxkRECDCSxVCprlRB+QGcbUv5uXocZ+5d+hN7jjttkpAFPQVLfL9gj59vfXZ5G53plu0umpQJGL9gEGI3re225Mzr4feMI/gzEymFJ7kUeflA0SidhkL7klnHMkjBxdL3Ep0l1pP2Z4m0AUpmLOzgBtAiRYiSu8CXg7DiRwnOV7ejoskWewoN+Wq4IhIa8gd1LHEQRD24KOKdm11LuMTgC5K6NKgYinmG9Wdf/QfzEtZIER4H2cFjgww7P3FwrLm3yf8SuCaoTkvB2Kn0=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="afpoutput">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.9.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">AFP output</span></div>
+         <div class="pgPrev"><a title="Preceding page: 4.9.1 &nbsp; Creating an output object" aria-label="Preceding page: 4.9.1 &nbsp; Creating an output object" href="creatinganoutputobject.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 4.9 &nbsp; Setting up outputs" aria-label="Section one level up: 4.9 &nbsp; Setting up outputs" href="settingupoutputs.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.9.3 &nbsp; DOCX output" aria-label="Next page: 4.9.3 &nbsp; DOCX output" href="docxoutput.html">Next</a></div>
+      </div>
+      <div class="sect2 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="afpoutput" id="afpoutput"></a><span class="otsLbl"><span class="otlbl-num">4.9.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">AFP output</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid17281" id="tmpid17281"></a>The AFP output driver produces the necessary resources to support
+            the print stream for IBM's Advanced Function Presentation (AFP) format
+            printers.
+         </p>
+         <p><a name="afpint1" id="afpint1"></a>After you&nbsp;create the output object, you can use the&nbsp;<strong class="guilabel" data-cid="Properties">Properties</strong>&nbsp;panel to view and modify the following output properties. After
+            making changes, click&nbsp;<strong class="guilabel" data-cid="Save">Save</strong> or the changes will
+            be lost.</p>
+         <div class="vl2formalsect-list vl2bhseq" id="aid4pidiv120">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732631747-042" id="vle2s1732631747-042"></a>General output settings
+         </h2>
+         <p><a name="afpint2" id="afpint2"></a>The following sections provide information about the general output
+            options.
+         </p>
+         <div class="variablelist standard lvl1 lvlmax1">
+            <dl class="variablelist standard">
+               <dt class="varlistentry"><a name="afprm06" id="afprm06"></a><span class="term"><a name="tmpid1000000016767" id="tmpid1000000016767"></a>Search key type</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid1000000016769" id="tmpid1000000016769"></a>In the <strong class="guilabel" data-cid="Search_key_type">Search key type</strong> box, select the
+                     type of search key to apply to the output. For more information about
+                     using search keys, see <a href="searchkeys.html" class="xref2 sect1 auto xstd" title="4.12 &nbsp; Setting up search keys"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">4.12</span> “</span><span class="otlbl-ttl">Setting up search
+                        keys</span><span class="otsLbl">”</span></a>.
+                  </p>
+               </dd>
+               <dt class="varlistentry"><a name="afprm07" id="afprm07"></a><span class="term"><a name="tmpid1100000016827" id="tmpid1100000016827"></a>Resolution (DPI)</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid1100000016829" id="tmpid1100000016829"></a>You can customize the output resolution settings to ensure that
+                     output is clear and readable. The output resolution specifies the
+                     sharpness of text and graphics, measured in dots per inch (DPI). If
+                     you are generating printed output, use a DPI at or lower than the
+                     maximum resolution supported by the output device that you are using
+                     for the best processing performance.
+                  </p>
+                  <p><a name="tmpid1100000016830" id="tmpid1100000016830"></a>In the <strong class="guilabel" data-cid="Resolution_DPI_">Resolution (DPI)</strong> list, select the
+                     DPI setting that you want to use from the available options.
+                  </p>
+               </dd>
+               <dt class="varlistentry"><a name="afprm08" id="afprm08"></a><span class="term"><a name="tmpid1200000016838" id="tmpid1200000016838"></a>Simplex/Duplex</span></dt>
+               <dd class="varlistentry">
+                  <div class="itemizedlist">
+                     <p><a name="tmpid1200000016841" id="tmpid1200000016841"></a>Set up simplex or duplex output. In the <strong class="guilabel" data-cid="Simplex_Duplex">Simplex/Duplex</strong> list, select one of the following:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid1200000016844" id="tmpid1200000016844"></a><b class="title"><strong class="guilabel" data-cid="Simplex">Simplex</strong> – </b>Prints
+                              only on one side of a page
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid1200000016848" id="tmpid1200000016848"></a><b class="title"><strong class="guilabel" data-cid="Duplex">Duplex</strong> – </b>Prints on
+                              both sides of a page
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="afprm09" id="afprm09"></a><span class="term"><a name="tmpid1300000016852" id="tmpid1300000016852"></a>Color mode</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid1300000016854" id="tmpid1300000016854"></a>Specify the way color is produced in output.
+                  </p>
+               </dd>
+               <dt class="varlistentry"><a name="afprm10" id="afprm10"></a><span class="term"><a name="tmpid1400000016856" id="tmpid1400000016856"></a>Color model</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid1400000016858" id="tmpid1400000016858"></a>Specify whether to use RGB or CMYK colors in output.
+                  </p>
+               </dd>
+               <dt class="varlistentry"><a name="vle2s1732631747-043" id="vle2s1732631747-043"></a><span class="term"><a name="tmpid17295" id="tmpid17295"></a>Create AFP index</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid17297" id="tmpid17297"></a>If your organization uses an archival system that requires an
+                     index file, select <strong class="guilabel" data-cid="Create_AFP_Index">Create AFP Index</strong> to generate
+                     the index file during the production run. Then, in the <strong class="guilabel" data-cid="Index_file">Index
+                        file</strong> box, enter the name and location of the index file
+                     that is created by the engine for the production run.
+                  </p>
+               </dd>
+               <dt class="varlistentry"><a name="afprm14" id="afprm14"></a><span class="term"><a name="tmpid1500000016861" id="tmpid1500000016861"></a>Unprintable areas offsets</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid1500000016863" id="tmpid1500000016863"></a>For printed output, you can set the print stream so that you
+                     do not print on page edges. You might want to set these unprintable
+                     areas because of output device limitations, because you are using
+                     a pre-printed or non-standard stock, or because of post-processing
+                     trimming. Keep in mind that all desktop printers have an unprintable
+                     area, and the output is offset by the printer automatically. A centralized
+                     production printer does not have the same restrictions. If you want
+                     to print from edge to edge when you use a desktop printer, consult
+                     your desktop printer manufacturer documentation for information.
+                  </p>
+                  <p><a name="tmpid1500000016864" id="tmpid1500000016864"></a>To specify unprintable areas for page margins, in the&nbsp;<strong class="guilabel" data-cid="Unprintable_area_offsets">Unprintable area offsets</strong>&nbsp;area, enter the values of the
+                     unprintable areas for the edges of your pages. If the page is duplex,
+                     you can define offsets for both the front and the back of the page.
+                     In the&nbsp;<strong class="guilabel" data-cid="Front">Front</strong>&nbsp;and&nbsp;<strong class="guilabel" data-cid="Back">Back</strong>&nbsp;boxes,
+                     enter the <strong class="guilabel" data-cid="x_short_side_">x (short side)</strong>&nbsp;and&nbsp;<strong class="guilabel" data-cid="y_long_side_">y (long
+                        side)</strong> measurements for each side of a printed sheet.
+                  </p>
+               </dd>
+               <dt class="varlistentry"><a name="vle2s1732631747-044" id="vle2s1732631747-044"></a><span class="term"><a name="tmpid17302" id="tmpid17302"></a>BDT/EDT placement</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid17304" id="tmpid17304"></a>Depending on whether you want to create one large output file
+                     or to place a break between each customer record, you can specify
+                     where to place Begin Document (BDT) and End Document (EDT) structured
+                     fields in the AFP print stream. 
+                  </p>
+                  <p><a name="tmpid17305" id="tmpid17305"></a>To specify where to place BDT and EDT structured fields, select
+                     one of the following options from the&nbsp;<strong class="guilabel" data-cid="BDT_EDT_placement">BDT/EDT placement</strong> list:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid17309" id="tmpid17309"></a><b class="title"><strong class="guilabel" data-cid="Around_entire_file">Around entire file</strong> – </b>Create one long document containing the entire output.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid17313" id="tmpid17313"></a><b class="title"><strong class="guilabel" data-cid="Around_each_customer">Around each customer</strong> – </b>Place a break between each customer record, so each customer record
+                              is considered a separate document by the printer.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="afprm12" id="afprm12"></a><span class="term"><a name="tmpid1600000016986" id="tmpid1600000016986"></a>Character fidelity</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid1600000016988" id="tmpid1600000016988"></a>Use character fidelity settings to make sure fonts appear correctly
+                     in output. <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> pulls metrics, such as height
+                     and width, from the font. By default, the engine uses integer measurements,
+                     which are used most often by bitmap fonts. However, rounding errors
+                     can cause the cursor position in your output to be different from
+                     what you expected, especially if you use outline fonts. Usually, this
+                     issue can be corrected by increasing the output resolution. If this
+                     solution does not work, you can adjust the character fidelity.
+                  </p>
+                  <div class="itemizedlist">
+                     <p><a name="tmpid1600000016996" id="tmpid1600000016996"></a>For best results, use the default settings for character positioning.
+                         If you are experiencing issues with overlapping text or incorrect
+                        spacing between words or characters, the following can also influence
+                        your character positioning:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid1600000016998" id="tmpid1600000016998"></a>Adjusting your resolution settings.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid1600000017003" id="tmpid1600000017003"></a>If you are using multiple output queues for production,
+                              some character fidelity settings might be affected.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="itemizedlist">
+                     <p class="title"><b><span class="otlbl-ttl">To adjust character fidelity settings:</span></b></p>
+                     <p><a name="tmpid1600000017006" id="tmpid1600000017006"></a>In the <strong class="guilabel" data-cid="Character_fidelity">Character fidelity</strong> list, select
+                        one of the following options to specify how text is placed:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid1600000017009" id="tmpid1600000017009"></a><b class="title"><strong class="guilabel" data-cid="Auto,_character">Auto, character</strong> – </b>This option is the default. Use this setting unless you are having
+                              issues with overlapping text or incorrect spacing in your output.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid1600000017013" id="tmpid1600000017013"></a><b class="title"><strong class="guilabel" data-cid="Auto,_word">Auto, word</strong> – </b>Adds
+                              positioning commands for each word in the output only if required;
+                              otherwise, positioning commands are added for each line of text. This
+                              option should allow you to set a lower print resolution, which reduces
+                              the size of images in output.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid1600000017017" id="tmpid1600000017017"></a><b class="title"><strong class="guilabel" data-cid="Auto,_line">Auto, line</strong> – </b>Adds
+                              positioning commands for each line of text and automatically positions
+                              text within that line. This option produces the smallest output size.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid1600000017021" id="tmpid1600000017021"></a><b class="title"><strong class="guilabel" data-cid="Position_every_word">Position every word</strong> – </b>Applies placement logic to every word in the output, which increases
+                              print sizes. This setting forces <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> to apply a new x/y
+                              coordinate for every word, rather than one x/y coordinate per line
+                              of text.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid1600000017031" id="tmpid1600000017031"></a><b class="title"><strong class="guilabel" data-cid="Position_every_character">Position every character</strong> – </b>Applies placement logic to every character in the output,
+                              which significantly increases print sizes. This setting forces <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> to apply a new x/y coordinate for every character, rather than one
+                              x/y coordinate per line of text. If you choose this option for any
+                              output driver in a multiple queue production run, the setting is applied
+                              to the text on all charts, such as data labels.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="afprm13" id="afprm13"></a><span class="term"><a name="tmpid1700000017041" id="tmpid1700000017041"></a>Text position adjustment</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid1700000017043" id="tmpid1700000017043"></a>If you are using more than one output queue, you can adjust
+                     the text position to accommodate for font differences between the
+                     output drivers that are associated with those output queues. You can
+                     use the text position adjustment feature to make output that uses
+                     an outline font look like output that uses bitmap fonts.
+                  </p>
+                  <div class="itemizedlist">
+                     <p><a name="tmpid1700000017045" id="tmpid1700000017045"></a>In the <strong class="guilabel" data-cid="Text_position_adjustment">Text position adjustment</strong> list, select
+                        one of the following options:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid1700000017048" id="tmpid1700000017048"></a><b class="title"><strong class="guilabel" data-cid="No_adjustment">No adjustment</strong> – </b>Text
+                              output is not changed.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid1700000017052" id="tmpid1700000017052"></a><b class="title"><strong class="guilabel" data-cid="Adjust_at_word_boundaries">Adjust at word boundaries</strong> – </b><span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> inserts position commands as
+                              necessary at word boundaries.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid1700000017062" id="tmpid1700000017062"></a><b class="title"><strong class="guilabel" data-cid="Adjust_characters">Adjust characters</strong> – </b><span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> inserts position commands as
+                              necessary on a per-character basis. Text is not searchable when you
+                              select <strong class="guilabel" data-cid="Adjust_characters">Adjust characters</strong>.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+            </dl>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv121">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732631747-045" id="vle2s1732631747-045"></a>Resource settings
+         </h2>
+         <p><a name="tmpid17321" id="tmpid17321"></a>The following list provides information about managing output
+            resources.
+         </p>
+         <div class="variablelist standard lvl1 lvlmax1">
+            <dl class="variablelist standard">
+               <dt class="varlistentry"><a name="afpxrs01" id="afpxrs01"></a><span class="term"><a name="tmpid1800000017078" id="tmpid1800000017078"></a>Font usage</span></dt>
+               <dd class="varlistentry">
+                  <div class="itemizedlist">
+                     <p><a name="tmpid1800000017081" id="tmpid1800000017081"></a>Specify whether to embed or reference fonts. In the <strong class="guilabel" data-cid="Font_usage">Font usage</strong> list, select one of the following options to
+                        indicate whether fonts used in a communication should be included
+                        in the output:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid1800000017084" id="tmpid1800000017084"></a><b class="title"><strong class="guilabel" data-cid="Embed_all_fonts">Embed all fonts</strong> – </b>All the fonts used in an application are embedded in the output.
+                              Using this option results in a larger file size, but it does not affect
+                              processing time and provides <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> the most control over
+                              the printed output.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="rs011--afpxrs01--exrsaa" id="rs011--afpxrs01--exrsaa"></a><a name="tmpid1800000017094" id="tmpid1800000017094"></a><b class="title"><strong class="guilabel" data-cid="Reference_all_fonts">Reference all fonts</strong> – </b>None of the fonts in a communication are included in the
+                              output. Referencing all fonts can help make the print file as small
+                              as possible. Keep in mind that when you reference fonts, your output
+                              might look slightly different from your design. For example, if you
+                              send files to customers who do not have the same output device or
+                              viewing software, these customers might not have the same fonts, in
+                              which case the output device or viewing software might either substitute
+                              a different font, or they might receive errors.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="vle2s1732631747-046" id="vle2s1732631747-046"></a><span class="term"><a name="tmpid17325" id="tmpid17325"></a>Font type</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid17328" id="tmpid17328"></a>Specify the type of font to embed in the communication. <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> supports any font loaded on your system and converts it to the correct
+                     font type for your output device. 
+                  </p>
+                  <p><a name="tmpid17335" id="tmpid17335"></a>AFP output supports only OpenType fonts. This font is selected
+                     automatically. 
+                  </p>
+               </dd>
+               <dt class="varlistentry"><a name="afpxrs03" id="afpxrs03"></a><span class="term"><a name="tmpid1900000017138" id="tmpid1900000017138"></a>Image processing</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid1900000017141" id="tmpid1900000017141"></a>Specify where to place static images in the print stream. Static
+                     images can be placed at different places in the print stream. The
+                     options you use to specify where static images are placed depend on
+                     the output device or viewing software you will use. For example, some
+                     output devices can read resources from the top of the file into memory
+                     and then reuse them each time the image is called.
+                  </p>
+                  <div class="itemizedlist">
+                     <p class="title"><b><span class="otlbl-ttl">To specify where to place static images:</span></b></p>
+                     <p><a name="tmpid1900000017144" id="tmpid1900000017144"></a>In the <strong class="guilabel" data-cid="Image_processing">Image processing</strong> list, select one
+                        of the following options:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid1900000017147" id="tmpid1900000017147"></a><b class="title"><strong class="guilabel" data-cid="Include_on_each_page">Include on each page</strong> – </b>Includes a copy of all the images used in the application in your
+                              output file on each page where they occur
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid1900000017151" id="tmpid1900000017151"></a><b class="title"><strong class="guilabel" data-cid="Place_at_top_of_print_stream">Place at top of print stream</strong> – </b>Includes a copy of the images at the top of the print stream
+                              for insertion as needed. This option can increase production processing
+                              speed.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="afpxrs08" id="afpxrs08"></a><span class="term"><a name="tmpid2000000017233" id="tmpid2000000017233"></a>Resource inclusion</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid2000000017235" id="tmpid2000000017235"></a>You can choose to include all available resources (for example,
+                     fonts and images) in your output, or you can include only the resources that are
+                     used.
+                  </p>
+                  <div class="itemizedlist">
+                     <p class="title"><b><span class="otlbl-ttl">To control which resources are included in your output:</span></b></p>
+                     <p><a name="tmpid2000000017239" id="tmpid2000000017239"></a>Select one of the following options in the <strong class="guilabel" data-cid="Resource_inclusion">Resource
+                           inclusion</strong> list:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid2000000017242" id="tmpid2000000017242"></a><b class="title"><strong class="guilabel" data-cid="Default">Default</strong> – </b>All available
+                              resources that are designed in your communication are included in
+                              the output file, even if they are not used. For example, if you have
+                              used rules to exclude some content, the resources in that content
+                              are still included in the output file.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid2000000017246" id="tmpid2000000017246"></a><b class="title"><strong class="guilabel" data-cid="Used_resources_only">Used resources only</strong> – </b>Only the resources used by your communication are included in the
+                              output file. If you select this option, programs can reference resources
+                              as needed rather than loading all available resources for each page.
+                              The <strong class="guilabel" data-cid="Used_resources_only">Used resources only</strong> option can slow the engine
+                              run; however, it can also reduce the file size, depending on the number
+                              of resources used by your application.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="vle2s1732631747-047" id="vle2s1732631747-047"></a><span class="term"><a name="tmpid17339" id="tmpid17339"></a>Create and include Formdef
+                     in print file</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid17341" id="tmpid17341"></a>Form definition (formdef) files are resources that define the
+                     general characteristics of the physical printed page, including duplexing and the number of copies.
+                     In <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span>, you can create an inline&nbsp;formdef
+                     and include it at the top of the AFP print stream.
+                  </p>
+                  <p><a name="tmpid17349" id="tmpid17349"></a>If you choose to create output with both simplex and duplex
+                     pages, you must create an inline&nbsp;formdef. 
+                  </p>
+                  <div class="procedure"><p class="title"><a name="d0e28407" id="d0e28407"></a><b><span class="otlbl-ttl">To create an inline form definition file:</span></b></p>
+                     <ol class="procedure" type="1">
+                        <li class="step">
+                           <p><a name="tmpid17353" id="tmpid17353"></a>Select the&nbsp;<strong class="guilabel" data-cid="Create_and_include&nbsp;Formdef&nbsp;in_print_file">Create and include&nbsp;Formdef&nbsp;in print
+                                 file</strong>&nbsp;check box.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid17356" id="tmpid17356"></a>In the&nbsp;<strong class="guilabel" data-cid="Formdef&nbsp;name">Formdef&nbsp;name</strong>&nbsp;box, enter the
+                              name for the&nbsp;formdef&nbsp;file. The&nbsp;formdef&nbsp;file name cannot exceed eight
+                              characters. The default name is <code class="literal">FORMDEFR</code>.
+                           </p>
+                        </li>
+                     </ol>
+                  </div>
+               </dd>
+            </dl>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv122">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732631747-048" id="vle2s1732631747-048"></a>Additional settings
+         </h2>
+         <p><a name="afprmmoaa" id="afprmmoaa"></a>This output includes additional common settings. For more information
+            about any of these settings, see the following locations:
+         </p>
+         <div class="itemizedlist"><a name="afprmmobb" id="afprmmobb"></a><ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="mobb5--afprmmobb--mocc" id="mobb5--afprmmobb--mocc"></a><a name="tmpid2200000017256" id="tmpid2200000017256"></a><b class="title">Paper bins – </b>For information
+                     about setting up paper bins for an output, see <a href="paperbins.html" class="xref2 sect1 auto xstd" title="4.10 &nbsp; Setting up paper bins"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">4.10</span> “</span><span class="otlbl-ttl">Setting up paper
+                        bins</span><span class="otsLbl">”</span></a></p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid2200000017261" id="tmpid2200000017261"></a><b class="title">Domains – </b>For information about defining
+                     the domains to which a resource is assigned, see <a href="associatingresourceswithdomains.html" class="xref2 sect1 auto xstd" title="3.13 &nbsp; Associating resources&#xA;with domains"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.13</span> “</span><span class="otlbl-ttl">Associating resources
+                        with domains</span><span class="otsLbl">”</span></a>.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid2200000017269" id="tmpid2200000017269"></a><b class="title">Workflow – </b>For information about managing
+                     an approval workflow, see <a href="managingapprovalworkflows.html" class="xref2 sect1 auto xstd" title="3.6 &nbsp; Managing approval workflows"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.6</span> “</span><span class="otlbl-ttl">Managing approval
+                        workflows</span><span class="otsLbl">”</span></a>.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid2200000017273" id="tmpid2200000017273"></a><b class="title">References – </b>For information about viewing
+                     the linked resources connected to a selected resource, see <a href="usingassetlibraryviews.html" class="xref2 sect1 auto xstd" title="3.3 &nbsp; Viewing resources in asset&#xA;library views"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.3</span> “</span><span class="otlbl-ttl">Viewing resources
+                        in asset
+                        library views</span><span class="otsLbl">”</span></a>.
+                  </p>
+               </li>
+            </ul>
+         </div></div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.9.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">AFP output</span></div>
+         <div class="pgPrev"><a title="Preceding page: 4.9.1 &nbsp; Creating an output object" aria-label="Preceding page: 4.9.1 &nbsp; Creating an output object" href="creatinganoutputobject.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 4.9 &nbsp; Setting up outputs" aria-label="Section one level up: 4.9 &nbsp; Setting up outputs" href="settingupoutputs.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.9.3 &nbsp; DOCX output" aria-label="Next page: 4.9.3 &nbsp; DOCX output" href="docxoutput.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

@@ -1,0 +1,180 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="9.3 ">9.3 Initiating orchestration jobs</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="runningengineorchestration.html" title="Chapter 9 – Running engine orchestration"> -->
+      <link rel="prev" href="publishingflows.html" title="9.2 &nbsp; Publishing orchestration flows">
+      <link rel="next" href="monitoringorchestrationjobs.html" title="9.4 &nbsp; Monitoring orchestration jobs">
+   <link rel="stylesheet" type="text/css" href="../../../../../ccmceorc/v250100/ccmceorc-h-ugd/en/ofh/dynData/condstyles.css">
+
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wz6o-f-54bf709d5-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":7,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9e99a255","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":63381,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741383630","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==enHx5wlWPHcOmvW5Ucldd3TRNk3HSEqCqY+vfxIexs6umvyQa5+HF12WtsQsKbjKevcnmF01j5QFzk1waplm8TfPlN/lzI4u1tMbcv2lOMd9nq/koawX7rGsQIgbmovgA/T04+DX5a+/ZQ9iXi8tSxlaFVFGEU1fDPq3NevQOlstXkqB9ZdI+mBjZcByck6hTC73NOLwQnBz4agMmi70NL1ARurw7HBMV/R63VY6/QDNF/aVG9HXnFkPY4kLzo7FrY5PIW7Uz/w+FOK08JIeu9KAsWTXVYrKw6BuaXxJXx9NK6dlqz8fvIPCqrVublY6y7JpYJLIAgYy4o5RFBPf8sjMAAsZyEy+ng0zgEsGyMNHV5HlHVz1iwImNezYlWPzM9YSf/iL1iHheDJH8Ct0C+OMq5J21F3IQjFkr7kX8wY=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="initiatingorchestrationjobs">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">9.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Initiating orchestration
+            jobs</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 9.2 &nbsp; Publishing orchestration flows" aria-label="Preceding page: 9.2 &nbsp; Publishing orchestration flows" href="publishingflows.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 9 – Running engine orchestration" aria-label="Section one level up: Chapter 9 – Running engine orchestration" href="runningengineorchestration.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 9.4 &nbsp; Monitoring orchestration&#xA;jobs" aria-label="Next page: 9.4 &nbsp; Monitoring orchestration&#xA;jobs" href="monitoringorchestrationjobs.html">Next</a></div>
+      </div>
+      <div class="sect1 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="initiatingorchestrationjobs" id="initiatingorchestrationjobs"></a><span class="otsLbl"><span class="otlbl-num">9.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Initiating orchestration
+                     jobs</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid26051" id="tmpid26051"></a>After you publish your flow model and flow context, you are
+            ready to initiate the production engine run as defined in the published
+            flow resources. Depending on the type of input channel that you are
+            using, and the type of communication being fulfilled, you can initiate
+            the engine run in the following ways:</p>
+         <div class="vl2formalsect-list vl2bhseq" id="aid4pidiv215">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732631747-025" id="vle2s1732631747-025"></a> Using a directory input channel 
+         </h2>
+         <p><a name="tmpid26056" id="tmpid26056"></a>When you use a directory input channel, you simply place your
+            input file in the specified input directory that is defined in the
+            flow context. This initiates new orchestration jobs with flow instances
+            of any published flow models that use the input channel. Keep in mind,
+            that this triggers orchestration jobs only if the input file name
+            matches the file name pattern that is defined for that directory channel.
+         </p>
+         <p><a name="tmpid26057" id="tmpid26057"></a>For more information about defining directory input channels,
+            see 
+            <data-xpi><data-xproc name="ExtXrefStart" href="ccmceorc-h-ugd.chsetdirectory" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+               ><A class="otModuleHide if-ccmceorc-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../ccmceorc/v250100/ccmceorc-h-ugd/en/ofh/chsetdirectory.html"
+               ><span class="otsLbl"
+               ><span class="otlbl-num">section 2.2.5</span
+               ><span class="otlbl-sep"> </span></span
+               ><span class="otlbl-ttl">"Directory channel"</span> in <i>OpenText Communications - Orchestrator User Help (CCMCEORC-H-UGD)</i></A
+               ><SPAN class="otModuleShow if-ccmceorc-h-ugd-hide"
+               ><span class="otsLbl"
+               ><span class="otlbl-num">section 2.2.5</span
+               ><span class="otlbl-sep"> </span></span
+               ><span class="otlbl-ttl">"Directory channel"</span> in <i>OpenText Communications - Orchestrator User Help (CCMCEORC-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccmceorc-h-ugd.chsetdirectory" fmt=""></data-xproc></data-xpi>.
+         </p></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv216">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732631747-026" id="vle2s1732631747-026"></a>Sending data to an HTTP(S) input channel 
+         </h2>
+         <p><a name="tmpid26062" id="tmpid26062"></a>You can use an HTTP post request to trigger the input service
+            that is associated with an HTTP(S) channel.
+         </p>
+         <p><a name="tmpid26063" id="tmpid26063"></a>The following request URI is used to post data to an HTTP(S)
+            channel:
+         </p>
+         <p><a name="tmpid26064" id="tmpid26064"></a><code class="literal"><em class="varname">orchestrationURL</em>/api/v1/inputs/<em class="varname">mode</em>/<em class="varname">domainID</em>/<em class="varname">serviceName</em></code></p>
+         <div class="informaltable">
+            <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+               <colgroup>
+                  <col class="col1">
+                  <col class="col2">
+               </colgroup>
+               <tbody>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid26076" id="tmpid26076"></a><a name="tmpid26077" id="tmpid26077"></a><code class="literal"><em class="varname">orchestrationURL</em></code></p>
+                     </td>
+                     <td style=""><p><a name="tmpid26080" id="tmpid26080"></a><a name="tmpid26081" id="tmpid26081"></a>Base URL to the multi-tenant HTTP channel for orchestration
+                           requests. For example: 
+                        </p>
+                        <p><a name="tmpid26082" id="tmpid26082"></a><code class="literal">http://localhost/orchestration</code></p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid26085" id="tmpid26085"></a><a name="tmpid26086" id="tmpid26086"></a><code class="literal"><em class="varname">mode</em></code></p>
+                     </td>
+                     <td style=""><p><a name="tmpid26089" id="tmpid26089"></a><a name="tmpid26090" id="tmpid26090"></a>Processing mode (<code class="literal">batch</code> or <code class="literal">ondemand</code>).
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid26094" id="tmpid26094"></a><a name="tmpid26095" id="tmpid26095"></a><code class="literal"><em class="varname">domainID</em></code></p>
+                     </td>
+                     <td style=""><p><a name="tmpid26098" id="tmpid26098"></a><a name="tmpid26099" id="tmpid26099"></a>ID of the domain to access.
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid26101" id="tmpid26101"></a><a name="tmpid26102" id="tmpid26102"></a><code class="literal"><em class="varname">serviceName</em></code></p>
+                     </td>
+                     <td style=""><p><a name="tmpid26105" id="tmpid26105"></a><a name="tmpid26106" id="tmpid26106"></a>Name of the service to access. 
+                        </p>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <p><a name="tmpid26107" id="tmpid26107"></a>The application that posts data must be signed in to the same
+            tenant as the HTTP(S) channel. Like any other API call, an <code class="literal">OAUTH2</code> authentication token must be provided either as
+            a header or in a cookie. To get this token you can, for example, make
+            the following type of post and then get the access token from the
+            response:</p>
+         <pre class="screen noinltag">http://&lt;otdsHostName&gt;/otds/otdsws/otdstenant/&lt;tenantName&gt;/oauth2/token?grant_type=client_credentials&amp;scope=otds:groups otds:roles</pre><p><a name="tmpid26110" id="tmpid26110"></a>For cross-site post requests, the header <code class="literal">X-Xsrf-Token</code> must also be provided. To get the value for this header you can,
+            for example, make an <code class="literal">orchestration/version</code> API
+            call and then get the <code class="literal">XSRF-TOKEN</code> value from the
+            response cookie.
+         </p>
+         <p><a name="tmpid26114" id="tmpid26114"></a>When a request is made, the data in the HTTP body is sent as
+            input to the HTTP(S) channel specified in the request URI, and the
+            headers defined in the request will be available as variables in the
+            flow model.
+         </p>
+         <p><a name="tmpid26115" id="tmpid26115"></a>For more information about sending data to HTTP(S) input channels,
+            see 
+            <data-xpi><data-xproc name="ExtXrefStart" href="ccmceorc-h-ugd.chsethttp" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+               ><A class="otModuleHide if-ccmceorc-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../ccmceorc/v250100/ccmceorc-h-ugd/en/ofh/chsethttp.html"
+               ><span class="otsLbl"
+               ><span class="otlbl-num">section 2.2.9</span
+               ><span class="otlbl-sep"> </span></span
+               ><span class="otlbl-ttl">"HTTP(S) channel"</span> in <i>OpenText Communications - Orchestrator User Help (CCMCEORC-H-UGD)</i></A
+               ><SPAN class="otModuleShow if-ccmceorc-h-ugd-hide"
+               ><span class="otsLbl"
+               ><span class="otlbl-num">section 2.2.9</span
+               ><span class="otlbl-sep"> </span></span
+               ><span class="otlbl-ttl">"HTTP(S) channel"</span> in <i>OpenText Communications - Orchestrator User Help (CCMCEORC-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccmceorc-h-ugd.chsethttp" fmt=""></data-xproc></data-xpi>.
+         </p></div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">9.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Initiating orchestration
+            jobs</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 9.2 &nbsp; Publishing orchestration flows" aria-label="Preceding page: 9.2 &nbsp; Publishing orchestration flows" href="publishingflows.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 9 – Running engine orchestration" aria-label="Section one level up: Chapter 9 – Running engine orchestration" href="runningengineorchestration.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 9.4 &nbsp; Monitoring orchestration&#xA;jobs" aria-label="Next page: 9.4 &nbsp; Monitoring orchestration&#xA;jobs" href="monitoringorchestrationjobs.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

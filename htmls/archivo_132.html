@@ -1,0 +1,583 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="4.2.2 ">4.2.2 Setting up data sources</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="managingdatasources.html" title="4.2 &nbsp; Configuring data sources"> -->
+      <link rel="prev" href="aboutmappingview.html" title="4.2.1 &nbsp; Mapping view at a glance">
+      <link rel="next" href="mappingavariable.html" title="4.2.3 &nbsp; Mapping data sources">
+   <link rel="stylesheet" type="text/css" href="../../../../../ccwc/v250100/ccwc-h-ugd/en/ofh/dynData/condstyles.css">
+
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wxhp-f-edde6e6d8-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d8456bd","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61809,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741380847","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==+FjMy+ICxtoqfrWjUE5GRHkCzqRnBUEv6dmI1FZDq0DXrV3Ld7DoWiohUFKAQQfQktowKF8suH+OgKEw3iA24olwpTaFyPRx4zp5JaatV94W0BYsXYI7WGT7H9U4Cvg7ePht84xh+AiZ4VLtgcmnbwnKN5rFmuUIy+vTwrz2xBjuOgy3Q3kqTpRLunHFw21lIOSbmINseOEbckrrSqOZ/jPYUQEUMJYOT/PotoS9CK0ucsunrnHmGcTCC7G44K62H0aPxFYMICDkpjeKY+RSKJJQsH5OWjA5Hrvx2fTglbU4lgw/0jxnzMLxPRIFWqAcD3+oCAh+satNrsLppj6mR9APBT77GlbVPKR3uln0DjGtt7qH21JobEfSXxmhqK7/GVacdGR+lvMGZ11qtnH+RyUgddEXSL03kGN66QwXWuc=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="settingupdatasources">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.2.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Setting up data sources</span></div>
+         <div class="pgPrev"><a title="Preceding page: 4.2.1 &nbsp; Mapping view at a glance" aria-label="Preceding page: 4.2.1 &nbsp; Mapping view at a glance" href="aboutmappingview.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 4.2 &nbsp; Configuring data sources" aria-label="Section one level up: 4.2 &nbsp; Configuring data sources" href="managingdatasources.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.2.3 &nbsp; Mapping data sources" aria-label="Next page: 4.2.3 &nbsp; Mapping data sources" href="mappingavariable.html">Next</a></div>
+      </div>
+      <div class="sect2 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="settingupdatasources" id="settingupdatasources"></a><span class="otsLbl"><span class="otlbl-num">4.2.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Setting up data sources</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid12399" id="tmpid12399"></a>A data source is what <span class="namestring" data-cid="Designer">Designer</span> uses to identify which sample
+            file to use for a particular data map. The same sample file can be
+            used in multiple data sources, and be mapped differently for each
+            data source with which is it associated.
+         </p>
+         <p><a name="tmpid12401" id="tmpid12401"></a>When a data source is assigned to a communication, any variables
+            mapped in the data source become available for use in the communication.
+         </p>
+         <p><a name="tmpid12402" id="tmpid12402"></a>Use the Communication asset library view to create and modify the data sources
+            that can be used when fulfilling your communications.
+         </p>
+         <p><a name="tmpid12403" id="tmpid12403"></a>To access the Communication asset library view, in Content launcher, on
+            the toolbar, click the <strong class="guilabel" data-cid="Communication_asset_library">Communication asset library</strong> button <img src="./img/b_WebApps_AppToolbar_MappingIcon.png" class="igrph" alt="" width="30" height="30">.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref172" id="tmp4ref172"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid12407" id="tmpid12407"></a>Only <span class="namestring" data-cid="Designer">Designer</span> user roles that have the proper <strong class="guilabel" data-cid="Resource_access">Resource
+                  access</strong> permissions allow access to the Communication asset library view.
+               If you have questions about your access privileges, talk to your system
+               administrator.
+            </p></div>
+         <div class="vl2formalsect-list vl2bhseq" id="aid4pidiv89">
+         <h2 class="bridgehead subheading2"><a name="creating-nds" id="creating-nds"></a>Creating a new data source
+         </h2>
+         <div class="procedure">
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid12416" id="tmpid12416"></a>In the <strong class="guilabel" data-cid="Data">Data</strong> panel, click <strong class="guilabel" data-cid="Add">Add</strong>, then click <strong class="guilabel" data-cid="Data_source">Data source</strong> in the
+                     selection list.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid12421" id="tmpid12421"></a>In the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, provide
+                     the following information:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid12425" id="tmpid12425"></a>Enter a name and, optionally, a description for the
+                              data source that you want to create.
+                           </p>
+                           <p><a name="tmpid12426" id="tmpid12426"></a>Names do not support the following special characters: <code class="literal">&amp; / : * ! ? &gt; &lt; | + # %</code> 
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid12429" id="tmpid12429"></a>If you want to use resources
+                              from a design pack, select <strong class="guilabel" data-cid="Use_design_pack">Use design pack</strong>, click <strong class="guilabel" data-cid="Find_design_pack">Find design pack</strong>, and then select a design pack.
+                           </p>
+                           <div class="note">
+                              <p class="title"><strong><a name="tmp4ref173" id="tmp4ref173"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                              </strong></p>
+                              <p><a name="tmpid12433" id="tmpid12433"></a>This option is only available if a design pack with a <span class="namestring" data-cid="Designer">Designer</span> driver
+                                 file is present in Orchestration asset library view.
+                              </p>
+                           </div>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid12436" id="tmpid12436"></a>Click the <strong class="guilabel" data-cid="Data_source_type">Data source type</strong> list
+                              to select the data file type being mapped:
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid12440" id="tmpid12440"></a><strong class="guilabel" data-cid="Driver">Driver</strong>—Driver files contain
+                                       at least one set of records for each customer. They drive the main
+                                       processing of the engine and are usually the primary source of data.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid12443" id="tmpid12443"></a><strong class="guilabel" data-cid="Reference">Reference</strong>—Reference files let the engine access a supplemental set of
+                                       customer data that is not included in a customer driver file. This
+                                       extra information is retrieved based on a key variable included in
+                                       the customer driver file.
+                                    </p>
+                                    <div class="note">
+                                       <p class="title"><strong><a name="tmp4ref174" id="tmp4ref174"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                                       </strong></p>
+                                       <p><a name="tmpid12446" id="tmpid12446"></a>Reference files are not supported when fulfilling <span class="namestring" data-cid="Interactive">Interactive</span> documents.
+                                       </p>
+                                    </div>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid12449" id="tmpid12449"></a><strong class="guilabel" data-cid="Report">Report</strong>—Report
+                                       files let the engine collect data in order to create a report that
+                                       includes any information that you select about the production run.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="note">
+                              <p class="title"><strong><a name="tmp4ref175" id="tmp4ref175"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                              </strong></p>
+                              <p><a name="tmpid12452" id="tmpid12452"></a>If using a design pack, this field is pre-populated with the <strong class="guilabel" data-cid="Driver">Driver</strong> type.
+                              </p>
+                           </div>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid12455" id="tmpid12455"></a>Select an option in the <strong class="guilabel" data-cid="Data_source_format">Data source format</strong> list to define the layout of data in a data file.
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid12459" id="tmpid12459"></a><strong class="guilabel" data-cid="XML">XML</strong>—The data file consists
+                                       of data that uses tags to define the beginning and end of a data element.
+                                       For XML files, <span class="namestring" data-cid="Designer">Designer</span> supports the following features: elements
+                                       and values; attributes; and namespaces.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid12463" id="tmpid12463"></a><strong class="guilabel" data-cid="JSON">JSON</strong>—The data file consists
+                                       of data that uses the JavaScript Object Notation (JSON) text format
+                                       to define data elements.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid12466" id="tmpid12466"></a><strong class="guilabel" data-cid="Interactive"><span class="namestring">Interactive</span></strong>—The data file
+                                       consists of data located in an <span class="namestring" data-cid="Interactive">Interactive</span> document (MPW file).
+                                    </p>
+                                    <p><a name="tmpid12470" id="tmpid12470"></a>This option is only available if the data source type is <strong class="guilabel" data-cid="Driver">Driver</strong>.
+                                    </p>
+                                    <div class="note">
+                                       <p class="title"><strong><a name="tmp4ref176" id="tmp4ref176"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                                       </strong></p>
+                                       <p><a name="tmpid12473" id="tmpid12473"></a><span class="namestring" data-cid="Interactive">Interactive</span> data sources only support PDF and HTML Email outputs.
+                                       </p>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="variablelist standard lvl1 lvlmax1">
+                              <dl class="variablelist standard">
+                                 <dt class="varlistentry"><a name="dl2vl-352" id="dl2vl-352"></a><span class="term"><a name="tmpid12477" id="tmpid12477"></a>If you are creating a <strong class="guilabel" data-cid="Report">Report</strong> data source:</span></dt>
+                                 <dd class="varlistentry">
+                                    <p><a name="tmpid12480" id="tmpid12480"></a>Select one of the following options in the <strong class="guilabel" data-cid="I_O_timing">I/O timing</strong> list:
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid12484" id="tmpid12484"></a><strong class="guilabel" data-cid="At_end_of_customer">At end of customer</strong>—The
+                                                engine writes data records after each customer is complete. Each customer's
+                                                information can be summarized for reports, including the current production
+                                                run.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid12487" id="tmpid12487"></a><strong class="guilabel" data-cid="Completion_of_all_customers">Completion of all customers</strong>—The
+                                                engine writes data records after it finishes processing. This option
+                                                creates a single output record upon completion of processing. It ensures
+                                                that all of the variables are processed and written to the report
+                                                in case the first records are shorter and contain less data than later
+                                                records.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </dd>
+                                 <dt class="varlistentry"><a name="dl2vl-353" id="dl2vl-353"></a><span class="term"><a name="tmpid12490" id="tmpid12490"></a>If you are creating a <strong class="guilabel" data-cid="Reference">Reference</strong> data source:</span></dt>
+                                 <dd class="varlistentry">
+                                    <p><a name="tmpid12493" id="tmpid12493"></a>Select one of the following options in the <strong class="guilabel" data-cid="Access_method_timing">Access
+                                          method timing</strong> list:
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid12497" id="tmpid12497"></a><strong class="guilabel" data-cid="Memory">Memory</strong>—The engine reads
+                                                the entire reference file and stores all of the data in memory.
+                                             </p>
+                                             <p><a name="tmpid12499" id="tmpid12499"></a>This option offers the fastest processing but uses the most
+                                                memory. With small reference files, this option yields the best results. 
+                                             </p>
+                                             <p><a name="tmpid12501" id="tmpid12501"></a>The <strong class="guilabel" data-cid="Memory">Memory</strong> option does not support data
+                                                segments. 
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid12504" id="tmpid12504"></a><strong class="guilabel" data-cid="Driver-ordered,_required">Driver-ordered, required</strong>—The
+                                                engine reads customer data in the customer driver file, looks for
+                                                corresponding key variable values in the reference file, and then
+                                                returns to the customer driver file for the next customer. The engine
+                                                does not store keys in memory so the customer driver file and reference
+                                                file values must be in the same order. If the reference file does
+                                                not have a match at the same customer position, the engine reads the
+                                                remainder of the reference file until it finds a match. The engine
+                                                requires the specified key to be in the reference file. If the engine
+                                                reaches the end of the reference file without a match, the run stops
+                                                and you receive a severe error message.
+                                             </p>
+                                             <p><a name="tmpid12506" id="tmpid12506"></a>Select this option if the customer driver file exactly matches
+                                                reference files or if the customer driver file contains fewer customers
+                                                than the reference file. 
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid12512" id="tmpid12512"></a><strong class="guilabel" data-cid="Driver-ordered,_optional">Driver-ordered, optional</strong>—The
+                                                engine reads customer data in the customer driver file, looks for
+                                                corresponding key variable values in the reference file, and then
+                                                returns to the customer driver file for the next customer. The engine
+                                                does not store keys in memory so the customer driver file and reference
+                                                file values must be in the same order. If the reference file does
+                                                not have a match at the same customer position, the engine immediately
+                                                stops reading and resets the reference file position to test for a
+                                                match for the next customer. If the engine finds a value in the reference
+                                                file that does not have a corresponding match in the customer driver
+                                                file, then all subsequent reads to the reference file fail.
+                                             </p>
+                                             <p><a name="tmpid12514" id="tmpid12514"></a>Select this option when the reference file is a subset of the
+                                                customer driver file key values.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </dd>
+                              </dl>
+                           </div>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid12519" id="tmpid12519"></a>Click <strong class="guilabel" data-cid="Find_sample_file">Find sample file</strong> to select
+                              the sample file that you want to use.
+                           </p>
+                           <div class="note">
+                              <p class="title"><strong><a name="tmp4ref177" id="tmp4ref177"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                              </strong></p>
+                              <p><a name="tmpid12522" id="tmpid12522"></a>If you use a JSON sample file, and any of its data element names
+                                 contain spaces, you cannot map variables to those elements.
+                              </p>
+                              <p><a name="tmpid12523" id="tmpid12523"></a>If the file has been mapped previously and contains any variables
+                                 mapped to those elements, those variables will not be processed properly
+                                 by the engine (that is, the values for those elements will be missing
+                                 in the output).
+                              </p>
+                           </div>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid12525" id="tmpid12525"></a>Optionally, in the <strong class="guilabel" data-cid="Migration_set">Migration set</strong> list, you can select up to five approved
+                              migration sets to associate with the data source. When you link this
+                              data source to a <span class="namestring" data-cid="Designer">Designer</span> communication, the associated migration
+                              sets are also linked with that communication.
+                           </p>
+                           <div class="note">
+                              <p class="title"><strong><a name="tmp4ref178" id="tmp4ref178"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                              </strong></p>
+                              <p><a name="tmpid12529" id="tmpid12529"></a>This option is only available for driver data files and when
+                                 an approved migration set is present in Rationalization asset library view. For more
+                                 information, see 
+                                 <data-xpi><data-xproc name="ExtXrefStart" href="ccwc250100-h-ugd.addingmigset" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                                    ><A class="otModuleHide if-ccwc-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../ccwc/v250100/ccwc-h-ugd/en/ofh/addingmigset.html"
+                                    ><span class="otsLbl"
+                                    ><span class="otlbl-num">section 8.3.2.2.2</span
+                                    ><span class="otlbl-sep"> </span></span
+                                    ><span class="otlbl-ttl">"Creating a migration set"</span> in <i>OpenText Communications - Web Client User Help (CCWC250100-H-UGD)</i></A
+                                    ><SPAN class="otModuleShow if-ccwc-h-ugd-hide"
+                                    ><span class="otsLbl"
+                                    ><span class="otlbl-num">section 8.3.2.2.2</span
+                                    ><span class="otlbl-sep"> </span></span
+                                    ><span class="otlbl-ttl">"Creating a migration set"</span> in <i>OpenText Communications - Web Client User Help (CCWC250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccwc250100-h-ugd.addingmigset" fmt=""></data-xproc></data-xpi>.
+                              </p>
+                           </div>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid12532" id="tmpid12532"></a>Provide the <strong class="guilabel" data-cid="Production_data_source_name">Production data source name</strong> by entering the symbolic name or the path and file name of the file
+                              to use for production.
+                           </p>
+                           <div class="note">
+                              <p class="title"><strong><a name="tmp4ref179" id="tmp4ref179"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                              </strong></p>
+                              <p><a name="tmpid12535" id="tmpid12535"></a>If using a design pack, this field is pre-populated with the
+                                 production file designated in the design pack.
+                              </p>
+                           </div>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid12537" id="tmpid12537"></a>For XML data sources and columnar
+                              sort indexes, select the appropriate encoding in the <strong class="guilabel" data-cid="Encoding">Encoding</strong> list:
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid12541" id="tmpid12541"></a><strong class="guilabel" data-cid="UTF-8">UTF-8</strong>: —The default and
+                                       recommended option.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid12544" id="tmpid12544"></a><strong class="guilabel" data-cid="UTF-16">UTF-16</strong>—Select one of the
+                                       following options if you know your data source is encoded in UTF-16:
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid12548" id="tmpid12548"></a><strong class="guilabel" data-cid="UTF-16">UTF-16</strong>—UTF-16 with a byte
+                                                order mark (BOM)
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid12551" id="tmpid12551"></a><strong class="guilabel" data-cid="UTF-16BE">UTF-16BE</strong>—UTF-16, Big-endian,
+                                                no BOM
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid12554" id="tmpid12554"></a><strong class="guilabel" data-cid="UTF-16LE">UTF-16LE</strong>—UTF-16, Little-endian,
+                                                no BOM
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="note">
+                              <p class="title"><strong><a name="tmp4ref180" id="tmp4ref180"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                              </strong></p>
+                              <p><a name="tmpid12557" id="tmpid12557"></a>If unexpected characters appear during <a class="link" href="mappingavariable.html" title="4.2.3 &nbsp; Mapping data sources">data mapping</a>, check to make sure
+                                 that the proper encoding was selected.
+                              </p>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid12560" id="tmpid12560"></a>Click <strong class="guilabel" data-cid="Create">Create</strong>.
+                  </p>
+               </li>
+            </ol>
+         </div>
+         <div class="itemizedlist">
+            <p><a name="tmpid12563" id="tmpid12563"></a>After the data source is created, the following options become
+               available in the properties panel, based on the data source type:
+            </p>
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid12565" id="tmpid12565"></a><strong class="guilabel" data-cid="Driver:_End_segment_at_closing_tag">Driver: End segment at closing tag</strong>—When selected, this option ends the data segment at the corresponding
+                     closing element instead of at the start of a new data segment or the
+                     start of a new customer. This option is enabled by default.
+                  </p>
+                  <div class="note">
+                     <p class="title"><strong><a name="tmp4ref181" id="tmp4ref181"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                     </strong></p>
+                     <p><a name="tmpid12568" id="tmpid12568"></a>The option is not available for the <span class="namestring" data-cid="Interactive">Interactive</span> data source format.
+                     </p>
+                  </div>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid12571" id="tmpid12571"></a><strong class="guilabel" data-cid="Reference:_Reference_key">Reference: Reference
+                        key</strong>—This identifies the variable that is used as
+                     the key for the reference file. This key is used to call the reference
+                     file from the customer driver file. The <a class="link" href="referencekey.html" title="4.2.3.10 &nbsp; Selecting a reference key variable">reference key</a> is specified in Mapping view.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid12575" id="tmpid12575"></a><strong class="guilabel" data-cid="Report:_Tag_level_indentation">Report: Tag level indentation</strong>—You can select one of the following options in the list:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid12579" id="tmpid12579"></a><strong class="guilabel" data-cid="0–10">0–10</strong>—Select the number
+                              of spaces (0–10) to indent for each tag level in the output.
+                              The default is <strong class="guilabel" data-cid="0">0</strong>.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid12583" id="tmpid12583"></a><strong class="guilabel" data-cid="Lean_JSON">Lean JSON</strong> / <strong class="guilabel" data-cid="Lean_XML">Lean XML</strong>—Select a lean option to suppress indentation, carriage returns,
+                              and line feeds in the output. This can reduce the size of the file.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+            </ul>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv90">
+         <h2 class="bridgehead subheading2"><a name="opening" id="opening"></a>Opening an existing data
+            source
+         </h2>
+         <div class="orderedlist">
+            <ol class="orderedlist" type="1">
+               <li class="listitem">
+                  <p><a name="tmpid12591" id="tmpid12591"></a>In the <strong class="guilabel" data-cid="Data">Data</strong> panel, click one
+                     of the following buttons:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid12595" id="tmpid12595"></a><strong class="guilabel" data-cid="Library">Library</strong>—Displays all of
+                              the existing data sources
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid12598" id="tmpid12598"></a><strong class="guilabel" data-cid="Favorites">Favorites</strong>—Displays a list
+                              of data sources that have been bookmarked
+                           </p>
+                           <div class="tip">
+                              <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Tip</span></span></strong></p>
+                              <p><a name="tmpid12601" id="tmpid12601"></a>If you work frequently with a specific data source, you can
+                                 bookmark that data source so that it appears in the <strong class="guilabel" data-cid="Favorites">Favorites</strong> list. To bookmark a data source, point to the data source in the <strong class="guilabel" data-cid="Library">Library</strong> tab, and click the bookmark icon (<img src="./img/b_WebApps_Favorite.png" class="igrph" alt="" width="11" height="17">)
+                                 in the <strong class="guilabel" data-cid="Favorites">Favorites</strong> column.
+                              </p>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid12607" id="tmpid12607"></a>Select the data source that you want to open, and
+                     click <strong class="guilabel" data-cid="Open">Open</strong>.
+                  </p>
+                  <p><a name="tmpid12609" id="tmpid12609"></a>The data source opens in Mapping view.
+                  </p>
+               </li>
+            </ol>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv91">
+         <h2 class="bridgehead subheading2"><a name="dl2vl-358" id="dl2vl-358"></a>Handling orphaned mappings
+         </h2>
+         <p><a name="tmpid12613" id="tmpid12613"></a>Orphaned mappings are data areas in a sample file that previously
+            had variables mapped to them, but that are no longer present in that
+            sample file. Orphaned mappings occur when a sample file that is associated
+            with a data source is changed after it has been previously mapped.
+            When you open a data source that contains orphaned mappings, you receive
+            a message that indicates which previously mapped data elements are
+            missing.
+         </p>
+         <div class="itemizedlist">
+            <p><a name="tmpid12615" id="tmpid12615"></a>To close the message, select one of the following options:
+            </p>
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid12617" id="tmpid12617"></a>To ignore all of the orphaned mappings and remove
+                     them from the data source, click <strong class="guilabel" data-cid="Discard">Discard</strong>.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid12620" id="tmpid12620"></a>To retain the variable mappings in the data source,
+                     click <strong class="guilabel" data-cid="Keep">Keep</strong>. You might want to do this, for example,
+                     if you are using a production file that has the correct data elements,
+                     but the sample file no longer has those elements.
+                  </p>
+                  <div class="note">
+                     <p class="title"><strong><a name="tmp4ref182" id="tmp4ref182"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                     </strong></p>
+                     <p><a name="tmpid12623" id="tmpid12623"></a>If you choose to keep orphaned mappings, you will continue to
+                        receive the message each time you open the data source.
+                     </p>
+                  </div>
+               </li>
+            </ul>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv92">
+         <h2 class="bridgehead subheading2"><a name="dl2vl-360" id="dl2vl-360"></a>Updating the data source
+            properties
+         </h2>
+         <p><a name="tmpid12627" id="tmpid12627"></a>If you have already created a data source but want to change
+            any of its properties, you can do so by selecting the data source,
+            making the necessary adjustments in the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, and then clicking <strong class="guilabel" data-cid="Save">Save</strong>.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref183" id="tmp4ref183"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid12631" id="tmpid12631"></a>If the data source has been approved, submitted for approval,
+               or is in a rejected state, the properties cannot be changed.
+            </p>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv93">
+         <h2 class="bridgehead subheading2"><a name="dl2vl-362" id="dl2vl-362"></a>Viewing the references
+            for a data source
+         </h2>
+         <p><a name="tmpid12635" id="tmpid12635"></a>You can use the <strong class="guilabel" data-cid="References">References</strong> tab in the <strong class="guilabel" data-cid="Properties">Properties</strong> panel to see all of the
+            linked resources for a selected resource, if applicable.
+         </p>
+         <p><a name="tmpid12639" id="tmpid12639"></a>To see the references for a resource:
+         </p>
+         <div class="procedure">
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid12642" id="tmpid12642"></a>In the asset library panel, select a resource.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid12644" id="tmpid12644"></a>In the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, click the <strong class="guilabel" data-cid="References">References</strong> tab.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid12648" id="tmpid12648"></a>To display a
+                     list of references for the selected resource, click the following
+                     buttons:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid12651" id="tmpid12651"></a><strong class="guilabel" data-cid="Used_by">Used by</strong>—The list shows all of the parent resources that use the selected
+                              resource. Keep in mind that this list displays only parent resources
+                              with a direct link to the selected resource. Resources that use the
+                              parent resources are not listed. This option is selected by default.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid12654" id="tmpid12654"></a><strong class="guilabel" data-cid="Uses">Uses</strong>—The list shows
+                              all of the child resources that are used by the selected resource,
+                              including resources that are used by each child resource.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid12657" id="tmpid12657"></a>To filter the displayed list by resource type, click the resource
+                     type selection list and select from the available options. You can
+                     select as many resource types as you want. To select all types, simply
+                     clear all existing selections.
+                  </p>
+               </li>
+            </ol>
+         </div>
+         <p><a name="tmpid12668" id="tmpid12668"></a>By default, the
+            first 50 items are displayed in the <strong class="guilabel" data-cid="Properties">Properties</strong> panel. To change the number of items displayed in the panel, use
+            the&nbsp;<strong class="guilabel" data-cid="Items_per_page">Items per page</strong> list. If the number of resources
+            is too large to display in the  panel, you can navigate the resource
+            list with the page navigation buttons <img src="./img/b_WebApps_PageNavigation.png" class="igrph" alt="" width="98" height="14">.
+         </p></div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.2.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Setting up data sources</span></div>
+         <div class="pgPrev"><a title="Preceding page: 4.2.1 &nbsp; Mapping view at a glance" aria-label="Preceding page: 4.2.1 &nbsp; Mapping view at a glance" href="aboutmappingview.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 4.2 &nbsp; Configuring data sources" aria-label="Section one level up: 4.2 &nbsp; Configuring data sources" href="managingdatasources.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.2.3 &nbsp; Mapping data sources" aria-label="Next page: 4.2.3 &nbsp; Mapping data sources" href="mappingavariable.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

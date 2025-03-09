@@ -1,0 +1,155 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="4.2 ">4.2 Configuring data sources</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="addingcommunicationassets.html" title="Chapter 4 – Managing communication resources"> -->
+      <link rel="prev" href="configuringcommunicationsets.html" title="4.1 &nbsp; Configuring communication sets">
+      <link rel="next" href="aboutmappingview.html" title="4.2.1 &nbsp; Mapping view at a glance">
+   <link rel="stylesheet" type="text/css" href="../../../../../ccdpdi/v250100/ccdpdi-h-ugd/en/ofh/dynData/condstyles.css">
+
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wxho-f-e90c6dcaf-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":6,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d84468f","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61806,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741380846","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==RjUCM91zaWk/Xkcxwt0gu089VKqFgEUoSc+sa++Ukl7kTNGbT0WytsHFRBurD/s741rtMpn8TxVegMMJviUV9N0yljFdvB0Ptklo4XhviT/hgTcUmw+BG+/fu6+ToKqtfPPZSpm3JPEvJJvdPMxEQVrInDPpG+XepQ5ZXaCE0GY3O94dszS0vNl5YQAoQzJwf5+xKAKmOaNB2xgRCizfONTFvykiKMD5FwkleRjm29OojUDS7T8qZ+OqFail3VUFyZAMCF5WbXrmDanB3lsAdtwDbxxSpdVRj/eifFvBPYhOab2FRksABwTH5ujqxEDaxXa1X6vzgG0BDrqdrMrxjw2LrSbtkqf35rDKpvlNIVx+tPJB5lfn3Q2tXND2viIJqECPCKXFaGbMzR527RxoPNQFxHQyZSZr/sF8ZrSra5Y=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="managingdatasources">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Configuring data sources</span></div>
+         <div class="pgPrev"><a title="Preceding page: 4.1 &nbsp; Configuring communication&#xA;sets" aria-label="Preceding page: 4.1 &nbsp; Configuring communication&#xA;sets" href="configuringcommunicationsets.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 4 – Managing communication resources" aria-label="Section one level up: Chapter 4 – Managing communication resources" href="addingcommunicationassets.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.2.1 &nbsp; Mapping view at a glance" aria-label="Next page: 4.2.1 &nbsp; Mapping view at a glance" href="aboutmappingview.html">Next</a></div>
+      </div>
+      <div class="sect1 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="managingdatasources" id="managingdatasources"></a><span class="otsLbl"><span class="otlbl-num">4.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Configuring data sources</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid12294" id="tmpid12294"></a>To enable <span class="phrase">the <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> engine</span> to connect customer
+            data to your communications, you must map a data source using a sample
+            data file. When you map a data source, you associate a variable with
+            each data area in the sample file, which creates data maps that the
+            engine uses to find customer data in your production data file. The
+            engine then uses that data to populate variables and customize your
+            communications.
+         </p>
+         <p><a name="tmpid12301" id="tmpid12301"></a><span class="namestring" data-cid="Designer">Designer</span> uses the data source to identify which sample file
+            to use for a particular data map. The same sample file can be used
+            in multiple data sources, and be mapped differently for each data
+            source with which is it associated. The data source defines several
+            aspects of the file to be mapped. For example:
+         </p>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid12305" id="tmpid12305"></a>The name of the data source
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid12307" id="tmpid12307"></a>The sample data file to be used for the data map
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid12309" id="tmpid12309"></a>An associated design pack
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid12311" id="tmpid12311"></a>The type of data source that it represents
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid12313" id="tmpid12313"></a>The data source format
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid12315" id="tmpid12315"></a>The production data source name
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <p><a name="tmpid12316" id="tmpid12316"></a>In Communication asset library view, you use the <strong class="guilabel" data-cid="Data">Data</strong> panel to <a class="link" href="settingupdatasources.html" title="4.2.2 &nbsp; Setting up data sources">set up a data source</a> for use in your communications, and associate a sample file <span class="phrase">and design pack </span>with a data source.
+            You then open the data source in Mapping view to <a class="link" href="mappingavariable.html" title="4.2.3 &nbsp; Mapping data sources">map the data source</a>. You can <a class="link" href="creatingvariables.html" title="4.6.2 &nbsp; Creating variables">create variables</a> and <a class="link" href="updatingvariableproperties.html" title="4.6.3 &nbsp; Updating variable properties">update variable properties</a> in both Mapping view and the <strong class="guilabel" data-cid="Data">Data</strong> panel of the Communication asset library view.
+         </p>
+         <p><a name="tmpid12324" id="tmpid12324"></a>In Mapping view, you can map the data source using variables
+            from the following sources:
+         </p>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid12327" id="tmpid12327"></a><strong class="guilabel" data-cid="Asset_library">Asset library</strong>—Variables
+                     created in either Mapping view or Communication asset library view are stored in
+                     the asset library and are available to all <span class="namestring" data-cid="Designer">Designer</span> data sources.
+                     Library variables that are mapped in a data source are also available
+                     to any communication that uses that data source.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid12331" id="tmpid12331"></a><strong class="guilabel" data-cid="Design_pack">Design pack</strong>—When you create a <span class="namestring" data-cid="Design_Manager">Design Manager</span> application for use with <span class="namestring" data-cid="Designer">Designer</span>,
+                     you can include variables in the design pack. When you select a design
+                     pack to set up a data source in <span class="namestring" data-cid="Designer">Designer</span>, the variables in that design
+                     pack are available for use in that data source. For more information
+                     about configuring a design pack, see 
+                     <data-xpi><data-xproc name="ExtXrefStart" href="ccdpdi250100-h-ugd.configdesignpackcommdesigner" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                        ><A class="otModuleHide if-ccdpdi-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../ccdpdi/v250100/ccdpdi-h-ugd/en/ofh/configdesignpackcommdesigner.html"
+                        ><span class="otsLbl"
+                        ><span class="otlbl-num">section 2.2.1</span
+                        ><span class="otlbl-sep"> </span></span
+                        ><span class="otlbl-ttl">"Configuring a design pack for Communications Designer"</span> in <i>OpenText Exstream Design and Production - Design and Import Help (CCDPDI250100-H-UGD)</i></A
+                        ><SPAN class="otModuleShow if-ccdpdi-h-ugd-hide"
+                        ><span class="otsLbl"
+                        ><span class="otlbl-num">section 2.2.1</span
+                        ><span class="otlbl-sep"> </span></span
+                        ><span class="otlbl-ttl">"Configuring a design pack for Communications Designer"</span> in <i>OpenText Exstream Design and Production - Design and Import Help (CCDPDI250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccdpdi250100-h-ugd.configdesignpackcommdesigner" fmt=""></data-xproc></data-xpi>.
+                  </p>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div id="localtocBottom" data-piref="xlm_LclTocBtm" role="navigation" aria-label="Link list to sub sections">
+         <div class="title"><h2 class="dfltlabel">Table of Contents</h2></div>
+         <ul>
+            <li><a href="aboutmappingview.html">Mapping view at a glance</a></li>
+            <li><a href="settingupdatasources.html">Setting up data sources</a></li>
+            <li><a href="mappingavariable.html">Mapping data sources</a></li>
+         </ul>
+      </div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Configuring data sources</span></div>
+         <div class="pgPrev"><a title="Preceding page: 4.1 &nbsp; Configuring communication&#xA;sets" aria-label="Preceding page: 4.1 &nbsp; Configuring communication&#xA;sets" href="configuringcommunicationsets.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 4 – Managing communication resources" aria-label="Section one level up: Chapter 4 – Managing communication resources" href="addingcommunicationassets.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.2.1 &nbsp; Mapping view at a glance" aria-label="Next page: 4.2.1 &nbsp; Mapping view at a glance" href="aboutmappingview.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

@@ -1,0 +1,418 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="4.8 ">4.8 Setting up output queues</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="addingcommunicationassets.html" title="Chapter 4 – Managing communication resources"> -->
+      <link rel="prev" href="inserters.html" title="4.7 &nbsp; Setting up inserters">
+      <link rel="next" href="settingupoutputs.html" title="4.9 &nbsp; Setting up outputs">
+   <link rel="stylesheet" type="text/css" href="../../../../../ccwc/v250100/ccwc-h-ugd/en/ofh/dynData/condstyles.css">
+<link rel="stylesheet" type="text/css" href="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/dynData/condstyles.css">
+
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wyby-f-88815cbb0-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9dd79461","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":62291,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741381688","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==Cznq1nVBA8cdMYQKXARjH1oTfHVgyL/7DMnpgtpnkR7FzMKInwN0KANf2B43jCya+y40SVrEqaJ1/T4ku8n3ow4Z5Db2fOHU+iHwSybHJRcWNi6qjzDLy7RVB38MKIDp7Yix5mVwqzEGCD7ug+AD+QWFfUBnJWalh36eCbhQkq/pW08hEZgF//EHcm3AdY/P5hOE8iFZUhboxY8MUqKR8qr0NaVafVxfvSpiPR92JmmTLqZzk/G6oZpfl8B7WrRImga4LdmgowwQpgKLFcp4vKLunmyzWGWRFuvt1y4thSRSPMC8BZE56POyWW2YsBcsxfhKkki5ZYQEvJav6tF92YEh/8V0MPPMAQdCebcu9kTXHv21usDvDFqDytPhAFqx/ZfN0PxtmiPCZk0Z9YCgpwsO/0HzQZYqSJbFFGtY50A=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="settingupoutputqueues">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.8</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Setting up output queues</span></div>
+         <div class="pgPrev"><a title="Preceding page: 4.7 &nbsp; Setting up inserters" aria-label="Preceding page: 4.7 &nbsp; Setting up inserters" href="inserters.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 4 – Managing communication resources" aria-label="Section one level up: Chapter 4 – Managing communication resources" href="addingcommunicationassets.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.9 &nbsp; Setting up outputs" aria-label="Next page: 4.9 &nbsp; Setting up outputs" href="settingupoutputs.html">Next</a></div>
+      </div>
+      <div class="sect1 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="settingupoutputqueues" id="settingupoutputqueues"></a><span class="otsLbl"><span class="otlbl-num">4.8</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Setting up output queues</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid16453" id="tmpid16453"></a>You can use the asset library panel in the Communication asset library view to
+            add output queue objects to the asset library for use with a communication.
+            Output queues function as containers for production settings, including
+            those for output drivers and inserter objects.
+         </p>
+         <p><a name="tmpid16454" id="tmpid16454"></a>You can add multiple output queues to a communication set to
+            produce output with a variety of high-volume settings and output driver
+            settings, including a mix of print and electronic drivers, while running
+            the engine only once in <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span>. When a communication
+            set has multiple output queues, you can designate one to be the <a class="link" href="configuringcommunicationsets.html#setting" title="Setting a primary queue">primary queue</a>.</p>
+         <div class="vl2formalsect-list vl2bhseq" id="aid4pidiv115">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732631747-016" id="vle2s1732631747-016"></a> Creating an output queue
+            object 
+         </h2>
+         <div class="orderedlist">
+            <ol class="orderedlist" type="1">
+               <li class="listitem">
+                  <p><a name="tmpid16468" id="tmpid16468"></a>In the <strong class="guilabel" data-cid="Delivery">Delivery</strong> panel, click <strong class="guilabel" data-cid="Add">Add</strong>, then click <strong class="guilabel" data-cid="Output_queue">Output queue</strong> in the
+                     selection list.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid16473" id="tmpid16473"></a>Specify a name and, optionally, a description for
+                     the output queue.
+                  </p>
+                  <p><a name="tmpid16474" id="tmpid16474"></a>Names do not support the following special characters: <code class="literal">&amp; / : * ! ? &gt; &lt; | + # %</code> 
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid16477" id="tmpid16477"></a>In the <strong class="guilabel" data-cid="Output">Output</strong> list, select the
+                     output driver for this queue from the list of available outputs.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid16480" id="tmpid16480"></a>Click <strong class="guilabel" data-cid="Create">Create</strong>.
+                  </p>
+               </li>
+            </ol>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv116">
+         <h2 class="bridgehead subheading2"><a name="updating-oq" id="updating-oq"></a>Updating output queue properties 
+         </h2>
+         <p><a name="tmpid16485" id="tmpid16485"></a>After you create an output queue, you can use the <strong class="guilabel" data-cid="Properties">Properties</strong> panel to view and modify the properties on
+            the following tabs:
+         </p>
+         <div class="informaltable">
+            <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+               <colgroup>
+                  <col class="col1">
+                  <col class="COLSPEC0">
+                  <col class="col2">
+               </colgroup>
+               <tbody>
+                  <tr class="row">
+                     <td style=""><a name="tmpid16494" id="tmpid16494"></a>Properties
+                     </td>
+                     <td style=""><a name="tmpid16495" id="tmpid16495"></a>Description
+                     </td>
+                     <td style=""><a name="tmpid16496" id="tmpid16496"></a>Additional information
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid16498" id="tmpid16498"></a><a name="tmpid16499" id="tmpid16499"></a><strong class="guilabel" data-cid="General">General</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><a name="tmpid16501" id="tmpid16501"></a><div class="itemizedlist">
+                           <ul class="itemizedlist">
+                              <li class="listitem">
+                                 <p><a name="tmpid16504" id="tmpid16504"></a>Update the output queue name, the description, and
+                                    the output object associated with the output queue.
+                                 </p>
+                                 <p><a name="tmpid16505" id="tmpid16505"></a>Names do not support the following special characters: <code class="literal">&amp; / : * ! ? &gt; &lt; | + # %</code> 
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid16508" id="tmpid16508"></a>If you use a duplex output queue as the primary queue,
+                                    the duplex queue forces the engine to insert blank pages. If you want
+                                    all other output queues to also insert blank pages, clear the <strong class="guilabel" data-cid="Remove_blank_pages_if_the_primary_queue_is_duplex">Remove blank pages if the primary queue is duplex</strong> check
+                                    box. 
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid16511" id="tmpid16511"></a>If you want
+                                    to update the output queue for use with the sorting and bundling process,
+                                    see 
+                                    <data-xpi><data-xproc name="ExtXrefStart" href="ccwc250100-h-ugd.sortbundle" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                                       ><A class="otModuleHide if-ccwc-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../ccwc/v250100/ccwc-h-ugd/en/ofh/sortbundle.html"
+                                       ><span class="otsLbl"
+                                       ><span class="otlbl-num">section 9.7</span
+                                       ><span class="otlbl-sep"> </span></span
+                                       ><span class="otlbl-ttl">"Sorting and bundling output"</span> in <i>OpenText Communications - Web Client User Help (CCWC250100-H-UGD)</i></A
+                                       ><SPAN class="otModuleShow if-ccwc-h-ugd-hide"
+                                       ><span class="otsLbl"
+                                       ><span class="otlbl-num">section 9.7</span
+                                       ><span class="otlbl-sep"> </span></span
+                                       ><span class="otlbl-ttl">"Sorting and bundling output"</span> in <i>OpenText Communications - Web Client User Help (CCWC250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccwc250100-h-ugd.sortbundle" fmt=""></data-xproc></data-xpi>. 
+                                 </p>
+                              </li>
+                           </ul>
+                        </div>
+                     </td>
+                     <td style=""><a name="tmpid16513" id="tmpid16513"></a>Not applicable
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid16515" id="tmpid16515"></a><a name="tmpid16516" id="tmpid16516"></a><strong class="guilabel" data-cid="Breaks">Breaks</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid16518" id="tmpid16518"></a><a name="tmpid16519" id="tmpid16519"></a>Add convenience breaks to divide output into multiple
+                           files.
+                        </p>
+                     </td>
+                     <td style=""><a name="tmpid16520" id="tmpid16520"></a><a href="settingupoutputqueues.html#queuebreak" class="xref2 varlistentry auto xstd"><span class="otlbl-ttl">Using breaks to create multiple
+                           output files</span></a></td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid16523" id="tmpid16523"></a><a name="tmpid16524" id="tmpid16524"></a><strong class="guilabel" data-cid="Domains">Domains</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid16526" id="tmpid16526"></a><a name="tmpid16527" id="tmpid16527"></a>Define the domains to which a resource is assigned.
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid16528" id="tmpid16528"></a><a name="tmpid16529" id="tmpid16529"></a><a href="associatingresourceswithdomains.html" class="xref2 sect1 auto xstd" title="3.13 &nbsp; Associating resources&#xA;with domains"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.13</span> “</span><span class="otlbl-ttl">Associating resources
+                              with domains</span><span class="otsLbl">”</span></a></p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid16532" id="tmpid16532"></a><a name="tmpid16533" id="tmpid16533"></a><strong class="guilabel" data-cid="Logic">Logic</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid16535" id="tmpid16535"></a><a name="tmpid16536" id="tmpid16536"></a>Create or assign a rule to the output queue.
+                        </p>
+                        <div class="itemizedlist">
+                           <ul class="itemizedlist">
+                              <li class="listitem">
+                                 <p><a name="tmpid16539" id="tmpid16539"></a><b class="title">To add a rule – </b>Click the <strong class="guilabel" data-cid="Add_rule">Add
+                                       rule</strong> button <img src="./img/b_WebApps_AddListItem.png" class="igrph" alt="" width="30" height="30">.
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid16544" id="tmpid16544"></a><b class="title">To view or edit a rule – </b>Click the <strong class="guilabel" data-cid="Rule_action">Rule action</strong> button <img src="./img/b_WebApps_ActionMenu.png" class="igrph" alt="" width="30" height="30"> and
+                                    select <strong class="guilabel" data-cid="Edit_View">Edit/View</strong>. 
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid16550" id="tmpid16550"></a><b class="title">To remove a rule – </b>Click the <strong class="guilabel" data-cid="Rule_action">Rule action</strong> button <img src="./img/b_WebApps_ActionMenu.png" class="igrph" alt="" width="30" height="30"> and
+                                    select <strong class="guilabel" data-cid="Remove">Remove</strong>. 
+                                 </p>
+                              </li>
+                           </ul>
+                        </div>
+                     </td>
+                     <td style=""><a name="tmpid16555" id="tmpid16555"></a><data-xpi><data-xproc name="ExtXrefStart" href="cccd250100-h-ugd.usingtargetingrules" fmt="auto" is1st="yes" tgtag="?"></data-xproc
+                           ><A class="otModuleHide if-cccd-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/usingtargetingrules.html"
+                           ><span class="otsLbl"
+                           ><span class="otlbl-num">Section 22</span
+                           ><span class="otlbl-sep"> </span></span
+                           ><span class="otlbl-ttl">"Rules"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></A
+                           ><SPAN class="otModuleShow if-cccd-h-ugd-hide"
+                           ><span class="otsLbl"
+                           ><span class="otlbl-num">Section 22</span
+                           ><span class="otlbl-sep"> </span></span
+                           ><span class="otlbl-ttl">"Rules"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="cccd250100-h-ugd.usingtargetingrules" fmt=""></data-xproc></data-xpi>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid16558" id="tmpid16558"></a><a name="tmpid16559" id="tmpid16559"></a><strong class="guilabel" data-cid="Metadata_class_">Metadata (class)</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid16561" id="tmpid16561"></a><a name="tmpid16562" id="tmpid16562"></a>Apply metadata or class tags to resources.
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid16563" id="tmpid16563"></a><a name="tmpid16564" id="tmpid16564"></a><a href="applyingmetadata.html" class="xref2 sect1 auto xstd" title="3.5 &nbsp; Applying metadata tags to resources"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.5</span> “</span><span class="otlbl-ttl">Applying metadata
+                              tags to resources</span><span class="otsLbl">”</span></a></p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid16567" id="tmpid16567"></a><a name="tmpid16568" id="tmpid16568"></a><strong class="guilabel" data-cid="Workflow">Workflow</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid16570" id="tmpid16570"></a><a name="tmpid16571" id="tmpid16571"></a>Manage the approval workflow for a resource.
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid16572" id="tmpid16572"></a><a name="tmpid16573" id="tmpid16573"></a><a href="managingapprovalworkflows.html" class="xref2 sect1 auto xstd" title="3.6 &nbsp; Managing approval workflows"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.6</span> “</span><span class="otlbl-ttl">Managing approval
+                              workflows</span><span class="otsLbl">”</span></a></p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid16576" id="tmpid16576"></a><a name="tmpid16577" id="tmpid16577"></a><strong class="guilabel" data-cid="References">References</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid16579" id="tmpid16579"></a><a name="tmpid16580" id="tmpid16580"></a>View the linked resources connected to a selected resource
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid16581" id="tmpid16581"></a><a name="tmpid16582" id="tmpid16582"></a><a href="usingassetlibraryviews.html" class="xref2 sect1 auto xstd" title="3.3 &nbsp; Viewing resources in asset&#xA;library views"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.3</span> “</span><span class="otlbl-ttl">Viewing resources
+                              in asset
+                              library views</span><span class="otsLbl">”</span></a></p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid16585" id="tmpid16585"></a><a name="tmpid16586" id="tmpid16586"></a><strong class="guilabel" data-cid="Inserters">Inserters</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid16588" id="tmpid16588"></a><a name="tmpid16589" id="tmpid16589"></a>Supplement your printed output during the production
+                           run with inserts.
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid16590" id="tmpid16590"></a><a name="tmpid16591" id="tmpid16591"></a><a href="inserters.html" class="xref2 sect1 auto xstd" title="4.7 &nbsp; Setting up inserters"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">4.7</span> “</span><span class="otlbl-ttl">Setting up inserters</span><span class="otsLbl">”</span></a></p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid16594" id="tmpid16594"></a><a name="tmpid16595" id="tmpid16595"></a><strong class="guilabel" data-cid="Report">Report</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid16597" id="tmpid16597"></a><a name="tmpid16598" id="tmpid16598"></a>Configure the settings that are used to generate a queue
+                           report file.
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid16599" id="tmpid16599"></a><a name="tmpid16600" id="tmpid16600"></a><a href="settingupoutputqueues.html#queuereport" class="xref2 varlistentry auto xstd"><span class="otlbl-ttl">Generating queue report files
+                              for tracking and quality control</span></a></p>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div class="variablelist standard lvl1 lvlmax1">
+            <dl class="variablelist standard">
+               <dt class="varlistentry"><a name="queuebreak" id="queuebreak"></a><span class="term"><a name="tmpid16604" id="tmpid16604"></a>Using breaks to create multiple
+                     output files</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid16606" id="tmpid16606"></a>You can use the options on the <strong class="guilabel" data-cid="Breaks">Breaks</strong> tab
+                     to divide output into multiple files (sometimes called document subsets). You can also
+                     use breaks for archival purposes. For example, you can create a
+                     separate output file for each customer, or you can separate the output
+                     into files of 5000 pages each. 
+                  </p>
+                  <div class="note">
+                     <p class="title"><strong><a name="tmp4ref208" id="tmp4ref208"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                     </strong></p>
+                     <p><a name="tmpid16613" id="tmpid16613"></a>Break options are unavailable for output queues that use <strong class="guilabel" data-cid="Messaging">Messaging</strong> as the output type.
+                     </p>
+                  </div>
+                  <div class="itemizedlist">
+                     <p><a name="tmpid16616" id="tmpid16616"></a>The following break options are available:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid16618" id="tmpid16618"></a><strong class="guilabel" data-cid="Break_options">Break options</strong>—Indicates where
+                              to place a convenience break in the output. Select from the following
+                              options: 
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid16622" id="tmpid16622"></a><strong class="guilabel" data-cid="None">None</strong>—No breaks added.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid16625" id="tmpid16625"></a><strong class="guilabel" data-cid="Customers">Customers</strong>—Adds breaks after the
+                                       specified number of customers.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid16628" id="tmpid16628"></a><strong class="guilabel" data-cid="Documents">Documents</strong>—Adds breaks after the
+                                       specified number of documents.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid16631" id="tmpid16631"></a><strong class="guilabel" data-cid="Designs">Designs</strong>—Adds breaks after the
+                                       specified number of designs.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid16634" id="tmpid16634"></a><strong class="guilabel" data-cid="Count">Count</strong>—Specifies the number of
+                              customers, documents, or designs after which to include a break. The
+                              default value is <strong class="guilabel" data-cid="1">1</strong>.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid16638" id="tmpid16638"></a><strong class="guilabel" data-cid="Can_split_customers">Can split customers</strong>—Allows documents
+                              or designs for a customer to be split into multiple output files.
+                              By default, this check box is not selected.
+                           </p>
+                           <div class="note">
+                              <p class="title"><strong><a name="tmp4ref209" id="tmp4ref209"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                              </strong></p>
+                              <p><a name="tmpid16641" id="tmpid16641"></a>Output queues that use <strong class="guilabel" data-cid="HTML">HTML</strong> or <strong class="guilabel" data-cid="Interactive"><span class="namestring">Interactive</span></strong> as the output type automatically have the <strong class="guilabel" data-cid="Break_options">Break options</strong> set to <strong class="guilabel" data-cid="Customers">Customers</strong> and
+                                 the <strong class="guilabel" data-cid="Count">Count</strong> set to <strong class="guilabel" data-cid="1">1</strong>. These
+                                 are fixed settings.
+                              </p>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="queuereport" id="queuereport"></a><span class="term"><a name="tmpid16650" id="tmpid16650"></a>Generating queue report files
+                     for tracking and quality control</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid16652" id="tmpid16652"></a>You can use the <strong class="guilabel" data-cid="Report">Report</strong> tab to configure
+                     the creation of a custom report file, often called a queue report
+                     or custom queue report. for the output queue. This report can be used
+                     as an audit or quality control file. Unlike regular report files,
+                     queue reports generate queue-specific information rather than global
+                     information about a communication. For example, you might want to
+                     track information about how many customers are processed through the
+                     queue or how many documents are sent through the queue. The report
+                     is generated as a JSON or XML file and can be imported into other
+                     programs for formatting and data manipulation. You must have created
+                     a report file object before you can add it to the output queue.
+                  </p>
+                  <div class="itemizedlist">
+                     <p><a name="tmpid16655" id="tmpid16655"></a>The following queue report settings are available:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid16657" id="tmpid16657"></a><strong class="guilabel" data-cid="Layout">Layout</strong>—Specifies the data source
+                              to use as the layout for the report file.
+                           </p>
+                           <div class="note">
+                              <p class="title"><strong><a name="tmp4ref210" id="tmp4ref210"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                              </strong></p>
+                              <p><a name="tmpid16660" id="tmpid16660"></a>The only data source objects that can be used for a layout are <strong class="guilabel" data-cid="Report">Report</strong> objects that have their <strong class="guilabel" data-cid="I_O_timing">I/O timing</strong> option set to <strong class="guilabel" data-cid="Queue_break_and_end_of_queue">Queue break and end of queue</strong> or <strong class="guilabel" data-cid="Completion_of_all_customers">Completion of all customers</strong>.
+                              </p>
+                           </div>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid16666" id="tmpid16666"></a><strong class="guilabel" data-cid="Report_file_name_type">Report file name type</strong>—Indicates
+                              if the report file name is set by a variable or static text.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid16669" id="tmpid16669"></a><strong class="guilabel" data-cid="Report_file_name">Report file name</strong>—Specifies the
+                              name of the report file.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid16672" id="tmpid16672"></a><strong class="guilabel" data-cid="Break_method">Break method</strong>—If you have set
+                              up convenience breaks for output, you can set the report file to break
+                              at the same time by selecting <strong class="guilabel" data-cid="When_queue_breaks">When queue breaks</strong> in the <strong class="guilabel" data-cid="Break_method">Break method</strong> list. To turn off this
+                              option, select <strong class="guilabel" data-cid="None">None</strong>.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+            </dl>
+         </div></div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.8</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Setting up output queues</span></div>
+         <div class="pgPrev"><a title="Preceding page: 4.7 &nbsp; Setting up inserters" aria-label="Preceding page: 4.7 &nbsp; Setting up inserters" href="inserters.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 4 – Managing communication resources" aria-label="Section one level up: Chapter 4 – Managing communication resources" href="addingcommunicationassets.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.9 &nbsp; Setting up outputs" aria-label="Next page: 4.9 &nbsp; Setting up outputs" href="settingupoutputs.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

@@ -1,0 +1,239 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="9.2 ">9.2 Publishing orchestration flows</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="runningengineorchestration.html" title="Chapter 9 – Running engine orchestration"> -->
+      <link rel="prev" href="configuringorchestrationflows.html" title="9.1 &nbsp; Adding orchestration flow resources">
+      <link rel="next" href="initiatingorchestrationjobs.html" title="9.3 &nbsp; Initiating orchestration jobs">
+   <link rel="stylesheet" type="text/css" href="../../../../../ccmceorc/v250100/ccmceorc-h-ugd/en/ofh/dynData/condstyles.css">
+
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wz6o-f-54bf709d5-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9e999a8e","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":63380,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741383630","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==ul8jYW3MxEIdmEyVZ5ax7ngxYXXoUyLqfdZ9874+NcU7vLHzsF7gWS1F/NdRxHcvtugOVfdNCNzz0gRcwu5t/DSmXSieiyCTAnTAzodyDPwbeDgkMG8xlRTPa7oEkSVLLwnNOvBIKo/COvaN46Noj4Th39d6HIkq03qFGAzwPn54oLbh4ATbyzHhcPMoQ/2ERs2hluirazW2jQobHEEO+R3dN5FUhnxTqCiK9s4vD8euPJvHJUC321ce232cB+CXvryR1jHUSQFCBoSQM7QPT9UdVAoZ7p8aZUJ9J/OFQ17ZYrPiZ2hkImY23fSugFhmMWVPOpWcIXXQupeyJk3E9E+oRj7IH6e6ddPK/r7g/lODdbCOW4AldKfzZhkrH1Q5wkZ8qPF7oN9rFR/6DoxIlITVPd035QqFo/AUDJM8g6g=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="publishingflows">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">9.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Publishing orchestration
+            flows</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 9.1 &nbsp; Adding orchestration&#xA;flow resources" aria-label="Preceding page: 9.1 &nbsp; Adding orchestration&#xA;flow resources" href="configuringorchestrationflows.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 9 – Running engine orchestration" aria-label="Section one level up: Chapter 9 – Running engine orchestration" href="runningengineorchestration.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 9.3 &nbsp; Initiating orchestration&#xA;jobs" aria-label="Next page: 9.3 &nbsp; Initiating orchestration&#xA;jobs" href="initiatingorchestrationjobs.html">Next</a></div>
+      </div>
+      <div class="sect1 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="publishingflows" id="publishingflows"></a><span class="otsLbl"><span class="otlbl-num">9.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Publishing orchestration
+                     flows</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid25977" id="tmpid25977"></a>Flow models and flow contexts determine the manner in which
+            the engine processes communications or package files to produce customer
+            output.
+         </p>
+         <p><a name="tmpid25978" id="tmpid25978"></a>Flow models and flow contexts are created in the Orchestration asset library view and
+            configured using <span class="namestring" data-cid="Orchestrator">Orchestrator</span>. For more information about configuring
+            these resources, see 
+            <data-xpi><data-xproc name="ExtXrefStart" href="ccmceorc-h-ugd.-" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+               ><A class="otModuleHide if-ccmceorc-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../ccmceorc/v250100/ccmceorc-h-ugd/en/ofh/index.html"><i>OpenText Communications - Orchestrator User Help (CCMCEORC-H-UGD)</i></A
+               ><SPAN class="otModuleShow if-ccmceorc-h-ugd-hide"><i>OpenText Communications - Orchestrator User Help (CCMCEORC-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccmceorc-h-ugd.-" fmt=""></data-xproc></data-xpi>.
+         </p>
+         <p><a name="tmpid25981" id="tmpid25981"></a>Publishing a flow model or a flow context makes the resource
+            available for processing by the Orchestration service in the following
+            way:
+         </p>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid25984" id="tmpid25984"></a>Publishing a flow context activates its settings in
+                     the Orchestration service. This means that the input and output channels,
+                     outcome mappings, and communications that are defined in that flow
+                     context can be used in published flow models.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid25986" id="tmpid25986"></a>Publishing a flow model activates it for execution
+                     in the Orchestration service. This means that data sent to an input
+                     channel used in a published flow model will trigger the execution
+                     of that flow model. Publishing a flow model also generates engine
+                     run definitions for communications that are used in that flow model.
+                     Engine run definitions are provided to <span class="namestring" data-cid="Document_Generation">Document Generation</span> to run the <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> engine.
+                     When you publish a flow model that uses settings from multiple flow
+                     contexts, make sure that you have first published all of those flow
+                     contexts.
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref303" id="tmp4ref303"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid25991" id="tmpid25991"></a>Regardless of the resource version that is selected, publishing
+               a flow model or flow context always makes the latest approved version
+               of the resource available to the Orchestration service.&nbsp;When you publish
+               a resource, review these considerations:
+            </p>
+            <div class="itemizedlist">
+               <ul class="itemizedlist">
+                  <li class="listitem">
+                     <p><a name="tmpid25994" id="tmpid25994"></a>To publish the latest version of the resource, make
+                        sure that you approve the resource before you publish.
+                     </p>
+                  </li>
+                  <li class="listitem">
+                     <p><a name="tmpid25996" id="tmpid25996"></a>To publish an older version of the resource, promote
+                        that version of the resource and approve it before you publish.
+                     </p>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <p><a name="tmpid25997" id="tmpid25997"></a>If a flow context includes a communication that has <strong class="guilabel" data-cid="High-throughput_realtime_">High-throughput (realtime)</strong> selected, all the associated
+            input and reference files must be present in the specified folder
+            when the flow context is published. For more information about configuring
+            a flow context, see 
+            <data-xpi><data-xproc name="ExtXrefStart" href="ccmceorc-h-ugd.manageflowcontexts" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+               ><A class="otModuleHide if-ccmceorc-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../ccmceorc/v250100/ccmceorc-h-ugd/en/ofh/manageflowcontexts.html"
+               ><span class="otsLbl"
+               ><span class="otlbl-num">section 2</span
+               ><span class="otlbl-sep"> </span></span
+               ><span class="otlbl-ttl">"Configuring flow contexts"</span> in <i>OpenText Communications - Orchestrator User Help (CCMCEORC-H-UGD)</i></A
+               ><SPAN class="otModuleShow if-ccmceorc-h-ugd-hide"
+               ><span class="otsLbl"
+               ><span class="otlbl-num">section 2</span
+               ><span class="otlbl-sep"> </span></span
+               ><span class="otlbl-ttl">"Configuring flow contexts"</span> in <i>OpenText Communications - Orchestrator User Help (CCMCEORC-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccmceorc-h-ugd.manageflowcontexts" fmt=""></data-xproc></data-xpi>.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref304" id="tmp4ref304"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid26001" id="tmpid26001"></a>When using realtime publishing, engine run definitions are created
+               when a flow context is published, rather than when a flow model is
+               published.
+            </p></div>
+         <div class="vl2formalsect-list vl2bhseq" id="aid4pidiv212">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732631747-023" id="vle2s1732631747-023"></a> Publishing a flow model or flow context
+         </h2>
+         <p><a name="tmpid26006" id="tmpid26006"></a>When you work with versioned resources, the publishing behavior
+            is different for flow models and flow contexts:
+         </p>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid26009" id="tmpid26009"></a>For flow models, if you publish the latest version
+                     of a resource while a previous version is in a published state, the
+                     previous version will be automatically unpublished.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid26011" id="tmpid26011"></a>For flow contexts, if you publish the latest version
+                     of a resource while a previous version is in a published state, then
+                     both versions are available in published state.
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <div class="important">
+            <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Important</span></span></strong></p>
+            <p><a name="tmpid26013" id="tmpid26013"></a>To ensure correct flow execution, make sure that you unpublish
+               previous versions before you publish the latest version of a flow
+               model or a flow context. Otherwise, you might see unexpected results.
+            </p>
+         </div>
+         <p><a name="tmpid26014" id="tmpid26014"></a>To publish a flow model or flow context:
+         </p>
+         <div class="orderedlist">
+            <ol class="orderedlist" type="1">
+               <li class="listitem">
+                  <p><a name="tmpid26017" id="tmpid26017"></a>In Orchestration asset library view, in the <strong class="guilabel" data-cid="Flows">Flows</strong> panel, select a flow model or flow context.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid26020" id="tmpid26020"></a>On the <strong class="guilabel" data-cid="General">General</strong> tab in the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, click <strong class="guilabel" data-cid="Publish">Publish</strong>.
+                  </p>
+               </li>
+            </ol>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv213">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732631747-024" id="vle2s1732631747-024"></a> Unpublishing a published resource
+         </h2>
+         <div class="procedure">
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid26029" id="tmpid26029"></a>In Orchestration asset library view, in the <strong class="guilabel" data-cid="Flows">Flows</strong> panel, select the resource.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid26032" id="tmpid26032"></a>On the <strong class="guilabel" data-cid="General">General</strong> tab in the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, click <strong class="guilabel" data-cid="Unpublish">Unpublish</strong>.
+                  </p>
+               </li>
+            </ol>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv214">
+         <h2 class="bridgehead subheading2"><a name="flowdeleteconsiderations" id="flowdeleteconsiderations"></a>Considerations for
+            deleting flow resources
+         </h2>
+         <p><a name="tmpid26039" id="tmpid26039"></a>When only one version of an unpublished flow model or flow context
+            exists, you can simply click <strong class="guilabel" data-cid="Delete">Delete</strong> in the <strong class="guilabel" data-cid="Properties">Properties</strong> panel in Orchestration asset library view to delete the
+            resource from the asset library.
+         </p>
+         <p><a name="tmpid26042" id="tmpid26042"></a>When multiple versions of a flow model or flow context exist,
+            you can choose to delete either a specific version that you select
+            in the version selector in the <strong class="guilabel" data-cid="Properties">Properties</strong> panel,
+            or you can choose to delete all versions of the resource. To do so,
+            select the <strong class="guilabel" data-cid="Delete_all_versions">Delete all versions</strong> check box in the
+            confirmation dialog box that appears when you click <strong class="guilabel" data-cid="Delete">Delete</strong>.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref305" id="tmp4ref305"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid26047" id="tmpid26047"></a>You cannot delete a flow model or a flow context if any version
+               of that resource that is in a published state.
+            </p>
+         </div>
+         <p><a name="tmpid26048" id="tmpid26048"></a>When&nbsp;you unpublish and delete the latest version of a flow model
+            or flow context, you must then republish the previous version of the
+            resource if you want to make it available to the Orchestration service.
+         </p></div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">9.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Publishing orchestration
+            flows</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 9.1 &nbsp; Adding orchestration&#xA;flow resources" aria-label="Preceding page: 9.1 &nbsp; Adding orchestration&#xA;flow resources" href="configuringorchestrationflows.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 9 – Running engine orchestration" aria-label="Section one level up: Chapter 9 – Running engine orchestration" href="runningengineorchestration.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 9.3 &nbsp; Initiating orchestration&#xA;jobs" aria-label="Next page: 9.3 &nbsp; Initiating orchestration&#xA;jobs" href="initiatingorchestrationjobs.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

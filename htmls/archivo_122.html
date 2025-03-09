@@ -1,0 +1,572 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="3.9.4 ">3.9.4 Replacing text in multiple content resources</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="search-replace-content-24-2.html" title="3.9 &nbsp; Searching and replacing text in multiple content resources"> -->
+      <link rel="prev" href="search-text-and-filter-24-2.html" title="3.9.3 &nbsp; Searching text in multiple content resources">
+      <link rel="next" href="enablingeffectivity-cdr.html" title="3.10 &nbsp; Enabling effectivity for Designer">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wxhl-f-4551fe4fb-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d84048c","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61797,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741380843","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==KYHih3aeM0priLQeGf3ktMAum/SpEv81uzVU4LlH5+ke6qhhLNIt8yLy/ZVEQmA3S1suFU56u7zsp93AWdIu+4Mi4qaEIjErh53hcMT5CH3UsX6xFXoq2wj1ovcQUi+lVDdSaKXyno5UNTs5jC5EyVH2sR7AI44JMrM0tm9fYhYxgNVy3vF5gI0A5tZ8h/tWbsHwRjalOsyCMqorjEdcYHPGWuMniZgRyZ75AIgXVzfob7Q0YKg0ZfHqPdpyk3m5eFt70zNViy5iHrw3IvHcMi4ri7Mt7H5nNRmlKany3nwSf+g22oWxAvIzXs8Jq5TSrw0QkCLkCUmRWuWTaWk/dNZGrrCLXoG7DXbcHW0A/WA/slUZNkUR2W02QGIUdagNhaRj3IOeEFd68mQMsJHlW+iKdxkl0GDac5zHHdk+dMY=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="search-replacing-text-24-2">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">3.9.4</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Replacing text in
+            multiple content resources</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 3.9.3 &nbsp; Searching text in&#xA;multiple content resources" aria-label="Preceding page: 3.9.3 &nbsp; Searching text in&#xA;multiple content resources" href="search-text-and-filter-24-2.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 3.9 &nbsp; Searching and replacing text in multiple content resources" aria-label="Section one level up: 3.9 &nbsp; Searching and replacing text in multiple content resources" href="search-replace-content-24-2.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 3.10 &nbsp; Enabling effectivity&#xA;for Designer" aria-label="Next page: 3.10 &nbsp; Enabling effectivity&#xA;for Designer" href="enablingeffectivity-cdr.html">Next</a></div>
+      </div>
+      <div class="sect2 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="search-replacing-text-24-2" id="search-replacing-text-24-2"></a><span class="otsLbl"><span class="otlbl-num">3.9.4</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Replacing text in
+                     multiple content resources</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid11407" id="tmpid11407"></a>If your deployment supports the <a class="link" href="advanced-search-options-24-2.html" title="3.9.2 &nbsp; Specifying advanced search options"><strong class="guilabel" data-cid="Search_text_within_content">Search text within
+                  content</strong></a> option, follow the instructions in this
+            section to replace text in multiple content resources. You can replace
+            text in the standard variation of a content resource or any of its
+            alternate variations.
+         </p>
+         <p><a name="tmpid11410" id="tmpid11410"></a>Replacing begins with a list of content resources in the search
+            results. Each resource contains matching text in one or more locations.
+            The match locations can be in the standard variation or any alternate
+            variations.
+         </p>
+         <p><a name="tmpid11411" id="tmpid11411"></a>In the results list, you select the content resources in which
+            to replace matching text. Then, you can either replace the matches
+            at all locations in the selected resources or open individual resources
+            and replace matches at selected locations.
+         </p>
+         <p><a name="tmpid11412" id="tmpid11412"></a>After replacing, you can review the final replacement results
+            and the replacement status for each affected content resource.
+         </p>
+         <div class="variablelist standard lvl1 lvlmax1">
+            <dl class="variablelist standard">
+               <dt class="varlistentry"><a name="replacing-text-prereqs-24-2" id="replacing-text-prereqs-24-2"></a><span class="term"><a name="tmpid11415" id="tmpid11415"></a>Prerequisites
+                     for replacing text in multiple content resources</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid11417" id="tmpid11417"></a>You can replace text in a list of content resources, including
+                     text in alternate variations of those resources, if each resource
+                     meets these requirements:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid11420" id="tmpid11420"></a>The advanced search option <strong class="guilabel" data-cid="Search_text_within_content">Search text within
+                                 content</strong> is available for all content types in list that
+                              you want to search. For the list of content types that support the <strong class="guilabel" data-cid="Search_text_within_content">Search text within content</strong> option, see <a href="advanced-search-options-24-2.html#search-within-text-applying" class="xref2 varlistentry auto xstd"><span class="otlbl-ttl">Applying the Search text within content option</span></a>.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid11425" id="tmpid11425"></a>The text to replace is within an editable content
+                              resource. For more information about content editability requirements,
+                              see <a href="replacing-text-prereqs-editing.html" class="xref2 sect2 auto xstd" title="3.8.2 &nbsp; Prerequisites&#xA;for replacing text while editing"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.8.2</span> “</span><span class="otlbl-ttl">Prerequisites
+                                 for replacing text while editing</span><span class="otsLbl">”</span></a>.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="note">
+                     <p class="title"><strong><a name="tmp4ref158" id="tmp4ref158"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                     </strong></p>
+                     <p><a name="tmpid11428" id="tmpid11428"></a>You cannot replace text in the name or description properties
+                        for content resources. However, you can <a class="link" href="search-text-and-filter-24-2.html#search-in-name-description-24-2" title="">search for text in the name
+                           or description properties</a> if the <strong class="guilabel" data-cid="Search_text_within_content">Search text within
+                           content</strong> check box is cleared or unavailable.
+                     </p>
+                  </div>
+               </dd>
+            </dl></div>
+         <div class="vl2formalsect-list vl2bhseq" id="aid4pidiv73">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732319984-006" id="vle2s1732319984-006"></a>Finding and replacing
+            text in multiple content resources
+         </h2>
+         <div class="procedure">
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid11437" id="tmpid11437"></a>To find content resources and replace text, complete the
+                     following steps:
+                  </p>
+                  <ol type="a" class="substeps">
+                     <li class="step">
+                        <p><a name="tmpid11440" id="tmpid11440"></a>From the home page, access the list of content resources
+                           in which you want to replace text. You can replace text only in content
+                           resources that meet all the <a class="link" href="search-replacing-text-24-2.html#replacing-text-prereqs-24-2">prerequisites for replacing text</a>.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid11443" id="tmpid11443"></a>In the <strong class="guilabel" data-cid="Search">Search</strong> box, click the down
+                           arrow.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid11446" id="tmpid11446"></a>At the top of the <strong class="guilabel" data-cid="Advanced_search_options">Advanced search options</strong> dialog box, click <strong class="guilabel" data-cid="Replace">Replace</strong>.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid11450" id="tmpid11450"></a>Enter the search text in the <strong class="guilabel" data-cid="Search...">Search...</strong> box and the replacement text in the <strong class="guilabel" data-cid="Replace...">Replace...</strong> box.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid11454" id="tmpid11454"></a><span class="boxed-text optional">Optional</span> Select the check boxes for any <a class="link" href="advanced-search-options-24-2.html" title="3.9.2 &nbsp; Specifying advanced search options">advanced search options</a> that you want to apply to your search results.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid11457" id="tmpid11457"></a>At the bottom of the dialog box,
+                           click <strong class="guilabel" data-cid="Replace">Replace</strong> to display the list of search results
+                           in the <strong class="guilabel" data-cid="Content_resource_type_text_replacement"><em class="varname">Content resource type</em> text replacement</strong> dialog box.
+                        </p>
+                        <div class="note">
+                           <p class="title"><strong><a name="tmp4ref159" id="tmp4ref159"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                           </strong></p>
+                           <p><a name="tmpid11462" id="tmpid11462"></a>When searching for text to replace, <span class="phrase">text in the name and description properties for content resources
+                                 is ignored.</span></p>
+                        </div>
+                     </li>
+                  </ol>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid11468" id="tmpid11468"></a>To choose how to replace search text in the results, complete
+                     the following steps:
+                  </p>
+                  <ol type="a" class="substeps">
+                     <li class="step">
+                        <p><a name="tmpid11471" id="tmpid11471"></a>In the <strong class="guilabel" data-cid="Content_resource_type_text_replacement"><em class="varname">Content resource type</em> text replacement</strong> dialog box, select the check boxes for
+                           the content resources in which you want to replace the search text
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid11475" id="tmpid11475"></a>Perform one of the following replacement tasks:
+                        </p>
+                        <div class="informaltable">
+                           <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                              <colgroup>
+                                 <col class="col1">
+                                 <col class="col2">
+                              </colgroup>
+                              <thead>
+                                 <tr class="row">
+                                    <th style="" valign="top"><a name="tmpid11482" id="tmpid11482"></a>Task
+                                    </th>
+                                    <th style="" valign="top"><a name="tmpid11483" id="tmpid11483"></a>Action
+                                    </th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr class="row">
+                                    <td style=""><a name="tmpid11486" id="tmpid11486"></a>To replace the search text in all locations in all selected
+                                       content resources.
+                                    </td>
+                                    <td style=""><a name="tmpid11487" id="tmpid11487"></a>Click <strong class="guilabel" data-cid="Replace_All">Replace All</strong>.
+                                    </td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td style=""><a name="tmpid11490" id="tmpid11490"></a>To open each selected content resource in the search bar and
+                                       specify the locations at which to replace the search text
+                                    </td>
+                                    <td style=""><a name="tmpid11491" id="tmpid11491"></a>Click <strong class="guilabel" data-cid="Replace">Replace</strong>.
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </li>
+                  </ol>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid11494" id="tmpid11494"></a>To replace search text at selected locations using the
+                     search bar, complete the following steps:
+                  </p>
+                  <ol type="a" class="substeps">
+                     <li class="step">
+                        <p><a name="tmpid11497" id="tmpid11497"></a>In the search results, if you clicked <strong class="guilabel" data-cid="Replace">Replace</strong> instead of <strong class="guilabel" data-cid="Replace_all">Replace all</strong>, the first selected
+                           content resource opens in an editng view with search bar and the matching
+                           text locations highlighted. The editing view initially shows the first
+                           match location at the top of the canvas, even if the first match is
+                           in an alternate variation.
+                        </p>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid11501" id="tmpid11501"></a>Perform any of the following actions in the search bar:
+                        </p>
+                        <div class="informaltable">
+                           <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                              <colgroup>
+                                 <col class="col1">
+                                 <col class="col2">
+                              </colgroup>
+                              <thead>
+                                 <tr class="row">
+                                    <th style="" valign="top"><p><a name="tmpid11508" id="tmpid11508"></a><a name="tmpid11509" id="tmpid11509"></a>Task
+                                       </p>
+                                    </th>
+                                    <th style="" valign="top"><p><a name="tmpid11510" id="tmpid11510"></a><a name="tmpid11511" id="tmpid11511"></a>Action
+                                       </p>
+                                    </th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr class="row">
+                                    <td style=""><p><a name="tmpid11514" id="tmpid11514"></a><a name="tmpid11515" id="tmpid11515"></a>To replace the search text in all locations in the content
+                                          resource
+                                       </p>
+                                    </td>
+                                    <td style=""><p><a name="tmpid11516" id="tmpid11516"></a><a name="tmpid11517" id="tmpid11517"></a>Click <strong class="guilabel" data-cid="Replace_All">Replace All</strong>.
+                                       </p>
+                                    </td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td style=""><p><a name="tmpid11520" id="tmpid11520"></a><a name="tmpid11521" id="tmpid11521"></a>To replace the search text at the current location and
+                                          then go to the next location
+                                       </p>
+                                    </td>
+                                    <td style=""><p><a name="tmpid11522" id="tmpid11522"></a><a name="tmpid11523" id="tmpid11523"></a>Click <strong class="guilabel" data-cid="Replace">Replace</strong>.
+                                       </p>
+                                    </td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td style=""><p><a name="tmpid11526" id="tmpid11526"></a><a name="tmpid11527" id="tmpid11527"></a>To skip replacing at the current location and go to the
+                                          next location
+                                       </p>
+                                    </td>
+                                    <td style=""><p><a name="tmpid11528" id="tmpid11528"></a><a name="tmpid11529" id="tmpid11529"></a>Click the click the <strong class="guilabel" data-cid="Next">Next</strong> button <img src="./img/b_WebApps_SearchReplaceNext.png" class="igrph" alt="" width="20" height="20">.
+                                       </p>
+                                    </td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td style=""><p><a name="tmpid11533" id="tmpid11533"></a><a name="tmpid11534" id="tmpid11534"></a>To go to the next or previous search location
+                                       </p>
+                                    </td>
+                                    <td style=""><p><a name="tmpid11535" id="tmpid11535"></a><a name="tmpid11536" id="tmpid11536"></a>Click the <strong class="guilabel" data-cid="Next">Next</strong> button <img src="./img/b_WebApps_SearchReplaceNext.png" class="igrph" alt="" width="20" height="20"> or <strong class="guilabel" data-cid="Previous">Previous</strong> button <img src="./img/b_WebApps_SearchReplacePrevious.png" class="igrph" alt="" width="20" height="20">.
+                                       </p>
+                                    </td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td style=""><p><a name="tmpid11542" id="tmpid11542"></a><a name="tmpid11543" id="tmpid11543"></a>To view the list of replacement results
+                                       </p>
+                                    </td>
+                                    <td style=""><p><a name="tmpid11544" id="tmpid11544"></a><a name="tmpid11545" id="tmpid11545"></a>Click the <strong class="guilabel" data-cid="Replacement_list">Replacement list</strong> button <img src="./img/b_WebApps_ReplacementList.png" class="igrph" alt="" width="19" height="18">. Click <strong class="guilabel" data-cid="Return">Return</strong> to go back to the search bar.
+                                       </p>
+                                    </td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td style=""><p><a name="tmpid11550" id="tmpid11550"></a><a name="tmpid11551" id="tmpid11551"></a>To save replacements and move to the next selected content
+                                          resource
+                                       </p>
+                                    </td>
+                                    <td style=""><p><a name="tmpid11552" id="tmpid11552"></a><a name="tmpid11553" id="tmpid11553"></a>Click the <strong class="guilabel" data-cid="Save_changes">Save changes</strong> button <img src="./img/b_WebApps_SaveReplacementsMoveNext.png" class="igrph" alt="" width="21" height="42">.
+                                       </p>
+                                    </td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td style=""><p><a name="tmpid11557" id="tmpid11557"></a><a name="tmpid11558" id="tmpid11558"></a>To discard all replacements and move to the next selected
+                                          content resource
+                                       </p>
+                                    </td>
+                                    <td style=""><p><a name="tmpid11559" id="tmpid11559"></a><a name="tmpid11560" id="tmpid11560"></a>Click the <strong class="guilabel" data-cid="Discard_changes">Discard changes</strong> button <img src="./img/b_WebApps_DiscardReplacementsMoveNext.png" class="igrph" alt="" width="21" height="42">.
+                                       </p>
+                                    </td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td style=""><p><a name="tmpid11564" id="tmpid11564"></a><a name="tmpid11565" id="tmpid11565"></a>To abandon the remaining text replacements in the current
+                                          resource and all remaing resources
+                                       </p>
+                                    </td>
+                                    <td style=""><p><a name="tmpid11566" id="tmpid11566"></a><a name="tmpid11567" id="tmpid11567"></a>Click <strong class="guilabel" data-cid="Stop">Stop</strong>.
+                                       </p>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid11570" id="tmpid11570"></a>In the search bar, after you click <strong class="guilabel" data-cid="Replace">Replace</strong> at the last location, or after you click <strong class="guilabel" data-cid="Replace_all">Replace all</strong> at any location, do one of the following in the dialog box that
+                           displays the message: <code class="literal">How would you like to advance to the
+                              next text object to replace matches</code>?
+                        </p>
+                        <div class="informaltable">
+                           <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                              <colgroup>
+                                 <col class="col1">
+                                 <col class="col2">
+                              </colgroup>
+                              <thead>
+                                 <tr class="row">
+                                    <th style="" valign="top"><p><a name="tmpid11580" id="tmpid11580"></a><a name="tmpid11581" id="tmpid11581"></a>Task
+                                       </p>
+                                    </th>
+                                    <th style="" valign="top"><p><a name="tmpid11582" id="tmpid11582"></a><a name="tmpid11583" id="tmpid11583"></a>Action
+                                       </p>
+                                    </th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr class="row">
+                                    <td style=""><p><a name="tmpid11586" id="tmpid11586"></a><a name="tmpid11587" id="tmpid11587"></a>To save all replacements before advancing to the next
+                                          content resource
+                                       </p>
+                                    </td>
+                                    <td style=""><p><a name="tmpid11588" id="tmpid11588"></a><a name="tmpid11589" id="tmpid11589"></a>Click <strong class="guilabel" data-cid="Save">Save</strong>.
+                                       </p>
+                                    </td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td style=""><p><a name="tmpid11592" id="tmpid11592"></a><a name="tmpid11593" id="tmpid11593"></a>To save no replacements before advancing the next content
+                                          resource
+                                       </p>
+                                    </td>
+                                    <td style=""><p><a name="tmpid11594" id="tmpid11594"></a><a name="tmpid11595" id="tmpid11595"></a>Click <strong class="guilabel" data-cid="Abandon">Abandon</strong>.
+                                       </p>
+                                    </td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td style=""><p><a name="tmpid11598" id="tmpid11598"></a><a name="tmpid11599" id="tmpid11599"></a>To close the message box and return to the last location
+                                       </p>
+                                    </td>
+                                    <td style=""><p><a name="tmpid11600" id="tmpid11600"></a><a name="tmpid11601" id="tmpid11601"></a>Click <strong class="guilabel" data-cid="Cancel">Cancel</strong>.
+                                       </p>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </li>
+                     <li class="step">
+                        <p><a name="tmpid11604" id="tmpid11604"></a><span class="boxed-text optional">Optional</span> In the search bar, click <strong class="guilabel" data-cid="Stop">Stop</strong>. Then, do one of the following in the dialog box
+                           that displays the message: <code class="literal">Are you sure you would like to
+                              abandon remaining text replacements for all matches?</code></p>
+                        <div class="informaltable">
+                           <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                              <colgroup>
+                                 <col class="col1">
+                                 <col class="col2">
+                              </colgroup>
+                              <thead>
+                                 <tr class="row">
+                                    <th style="" valign="top"><a name="tmpid11613" id="tmpid11613"></a>Task
+                                    </th>
+                                    <th style="" valign="top"><a name="tmpid11614" id="tmpid11614"></a>Action
+                                    </th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr class="row">
+                                    <td style=""><p><a name="tmpid11617" id="tmpid11617"></a><a name="tmpid11618" id="tmpid11618"></a>To abandon all remaining replacements in the current
+                                          content resource and all remaining content resources
+                                       </p>
+                                    </td>
+                                    <td style=""><p><a name="tmpid11619" id="tmpid11619"></a><a name="tmpid11620" id="tmpid11620"></a>Click <strong class="guilabel" data-cid="Stop">Stop</strong>.
+                                       </p>
+                                    </td>
+                                 </tr>
+                                 <tr class="row">
+                                    <td style=""><p><a name="tmpid11623" id="tmpid11623"></a><a name="tmpid11624" id="tmpid11624"></a>To close the message box and return to the last location
+                                       </p>
+                                    </td>
+                                    <td style=""><p><a name="tmpid11625" id="tmpid11625"></a><a name="tmpid11626" id="tmpid11626"></a>Click <strong class="guilabel" data-cid="Cancel">Cancel</strong>.
+                                       </p>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </li>
+                  </ol>
+               </li>
+            </ol>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv74">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732319984-007" id="vle2s1732319984-007"></a>Reviewing replacement
+            results
+         </h2>
+         <div class="procedure">
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid11633" id="tmpid11633"></a>After you save your last text replacement, or if you click <strong class="guilabel" data-cid="Stop">Stop</strong> in the search bar and choose to skip any remaining
+                     text replacements, the <strong class="guilabel" data-cid="Content_resource_type_text_replacement"><em class="varname">Content resource type</em> text replacement</strong> dialog box opens so you can review the
+                     following statistics in the <strong class="guilabel" data-cid="Final_results">Final results</strong> list:
+                  </p>
+                  <div class="informaltable">
+                     <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                        <colgroup>
+                           <col class="col1">
+                           <col class="col2">
+                        </colgroup>
+                        <thead>
+                           <tr class="row">
+                              <th style="" valign="top"><p><a name="tmpid11644" id="tmpid11644"></a><a name="tmpid11645" id="tmpid11645"></a>Result
+                                 </p>
+                              </th>
+                              <th style="" valign="top"><p><a name="tmpid11646" id="tmpid11646"></a><a name="tmpid11647" id="tmpid11647"></a>Description
+                                 </p>
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid11650" id="tmpid11650"></a><a name="tmpid11651" id="tmpid11651"></a><strong class="guilabel" data-cid="Matchesfound">Matches&nbsp;found</strong></p>
+                              </td>
+                              <td style=""><p><a name="tmpid11653" id="tmpid11653"></a><a name="tmpid11654" id="tmpid11654"></a>The number of search text locations in the content resources
+                                    that you selected in the search results.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid11656" id="tmpid11656"></a><a name="tmpid11657" id="tmpid11657"></a><strong class="guilabel" data-cid="Replaced">Replaced</strong></p>
+                              </td>
+                              <td style=""><p><a name="tmpid11659" id="tmpid11659"></a><a name="tmpid11660" id="tmpid11660"></a>The number of locations at which search text was replaced
+                                    in the content resources that you selected in the search results.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid11662" id="tmpid11662"></a><a name="tmpid11663" id="tmpid11663"></a><strong class="guilabel" data-cid="Ignored">Ignored</strong></p>
+                              </td>
+                              <td style=""><p><a name="tmpid11665" id="tmpid11665"></a><a name="tmpid11666" id="tmpid11666"></a>The number of locations at which search text was not
+                                    replaced in the content resources that you selected in the search
+                                    results.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid11668" id="tmpid11668"></a><a name="tmpid11669" id="tmpid11669"></a><strong class="guilabel" data-cid="Couldnotchange">Could&nbsp;not&nbsp;change</strong></p>
+                              </td>
+                              <td style=""><p><a name="tmpid11671" id="tmpid11671"></a><a name="tmpid11672" id="tmpid11672"></a>The number of content resources that you selected in
+                                    the search results that would not allow text to be replaced. This
+                                    number includes content resources that are selected in the search
+                                    results, but are not in the draft state or are locked by another user.
+                                 </p>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid11674" id="tmpid11674"></a>Click <strong class="guilabel" data-cid="Close">Close</strong>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid11677" id="tmpid11677"></a>In the <strong class="guilabel" data-cid="Replacements_found">Replacements found</strong> list, review
+                     the icons in the <strong class="guilabel" data-cid="Replaced">Replaced</strong> column for each selected
+                     content resource in the results. The icons indicate the replacement
+                     status for each content resource as follows:
+                  </p>
+                  <div class="informaltable">
+                     <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                        <colgroup>
+                           <col class="COLSPEC1">
+                           <col class="col1">
+                        </colgroup>
+                        <thead>
+                           <tr class="row">
+                              <th style="" valign="top"><p><a name="tmpid11686" id="tmpid11686"></a><a name="tmpid11687" id="tmpid11687"></a>Icon
+                                 </p>
+                              </th>
+                              <th style="" valign="top"><p><a name="tmpid11688" id="tmpid11688"></a><a name="tmpid11689" id="tmpid11689"></a>Replacement status
+                                 </p>
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid11692" id="tmpid11692"></a><a name="tmpid11693" id="tmpid11693"></a><img src="./img/b_WebApps_ReplacedNone.png" class="igrph" alt="" width="16" height="10"></p>
+                              </td>
+                              <td style=""><p><a name="tmpid11695" id="tmpid11695"></a><a name="tmpid11696" id="tmpid11696"></a>None: This status is due to one of the following conditions:
+                                 </p>
+                                 <div class="itemizedlist">
+                                    <ul class="itemizedlist">
+                                       <li class="listitem">
+                                          <p><a name="tmpid11699" id="tmpid11699"></a>The resource was opened, but no replacements were
+                                             made.
+                                          </p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid11701" id="tmpid11701"></a>Text in the resource could not be changed because
+                                             the resource did not meet the <a class="link" href="search-replacing-text-24-2.html#replacing-text-prereqs-24-2">prerequisites for replacing
+                                                text</a>.
+                                          </p>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid11704" id="tmpid11704"></a><a name="tmpid11705" id="tmpid11705"></a><img src="./img/b_WebApps_ReplacedPartial.png" class="igrph" alt="" width="16" height="10"></p>
+                              </td>
+                              <td style=""><p><a name="tmpid11707" id="tmpid11707"></a><a name="tmpid11708" id="tmpid11708"></a>Partial: The search text was replaced in at least one
+                                    location, but not in all locations.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid11710" id="tmpid11710"></a><a name="tmpid11711" id="tmpid11711"></a><img src="./img/b_WebApps_ReplacedAll.png" class="igrph" alt="" width="16" height="10"></p>
+                              </td>
+                              <td style=""><p><a name="tmpid11713" id="tmpid11713"></a><a name="tmpid11714" id="tmpid11714"></a>All: The search text was replaced in all locations.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid11716" id="tmpid11716"></a><a name="tmpid11717" id="tmpid11717"></a>Blank&nbsp;(no&nbsp;icon)
+                                 </p>
+                              </td>
+                              <td style=""><p><a name="tmpid11718" id="tmpid11718"></a><a name="tmpid11719" id="tmpid11719"></a>Unavailable: The resource appears in the search results
+                                    (contains matching text), but it was not selected for the replacement
+                                    operation.
+                                 </p>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </li>
+            </ol>
+         </div></div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">3.9.4</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Replacing text in
+            multiple content resources</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 3.9.3 &nbsp; Searching text in&#xA;multiple content resources" aria-label="Preceding page: 3.9.3 &nbsp; Searching text in&#xA;multiple content resources" href="search-text-and-filter-24-2.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 3.9 &nbsp; Searching and replacing text in multiple content resources" aria-label="Section one level up: 3.9 &nbsp; Searching and replacing text in multiple content resources" href="search-replace-content-24-2.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 3.10 &nbsp; Enabling effectivity&#xA;for Designer" aria-label="Next page: 3.10 &nbsp; Enabling effectivity&#xA;for Designer" href="enablingeffectivity-cdr.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

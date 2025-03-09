@@ -1,0 +1,731 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="3.1 ">3.1 Supported DAS resource types</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="managingassetlibraryresources.html" title="Chapter 3 – Working with DAS&nbsp;resources"> -->
+      <link rel="prev" href="managingassetlibraryresources.html" title="Chapter 3 – Working with DAS&nbsp;resources">
+      <link rel="next" href="aboutassetmanagementviews.html" title="3.2 &nbsp; Asset library views at a glance">
+   <link rel="stylesheet" type="text/css" href="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/dynData/condstyles.css">
+
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wwuk-f-cdc81d81f-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":9,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d48faff","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61426,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741380234","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==U30x8cy6sjNxhP8X1SlpdByjE/P/4y/+4xKEo3JEOiyX4lKe2LWp9YRpP6qzZ/wbm3axfLTicfNqNXfu88FPjAnmQCCS4cuMptnoXBxKRAXifXOHWWJahdlsRzSbwISO/VBHQiScJivmSu8+p7UWKM+dA4h8QEOTmte6aknxZ9VN4QHoPw+JOOAVpWcUAzAwfDTYdhsz4HJ/Mdzdb093mugBM+1aACegl8egOA0OKm6TjSSfrMbRDythrLfmZYWq+jG7nNn15D3SfxYNbzg37UZb1rcfsxqzrQfWLitNQZTY2/snO0KY4vzccbQT7qiNS9D9obYJHoQkXhmZBkWLOEKZY/B78APRhY9nFAQVwztHtXv1kCm+d/4SBL4C77yDzMAMX8rmTrXfQxXSV9Fsu5gAnozEjLlag16lfvKeZrM=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="supportedresourcesdas">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">3.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Supported DAS resource
+            types</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: Chapter 3 – Working with DAS&nbsp;resources" aria-label="Preceding page: Chapter 3 – Working with DAS&nbsp;resources" href="managingassetlibraryresources.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 3 – Working with DAS&nbsp;resources" aria-label="Section one level up: Chapter 3 – Working with DAS&nbsp;resources" href="managingassetlibraryresources.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 3.2 &nbsp; Asset library views&#xA;at a glance" aria-label="Next page: 3.2 &nbsp; Asset library views&#xA;at a glance" href="aboutassetmanagementviews.html">Next</a></div>
+      </div>
+      <div class="sect1 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="supportedresourcesdas" id="supportedresourcesdas"></a><span class="otsLbl"><span class="otlbl-num">3.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Supported DAS resource
+                     types</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid8899" id="tmpid8899"></a>The following table describes the resource types that are supported
+            in DAS and lists the <a class="link" href="aboutassetmanagementviews.html" title="3.2 &nbsp; Asset library views at a glance">asset
+               library view</a> that you use to manage them.
+         </p>
+         <div class="table"><p class="title"><a name="tbl-32107" id="tbl-32107"></a><b><span class="otLbl"><span class="otlbl-kw">Table</span> <span class="otlbl-num">3.1</span>: </span><span class="otlbl-ttl">Supported resource types</span></b></p>
+            <div class="table-contents">
+               <table summary="Supported resource types" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                  <colgroup>
+                     <col class="col1">
+                     <col class="col2">
+                     <col class="col3">
+                  </colgroup>
+                  <thead>
+                     <tr class="row">
+                        <th style=""><a name="tmpid8909" id="tmpid8909"></a>Resource type
+                        </th>
+                        <th style=""><a name="tmpid8910" id="tmpid8910"></a>Description
+                        </th>
+                        <th style=""><a name="tmpid8911" id="tmpid8911"></a>Asset library view
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid8914" id="tmpid8914"></a><a name="tmpid8915" id="tmpid8915"></a><strong class="guilabel" data-cid="Alert_model">Alert model</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid8917" id="tmpid8917"></a><a name="tmpid8918" id="tmpid8918"></a>A resource that lets you create an alert flow based on
+                              an orchestration job state change. Alert flow models contain nodes
+                              that receive the alert from an alert node, then they process the rest
+                              of the flow like a regular flow model.
+                           </p>
+                           <p><a name="tmpid8919" id="tmpid8919"></a>Alert models are
+                              configured in <a class="link" href="index.html#bookbiblref" target="_blank"><span class="namestring" data-cid="Orchestrator">Orchestrator</span></a>.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid8922" id="tmpid8922"></a><a name="tmpid8923" id="tmpid8923"></a><strong class="guilabel" data-cid="Flow">Flow</strong> panel in Orchestration asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid8926" id="tmpid8926"></a><a name="tmpid8927" id="tmpid8927"></a><strong class="guilabel" data-cid="Barcode">Barcode</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid8929" id="tmpid8929"></a><a name="tmpid8930" id="tmpid8930"></a>A barcode object that can be used in <span class="namestring" data-cid="Designer">Designer</span> communications.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid8932" id="tmpid8932"></a><a name="tmpid8933" id="tmpid8933"></a><strong class="guilabel" data-cid="Common">Common</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid8936" id="tmpid8936"></a><a name="tmpid8937" id="tmpid8937"></a><strong class="guilabel" data-cid="Clause">Clause</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid8939" id="tmpid8939"></a><a name="tmpid8940" id="tmpid8940"></a>A design object that is used in <span class="namestring" data-cid="Content_Author">Content Author</span> communications.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid8942" id="tmpid8942"></a><a name="tmpid8943" id="tmpid8943"></a><strong class="guilabel" data-cid="Author">Author</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid8946" id="tmpid8946"></a><a name="tmpid8947" id="tmpid8947"></a><strong class="guilabel" data-cid="Color">Color</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid8949" id="tmpid8949"></a><a name="tmpid8950" id="tmpid8950"></a>A design object that defines an individual custom color.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid8951" id="tmpid8951"></a><a name="tmpid8952" id="tmpid8952"></a><strong class="guilabel" data-cid="Common">Common</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid8955" id="tmpid8955"></a><a name="tmpid8956" id="tmpid8956"></a><strong class="guilabel" data-cid="Color_family">Color family</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid8958" id="tmpid8958"></a><a name="tmpid8959" id="tmpid8959"></a>A design object that is a color palette containing the
+                              colors that designers can use while creating content. A color family
+                              can contain any number of color objects.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid8960" id="tmpid8960"></a><a name="tmpid8961" id="tmpid8961"></a><strong class="guilabel" data-cid="Common">Common</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid8964" id="tmpid8964"></a><a name="tmpid8965" id="tmpid8965"></a><strong class="guilabel" data-cid="Communication_CA_">Communication (CA)</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid8967" id="tmpid8967"></a><a name="tmpid8968" id="tmpid8968"></a>A <span class="namestring" data-cid="Content_Author">Content Author</span> communication, which is based on an application
+                              template that can be created <span class="phrase">from <span class="namestring" data-cid="Design_Manager">Design Manager</span> applications
+                                 or </span>from <span class="namestring" data-cid="Designer">Designer</span> communications.
+                           </p>
+                           <p><a name="tmpid8973" id="tmpid8973"></a>For information
+                              about other types of <span class="namestring" data-cid="Content_Author">Content Author</span> communication resources, see <a href="cacontainersdocs.html" class="xref2 sect2 auto xstd" title="8.2.1 &nbsp; Creating Content Author communication&#xA;containers and documents"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">8.2.1</span> “</span><span class="otlbl-ttl">Creating Content
+                                 Author communication
+                                 containers and documents</span><span class="otsLbl">”</span></a>:
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid8976" id="tmpid8976"></a><a name="tmpid8977" id="tmpid8977"></a><strong class="guilabel" data-cid="Author">Author</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid8980" id="tmpid8980"></a><a name="tmpid8981" id="tmpid8981"></a><strong class="guilabel" data-cid="Communication_CD_">Communication (CD)</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid8983" id="tmpid8983"></a><a name="tmpid8984" id="tmpid8984"></a>A <span class="namestring" data-cid="Designer">Designer</span> communication, which can contain documents
+                              and designs such as pages and emails.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid8986" id="tmpid8986"></a><a name="tmpid8987" id="tmpid8987"></a><strong class="guilabel" data-cid="Designer">Designer</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid8990" id="tmpid8990"></a><a name="tmpid8991" id="tmpid8991"></a><strong class="guilabel" data-cid="Communication_set">Communication set</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid8993" id="tmpid8993"></a><a name="tmpid8994" id="tmpid8994"></a>A collection of other communication assets such as data
+                              sources, variables, and output queues.
+                           </p> 
+                           <p><a name="tmpid8995" id="tmpid8995"></a>Communication
+                              sets can be used to start new <span class="namestring" data-cid="Designer">Designer</span> communications with DAS-only
+                              resources<span class="phrase"> instead of using a template
+                                 based on a <span class="namestring" data-cid="Design_Manager">Design Manager</span> application</span>.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid8999" id="tmpid8999"></a><a name="tmpid9000" id="tmpid9000"></a><strong class="guilabel" data-cid="Communications_sets">Communications sets</strong> panel in Communication asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9003" id="tmpid9003"></a><a name="tmpid9004" id="tmpid9004"></a><strong class="guilabel" data-cid="Component">Component</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9006" id="tmpid9006"></a><a name="tmpid9007" id="tmpid9007"></a>A design object that can be reused in <span class="namestring" data-cid="Designer">Designer</span> designs.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9009" id="tmpid9009"></a><a name="tmpid9010" id="tmpid9010"></a><strong class="guilabel" data-cid="Designer">Designer</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9013" id="tmpid9013"></a><a name="tmpid9014" id="tmpid9014"></a><strong class="guilabel" data-cid="Data_source">Data source</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9016" id="tmpid9016"></a><a name="tmpid9017" id="tmpid9017"></a>A mapping of variables to a sample data file.
+                           </p> 
+                           <p><a name="tmpid9018" id="tmpid9018"></a>When producing customer output, a data source is used to identify
+                              data areas in production data files.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9019" id="tmpid9019"></a><a name="tmpid9020" id="tmpid9020"></a><strong class="guilabel" data-cid="Data">Data</strong> panel in Communication asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9023" id="tmpid9023"></a><a name="tmpid9024" id="tmpid9024"></a><strong class="guilabel" data-cid="Design_layer">Design layer</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9026" id="tmpid9026"></a><a name="tmpid9027" id="tmpid9027"></a>A set of static components that can be used to assist
+                              with design creation in <span class="namestring" data-cid="Designer">Designer</span> designs.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9029" id="tmpid9029"></a><a name="tmpid9030" id="tmpid9030"></a><strong class="guilabel" data-cid="Common">Common</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9033" id="tmpid9033"></a><a name="tmpid9034" id="tmpid9034"></a><strong class="guilabel" data-cid="Design_layout">Design layout</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9036" id="tmpid9036"></a><a name="tmpid9037" id="tmpid9037"></a>A <span class="namestring" data-cid="Designer">Designer</span> design template which can be used with page
+                              designs.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9039" id="tmpid9039"></a><a name="tmpid9040" id="tmpid9040"></a><strong class="guilabel" data-cid="Designer">Designer</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9043" id="tmpid9043"></a><a name="tmpid9044" id="tmpid9044"></a><strong class="guilabel" data-cid="design-pack"><a name="design-pack" id="design-pack"></a>Design pack</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9046" id="tmpid9046"></a><a name="tmpid9047" id="tmpid9047"></a>Contains <span class="namestring" data-cid="Design_and_Production">Design and Production</span> resources that can be used in <span class="namestring" data-cid="Content_Author">Content Author</span> and <span class="namestring" data-cid="Designer">Designer</span>.
+                              Design packs are created in <span class="namestring" data-cid="Design_Manager">Design Manager</span> and uploaded to the asset library
+                              along with the associated package file.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9052" id="tmpid9052"></a><a name="tmpid9053" id="tmpid9053"></a><strong class="guilabel" data-cid="Design_packs">Design packs</strong> panel in Orchestration asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9056" id="tmpid9056"></a><a name="tmpid9057" id="tmpid9057"></a><strong class="guilabel" data-cid="Document">Document</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9059" id="tmpid9059"></a><a name="tmpid9060" id="tmpid9060"></a>A container object for designs in a <span class="namestring" data-cid="Designer">Designer</span> communication.
+                           </p>
+                           <div class="note">
+                              <p class="title"><strong><a name="tmp4ref120" id="tmp4ref120"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                              </strong></p>
+                              <p><a name="tmpid9063" id="tmpid9063"></a>This <strong class="guilabel" data-cid="Document">Document</strong> resource in <span class="namestring" data-cid="Designer">Designer</span> is
+                                 different than a <a class="link" href="cacontainersdocs.html" title="8.2.1 &nbsp; Creating Content Author communication containers and documents">document in a communication
+                                    container</a> in <span class="namestring" data-cid="Content_Author">Content Author</span>.
+                              </p>
+                           </div>
+                        </td>
+                        <td style=""><p><a name="tmpid9068" id="tmpid9068"></a><a name="tmpid9069" id="tmpid9069"></a><strong class="guilabel" data-cid="Designer">Designer</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9072" id="tmpid9072"></a><a name="tmpid9073" id="tmpid9073"></a><strong class="guilabel" data-cid="DOCX">DOCX</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9075" id="tmpid9075"></a><a name="tmpid9076" id="tmpid9076"></a>A DOCX file that can be imported into DAS so that its
+                              contents can be used in <span class="namestring" data-cid="Designer">Designer</span> communications.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9078" id="tmpid9078"></a><a name="tmpid9079" id="tmpid9079"></a><strong class="guilabel" data-cid="Common">Common</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9082" id="tmpid9082"></a><a name="tmpid9083" id="tmpid9083"></a><strong class="guilabel" data-cid="Email">Email</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9085" id="tmpid9085"></a><a name="tmpid9086" id="tmpid9086"></a>A type of design layout that is used in <span class="namestring" data-cid="Designer">Designer</span> documents
+                              to create designs for HTML&nbsp;Email output.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9088" id="tmpid9088"></a><a name="tmpid9089" id="tmpid9089"></a><strong class="guilabel" data-cid="Designer">Designer</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid9092" id="tmpid9092"></a><strong class="guilabel" data-cid="Event">Event</strong></td>
+                        <td style=""><a name="tmpid9094" id="tmpid9094"></a>Events&nbsp;are snippets of code in a communication that execute
+                           at specific points during an engine run. Events that are saved as
+                           library events in <span class="namestring" data-cid="Designer">Designer</span> appear as DAS resources.
+                        </td>
+                        <td style=""><p><a name="tmpid9096" id="tmpid9096"></a><a name="tmpid9097" id="tmpid9097"></a><strong class="guilabel" data-cid="Data">Data</strong> panel in Communication asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9100" id="tmpid9100"></a><a name="tmpid9101" id="tmpid9101"></a><strong class="guilabel" data-cid="Flow_context">Flow context</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9103" id="tmpid9103"></a><a name="tmpid9104" id="tmpid9104"></a>Contains input and output channels and communication
+                              settings that are used to set up flow models.
+                           </p>
+                           <p><a name="tmpid9105" id="tmpid9105"></a>Flow contexts
+                              are configured in <a class="link" href="index.html#bookbiblref" target="_blank"><span class="namestring" data-cid="Orchestrator">Orchestrator</span></a>.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9108" id="tmpid9108"></a><a name="tmpid9109" id="tmpid9109"></a><strong class="guilabel" data-cid="Flow">Flow</strong> panel in Orchestration asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9112" id="tmpid9112"></a><a name="tmpid9113" id="tmpid9113"></a><strong class="guilabel" data-cid="Flow_model">Flow model</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9115" id="tmpid9115"></a><a name="tmpid9116" id="tmpid9116"></a>Defines the flow for engine orchestration jobs. Flow
+                              models contain nodes that receive data from an input channel, process
+                              the input data, and deliver the processed data through appropriate
+                              output channels.
+                           </p>
+                           <p><a name="tmpid9117" id="tmpid9117"></a>Flow models are configured in <a class="link" href="index.html#bookbiblref" target="_blank"><span class="namestring" data-cid="Orchestrator">Orchestrator</span></a>.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9120" id="tmpid9120"></a><a name="tmpid9121" id="tmpid9121"></a><strong class="guilabel" data-cid="Flow">Flow</strong> panel in Orchestration asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9124" id="tmpid9124"></a><a name="tmpid9125" id="tmpid9125"></a><strong class="guilabel" data-cid="Flow_script">Flow script</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9127" id="tmpid9127"></a><a name="tmpid9128" id="tmpid9128"></a>A resource that lets you create reusable flow scripts
+                              in order to implement orchestration logic.
+                           </p>
+                        </td>
+                        <td style=""><a name="tmpid9129" id="tmpid9129"></a><strong class="guilabel" data-cid="Flow">Flow</strong> panel in Orchestration asset library view
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9132" id="tmpid9132"></a><a name="tmpid9133" id="tmpid9133"></a><strong class="guilabel" data-cid="Font">Font</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9135" id="tmpid9135"></a><a name="tmpid9136" id="tmpid9136"></a>A font object that can be uploaded to DAS and used in <span class="namestring" data-cid="Content_Author">Content Author</span> or <span class="namestring" data-cid="Designer">Designer</span> communications. <span class="phrase">For communications that are based on <span class="namestring" data-cid="Design_Manager">Design Manager</span> applications,
+                                 DAS fonts supplement the fonts that are included in the design pack.</span></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9141" id="tmpid9141"></a><a name="tmpid9142" id="tmpid9142"></a><strong class="guilabel" data-cid="Common">Common</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9145" id="tmpid9145"></a><a name="graphicmsg" id="graphicmsg"></a><strong class="guilabel" data-cid="Graphic_message">Graphic message</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9148" id="tmpid9148"></a><a name="tmpid9149" id="tmpid9149"></a>A design object that is used in <span class="namestring" data-cid="Content_Author">Content Author</span> communications.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9151" id="tmpid9151"></a><a name="tmpid9152" id="tmpid9152"></a><strong class="guilabel" data-cid="Author">Author</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9155" id="tmpid9155"></a><a name="tmpid9156" id="tmpid9156"></a><strong class="guilabel" data-cid="HTML">HTML</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9158" id="tmpid9158"></a><a name="tmpid9159" id="tmpid9159"></a>HTML code that can be applied to web designs&nbsp;in <span class="namestring" data-cid="Designer">Designer</span>.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9161" id="tmpid9161"></a><a name="tmpid9162" id="tmpid9162"></a><strong class="guilabel" data-cid="Common">Common</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9165" id="tmpid9165"></a><a name="tmpid9166" id="tmpid9166"></a><strong class="guilabel" data-cid="Image">Image</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9168" id="tmpid9168"></a><a name="tmpid9169" id="tmpid9169"></a>Image that can be uploaded to DAS and used in <span class="namestring" data-cid="Content_Author">Content Author</span> or <span class="namestring" data-cid="Designer">Designer</span>.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9172" id="tmpid9172"></a><a name="tmpid9173" id="tmpid9173"></a><strong class="guilabel" data-cid="Common">Common</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9176" id="tmpid9176"></a><a name="tmpid9177" id="tmpid9177"></a><strong class="guilabel" data-cid="Inserter">Inserter</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9179" id="tmpid9179"></a><a name="tmpid9180" id="tmpid9180"></a>A resource that defines the contents of inserter devices,
+                              which are used to supplement printed output.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9181" id="tmpid9181"></a><a name="tmpid9182" id="tmpid9182"></a><strong class="guilabel" data-cid="Delivery">Delivery</strong> panel in Communication asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9185" id="tmpid9185"></a><a name="tmpid9186" id="tmpid9186"></a><strong class="guilabel" data-cid="Language">Language</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9188" id="tmpid9188"></a><a name="tmpid9189" id="tmpid9189"></a>A resource object that defines a language and its settings.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9190" id="tmpid9190"></a><a name="tmpid9191" id="tmpid9191"></a><strong class="guilabel" data-cid="Region">Region</strong> panel in Communication asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9194" id="tmpid9194"></a><a name="tmpid9195" id="tmpid9195"></a><strong class="guilabel" data-cid="Locale">Locale</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9197" id="tmpid9197"></a><a name="tmpid9198" id="tmpid9198"></a>A resource object that defines the settings for a geographic
+                              location.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9199" id="tmpid9199"></a><a name="tmpid9200" id="tmpid9200"></a><strong class="guilabel" data-cid="Region">Region</strong> panel in Communication asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9203" id="tmpid9203"></a><a name="tmpid9204" id="tmpid9204"></a><strong class="guilabel" data-cid="Message_type">Message type</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9206" id="tmpid9206"></a><a name="tmpid9207" id="tmpid9207"></a>A design object that is used to insert either a <a class="link" href="supportedresourcesdas.html#textmsg">text</a> or <a class="link" href="supportedresourcesdas.html#graphicmsg">graphic</a> message within a message frame in <span class="namestring" data-cid="Designer">Designer</span>, for use in <span class="namestring" data-cid="Content_Author">Content Author</span> communications.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9212" id="tmpid9212"></a><a name="tmpid9213" id="tmpid9213"></a><strong class="guilabel" data-cid="Common">Common</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9216" id="tmpid9216"></a><a name="tmpid9217" id="tmpid9217"></a><strong class="guilabel" data-cid="Messaging">Messaging</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9219" id="tmpid9219"></a><a name="tmpid9220" id="tmpid9220"></a>A type of design layout that is used in <span class="namestring" data-cid="Designer">Designer</span> documents
+                              to create designs of plain text output for SMS text messages.
+                           </p>
+                        </td>
+                        <td style=""><a name="tmpid9222" id="tmpid9222"></a><strong class="guilabel" data-cid="Designer">Designer</strong> panel in Design asset library view
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9225" id="tmpid9225"></a><a name="tmpid9226" id="tmpid9226"></a><strong class="guilabel" data-cid="Metadata_Class_">Metadata (Class)</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9228" id="tmpid9228"></a><a name="tmpid9229" id="tmpid9229"></a>An identification object that is used to sort and classify
+                              content in the asset library, and to easily identify resources in
+                              output files for use in downstream business processes.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9230" id="tmpid9230"></a><a name="tmpid9231" id="tmpid9231"></a><strong class="guilabel" data-cid="Common">Common</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9234" id="tmpid9234"></a><a name="tmpid9235" id="tmpid9235"></a><strong class="guilabel" data-cid="Named_flow">Named flow</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9238" id="tmpid9238"></a><a name="tmpid9239" id="tmpid9239"></a>A resource that identifies flow frames which are used
+                              in a targeted flow for one or more page designs within a <span class="namestring" data-cid="Content_Author">Content Author</span> communication
+                              or document template. For more information about named, targeted flows,
+                              see 
+                              <data-xpi><data-xproc name="ExtXrefStart" href="cccd250100-h-ugd.designingforbca" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                                 ><A class="otModuleHide if-cccd-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/designingforbca.html"
+                                 ><span class="otsLbl"
+                                 ><span class="otlbl-num">section 18</span
+                                 ><span class="otlbl-sep"> </span></span
+                                 ><span class="otlbl-ttl">"Designing for Content Author"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></A
+                                 ><SPAN class="otModuleShow if-cccd-h-ugd-hide"
+                                 ><span class="otsLbl"
+                                 ><span class="otlbl-num">section 18</span
+                                 ><span class="otlbl-sep"> </span></span
+                                 ><span class="otlbl-ttl">"Designing for Content Author"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="cccd250100-h-ugd.designingforbca" fmt=""></data-xproc></data-xpi>.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9242" id="tmpid9242"></a><a name="tmpid9243" id="tmpid9243"></a><strong class="guilabel" data-cid="Common">Common</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9246" id="tmpid9246"></a><a name="tmpid9247" id="tmpid9247"></a><strong class="guilabel" data-cid="Notification_model">Notification model</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9249" id="tmpid9249"></a><a name="tmpid9250" id="tmpid9250"></a>A resource that lets you create a notification flow based
+                              on an orchestration&nbsp;flow instance and a flow step event. Notification
+                              flow models contain nodes that receive alerts from an alert node based
+                              on an event queue, then they process the rest of the flow like a regular
+                              flow model.
+                           </p>
+                           <p><a name="tmpid9251" id="tmpid9251"></a>Notification models are configured in <a class="link" href="index.html#bookbiblref" target="_blank"><span class="namestring" data-cid="Orchestrator">Orchestrator</span></a>.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9254" id="tmpid9254"></a><a name="tmpid9255" id="tmpid9255"></a><strong class="guilabel" data-cid="Flow">Flow</strong> panel in Orchestration asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9258" id="tmpid9258"></a><a name="tmpid9259" id="tmpid9259"></a><strong class="guilabel" data-cid="Output">Output</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9261" id="tmpid9261"></a><a name="tmpid9262" id="tmpid9262"></a>A resource to which you can assign electronic and print
+                              output drivers.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9263" id="tmpid9263"></a><a name="tmpid9264" id="tmpid9264"></a><strong class="guilabel" data-cid="Delivery">Delivery</strong> panel in Communication asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9267" id="tmpid9267"></a><a name="tmpid9268" id="tmpid9268"></a><strong class="guilabel" data-cid="Output_queue">Output queue</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9270" id="tmpid9270"></a><a name="tmpid9271" id="tmpid9271"></a>A resource that contains the settings for output production.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9272" id="tmpid9272"></a><a name="tmpid9273" id="tmpid9273"></a><strong class="guilabel" data-cid="Delivery">Delivery</strong> panel in Communication asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9276" id="tmpid9276"></a><a name="tmpid9277" id="tmpid9277"></a><strong class="guilabel" data-cid="Package">Package</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9279" id="tmpid9279"></a><a name="tmpid9280" id="tmpid9280"></a>A resource that is generated when you upload an application
+                              package or subpackage to DAS from <span class="namestring" data-cid="Design_Manager">Design Manager</span>. Each application package
+                              or subpackage that you upload generates a separate package resource
+                              in DAS.
+                           </p>
+                           <div class="note">
+                              <p class="title"><strong><a name="tmp4ref121" id="tmp4ref121"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                              </strong></p>
+                              <p><a name="tmpid9283" id="tmpid9283"></a><span class="namestring" data-cid="Content_Author">Content Author</span> supports only subpackages that contain all campaigns
+                                 exclusively or a single document exclusively.
+                              </p>
+                           </div>
+                        </td>
+                        <td style=""><p><a name="tmpid9285" id="tmpid9285"></a><a name="tmpid9286" id="tmpid9286"></a><strong class="guilabel" data-cid="Packages">Packages</strong> panel in Orchestration asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9289" id="tmpid9289"></a><a name="tmpid9290" id="tmpid9290"></a><strong class="guilabel" data-cid="Page">Page</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9292" id="tmpid9292"></a><a name="tmpid9293" id="tmpid9293"></a>A type of design layout that is used in <span class="namestring" data-cid="Designer">Designer</span> documents
+                              to create designs for page-based output.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9295" id="tmpid9295"></a><a name="tmpid9296" id="tmpid9296"></a><strong class="guilabel" data-cid="Designer">Designer</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9299" id="tmpid9299"></a><a name="tmpid9300" id="tmpid9300"></a><strong class="guilabel" data-cid="Paper_bin">Paper bin</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9302" id="tmpid9302"></a><a name="tmpid9303" id="tmpid9303"></a>A resource that specifies the paper types available for
+                              print-based content when using a bin configuration for multiple paper
+                              types.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9304" id="tmpid9304"></a><a name="tmpid9305" id="tmpid9305"></a><strong class="guilabel" data-cid="Delivery">Delivery</strong> panel in Communication asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9308" id="tmpid9308"></a><a name="tmpid9309" id="tmpid9309"></a><strong class="guilabel" data-cid="Paper_type">Paper type</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9311" id="tmpid9311"></a><a name="tmpid9312" id="tmpid9312"></a>A layout object that is used to define page characteristics
+                              for page designs in <span class="namestring" data-cid="Designer">Designer</span> communications.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9314" id="tmpid9314"></a><a name="tmpid9315" id="tmpid9315"></a><strong class="guilabel" data-cid="Common">Common</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9318" id="tmpid9318"></a><a name="tmpid9319" id="tmpid9319"></a><strong class="guilabel" data-cid="PDF">PDF</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9321" id="tmpid9321"></a><a name="tmpid9322" id="tmpid9322"></a>A PDF that can be imported into DAS for the purpose of
+                              converting its contents into <span class="namestring" data-cid="Designer">Designer</span> communications.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9324" id="tmpid9324"></a><a name="tmpid9325" id="tmpid9325"></a><strong class="guilabel" data-cid="Common">Common</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9328" id="tmpid9328"></a><a name="tmpid9329" id="tmpid9329"></a><strong class="guilabel" data-cid="Recipient_profile">Recipient profile</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9331" id="tmpid9331"></a><a name="tmpid9332" id="tmpid9332"></a>Optional delivery settings that are used to send copies
+                              of a communication to recipients other than the customer.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9333" id="tmpid9333"></a><a name="tmpid9334" id="tmpid9334"></a><strong class="guilabel" data-cid="Delivery">Delivery</strong> panel in Communication asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9337" id="tmpid9337"></a><a name="tmpid9338" id="tmpid9338"></a><strong class="guilabel" data-cid="Rule">Rule</strong></p>
+                        </td>
+                        <td style=""><a name="tmpid9340" id="tmpid9340"></a>Rules&nbsp;allow you to include or exclude content or communications
+                           based on customer data. Rules that are saved as library rules in <span class="namestring" data-cid="Designer">Designer</span> appear
+                           as DAS resources.
+                        </td>
+                        <td style=""><p><a name="tmpid9342" id="tmpid9342"></a><a name="tmpid9343" id="tmpid9343"></a><strong class="guilabel" data-cid="Data">Data</strong> panel in Communication asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9346" id="tmpid9346"></a><a name="tmpid9347" id="tmpid9347"></a><strong class="guilabel" data-cid="Run_definition">Run definition</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9349" id="tmpid9349"></a><a name="tmpid9350" id="tmpid9350"></a>Contains information that is required to run the <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> engine and preview output for <span class="namestring" data-cid="Content_Author">Content Author</span> and <span class="namestring" data-cid="Designer">Designer</span> communications.
+                              An engine run definition is created either when a <span class="namestring" data-cid="Design_Manager">Design Manager</span> application
+                              that contains a design pack is packaged to DAS or when a communication
+                              set is created.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9360" id="tmpid9360"></a><a name="tmpid9361" id="tmpid9361"></a><strong class="guilabel" data-cid="Run_definitions">Run definitions</strong> panel in Orchestration asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9364" id="tmpid9364"></a><a name="tmpid9365" id="tmpid9365"></a><strong class="guilabel" data-cid="Sample_file">Sample file</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9367" id="tmpid9367"></a><a name="tmpid9368" id="tmpid9368"></a>A data file that contains sample input data that could
+                              be sent to <span class="phrase">the <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> engine</span> to produce output.
+                              Sample files are used to map data sources and to populate variables
+                              in communication previews and simulations.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9375" id="tmpid9375"></a><a name="tmpid9376" id="tmpid9376"></a><strong class="guilabel" data-cid="Common">Common</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9379" id="tmpid9379"></a><a name="tmpid9380" id="tmpid9380"></a><strong class="guilabel" data-cid="Search_key">Search key</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9382" id="tmpid9382"></a><a name="tmpid9383" id="tmpid9383"></a>A resource that lets you add data to the print stream
+                              for both electronic and print output.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9384" id="tmpid9384"></a><a name="tmpid9385" id="tmpid9385"></a><strong class="guilabel" data-cid="Delivery">Delivery</strong> panel in Communication asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9388" id="tmpid9388"></a><a name="tmpid9389" id="tmpid9389"></a><strong class="guilabel" data-cid="Section">Section</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9391" id="tmpid9391"></a><a name="tmpid9392" id="tmpid9392"></a>A design object that is used in <span class="namestring" data-cid="Content_Author">Content Author</span> communications.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9394" id="tmpid9394"></a><a name="tmpid9395" id="tmpid9395"></a><strong class="guilabel" data-cid="Author">Author</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9398" id="tmpid9398"></a><a name="tmpid9399" id="tmpid9399"></a><strong class="guilabel" data-cid="Style">Style</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9401" id="tmpid9401"></a><a name="tmpid9402" id="tmpid9402"></a>A design object that defines characteristic formatting,
+                              which affects the appearance of documents. Styles are not implemented
+                              until they are part of a style sheet.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9403" id="tmpid9403"></a><a name="tmpid9404" id="tmpid9404"></a><strong class="guilabel" data-cid="Common">Common</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9407" id="tmpid9407"></a><a name="tmpid9408" id="tmpid9408"></a><strong class="guilabel" data-cid="Style_sheet">Style sheet</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9410" id="tmpid9410"></a><a name="tmpid9411" id="tmpid9411"></a>A collection of style objects which can be applied to
+                              page, email, and web designs in <span class="namestring" data-cid="Designer">Designer</span>.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9413" id="tmpid9413"></a><a name="tmpid9414" id="tmpid9414"></a><strong class="guilabel" data-cid="Common">Common</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9417" id="tmpid9417"></a><a name="tmpid9418" id="tmpid9418"></a><strong class="guilabel" data-cid="Template">Template</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9420" id="tmpid9420"></a><a name="tmpid9421" id="tmpid9421"></a>Contains the application content
+                              of a <span class="namestring" data-cid="Design_Manager">Design Manager</span> application.
+                           </p>
+                           <p><a name="tmpid9423" id="tmpid9423"></a>A template
+                              is created when a <span class="namestring" data-cid="Design_Manager">Design Manager</span> application that contains a design pack
+                              is packaged and uploaded to the DAS&nbsp;asset library from <span class="namestring" data-cid="Design_Manager">Design Manager</span>,
+                              or when a <span class="namestring" data-cid="Content_Author">Content Author</span> template is created in <span class="namestring" data-cid="Designer">Designer</span>.
+                           </p>
+                           <p><a name="tmpid9428" id="tmpid9428"></a><span class="phrase">Templates based on <span class="namestring" data-cid="Design_Manager">Design Manager</span> applications
+                                 are used to create new <span class="namestring" data-cid="Content_Author">Content Author</span> and <span class="namestring" data-cid="Designer">Designer</span> communications. </span>Templates based on <span class="namestring" data-cid="Designer">Designer</span> communications are used to create new <span class="namestring" data-cid="Content_Author">Content Author</span> communications.
+                           </p>
+                           <p><a name="tmpid9435" id="tmpid9435"></a>In addition, templates based on <span class="namestring" data-cid="Design_Manager">Design Manager</span> application
+                              packages that allow split communications in <span class="namestring" data-cid="Content_Author">Content Author</span> can function
+                              as <span class="namestring" data-cid="Content_Author">Content Author</span> communication container templates. And the templates
+                              for single-document subpackages that are linked to these application
+                              packages can function as <span class="namestring" data-cid="Content_Author">Content Author</span> document templates.
+                           </p>
+                           <p><a name="tmpid9440" id="tmpid9440"></a>For more information, see <a href="containerdoctemplates.html" class="xref2 sect3 auto xstd" title="8.2.1.1 &nbsp; Generating&#xA;templates for Content Author communication containers and documents"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">8.2.1.1</span> “</span><span class="otlbl-ttl">Generating
+                                 templates for Content Author communication containers and documents</span><span class="otsLbl">”</span></a>.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9442" id="tmpid9442"></a><a name="tmpid9443" id="tmpid9443"></a><strong class="guilabel" data-cid="Templates">Templates</strong> panel in Orchestration asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9446" id="tmpid9446"></a><a name="textmsg" id="textmsg"></a><strong class="guilabel" data-cid="Text_message">Text message</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9449" id="tmpid9449"></a><a name="tmpid9450" id="tmpid9450"></a>A design object that is used in <span class="namestring" data-cid="Content_Author">Content Author</span> communications.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9452" id="tmpid9452"></a><a name="tmpid9453" id="tmpid9453"></a><strong class="guilabel" data-cid="Author">Author</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9456" id="tmpid9456"></a><a name="tmpid9457" id="tmpid9457"></a><strong class="guilabel" data-cid="Variable">Variable</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9459" id="tmpid9459"></a><a name="tmpid9460" id="tmpid9460"></a>DAS variables are created in the data source editor in Mapping view or
+                              the <strong class="guilabel" data-cid="Data">Data</strong> panel of the <strong class="guilabel" data-cid="Communication_asset_library">Communication
+                                 asset library</strong> panel. They can be used for mapping in a
+                              data source and as design objects in a communication.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9463" id="tmpid9463"></a><a name="tmpid9464" id="tmpid9464"></a><strong class="guilabel" data-cid="Data">Data</strong> panel in Communication asset library view
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid9467" id="tmpid9467"></a><a name="tmpid9468" id="tmpid9468"></a><strong class="guilabel" data-cid="Web_design">Web design</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid9470" id="tmpid9470"></a><a name="tmpid9471" id="tmpid9471"></a>A type of design layout that is used in <span class="namestring" data-cid="Designer">Designer</span> documents
+                              to create designs for HTML5 output.
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid9473" id="tmpid9473"></a><a name="tmpid9474" id="tmpid9474"></a><strong class="guilabel" data-cid="Designer">Designer</strong> panel in Design asset library view
+                           </p>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div><br class="table-break"></div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">3.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Supported DAS resource
+            types</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: Chapter 3 – Working with DAS&nbsp;resources" aria-label="Preceding page: Chapter 3 – Working with DAS&nbsp;resources" href="managingassetlibraryresources.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 3 – Working with DAS&nbsp;resources" aria-label="Section one level up: Chapter 3 – Working with DAS&nbsp;resources" href="managingassetlibraryresources.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 3.2 &nbsp; Asset library views&#xA;at a glance" aria-label="Next page: 3.2 &nbsp; Asset library views&#xA;at a glance" href="aboutassetmanagementviews.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

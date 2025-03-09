@@ -1,0 +1,261 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="2.2.1 ">2.2.1 Creating tenant schemas in the database</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="creatingmanagingtenants.html" title="2.2 &nbsp; Setting up tenants in OpenText Communications"> -->
+      <link rel="prev" href="creatingmanagingtenants.html" title="2.2 &nbsp; Setting up tenants in OpenText Communications">
+      <link rel="next" href="creatingtenantsinui.html" title="2.2.2 &nbsp; Creating tenants in System management view">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbrbt4wvym-f-453fae6ce-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9cee1cae","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":60874,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741379340","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==2yIN6+gCAkIV7hQHjwGVj74b9ecV/1aKm35X1MEaENL3/Q+I8nvx0yyopcqKI+B8sMSz5RYv2aqFGr1lZgtTYpKgZ+K9SHxwt6SdK/GrUZ/5rLZhX7yTXaa7utSHNURh78RS4uU/IMNbM/yn6zBNPEeX87CVkumMzuLGAlJF5tp0v0s5fbUkT3goVY8kTWkSx5N2DQo6GL7TTh5tCRaAs1pknQnF6xnXK9g8N4OcICW2vy5kGxcCycHV0+ULpG4NE/1JU/adgz0RZJD6f0Wr2XBsgV2qCrwEDqbUTiPdU9wwY0p8qUa3W2Yg3rBJLgF5oKbhYzhBssH5hYIsyF+I8vxKEPU9fG2gLQFJaordOv+udSBf5zZOhXvC6s2kjFuUA51kcVLUUyGo/b5JIwIgJBNW6ad2uKjyjmzfapPD7f8=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="settinguptenantschemas">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.2.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating
+            tenant schemas in the database</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.2 &nbsp; Setting up tenants in OpenText Communications" aria-label="Preceding page: 2.2 &nbsp; Setting up tenants in OpenText Communications" href="creatingmanagingtenants.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.2 &nbsp; Setting up tenants in OpenText Communications" aria-label="Section one level up: 2.2 &nbsp; Setting up tenants in OpenText Communications" href="creatingmanagingtenants.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.2.2 &nbsp; Creating&#xA;tenants in System management view" aria-label="Next page: 2.2.2 &nbsp; Creating&#xA;tenants in System management view" href="creatingtenantsinui.html">Next</a></div>
+      </div>
+      <div class="sect2 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="settinguptenantschemas" id="settinguptenantschemas"></a><span class="otsLbl"><span class="otlbl-num">2.2.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating
+                     tenant schemas in the database</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid1150" id="tmpid1150"></a>If you manually manage your database schemas, then you will
+            need to set up tenant schemas directly in the database for each of
+            the <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> services, and then use System management view to associate the
+            new tenant with the schema for each service in the <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> deployment.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref3" id="tmp4ref3"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid1156" id="tmpid1156"></a>This step is required only for manually managed databases. If
+               you are using automatic schema management for your <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> databases,
+               see <a class="link" href="creatingtenantsinui.html" title="2.2.2 &nbsp; Creating tenants in System management view">Creating tenants in System management view</a> or <a class="link" href="creatingtenantswithbootstrap.html" title="2.2.3.2 &nbsp; Running a Helm upgrade with the bootstrap configuration">Creating tenants
+                  with a bootstrap configuration</a>.
+            </p>
+         </div>
+         <p><a name="tmpid1161" id="tmpid1161"></a>After you create the tenant schemas in your database, you must
+            also use Liquibase to initialize the schemas. You can either allow
+            Liquibase to handle schema initialization automatically or you can
+            use it to generate the SQL&nbsp;file that can be applied to the database.
+            The <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> Liquibase scripts are packaged in the <code class="filename" data-cid="ux__exstreamce-database-setup-version.zip">exstreamce-database-setup-<em class="varname">version</em>.zip</code> file that is available for download
+            on My Support.
+         </p>
+         <div class="note">
+            <p class="title"><strong>Notes</strong></p>
+            <div class="itemizedlist">
+               <ul class="itemizedlist">
+                  <li class="listitem">
+                     <p><a name="tmp4ref4" id="tmp4ref4"></a><a name="tmpid1167" id="tmpid1167"></a>Regardless of the schema management method that you use for
+                        your databases, <span class="namestring" data-cid="OpenText">OpenText</span> recommends that you use either the <a class="link" href="creatingtenantsinui.html" title="2.2.2 &nbsp; Creating tenants in System management view">tenant creation wizard</a> in System management view or
+                        a <a class="link" href="creatingtenantswithbootstrap.html" title="2.2.3.2 &nbsp; Running a Helm upgrade with the bootstrap configuration">bootstrap configuration</a> to create new <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> tenants in <span class="namestring" data-cid="OTDS">OTDS</span>. Doing so saves a
+                        significant number of manual steps. For information about creating
+                        tenants manually in <span class="namestring" data-cid="OTDS">OTDS</span>, see <em class="emphasis"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Directory_Services">Directory Services</span> Web
+                           Client Help (OTDS-H-AWC)</em>.
+                     </p>
+                  </li>
+                  <li class="listitem">
+                     <p><a name="tmp4ref5" id="tmp4ref5"></a><a name="tmpid1179" id="tmpid1179"></a>For information about <span class="namestring" data-cid="OpenText">OpenText</span> product
+                        compatibility, see the <span class="namestring" data-cid="OpenText">OpenText</span> compatibly information provided
+                        in the release notes for the product. <span class="phrase">Release
+                           notes are available on My Support.</span></p>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="procedure"><h2 class="title"><a name="d0e1899" id="d0e1899"></a><b><span class="otlbl-ttl">To create database schemas for a new tenant:</span></b></h2>
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid1191" id="tmpid1191"></a>Extract the contents of the <code class="filename" data-cid="ux__exstreamce-database-setup-version.zip">exstreamce-database-setup-<em class="varname">version</em>.zip</code> file, and locate the <code class="filename" data-cid="ux__exstreamce-database-setup-version">exstreamce-database-setup-<em class="varname">version</em></code> folder.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid1197" id="tmpid1197"></a>In the <code class="filename" data-cid="ux__exstreamce-database-setup-version">exstreamce-database-setup-<em class="varname">version</em></code> folder, extract the contents of the <code class="filename" data-cid="ux__liquibase-core-<version&gt;-bin.zip">liquibase-core-&lt;version&gt;-bin.zip</code> file into a <code class="filename" data-cid="ux__Liquibase">Liquibase</code> folder.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid1203" id="tmpid1203"></a>In the <code class="filename" data-cid="ux__Liquibase">Liquibase</code> folder, copy the
+                     JDBC&nbsp;driver for your databases into the <code class="filename" data-cid="ux__lib">lib</code> folder.<br>
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid1207" id="tmpid1207"></a>Create database schemas for the new tenant in each <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> service
+                     in your deployment. If you're using separate database instances for
+                     each service, then create the appropriate schema in each database.
+                  </p>
+                  <p><a name="tmpid1210" id="tmpid1210"></a>For example, if you're creating a tenant called <strong class="guilabel" data-cid="sandbox">sandbox</strong>, you might create the following schemas in the database:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid1214" id="tmpid1214"></a>For Design, <strong class="guilabel" data-cid="exd__sandbox">exd_sandbox</strong></p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid1217" id="tmpid1217"></a>For Orchestration, <strong class="guilabel" data-cid="exo__sandbox">exo_sandbox</strong></p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid1220" id="tmpid1220"></a>For <span class="namestring" data-cid="Interactive">Interactive</span>, <strong class="guilabel" data-cid="exe__sandbox">exe_sandbox</strong></p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid1224" id="tmpid1224"></a>For Journey, <strong class="guilabel" data-cid="exi__sandbox">exi_sandbox</strong></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="important">
+                     <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Important</span></span></strong></p>
+                     <p><a name="tmpid1230" id="tmpid1230"></a>To ensure security in a multi-tenant deployment, you must use
+                        a separate schema and schema user for each tenant.
+                     </p>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid1232" id="tmpid1232"></a>Assign a schema owner for each schema. At a minimum, the
+                     schema owner must have CRUD&nbsp;permissions (Create, Read, Update,
+                     and Delete).
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid1234" id="tmpid1234"></a>For each schema, complete one of the following steps to
+                     initialize the schema in your database:
+                  </p>
+                  <div class="informaltable">
+                     <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                        <colgroup>
+                           <col class="col1">
+                           <col class="col2">
+                        </colgroup>
+                        <thead>
+                           <tr class="row">
+                              <th style=""><a name="tmpid1241" id="tmpid1241"></a>Step
+                              </th>
+                              <th style=""><a name="tmpid1242" id="tmpid1242"></a>Description
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="row">
+                              <td style=""><a name="tmpid1245" id="tmpid1245"></a>Use Liquibase to generate SQL&nbsp;statements and manually
+                                 initialize the schema in the database.
+                              </td>
+                              <td style=""><a name="tmpid1246" id="tmpid1246"></a><div class="orderedlist">
+                                    <ol class="orderedlist" type="1">
+                                       <li class="listitem">
+                                          <p><a name="tmpid1249" id="tmpid1249"></a>Use the following command with the <code class="filename" data-cid="ux__liquibase.bat">liquibase.bat</code> batch file or the <code class="filename" data-cid="ux__liquibase">liquibase</code> bash script file
+                                             to generate the SQL&nbsp;statement that is needed to initialize the
+                                             schema:
+                                          </p>
+                                          <p><a name="tmpid1252" id="tmpid1252"></a><strong class="command"><code>&lt;liquibaseExecutable&gt; --driver=<code class="literal">"</code>&lt;dbDriverClassName&gt;<code class="literal">"</code> --url=<code class="literal">"</code>&lt;dbURL&gt;<code class="literal">"</code> --username=<code class="literal">"</code>&lt;SchemaUser&gt;<code class="literal">"</code> --password=<code class="literal">"</code>&lt;schemaUserPassword&gt;<code class="literal">"</code> --changeLogFile=<code class="literal">"</code>&lt;dbDirectory&gt;\&lt;serviceName&gt;\changelog.xml<code class="literal">"</code> updateSQL</code></strong></p>
+                                          <p><a name="tmpid1264" id="tmpid1264"></a>The resulting output contains the SQL&nbsp;statements that you
+                                             need, along with some other information.&nbsp;By default, the output
+                                             is written to the console. To write the output directly to a SQL&nbsp;file,
+                                             add the following parameter to the command:
+                                          </p>
+                                          <p><a name="tmpid1265" id="tmpid1265"></a><strong class="command"><code>--outputFile=&lt;fileName&gt;</code></strong></p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid1268" id="tmpid1268"></a>If the output was written to the console, create a
+                                             SQL&nbsp;file that contains the SQL&nbsp;statements.
+                                          </p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid1270" id="tmpid1270"></a>Use the SQL&nbsp;file to initialize the schema in
+                                             the database.
+                                          </p>
+                                       </li>
+                                    </ol>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid1272" id="tmpid1272"></a>Use Liquibase to automatically initialize the schema in the
+                                 database.
+                              </td>
+                              <td style=""><p><a name="tmpid1273" id="tmpid1273"></a><a name="tmpid1274" id="tmpid1274"></a>Use the following command with the <code class="filename" data-cid="ux__liquibase.bat">liquibase.bat</code> batch file or the <code class="filename" data-cid="ux__liquibase">liquibase</code> bash script file
+                                    to generate the SQL&nbsp;statement that is needed to initialize the
+                                    schema:
+                                 </p> 
+                                 <p><a name="tmpid1277" id="tmpid1277"></a><strong class="command"><code>&lt;liquibaseExecutable&gt; --driver=<code class="literal">"</code>&lt;dbDriverClassName&gt;<code class="literal">"</code> --url=<code class="literal">"</code>&lt;dbURL&gt;<code class="literal">"</code> --username=<code class="literal">"</code>&lt;schemaUser&gt;<code class="literal">"</code> --password=<code class="literal">"</code>&lt;schemaUserPassword&gt;<code class="literal">"</code> --changeLogFile=<code class="literal">"</code>&lt;dbDirectory&gt;\&lt;serviceName&gt;\changelog.xml<code class="literal">"</code> update</code></strong></p>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="example"><p class="title"><a name="tmp4ref6" id="tmp4ref6"></a><b><span class="otLbl"><span class="otlbl-kw">Example</span> <span class="otlbl-num">2.1</span>: </span><span class="otlbl-ttl">Generate SQL&nbsp;statements
+                           to initialize a Design tenant
+                           schema</span></b></p>
+                     <div class="example-contents">
+                        <p><a name="tmpid1291" id="tmpid1291"></a>The following command uses the <code class="filename" data-cid="ux__liquibase.bat">liquibase.bat</code> batch file on Windows to generate the SQL&nbsp;statement to initialize
+                           a tenant schema for the Design service in a PostgreSQL database:
+                        </p>
+                        <p><a name="tmpid1293" id="tmpid1293"></a><strong class="command"><code>liquibase.bat --driver=<code class="literal">"</code>org.postgresql.Driver<code class="literal">"</code> --url=<code class="literal">"</code>jdbc:postgresql://sampleserver.opentext.com:5432/ExstreamDatabase?raiseExceptionOnSilentRollback=false<code class="literal">"</code> --username=<code class="literal">"</code>exd_sandbox<code class="literal">"</code> --password=<code class="literal">"</code>vExstream1!<code class="literal">"</code> --changeLogFile=<code class="literal">"</code>.\postgresql\das\changelog.xml<code class="literal">"</code> updateSQL</code></strong></p>
+                     </div>
+                  </div><br class="example-break"><div class="example"><p class="title"><a name="tmp4ref7" id="tmp4ref7"></a><b><span class="otLbl"><span class="otlbl-kw">Example</span> <span class="otlbl-num">2.2</span>: </span><span class="otlbl-ttl">Automatically initialize
+                           an Orchestration tenant schema</span></b></p>
+                     <div class="example-contents">
+                        <p><a name="tmpid1307" id="tmpid1307"></a>The following command uses the <code class="filename" data-cid="ux__liquibase">liquibase</code> bash script on Linux to automatically initialize a tenant schema
+                           for the Orchestration service in an Oracle database:
+                        </p>
+                        <p><a name="tmpid1309" id="tmpid1309"></a><strong class="command"><code>liquibase --driver=<code class="literal">"</code>oracle.jdbc.driver.OracleDriver<code class="literal">"</code> --url=<code class="literal">"</code>jdbc:oracle:thin://sampleserver.opentext.com:1521/ExstreamDatabase<code class="literal">"</code> --username=<code class="literal">"</code>exo_sandbox<code class="literal">"</code> --password=<code class="literal">"</code>Exstream1!<code class="literal">"</code> --changeLogFile=<code class="literal">"</code>.\oracle\orchestration\changelog.xml<code class="literal">"</code> update</code></strong></p>
+                     </div>
+                  </div><br class="example-break"><div class="example"><p class="title"><a name="tmp4ref8" id="tmp4ref8"></a><b><span class="otLbl"><span class="otlbl-kw">Example</span> <span class="otlbl-num">2.3</span>: </span><span class="otlbl-ttl">Generate SQL&nbsp;statements
+                           to initialize an Interactive tenant
+                           schema</span></b></p>
+                     <div class="example-contents">
+                        <p><a name="tmpid1324" id="tmpid1324"></a>The following command uses the <code class="filename" data-cid="ux__liquibase">liquibase</code> bash script on Linux to generate a SQL&nbsp;file containing the
+                           SQL&nbsp;statements needed to initialize a tenant schema for the <span class="namestring" data-cid="Interactive">Interactive</span> service
+                           in a SQL&nbsp;Server database:
+                        </p>
+                        <p><a name="tmpid1327" id="tmpid1327"></a><strong class="command"><code>liquibase --driver=<code class="literal">"</code>com.microsoft.sqlserver.jdbc.SQLServerDriver<code class="literal">"</code> --url=<code class="literal">"</code>jdbc:sqlserver://localhost:1433;databaseName=ExstreamDatabase<code class="literal">"</code> --username=<code class="literal">"</code>exe_sandbox<code class="literal">"</code> --password=<code class="literal">"</code>Exstream1!<code class="literal">"</code> --changeLogFile=<code class="literal">"</code>.\sqlserver\empower\tenant\db.changelog-master.xml<code class="literal">"</code> --outputFile=.\exe_sandboxTenant.sql updateSQL</code></strong></p>
+                     </div>
+                  </div><br class="example-break"></li>
+            </ol>
+         </div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.2.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating
+            tenant schemas in the database</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.2 &nbsp; Setting up tenants in OpenText Communications" aria-label="Preceding page: 2.2 &nbsp; Setting up tenants in OpenText Communications" href="creatingmanagingtenants.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.2 &nbsp; Setting up tenants in OpenText Communications" aria-label="Section one level up: 2.2 &nbsp; Setting up tenants in OpenText Communications" href="creatingmanagingtenants.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.2.2 &nbsp; Creating&#xA;tenants in System management view" aria-label="Next page: 2.2.2 &nbsp; Creating&#xA;tenants in System management view" href="creatingtenantsinui.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

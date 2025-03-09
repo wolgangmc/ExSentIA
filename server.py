@@ -9,7 +9,7 @@ from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain_chroma import Chroma
 import openai
-from chromadb import HttpClient  # ✅ Se importa HttpClient
+import chromadb  # ✅ Se importa correctamente chromadb
 
 # 📌 Cargar la API Key de OpenAI
 openai_api_key = os.getenv("OPENAI_API_KEY")
@@ -39,30 +39,27 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 async def serve_index():
     return FileResponse("static/index.html")
 
-# 📂 Cargar la base de datos vectorial con ChromaDB desde NGROK
+# 📂 Cargar la base de datos vectorial con ChromaDB
 def load_vector_store():
     try:
         embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
         
-        # 🚀 Conectar a ChromaDB a través de NGROK (SUSTITUIR URL CON LA ACTUAL DE NGROK)
-        chroma_client = HttpClient(
-            host="ccae-2806-107e-1b-c506-5aa7-2e03-12a8-e683.ngrok-free.app",
-            port=443
-        )
-
+        # 🚀 Conectar a ChromaDB localmente
+        chroma_client = chromadb.PersistentClient(path="chroma_db")
+        
         vector_store = Chroma(client=chroma_client, embedding_function=embeddings)
         retriever = vector_store.as_retriever(search_type="similarity", search_kwargs={"k": 5})
 
-        print("✅ Conectado a ChromaDB a través de NGROK.")
+        print("✅ Conectado a ChromaDB localmente.")
         return vector_store, retriever
     except Exception as e:
-        print(f"⚠️ No se pudo conectar a ChromaDB en NGROK. Usando solo GPT-4. Error: {e}")
+        print(f"⚠️ No se pudo conectar a ChromaDB. Usando solo GPT-4. Error: {e}")
         return None, None
 
-# 🔍 Inicializar ChromaDB desde NGROK
+# 🔍 Inicializar ChromaDB
 vector_store, retriever = load_vector_store()
 if retriever is None:
-    print("⚠️ No se pudo conectar a ChromaDB en NGROK. Usando solo GPT-4.")
+    print("⚠️ No se pudo conectar a ChromaDB. Usando solo GPT-4.")
 
 # 🔍 Generar respuestas basadas en la base vectorial
 llm = ChatOpenAI(openai_api_key=openai_api_key, model_name="gpt-4")
@@ -80,7 +77,6 @@ async def chat(message: Message):
         if chain:
             respuesta = chain.invoke({"question": message.text, "chat_history": []})
             return {"response": respuesta["answer"] if isinstance(respuesta, dict) and "answer" in respuesta else str(respuesta)}
-
         else:
             response = client.chat.completions.create(
                 model="gpt-4",
@@ -97,7 +93,11 @@ async def chat(message: Message):
 # 🛠️ Endpoint de prueba para verificar documentos en ChromaDB
 @app.get("/test-db")
 def test_db():
-    if vector_store:
-        return {"document_count": vector_store._collection.count()}
-    else:
-        return {"error": "ChromaDB no está cargado"}
+    try:
+        if vector_store and vector_store._collection:
+            count = vector_store._collection.count()  # ✅ Corrección aquí
+            return {"document_count": count}
+        else:
+            return {"error": "ChromaDB no está cargado"}
+    except Exception as e:
+        return {"error": f"Error en test-db: {str(e)}"}

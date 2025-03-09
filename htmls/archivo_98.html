@@ -1,0 +1,127 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="2.6.3 ">2.6.3 Setting a default engine</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="configuringengines.html" title="2.6 &nbsp; Configuring OpenText Communications engines"> -->
+      <link rel="prev" href="dl2vl-096.html" title="2.6.2 &nbsp; Naming engines">
+      <link rel="next" href="deletingengines.html" title="2.6.4 &nbsp; Deleting engines">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbrbt4wwnf-f-605c3b345-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":5,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d3130a0","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61303,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741380005","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==QkPcU0efgId2N2XRpTcZwiFqopRNlhW1qFuF+oD7fI7x5NTcsU5hxhR9LtGa39sqa6DLP6U8qRnmUluHppe4v1RCaLiSo+UKwKrlzrPAfiXQgfEWvVggPiaDnsiRVGz0so0zYgWkqV3RPGGFP7vA3kcCvAF/W3SbEvCTX6Z+KU60rQ//+WvfT05TLyDbYEEr5HD58X5bKAt3RxXd9t5sC1s1PT5bARcR73LFLtkRJ2uPIodtSrO/KlMC2mlCOUEuiO6P0ad0XcFLESK0cjIuS+wmC+cKaZMzHbls76ghEmBdRVbJF5vUnGlmEP53UN7F1h8okPbAmbENbzFaf/CXTKqfFVYhRS/w6nWVLnajvzmnXrckPNTwZVcmLewUvRA0LEC+SwsOv7B+YDd98WtTBJc1pYoDhcL2MiIFZIGHpwY=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="dl2vl-098">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.6.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Setting a default engine</span></div>
+         <div class="pgPrev"><a title="Preceding page: 2.6.2 &nbsp; Naming engines" aria-label="Preceding page: 2.6.2 &nbsp; Naming engines" href="dl2vl-096.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.6 &nbsp; Configuring OpenText Communications engines" aria-label="Section one level up: 2.6 &nbsp; Configuring OpenText Communications engines" href="configuringengines.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.6.4 &nbsp; Deleting engines" aria-label="Next page: 2.6.4 &nbsp; Deleting engines" href="deletingengines.html">Next</a></div>
+      </div>
+      <div class="sect2 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="dl2vl-098" id="dl2vl-098"></a><span class="otsLbl"><span class="otlbl-num">2.6.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Setting a default engine</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid8440" id="tmpid8440"></a>Setting the default engine for your tenant lets you specify
+            the single-byte character set (SBCS) or double -byte character set
+            (DBCS) engine version that applications will use if an engine is not
+            otherwise specified. For example, you might configure the latest engine
+            to be the default engine for your tenant so that new applications
+            that use new functionality automatically use the latest engine version.
+            Additionally, setting a default engine can save time when importing
+            applications that already have a default engine specified. In that
+            case, you don't need to configure the engine settings on those applications
+            because they will automatically pick up the default engine for your
+            tenant.
+         </p>
+         <p><a name="tmpid8441" id="tmpid8441"></a>If you are working with a new deployment and have not yet uploaded
+            any engines, the first SBCS and DBCS engines that you upload will
+            automatically be marked as <span class="quote">“<span class="quote">Default</span>”</span>&nbsp;in System management view.
+            So, in that scenario, the SBCS engine would be the default engine
+            for SBCS applications, and the DBCS engine would be the default engine
+            for DBCS applications.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref111" id="tmp4ref111"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid8444" id="tmpid8444"></a>Whenever DocGen is installed or upgraded, the engine in the
+               DocGen image is automatically set as the default. You can set another
+               engine as the default after installation.
+            </p>
+         </div>
+         <p><a name="tmpid8445" id="tmpid8445"></a>Remember that the default engine shows up as <span class="quote">“<span class="quote">Default</span>”</span> when users select between different engines in your tenant. So if
+            you have an engine named <span class="quote">“<span class="quote">Development</span>”</span> and it is the
+            default engine for your tenant, then that engine will show up as both <span class="quote">“<span class="quote">Default</span>”</span> and as <span class="quote">“<span class="quote">Development</span>”</span> in any lists where
+            users select between engines.
+         </p>
+         <div class="important">
+            <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Important</span></span></strong></p>
+            <p><a name="tmpid8451" id="tmpid8451"></a>If you have applications that use a default engine, and you
+               then select a different engine to be the default, behavior and output
+               can change across those applications.
+            </p>
+         </div>
+         <div class="procedure"><h2 class="title"><a name="d0e15195" id="d0e15195"></a><b><span class="otlbl-ttl">To set a default engine:</span></b></h2>
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid8455" id="tmpid8455"></a>Sign in to the <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> web client as an <span class="namestring" data-cid="OTDS">OTDS</span> administrator
+                     user at the following URL:
+                  </p>
+                  <p><a name="tmpid8463" id="tmpid8463"></a><strong class="command"><code>https://&lt;host&gt;:&lt;optionalPort&gt;/design?tenant=system</code></strong>         
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid8466" id="tmpid8466"></a>In the <strong class="guilabel" data-cid="Engines">Engines</strong> panel, select an engine
+                     that is not currently marked as <strong class="guilabel" data-cid="Default">Default</strong>, and
+                     then click <strong class="guilabel" data-cid="Open">Open</strong>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid8471" id="tmpid8471"></a>Depending on the engine, select either the <strong class="guilabel" data-cid="Default_DBCS_engine">Default
+                        DBCS engine</strong> or <strong class="guilabel" data-cid="Default_SBCS_engine">Default SBCS engine</strong> check box, and then click <strong class="guilabel" data-cid="Save">Save</strong>.
+                  </p>
+               </li>
+            </ol>
+         </div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.6.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Setting a default engine</span></div>
+         <div class="pgPrev"><a title="Preceding page: 2.6.2 &nbsp; Naming engines" aria-label="Preceding page: 2.6.2 &nbsp; Naming engines" href="dl2vl-096.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.6 &nbsp; Configuring OpenText Communications engines" aria-label="Section one level up: 2.6 &nbsp; Configuring OpenText Communications engines" href="configuringengines.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.6.4 &nbsp; Deleting engines" aria-label="Next page: 2.6.4 &nbsp; Deleting engines" href="deletingengines.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

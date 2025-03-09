@@ -1,0 +1,167 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="2.3.3.5 ">2.3.3.5 Using the simple workflow in a domain</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="configdomainworkflows.html" title="2.3.3 &nbsp; Configuring domain workflows"> -->
+      <link rel="prev" href="domainworkflowsettingsconfig.html" title="2.3.3.4 &nbsp; Configuring settings for a workflow type in a domain">
+      <link rel="next" href="domainworkflowconfigadvanced.html" title="2.3.3.6 &nbsp; Configuring advanced workflow settings for a domain">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wwhu-f-e3094a92a-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":6,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d1f59f6","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61175,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741379828","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==/MNoTSKO7psLjRqWy4afMvJZ7ceZpCGqQmIyWc/ESnwnsT/9OLuX2HThv9jHO40JWNTFpH0LOkTul5a/RCPoWUsfxgkzq0z8vDc0ggqAvgc8+B3HI+BVY0VyV07Yo1x+PNdm+jD+rvYUTTaqkcTW7np5EHwtuzj6CfmMR5D30da6vsRjOX0rjC9lxaIpQXEfHligOQgbYtK7nT4CT2FZYYhTH6LujzyVznLaQuvOwksATtBTYvW81HiCaSSVHKU5yRhmTWAa7ZQ7W+a0+gfZbe0Tkyr/gwByel6qCSEnn2NETtRzxqMd557oLQh8f6iYGum5S76UdOPEvP8keqWa6KnjL0rGJse6k70nDEOuPqseOPklM/IUt5pdIVJyP09UMOzlMbK/RpKGS8tH6FYpdeEcJkSeMbzyFGwzita5DTI=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="domainworkflowconfigsimple">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.3.3.5</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Using the simple
+            workflow in a domain</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.3.3.4 &nbsp; Configuring&#xA;settings for a workflow type in a domain" aria-label="Preceding page: 2.3.3.4 &nbsp; Configuring&#xA;settings for a workflow type in a domain" href="domainworkflowsettingsconfig.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.3.3 &nbsp; Configuring domain workflows" aria-label="Section one level up: 2.3.3 &nbsp; Configuring domain workflows" href="configdomainworkflows.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.3.3.6 &nbsp; Configuring&#xA;advanced workflow settings for a domain" aria-label="Next page: 2.3.3.6 &nbsp; Configuring&#xA;advanced workflow settings for a domain" href="domainworkflowconfigadvanced.html">Next</a></div>
+      </div>
+      <div class="sect3 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="domainworkflowconfigsimple" id="domainworkflowconfigsimple"></a><span class="otsLbl"><span class="otlbl-num">2.3.3.5</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Using the simple
+                     workflow in a domain</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid4972" id="tmpid4972"></a>If you can approve <a class="link" href="associatingresourceswithdomains.html" title="3.13 &nbsp; Associating resources with domains">resources that are associated with a domain</a>, and the domain is configured to use the simple workflow, you can
+            approve drafts without submitting them for approval.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref68" id="tmp4ref68"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid4975" id="tmpid4975"></a>For more information about configuring user roles to approve
+               resources, see <a class="link" href="managinguserpermissions.html" title="2.3.1 &nbsp; Configuring roles and permissions">Configuring
+                  roles and permissions</a>.
+            </p>
+         </div>
+         <p><a name="tmpid4977" id="tmpid4977"></a>If a domain is configured to use the simple workflow, the resources
+            associated with that domain have the following workflow states and
+            change options:
+         </p>
+         <div class="informaltable">
+            <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+               <colgroup>
+                  <col class="col1">
+                  <col class="col2">
+               </colgroup>
+               <thead>
+                  <tr class="row">
+                     <th style="" valign="top"><p><a name="tmpid4984" id="tmpid4984"></a><a name="tmpid4985" id="tmpid4985"></a>Current state
+                        </p>
+                     </th>
+                     <th style="" valign="top"><p><a name="tmpid4986" id="tmpid4986"></a><a name="tmpid4987" id="tmpid4987"></a>Change options for simple workflow
+                        </p>
+                     </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid4990" id="tmpid4990"></a><a name="tmpid4991" id="tmpid4991"></a>Draft
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid4992" id="tmpid4992"></a><a name="tmpid4993" id="tmpid4993"></a><strong class="guilabel" data-cid="Approve">Approve</strong></p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid4996" id="tmpid4996"></a><a name="tmpid4997" id="tmpid4997"></a>Approved
+                        </p>
+                     </td>
+                     <td style=""><a name="tmpid4998" id="tmpid4998"></a><strong class="guilabel" data-cid="Make_new_draft">Make new draft</strong></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <p><a name="tmpid5000" id="tmpid5000"></a>When you initially enable the simple workflow, some resources
+            might be in the Submitted for approval or Rejected state. In these
+            cases, your change options are as follows:
+         </p>
+         <div class="informaltable">
+            <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+               <colgroup>
+                  <col class="col1">
+                  <col class="col2">
+               </colgroup>
+               <thead>
+                  <tr class="row">
+                     <th style="" valign="top"><p><a name="tmpid5007" id="tmpid5007"></a><a name="tmpid5008" id="tmpid5008"></a>Initial state
+                        </p>
+                     </th>
+                     <th style="" valign="top"><p><a name="tmpid5009" id="tmpid5009"></a><a name="tmpid5010" id="tmpid5010"></a>Change options for simple workflow
+                        </p>
+                     </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid5013" id="tmpid5013"></a><a name="tmpid5014" id="tmpid5014"></a>Submitted&nbsp;for&nbsp;approval
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid5015" id="tmpid5015"></a><a name="tmpid5016" id="tmpid5016"></a><strong class="guilabel" data-cid="Approve">Approve</strong> or <strong class="guilabel" data-cid="Return_to_draft">Return to draft</strong></p> 
+                        <div class="note">
+                           <p class="title"><strong><a name="tmp4ref69" id="tmp4ref69"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                           </strong></p>
+                           <p><a name="tmpid5020" id="tmpid5020"></a>In the simple workflow, <strong class="guilabel" data-cid="Reject">Reject</strong> is not an
+                              option in the Submitted for approval state.
+                           </p>
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid5023" id="tmpid5023"></a><a name="tmpid5024" id="tmpid5024"></a>Rejected
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid5025" id="tmpid5025"></a><a name="tmpid5026" id="tmpid5026"></a><strong class="guilabel" data-cid="Return_to_draft">Return to draft</strong></p>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <p><a name="tmpid5028" id="tmpid5028"></a>For more information about using the simple workflow, see <a href="managingapprovalworkflows.html" class="xref2 sect1 auto xstd" title="3.6 &nbsp; Managing approval workflows"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.6</span> “</span><span class="otlbl-ttl">Managing approval
+               workflows</span><span class="otsLbl">”</span></a>.
+         </p>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.3.3.5</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Using the simple
+            workflow in a domain</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.3.3.4 &nbsp; Configuring&#xA;settings for a workflow type in a domain" aria-label="Preceding page: 2.3.3.4 &nbsp; Configuring&#xA;settings for a workflow type in a domain" href="domainworkflowsettingsconfig.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.3.3 &nbsp; Configuring domain workflows" aria-label="Section one level up: 2.3.3 &nbsp; Configuring domain workflows" href="configdomainworkflows.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.3.3.6 &nbsp; Configuring&#xA;advanced workflow settings for a domain" aria-label="Next page: 2.3.3.6 &nbsp; Configuring&#xA;advanced workflow settings for a domain" href="domainworkflowconfigadvanced.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

@@ -1,0 +1,257 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="7.1 ">7.1 Updating engine run definitions</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="addingorchestrationassets.html" title="Chapter 7 – Configuring template and communication previews"> -->
+      <link rel="prev" href="addingorchestrationassets.html" title="Chapter 7 – Configuring template and communication previews">
+      <link rel="next" href="configuringtemplatesamplefiles.html" title="7.2 &nbsp; Configuring sample files for a template">
+   <link rel="stylesheet" type="text/css" href="../../../../../ccwc/v250100/ccwc-h-ugd/en/ofh/dynData/condstyles.css">
+<link rel="stylesheet" type="text/css" href="../../../../../ccmceorc/v250100/ccmceorc-h-ugd/en/ofh/dynData/condstyles.css">
+
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wyon-f-79f89e9b4-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9e016b02","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":62546,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741382093","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==fjoGs8N+0/v6bTRzyZXe7BZCWpLzQ8NbdINwm1RGyejmFY7fQWqqRYiwLRkXrcGDailGk07wS87RvMvvCc17V+dRhPiXxdhHwRUxfoC32iHPREqW3DCTcJ7UWWN/0t8S1bDbQv7LdWbb1jU5qeZc3oBZlBQqpOIzdi+pTLG44w5vPEtuCzmj6YIh45MvGu1QWDR5Vh3IiOeqMDHlyNVywjO0LxDIcuGM1Y71ZyAQfwJa/UYMyqBWBUKO3ZcMV4eiFLOkoa7vYKQxtafxsG9a6aPIfC4gIOPJ9c0orEw/m2ALkCKRpgk8VCAOMrgOv9i7Vf8bfnepAdXrf2tHJPbv6CgGPLQ6HsyD7HDSb3yl7P+qcnNIisF99sJUu2FM7+sihdM5w9AU592vXqv7LFdxuwEIN/MTtc3G71C5yLmnAY0=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="editingrundefinitions">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">7.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Updating engine run definitions</span></div>
+         <div class="pgPrev"><a title="Preceding page: Chapter 7 – Configuring template and communication previews" aria-label="Preceding page: Chapter 7 – Configuring template and communication previews" href="addingorchestrationassets.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 7 – Configuring template and communication previews" aria-label="Section one level up: Chapter 7 – Configuring template and communication previews" href="addingorchestrationassets.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 7.2 &nbsp; Configuring sample&#xA;files for a template" aria-label="Next page: 7.2 &nbsp; Configuring sample&#xA;files for a template" href="configuringtemplatesamplefiles.html">Next</a></div>
+      </div>
+      <div class="sect1 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="editingrundefinitions" id="editingrundefinitions"></a><span class="otsLbl"><span class="otlbl-num">7.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Updating engine run definitions</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid22025" id="tmpid22025"></a>Engine run definitions provide instructions to the <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> engine
+            for producing output, and contain the following information:
+         </p>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid22030" id="tmpid22030"></a>Engine version
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid22032" id="tmpid22032"></a>Input files and output queues
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid22034" id="tmpid22034"></a>Switches for customizing the engine run
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <p><a name="tmpid22035" id="tmpid22035"></a>Depending on their purpose, run definitions can be of the following
+            types:
+         </p>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid22038" id="tmpid22038"></a><strong class="guilabel" data-cid="Production_run_definitions">Production run definitions</strong>—Created
+                     when you publish a flow model . Production run definitions are required
+                     for orchestration jobs that run the engine to produce customer output
+                     and are included in the flows that are processed by the Orchestration
+                     service. The run definition for a communication in a flow model is
+                     based on the corresponding communication settings that are defined
+                     in a flow context. 
+                  </p>
+                  <p><a name="tmpid22040" id="tmpid22040"></a>For information about publishing flows, see 
+                     <data-xpi><data-xproc name="ExtXrefStart" href="ccwc250100-h-ugd.publishingflows" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                        ><A class="otModuleHide if-ccwc-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../ccwc/v250100/ccwc-h-ugd/en/ofh/publishingflows.html"
+                        ><span class="otsLbl"
+                        ><span class="otlbl-num">section 9.2</span
+                        ><span class="otlbl-sep"> </span></span
+                        ><span class="otlbl-ttl">"Publishing orchestration flows"</span> in <i>OpenText Communications - Web Client User Help (CCWC250100-H-UGD)</i></A
+                        ><SPAN class="otModuleShow if-ccwc-h-ugd-hide"
+                        ><span class="otsLbl"
+                        ><span class="otlbl-num">section 9.2</span
+                        ><span class="otlbl-sep"> </span></span
+                        ><span class="otlbl-ttl">"Publishing orchestration flows"</span> in <i>OpenText Communications - Web Client User Help (CCWC250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccwc250100-h-ugd.publishingflows" fmt=""></data-xproc></data-xpi>.
+                  </p>
+                  <p><a name="tmpid22042" id="tmpid22042"></a>For information about defining communication settings in <span class="namestring" data-cid="Orchestrator">Orchestrator</span>,
+                     see 
+                     <data-xpi><data-xproc name="ExtXrefStart" href="ccmceorc-h-ugd.-" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                        ><A class="otModuleHide if-ccmceorc-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../ccmceorc/v250100/ccmceorc-h-ugd/en/ofh/index.html"><i>OpenText Communications - Orchestrator User Help (CCMCEORC-H-UGD)</i></A
+                        ><SPAN class="otModuleShow if-ccmceorc-h-ugd-hide"><i>OpenText Communications - Orchestrator User Help (CCMCEORC-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccmceorc-h-ugd.-" fmt=""></data-xproc></data-xpi>.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid22046" id="tmpid22046"></a><strong class="guilabel" data-cid="Preview_run_definitions">Preview run definitions</strong>—Created
+                     either when you package and upload a <span class="namestring" data-cid="Design_Manager">Design Manager</span> application that contains
+                     a design pack or when you create a communication set. Preview run
+                     definitions contain the information that is required to run the engine
+                     to generate previews for <span class="namestring" data-cid="Content_Author">Content Author</span> and generate simulations for <span class="namestring" data-cid="Designer">Designer</span> or <span class="namestring" data-cid="Content_Author">Content Author</span> communications
+                     that are based on the corresponding application template. Preview
+                     run definitions are configured in DAS and can be modified in the <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> web
+                     client.
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <div class="orderedlist">
+            <h2 class="title"><b><span class="otlbl-ttl">To modify a preview run definition:</span></b></h2>
+            <ol class="orderedlist" type="1">
+               <li class="listitem">
+                  <p><a name="tmpid22057" id="tmpid22057"></a>In the <strong class="guilabel" data-cid="Run_definitions">Run definitions</strong> panel
+                     in the Orchestration asset library view, select a run definition.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid22060" id="tmpid22060"></a>In the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, update
+                     the following settings as needed:
+                  </p>
+                  <div class="informaltable">
+                     <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                        <colgroup>
+                           <col class="col1">
+                           <col class="col2">
+                        </colgroup>
+                        <thead>
+                           <tr class="row">
+                              <th style=""><a name="tmpid22068" id="tmpid22068"></a>Option
+                              </th>
+                              <th style=""><a name="tmpid22069" id="tmpid22069"></a>Description
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid22072" id="tmpid22072"></a><a name="tmpid22073" id="tmpid22073"></a><strong class="guilabel" data-cid="Name">Name</strong></p>
+                              </td>
+                              <td style=""><p><a name="tmpid22075" id="tmpid22075"></a><a name="tmpid22076" id="tmpid22076"></a>The name of the run definition
+                                 </p>
+                                 <p><a name="tmpid22077" id="tmpid22077"></a>Names do not support the following special characters: <code class="literal">&amp; / : * ! ? &gt; &lt; | + # %</code> 
+                                 </p>
+                                 
+                                 
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid22080" id="tmpid22080"></a><a name="tmpid22081" id="tmpid22081"></a><strong class="guilabel" data-cid="Description">Description</strong></p>
+                              </td>
+                              <td style=""><p><a name="tmpid22083" id="tmpid22083"></a><a name="tmpid22084" id="tmpid22084"></a>The description of the run definition
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid22086" id="tmpid22086"></a><a name="tmpid22087" id="tmpid22087"></a><strong class="guilabel" data-cid="Data_source_associations">Data source associations</strong></p>
+                              </td>
+                              <td style=""><p><a name="tmpid22089" id="tmpid22089"></a><a name="tmpid22090" id="tmpid22090"></a>The sample data files that are associated with the run
+                                    definition.
+                                 </p> 
+                                 <p><a name="tmpid22091" id="tmpid22091"></a>To update an associated file, click the <strong class="guilabel" data-cid="Update_<type&gt;_file">Update &lt;type&gt; file</strong> button and select a different sample
+                                    file. Make sure that you select a file of the appropriate file type.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid22094" id="tmpid22094"></a><a name="tmpid22095" id="tmpid22095"></a><strong class="guilabel" data-cid="Engine">Engine</strong></p>
+                              </td>
+                              <td style=""><p><a name="tmpid22097" id="tmpid22097"></a><a name="tmpid22098" id="tmpid22098"></a>The engine version that is used to generate output. Click
+                                    the list and select the engine version that you want to use.
+                                 </p> 
+                                 <div class="note">
+                                    <p class="title"><strong><a name="tmp4ref252" id="tmp4ref252"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                                    </strong></p>
+                                    <p><a name="tmpid22100" id="tmpid22100"></a>The engine version must match or be later than the version that
+                                       is specified in the package file that will be processed using this
+                                       run definition.
+                                    </p>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid22102" id="tmpid22102"></a><a name="tmpid22103" id="tmpid22103"></a><strong class="guilabel" data-cid="Engine_switches">Engine switches</strong></p>
+                              </td>
+                              <td style=""><p><a name="tmpid22105" id="tmpid22105"></a><a name="tmpid22106" id="tmpid22106"></a>The engine switches that are used to customize the engine
+                                    run. By default, the run definition for a communication created by
+                                    a template contains at least the following required switches:
+                                 </p> 
+                                 <div class="itemizedlist">
+                                    <ul class="itemizedlist">
+                                       <li class="listitem">
+                                          <p><a name="tmpid22109" id="tmpid22109"></a><a class="link" href="index.html#bookbiblref">FILEMAP</a>—Specifies the input file that is used to produce output. By default,
+                                             the sample file that was included the <span class="namestring" data-cid="Design_Manager">Design Manager</span> application is used.
+                                          </p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid22113" id="tmpid22113"></a><a class="link" href="index.html#bookbiblref">PACKAGEFILE</a>—Specifies the associated <span class="namestring" data-cid="Design_Manager">Design Manager</span> application package.
+                                          </p>
+                                       </li>
+                                    </ul>
+                                 </div> 
+                                 <p><a name="tmpid22116" id="tmpid22116"></a>To add a new switch, click in the <strong class="guilabel" data-cid="Add_new_switch">Add new switch</strong> box and enter the switch and any required
+                                    arguments. To remove a switch, click the <strong class="guilabel" data-cid="Remove">Remove</strong> button <img src="./img/b_WebApps_RemoveSetting.png" class="igrph" alt="" width="29" height="29">.
+                                 </p> 
+                                 <div class="note">
+                                    <p class="title"><strong><a name="tmp4ref253" id="tmp4ref253"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                                    </strong></p>
+                                    <p><a name="tmpid22121" id="tmpid22121"></a>Some engine switches are not supported when you use the Document
+                                       Generation service to run the engine. For additional information,
+                                       see 
+                                       <data-xpi><data-xproc name="ExtXrefStart" href="ccwc250100-h-ugd.restrictedswitchesfordocgen" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                                          ><A class="otModuleHide if-ccwc-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../ccwc/v250100/ccwc-h-ugd/en/ofh/restrictedswitchesfordocgen.html"
+                                          ><span class="otsLbl"
+                                          ><span class="otlbl-num">section 9.6.1</span
+                                          ><span class="otlbl-sep"> </span></span
+                                          ><span class="otlbl-ttl">"Restricted switches for containerized OpenText Communications deployments"</span> in <i>OpenText Communications - Web Client User Help (CCWC250100-H-UGD)</i></A
+                                          ><SPAN class="otModuleShow if-ccwc-h-ugd-hide"
+                                          ><span class="otsLbl"
+                                          ><span class="otlbl-num">section 9.6.1</span
+                                          ><span class="otlbl-sep"> </span></span
+                                          ><span class="otlbl-ttl">"Restricted switches for containerized OpenText Communications deployments"</span> in <i>OpenText Communications - Web Client User Help (CCWC250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccwc250100-h-ugd.restrictedswitchesfordocgen" fmt=""></data-xproc></data-xpi>.
+                                    </p>
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </li>
+            </ol>
+         </div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">7.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Updating engine run definitions</span></div>
+         <div class="pgPrev"><a title="Preceding page: Chapter 7 – Configuring template and communication previews" aria-label="Preceding page: Chapter 7 – Configuring template and communication previews" href="addingorchestrationassets.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 7 – Configuring template and communication previews" aria-label="Section one level up: Chapter 7 – Configuring template and communication previews" href="addingorchestrationassets.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 7.2 &nbsp; Configuring sample&#xA;files for a template" aria-label="Next page: 7.2 &nbsp; Configuring sample&#xA;files for a template" href="configuringtemplatesamplefiles.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

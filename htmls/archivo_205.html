@@ -1,0 +1,513 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="5.15 ">5.15 Managing Designer resources</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="addingdesignassets.html" title="Chapter 5 – Managing design resources"> -->
+      <link rel="prev" href="addstylesheet.html" title="5.14.1 &nbsp; Creating communication set-based style sheets">
+      <link rel="next" href="authorres.html" title="5.16 &nbsp; Managing Content Author resources">
+   <link rel="stylesheet" type="text/css" href="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/dynData/condstyles.css">
+
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wyol-f-c93a58e53-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9e0137c0","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":62538,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741382091","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==FDo/j34S0wFI9iM1zA3gDPAvn/UKnf7zRQHVx//vkaKiI4EDEfCmczDoJeWoR9V6qKbk2YQrxy1StfnnnyDzuuj05S8kFd+yQWboiGKczo/QW1Pdv10INsKjnWViL+CpuiPOMLOdrxdP36+hcBE4wrycE+Fqb/1tkDdZhglMRGAsth6TpOeMhRP59LBK/LMca5IAyPtuhVzGZYtfIxCZO2YuNq8WigCLtW8RZ187mIzAOL4dXX/E5Fu/B3MLhF4i+yCjFVpGQozhEVSApRRY1JnVE38JeudO5ghLJjq90Yiu7wMbRmRHbiiS/rH2GFm3O7T3i3CCcuGKVjLQMbZCZqinEGT9dqRnJcKdiY59YI73pxKbMzCdVJ8VDEzkA55JGd2Xe6NWk3Yz/x9KJDBpGKnCqGasIRZ3nNTRWYtdw8k=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="designerres">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">5.15</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Managing Designer resources</span></div>
+         <div class="pgPrev"><a title="Preceding page: 5.14.1 &nbsp; Creating communication set-based&#xA;style sheets" aria-label="Preceding page: 5.14.1 &nbsp; Creating communication set-based&#xA;style sheets" href="addstylesheet.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 5 – Managing design resources" aria-label="Section one level up: Chapter 5 – Managing design resources" href="addingdesignassets.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 5.16 &nbsp; Managing Content Author resources" aria-label="Next page: 5.16 &nbsp; Managing Content Author resources" href="authorres.html">Next</a></div>
+      </div>
+      <div class="sect1 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="designerres" id="designerres"></a><span class="otsLbl"><span class="otlbl-num">5.15</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Managing Designer resources</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid21220" id="tmpid21220"></a>Although the following objects are typically created and defined
+            from <span class="namestring" data-cid="Designer">Designer</span>, they are also stored in the web client on the <strong class="guilabel" data-cid="Designer">Designer</strong> tab of the Design asset library. From the web
+            client, you can review the settings for these objects and define how
+            these objects behave when they interact with customer data and output.
+         </p>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid21225" id="tmpid21225"></a>Clause (CD)
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid21227" id="tmpid21227"></a>Communication (CD)
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid21229" id="tmpid21229"></a>Component
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid21231" id="tmpid21231"></a>Design layout
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid21233" id="tmpid21233"></a>Document
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid21235" id="tmpid21235"></a>Email
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid21237" id="tmpid21237"></a>Messaging (CD)
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid21239" id="tmpid21239"></a>Page
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid21241" id="tmpid21241"></a>Section (CD)
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid21243" id="tmpid21243"></a>Web
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <p><a name="tmpid21244" id="tmpid21244"></a>To avoid unexpected output changes, the settings on the <strong class="guilabel" data-cid="General">General</strong> tab are typically view-only. However, you can
+            modify the following settings as needed, depending on the object you
+            are viewing: 
+         </p>
+         <div class="informaltable">
+            <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+               <colgroup>
+                  <col class="col1">
+                  <col class="COLSPEC0">
+                  <col class="col2">
+                  <col class="COLSPEC2">
+               </colgroup>
+               <thead>
+                  <tr class="row">
+                     <th style="" valign="top"><a name="tmpid21254" id="tmpid21254"></a>Properties
+                     </th>
+                     <th style="" valign="top"><a name="tmpid21255" id="tmpid21255"></a>Availability
+                     </th>
+                     <th style="" valign="top"><a name="tmpid21256" id="tmpid21256"></a>Description
+                     </th>
+                     <th style="" valign="top"><a name="tmpid21257" id="tmpid21257"></a>Additional information
+                     </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid21260" id="tmpid21260"></a><a name="tmpid21261" id="tmpid21261"></a><strong class="guilabel" data-cid="Accessibility">Accessibility</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21263" id="tmpid21263"></a><a name="tmpid21264" id="tmpid21264"></a>Pages
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21265" id="tmpid21265"></a><a name="tmpid21266" id="tmpid21266"></a>Control and optimize the way that customer output is
+                           read by assistive technology tools such as screen readers and text-to-speech
+                           converters.
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21267" id="tmpid21267"></a><a name="tmpid21268" id="tmpid21268"></a><data-xpi><data-xproc name="ExtXrefStart" href="cccd250100-h-ugd.creatingaccessiblepages" fmt="auto" is1st="yes" tgtag="?"></data-xproc
+                              ><A class="otModuleHide if-cccd-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/creatingaccessiblepages.html"
+                              ><span class="otsLbl"
+                              ><span class="otlbl-num">Section 15.3</span
+                              ><span class="otlbl-sep"> </span></span
+                              ><span class="otlbl-ttl">"Creating accessible page designs"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></A
+                              ><SPAN class="otModuleShow if-cccd-h-ugd-hide"
+                              ><span class="otsLbl"
+                              ><span class="otlbl-num">Section 15.3</span
+                              ><span class="otlbl-sep"> </span></span
+                              ><span class="otlbl-ttl">"Creating accessible page designs"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="cccd250100-h-ugd.creatingaccessiblepages" fmt=""></data-xproc></data-xpi>
+                        </p>
+                        <p><a name="tmpid21270" id="tmpid21270"></a><data-xpi><data-xproc name="ExtXrefStart" href="cccd250100-h-ugd.creatingaccessiblehtml" fmt="auto" is1st="yes" tgtag="?"></data-xproc
+                              ><A class="otModuleHide if-cccd-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/creatingaccessiblehtml.html"
+                              ><span class="otsLbl"
+                              ><span class="otlbl-num">Section 14.6</span
+                              ><span class="otlbl-sep"> </span></span
+                              ><span class="otlbl-ttl">"Creating accessible email and web designs"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></A
+                              ><SPAN class="otModuleShow if-cccd-h-ugd-hide"
+                              ><span class="otsLbl"
+                              ><span class="otlbl-num">Section 14.6</span
+                              ><span class="otlbl-sep"> </span></span
+                              ><span class="otlbl-ttl">"Creating accessible email and web designs"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="cccd250100-h-ugd.creatingaccessiblehtml" fmt=""></data-xproc></data-xpi>
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid21273" id="tmpid21273"></a><a name="tmpid21274" id="tmpid21274"></a><strong class="guilabel" data-cid="CSS">CSS</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><a name="tmpid21276" id="tmpid21276"></a><div class="itemizedlist">
+                           <ul class="itemizedlist">
+                              <li class="listitem">
+                                 <p><a name="tmpid21279" id="tmpid21279"></a>Email
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21281" id="tmpid21281"></a>Web
+                                 </p>
+                              </li>
+                           </ul>
+                        </div>
+                     </td>
+                     <td style=""><p><a name="tmpid21282" id="tmpid21282"></a><a name="tmpid21283" id="tmpid21283"></a>Apply a CSS to email and web designs, and embedded object-level
+                           CSS to supported objects and containers within your design.
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21284" id="tmpid21284"></a><a name="tmpid21285" id="tmpid21285"></a><data-xpi><data-xproc name="ExtXrefStart" href="cccd250100-h-ugd.cssonwebemail" fmt="auto" is1st="yes" tgtag="?"></data-xproc
+                              ><A class="otModuleHide if-cccd-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/cssonwebemail.html"
+                              ><span class="otsLbl"
+                              ><span class="otlbl-num">Section 14.8</span
+                              ><span class="otlbl-sep"> </span></span
+                              ><span class="otlbl-ttl">"Managing cascading style sheets for email and web designs"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></A
+                              ><SPAN class="otModuleShow if-cccd-h-ugd-hide"
+                              ><span class="otsLbl"
+                              ><span class="otlbl-num">Section 14.8</span
+                              ><span class="otlbl-sep"> </span></span
+                              ><span class="otlbl-ttl">"Managing cascading style sheets for email and web designs"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="cccd250100-h-ugd.cssonwebemail" fmt=""></data-xproc></data-xpi>
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid21288" id="tmpid21288"></a><a name="tmpid21289" id="tmpid21289"></a><strong class="guilabel" data-cid="Delivery">Delivery</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><a name="tmpid21291" id="tmpid21291"></a><div class="itemizedlist">
+                           <ul class="itemizedlist">
+                              <li class="listitem">
+                                 <p><a name="tmpid21294" id="tmpid21294"></a>Email
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21296" id="tmpid21296"></a>Messaging (CD)
+                                 </p>
+                              </li>
+                           </ul>
+                        </div>
+                     </td>
+                     <td style=""><p><a name="tmpid21297" id="tmpid21297"></a><a name="tmpid21298" id="tmpid21298"></a>Identify senders, recipients, and attachments for output
+                           that is transmitted and received using electronic devices.
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21299" id="tmpid21299"></a><a name="tmpid21300" id="tmpid21300"></a><data-xpi><data-xproc name="ExtXrefStart" href="cccd250100-h-ugd.dl2vl-315" fmt="auto" is1st="yes" tgtag="?"></data-xproc
+                              ><A class="otModuleHide if-cccd-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/dl2vl-315.html"
+                              ><span class="otsLbl"
+                              ><span class="otlbl-num">Section 8.11</span
+                              ><span class="otlbl-sep"> </span></span
+                              ><span class="otlbl-ttl">"Defining email delivery and attachment information"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></A
+                              ><SPAN class="otModuleShow if-cccd-h-ugd-hide"
+                              ><span class="otsLbl"
+                              ><span class="otlbl-num">Section 8.11</span
+                              ><span class="otlbl-sep"> </span></span
+                              ><span class="otlbl-ttl">"Defining email delivery and attachment information"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="cccd250100-h-ugd.dl2vl-315" fmt=""></data-xproc></data-xpi>
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid21303" id="tmpid21303"></a><a name="tmpid21304" id="tmpid21304"></a><strong class="guilabel" data-cid="Domains">Domains</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21306" id="tmpid21306"></a><a name="tmpid21307" id="tmpid21307"></a>All objects
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21308" id="tmpid21308"></a><a name="tmpid21309" id="tmpid21309"></a>Define the domains to which a resource is assigned.
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21310" id="tmpid21310"></a><a name="tmpid21311" id="tmpid21311"></a><a href="associatingresourceswithdomains.html" class="xref2 sect1 auto xstd" title="3.13 &nbsp; Associating resources&#xA;with domains"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.13</span> “</span><span class="otlbl-ttl">Associating resources
+                              with domains</span><span class="otsLbl">”</span></a></p>.
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid21314" id="tmpid21314"></a><a name="tmpid21315" id="tmpid21315"></a><strong class="guilabel" data-cid="Duplex">Duplex</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21317" id="tmpid21317"></a><a name="tmpid21318" id="tmpid21318"></a>Document
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21319" id="tmpid21319"></a><a name="tmpid21320" id="tmpid21320"></a>Set up a document for duplex printing.
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21321" id="tmpid21321"></a><a name="tmpid21322" id="tmpid21322"></a><data-xpi><data-xproc name="ExtXrefStart" href="cccd250100-h-ugd.docduplexprinting" fmt="auto" is1st="yes" tgtag="?"></data-xproc
+                              ><A class="otModuleHide if-cccd-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/docduplexprinting.html"
+                              ><span class="otsLbl"
+                              ><span class="otlbl-num">Section 7.16</span
+                              ><span class="otlbl-sep"> </span></span
+                              ><span class="otlbl-ttl">"Setting up a document for duplex printing"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></A
+                              ><SPAN class="otModuleShow if-cccd-h-ugd-hide"
+                              ><span class="otsLbl"
+                              ><span class="otlbl-num">Section 7.16</span
+                              ><span class="otlbl-sep"> </span></span
+                              ><span class="otlbl-ttl">"Setting up a document for duplex printing"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="cccd250100-h-ugd.docduplexprinting" fmt=""></data-xproc></data-xpi>
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid21325" id="tmpid21325"></a><a name="tmpid21326" id="tmpid21326"></a><strong class="guilabel" data-cid="Flow">Flow</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21328" id="tmpid21328"></a><a name="tmpid21329" id="tmpid21329"></a>Pages
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21330" id="tmpid21330"></a><a name="tmpid21331" id="tmpid21331"></a>For flow designs or flow pages, define how overflow content
+                           on that page should behave. 
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21332" id="tmpid21332"></a><a name="tmpid21333" id="tmpid21333"></a><data-xpi><data-xproc name="ExtXrefStart" href="cccd250100-h-ugd.flowoptionspages" fmt="auto" is1st="yes" tgtag="?"></data-xproc
+                              ><A class="otModuleHide if-cccd-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/flowoptionspages.html"
+                              ><span class="otsLbl"
+                              ><span class="otlbl-num">Section 15.1.2</span
+                              ><span class="otlbl-sep"> </span></span
+                              ><span class="otlbl-ttl">"Specifying flow options for page designs"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></A
+                              ><SPAN class="otModuleShow if-cccd-h-ugd-hide"
+                              ><span class="otsLbl"
+                              ><span class="otlbl-num">Section 15.1.2</span
+                              ><span class="otlbl-sep"> </span></span
+                              ><span class="otlbl-ttl">"Specifying flow options for page designs"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="cccd250100-h-ugd.flowoptionspages" fmt=""></data-xproc></data-xpi>
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid21336" id="tmpid21336"></a><a name="tmpid21337" id="tmpid21337"></a><strong class="guilabel" data-cid="Logic">Logic</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><a name="tmpid21339" id="tmpid21339"></a><div class="itemizedlist">
+                           <ul class="itemizedlist">
+                              <li class="listitem">
+                                 <p><a name="tmpid21342" id="tmpid21342"></a>Clause (CD)
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21344" id="tmpid21344"></a>Communication (CD)
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21346" id="tmpid21346"></a>Component
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21348" id="tmpid21348"></a>Document
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21350" id="tmpid21350"></a>Email
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21352" id="tmpid21352"></a>Messaging (CD)
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21354" id="tmpid21354"></a>Page
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21356" id="tmpid21356"></a>Section (CD)
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21358" id="tmpid21358"></a>Web
+                                 </p>
+                              </li>
+                           </ul>
+                        </div>
+                     </td>
+                     <td style=""><a name="tmpid21359" id="tmpid21359"></a><div class="itemizedlist">
+                           <ul class="itemizedlist">
+                              <li class="listitem">
+                                 <p><a name="tmpid21362" id="tmpid21362"></a>For communications, add or manage events. 
+                                 </p>
+                                 <div class="itemizedlist">
+                                    <ul class="itemizedlist">
+                                       <li class="listitem">
+                                          <p><a name="tmpid21365" id="tmpid21365"></a><b class="title">To add an event – </b>Click the <strong class="guilabel" data-cid="Add_event">Add event</strong> button <img src="./img/b_WebApps_AddListItem.png" class="igrph" alt="" width="30" height="30">.
+                                          </p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid21370" id="tmpid21370"></a><b class="title">To view an event – </b>Click the <strong class="guilabel" data-cid="Event_action">Event action</strong> button <img src="./img/b_WebApps_ActionMenu.png" class="igrph" alt="" width="30" height="30"> and
+                                             select <strong class="guilabel" data-cid="View_code">View code</strong>. 
+                                          </p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid21376" id="tmpid21376"></a><b class="title">To remove an event – </b>Click the <strong class="guilabel" data-cid="Event_action">Event action</strong> button <img src="./img/b_WebApps_ActionMenu.png" class="igrph" alt="" width="30" height="30"> and
+                                             select <strong class="guilabel" data-cid="Remove">Remove</strong>. 
+                                          </p>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21382" id="tmpid21382"></a>For all other objects, add or manage rules.
+                                 </p>
+                                 <div class="itemizedlist">
+                                    <ul class="itemizedlist">
+                                       <li class="listitem">
+                                          <p><a name="tmpid21385" id="tmpid21385"></a><b class="title">To add a rule – </b>Click the <strong class="guilabel" data-cid="Add_rule">Add
+                                                rule</strong> button <img src="./img/b_WebApps_AddListItem.png" class="igrph" alt="" width="30" height="30">.
+                                          </p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid21390" id="tmpid21390"></a><b class="title">To view or edit a rule – </b>Click the <strong class="guilabel" data-cid="Rule_action">Rule action</strong> button <img src="./img/b_WebApps_ActionMenu.png" class="igrph" alt="" width="30" height="30"> and
+                                             select <strong class="guilabel" data-cid="Edit_View">Edit/View</strong>. 
+                                          </p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid21396" id="tmpid21396"></a><b class="title">To remove a rule – </b>Click the <strong class="guilabel" data-cid="Rule_action">Rule action</strong> button <img src="./img/b_WebApps_ActionMenu.png" class="igrph" alt="" width="30" height="30"> and
+                                             select <strong class="guilabel" data-cid="Remove">Remove</strong>. 
+                                          </p>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </td>
+                     <td style=""><p><a name="tmpid21401" id="tmpid21401"></a><a name="tmpid21402" id="tmpid21402"></a><data-xpi><data-xproc name="ExtXrefStart" href="cccd250100-h-ugd.logic" fmt="auto" is1st="yes" tgtag="?"></data-xproc
+                              ><A class="otModuleHide if-cccd-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/logic.html"
+                              ><span class="otsLbl"
+                              ><span class="otlbl-num">Part IV</span></span> <span class="otlbl-ttl">"Logic"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></A
+                              ><SPAN class="otModuleShow if-cccd-h-ugd-hide"
+                              ><span class="otsLbl"
+                              ><span class="otlbl-num">Part IV</span></span> <span class="otlbl-ttl">"Logic"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="cccd250100-h-ugd.logic" fmt=""></data-xproc></data-xpi>
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid21405" id="tmpid21405"></a><a name="tmpid21406" id="tmpid21406"></a><strong class="guilabel" data-cid="Metadata_class_">Metadata (class)</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><a name="tmpid21408" id="tmpid21408"></a><div class="itemizedlist">
+                           <ul class="itemizedlist">
+                              <li class="listitem">
+                                 <p><a name="tmpid21411" id="tmpid21411"></a>Communication (CD)
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21413" id="tmpid21413"></a>Component
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21415" id="tmpid21415"></a>Design layout
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21417" id="tmpid21417"></a>Document
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21419" id="tmpid21419"></a>Email
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21421" id="tmpid21421"></a>Messaging (CD)
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21423" id="tmpid21423"></a>Page
+                                 </p>
+                              </li>
+                              <li class="listitem">
+                                 <p><a name="tmpid21425" id="tmpid21425"></a>Web
+                                 </p>
+                              </li>
+                           </ul>
+                        </div>
+                     </td>
+                     <td style=""><a name="tmpid21426" id="tmpid21426"></a>Apply metadata or class tags to resources.
+                     </td>
+                     <td style=""><p><a name="tmpid21427" id="tmpid21427"></a><a name="tmpid21428" id="tmpid21428"></a><a href="applyingmetadata.html" class="xref2 sect1 auto xstd" title="3.5 &nbsp; Applying metadata tags to resources"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.5</span> “</span><span class="otlbl-ttl">Applying metadata
+                              tags to resources</span><span class="otsLbl">”</span></a></p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid21431" id="tmpid21431"></a><a name="tmpid21432" id="tmpid21432"></a><strong class="guilabel" data-cid="References">References</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21434" id="tmpid21434"></a><a name="tmpid21435" id="tmpid21435"></a>All objects
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21436" id="tmpid21436"></a><a name="tmpid21437" id="tmpid21437"></a>View the linked resources connected to a selected resource.
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21438" id="tmpid21438"></a><a name="tmpid21439" id="tmpid21439"></a><a href="usingassetlibraryviews.html" class="xref2 sect1 auto xstd" title="3.3 &nbsp; Viewing resources in asset&#xA;library views"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.3</span> “</span><span class="otlbl-ttl">Viewing resources
+                              in asset
+                              library views</span><span class="otsLbl">”</span></a></p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid21442" id="tmpid21442"></a><a name="tmpid21443" id="tmpid21443"></a><strong class="guilabel" data-cid="Search_Keys">Search Keys</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21445" id="tmpid21445"></a><a name="tmpid21446" id="tmpid21446"></a>Communication (CD)
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21447" id="tmpid21447"></a><a name="tmpid21448" id="tmpid21448"></a>Add data to the print stream for both electronic and
+                           print output. Data you can add includes comments,&nbsp;searchable tags,
+                           instructions to print devices, and more.
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21449" id="tmpid21449"></a><a name="tmpid21450" id="tmpid21450"></a><a href="searchkeys.html" class="xref2 sect1 auto xstd" title="4.12 &nbsp; Setting up search keys"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">4.12</span> “</span><span class="otlbl-ttl">Setting up search
+                              keys</span><span class="otsLbl">”</span></a></p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid21453" id="tmpid21453"></a><a name="tmpid21454" id="tmpid21454"></a><strong class="guilabel" data-cid="Workflow">Workflow</strong> tab
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21456" id="tmpid21456"></a><a name="tmpid21457" id="tmpid21457"></a>All objects
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21458" id="tmpid21458"></a><a name="tmpid21459" id="tmpid21459"></a>Manage the approval workflow for a resource.
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid21460" id="tmpid21460"></a><a name="tmpid21461" id="tmpid21461"></a><a href="managingapprovalworkflows.html" class="xref2 sect1 auto xstd" title="3.6 &nbsp; Managing approval workflows"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.6</span> “</span><span class="otlbl-ttl">Managing approval
+                              workflows</span><span class="otsLbl">”</span></a></p>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">5.15</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Managing Designer resources</span></div>
+         <div class="pgPrev"><a title="Preceding page: 5.14.1 &nbsp; Creating communication set-based&#xA;style sheets" aria-label="Preceding page: 5.14.1 &nbsp; Creating communication set-based&#xA;style sheets" href="addstylesheet.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 5 – Managing design resources" aria-label="Section one level up: Chapter 5 – Managing design resources" href="addingdesignassets.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 5.16 &nbsp; Managing Content Author resources" aria-label="Next page: 5.16 &nbsp; Managing Content Author resources" href="authorres.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

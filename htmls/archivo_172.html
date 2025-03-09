@@ -1,0 +1,876 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="4.9.9 ">4.9.9 PDF/A output</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="settingupoutputs.html" title="4.9 &nbsp; Setting up outputs"> -->
+      <link rel="prev" href="pdfoutput.html" title="4.9.8 &nbsp; PDF output">
+      <link rel="next" href="postscriptoutput.html" title="4.9.10 &nbsp; Postscript output">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wyb3-f-60d04899f-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":8,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9dd7e669","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":62304,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741381691","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==KmukKb8yOySbvPAxvXbNb1sY1O3XnjQUWIU0EBvxIhXwXVJcThJ4gbC5m1XgasJzSEmzLQ91oH0lsw6bmtMYXbAcqpxtxFnUw5Uj/QxTfVm9TS7qYbZOOi5X2FTMh7vhVZ2hIrUcOoopl721QURJC2YbjHD5viJGraVptrIDSZH21NSqIK9+wgOOVCEpFnASMNDhoBw/BZ3FjbX534fUecyrUGAU0kaMhDJ9ZS5LEO2i/YDdT/5EXDKjYbWJJfrMZTn5TG7jvnrWBuAorZMJqKl7d9JJJtjGdszMmrSad37jAc/GnqfXqp9ydEzO7Hm5orkPgfrSsrxImrk3nJ85CIC3uJxmjsBkrJBztqGYUInfYktMiWCB4akPr/7HlRZQcsgatb2gBAbcjck6xXjlqV2hv2fop0SlMXfXTw9e1FQ=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="pdfaoutput">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.9.9</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">PDF/A output</span></div>
+         <div class="pgPrev"><a title="Preceding page: 4.9.8 &nbsp; PDF output" aria-label="Preceding page: 4.9.8 &nbsp; PDF output" href="pdfoutput.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 4.9 &nbsp; Setting up outputs" aria-label="Section one level up: 4.9 &nbsp; Setting up outputs" href="settingupoutputs.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.9.10 &nbsp; Postscript output" aria-label="Next page: 4.9.10 &nbsp; Postscript output" href="postscriptoutput.html">Next</a></div>
+      </div>
+      <div class="sect2 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="pdfaoutput" id="pdfaoutput"></a><span class="otsLbl"><span class="otlbl-num">4.9.9</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">PDF/A output</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid17883" id="tmpid17883"></a>The&nbsp;PDF/A&nbsp;output driver produces a subset of PDF output that
+            is used specifically for archiving documents. 
+         </p>
+         <div class="itemizedlist"><p><a name="pdfacomp" id="pdfacomp"></a><a name="tmpid17885" id="tmpid17885"></a><span class="namestring" data-cid="Designer">Designer</span> provides the following levels of PDF/A compliance:
+            </p>
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid17888" id="tmpid17888"></a><b class="title"><span class="highlight"><strong>PDF/A-1a</strong></span> – </b>This
+                     level of compliance ensures that the logical structure and content
+                     text stream of a document is preserved in the natural reading order.
+                     Preserving the logical structure ensures that the file will be displayed
+                     correctly on multiple viewing devices. This level also ensures that
+                     text can be extracted. Use&nbsp;PDF/A-1a if you must produce output in
+                     accordance with Section 508 with the US Rehabilitation Act. Accessibility
+                     tags are automatically enabled for&nbsp;PDF/A-1a output.&nbsp;PDF/A-1a produced
+                     in <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> meets PDF 1.4 standards.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid17898" id="tmpid17898"></a><b class="title"><span class="highlight"><strong>PDF/A-1b</strong></span> – </b>This
+                     level of compliance meets the minimum requirements for the&nbsp;PDF/A&nbsp;standard.&nbsp;PDF/A-1b
+                     output preserves the visual appearance of archived documents only
+                     with the original structure of the file. This level of compliance
+                     is not optimized for viewing on multiple devices. Use&nbsp;PDF/A-1b if
+                     you do not anticipate the need to extract text.&nbsp;PDF/A-1b output does
+                     not necessarily meet the requirements of Section 508 of the US Rehabilitation
+                     Act. Accessibility tags are optional for&nbsp;PDF/A-1b output.&nbsp;PDF/A-1b
+                     produced in <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> meets PDF 1.4 standards.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid17908" id="tmpid17908"></a><b class="title"><span class="highlight"><strong>PDF/A-2a</strong></span> – </b>This
+                     level of compliance is an ISO-standardized version that is suitable
+                     for long-term archival material. This update to the&nbsp;PDF/A&nbsp;standard
+                     supports PDF 1.7 standards when creating archival documents, so you
+                     can include digital signatures in accordance with the PDF Advanced
+                     Electronic Signatures (PAdES) standard, ActiveX Data Objects (ADO)
+                     stream objects, and JPEG2000 (*.jp2) images. Accessibility tags are
+                     required for&nbsp;PDF/A-2a output. One advantage of&nbsp;PDF/A-2a is a smaller
+                     archival file size. To optimize the file size in <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span>, use JPEG2000 files in the design and select&nbsp;<strong class="guilabel" data-cid="Max">Max</strong>&nbsp;from the&nbsp;<strong class="guilabel" data-cid="Compression_level">Compression level</strong>&nbsp;box on the&nbsp;PDF/A-2a
+                     output object properties.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid17920" id="tmpid17920"></a><b class="title"><span class="highlight"><strong>PDF/A-3a</strong></span> – </b>This
+                     level of compliance is nearly identical to&nbsp;PDF/A-2a except that&nbsp;PDF/A-3
+                     also permits files of any type to be embedded into&nbsp;PDF/A-conforming
+                     documents, including files that do not comply with the&nbsp;PDF/A&nbsp;standard.
+                     In addition, this level includes the option to attach a queue report
+                     file to the output.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid17924" id="tmpid17924"></a><b class="title"><span class="highlight"><strong>PDF/A-3u</strong></span> – </b>This
+                     level of compliance requires character mapping to Unicode, which results
+                     in text that can be reliably searched and copied. Like&nbsp;PDF/A-3a,&nbsp;PDF/A-3u
+                     output can include files of any type to be embedded in the output,
+                     and includes the option to attach a queue report file. However, accessibility
+                     is not required for&nbsp;PDF/A-3u. This option is not available for single-byte
+                     character set (SBCS) output queue devices.
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <p><a name="pdfaint1" id="pdfaint1"></a>After you&nbsp;create the output object, you can use the&nbsp;<strong class="guilabel" data-cid="Properties">Properties</strong>&nbsp;panel to view and modify the following output properties. After
+            making changes, click&nbsp;<strong class="guilabel" data-cid="Save">Save</strong> or the changes will
+            be lost.</p>
+         <div class="vl2formalsect-list vl2bhseq" id="aid4pidiv136">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732631747-065" id="vle2s1732631747-065"></a>General output settings
+         </h2>
+         <p><a name="pdfaint2" id="pdfaint2"></a>The following sections provide information about the general output
+            options.
+         </p>
+         <div class="variablelist standard lvl1 lvlmax1">
+            <dl class="variablelist standard">
+               <dt class="varlistentry"><a name="pdfapdf01" id="pdfapdf01"></a><span class="term"><a name="tmpid6800000016750" id="tmpid6800000016750"></a>Version</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid6800000016752" id="tmpid6800000016752"></a>The PDF version of PDF output is used to identify the output's
+                     compatibility with different PDF viewers, process tools, and utilities.
+                     For example, for maximum accessibility and reuse, PDF output that
+                     you intend to archive generally uses PDF version 1.3 so that the PDF
+                     is compatible with any version of Acrobat 4.0 or later. To determine
+                     the PDF version required for your production and delivery needs, consult
+                     the documentation for any PDF viewer, processing tool, or utility
+                     that your organization uses.
+                  </p>
+                  <div class="itemizedlist">
+                     <p><a name="tmpid6800000016754" id="tmpid6800000016754"></a>From <span class="namestring" data-cid="Designer">Designer</span>, you can create PDF output using any of the following
+                        PDF versions:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid6800000016757" id="tmpid6800000016757"></a>Version 1.3 (compatible with Acrobat version 4.0 and
+                              later)
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid6800000016759" id="tmpid6800000016759"></a>Version 1.4 (compatible with Acrobat version 5.0 and
+                              later)
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid6800000016761" id="tmpid6800000016761"></a>Version 1.5 (compatible with Acrobat version 6.0 and
+                              later)
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid6800000016763" id="tmpid6800000016763"></a>Version 1.6 (compatible with Acrobat version 7.0 and
+                              later)
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid6800000016765" id="tmpid6800000016765"></a>Version 1.7 (compatible with Acrobat version 8.0 and
+                              later)
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="vle2s1732631747-066" id="vle2s1732631747-066"></a><span class="term"><a name="tmpid17936" id="tmpid17936"></a>Conformance level</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid17938" id="tmpid17938"></a>Identify the conformance level that you want to use for the
+                     PDF/A output. 
+                  </p>
+                  <div class="itemizedlist"><p><a name="pdfacomprep" id="pdfacomprep"></a><a name="tmpid6900000017885" id="tmpid6900000017885"></a><span class="namestring" data-cid="Designer">Designer</span> provides the following levels of PDF/A compliance:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid6900000017888" id="tmpid6900000017888"></a><b class="title"><span class="highlight"><strong>PDF/A-1a</strong></span> – </b>This
+                              level of compliance ensures that the logical structure and content
+                              text stream of a document is preserved in the natural reading order.
+                              Preserving the logical structure ensures that the file will be displayed
+                              correctly on multiple viewing devices. This level also ensures that
+                              text can be extracted. Use&nbsp;PDF/A-1a if you must produce output in
+                              accordance with Section 508 with the US Rehabilitation Act. Accessibility
+                              tags are automatically enabled for&nbsp;PDF/A-1a output.&nbsp;PDF/A-1a produced
+                              in <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> meets PDF 1.4 standards.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid6900000017898" id="tmpid6900000017898"></a><b class="title"><span class="highlight"><strong>PDF/A-1b</strong></span> – </b>This
+                              level of compliance meets the minimum requirements for the&nbsp;PDF/A&nbsp;standard.&nbsp;PDF/A-1b
+                              output preserves the visual appearance of archived documents only
+                              with the original structure of the file. This level of compliance
+                              is not optimized for viewing on multiple devices. Use&nbsp;PDF/A-1b if
+                              you do not anticipate the need to extract text.&nbsp;PDF/A-1b output does
+                              not necessarily meet the requirements of Section 508 of the US Rehabilitation
+                              Act. Accessibility tags are optional for&nbsp;PDF/A-1b output.&nbsp;PDF/A-1b
+                              produced in <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> meets PDF 1.4 standards.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid6900000017908" id="tmpid6900000017908"></a><b class="title"><span class="highlight"><strong>PDF/A-2a</strong></span> – </b>This
+                              level of compliance is an ISO-standardized version that is suitable
+                              for long-term archival material. This update to the&nbsp;PDF/A&nbsp;standard
+                              supports PDF 1.7 standards when creating archival documents, so you
+                              can include digital signatures in accordance with the PDF Advanced
+                              Electronic Signatures (PAdES) standard, ActiveX Data Objects (ADO)
+                              stream objects, and JPEG2000 (*.jp2) images. Accessibility tags are
+                              required for&nbsp;PDF/A-2a output. One advantage of&nbsp;PDF/A-2a is a smaller
+                              archival file size. To optimize the file size in <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span>, use JPEG2000 files in the design and select&nbsp;<strong class="guilabel" data-cid="Max">Max</strong>&nbsp;from the&nbsp;<strong class="guilabel" data-cid="Compression_level">Compression level</strong>&nbsp;box on the&nbsp;PDF/A-2a
+                              output object properties.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid6900000017920" id="tmpid6900000017920"></a><b class="title"><span class="highlight"><strong>PDF/A-3a</strong></span> – </b>This
+                              level of compliance is nearly identical to&nbsp;PDF/A-2a except that&nbsp;PDF/A-3
+                              also permits files of any type to be embedded into&nbsp;PDF/A-conforming
+                              documents, including files that do not comply with the&nbsp;PDF/A&nbsp;standard.
+                              In addition, this level includes the option to attach a queue report
+                              file to the output.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid6900000017924" id="tmpid6900000017924"></a><b class="title"><span class="highlight"><strong>PDF/A-3u</strong></span> – </b>This
+                              level of compliance requires character mapping to Unicode, which results
+                              in text that can be reliably searched and copied. Like&nbsp;PDF/A-3a,&nbsp;PDF/A-3u
+                              output can include files of any type to be embedded in the output,
+                              and includes the option to attach a queue report file. However, accessibility
+                              is not required for&nbsp;PDF/A-3u. This option is not available for single-byte
+                              character set (SBCS) output queue devices.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="vle2s1732631747-067" id="vle2s1732631747-067"></a><span class="term"><a name="tmpid17941" id="tmpid17941"></a>Attach a report file</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid17943" id="tmpid17943"></a>If you are using PDF/A output with a <strong class="guilabel" data-cid="Compliance_level">Compliance level</strong> of <strong class="guilabel" data-cid="PDF_A–3a">PDF/A–3a</strong> or <strong class="guilabel" data-cid="PDF_A–3u">PDF/A–3u</strong>, select the <span class="highlight"><strong>Attach report file</strong></span> check box
+                     to include a&nbsp;report file&nbsp;with the output. Then, during the engine
+                     run, the engine attaches the output queue report that is associated
+                     with the output. 
+                  </p>
+                  <div class="itemizedlist">
+                     <p><a name="tmpid17949" id="tmpid17949"></a>If you use this option, keep in mind the following dependencies: 
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid17951" id="tmpid17951"></a>For an accurate report, the report file associated
+                              with this output must set the <strong class="guilabel" data-cid="IO_time">IO time</strong> option
+                              to <strong class="guilabel" data-cid="Queue_break_and_end_of_queue">Queue break and end of queue</strong>.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="vle2s1732631747-068" id="vle2s1732631747-068"></a><span class="term"><a name="tmpid17959" id="tmpid17959"></a>Include metadata objects
+                     in the output</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid17961" id="tmpid17961"></a>You can add static subject and keyword information about the
+                     content of communication you are creating. This information appears
+                     in&nbsp;PDF/A&nbsp;output as Subject and Keywords metadata, which can then be
+                     used by search utilities to help users find information. For example,
+                     you can enter multiple keywords that can later help users find a specific
+                     document in a focused search.
+                  </p>
+                  <p><a name="tmpid17962" id="tmpid17962"></a>You also have the option to add a more robust set of metadata
+                     information to your&nbsp;output, including system metadata for author,
+                     keywords, subject, and title, in addition to an unlimited number of
+                     metadata/class objects that you can create yourself. If you add additional
+                     metadata (class) objects to your&nbsp;PDF/A&nbsp;output, keep in mind that the&nbsp;Subject&nbsp;and&nbsp;Keywords&nbsp;fields
+                     will be unavailable on the&nbsp;PDF/A&nbsp;output object. As an alternative,
+                     you can apply the SYS_Subject and SYS_Keywords system metadata objects
+                     to your&nbsp;PDF/A&nbsp;output. Additionally, you can assign variables for the
+                     values of those two system metadata objects, which you cannot do when
+                     using the&nbsp;Subject&nbsp;and&nbsp;Keywords&nbsp;fields on the PDF output object.
+                  </p>
+               </dd>
+               <dt class="varlistentry"><a name="pdfarm06" id="pdfarm06"></a><span class="term"><a name="tmpid7000000016767" id="tmpid7000000016767"></a>Search key type</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid7000000016769" id="tmpid7000000016769"></a>In the <strong class="guilabel" data-cid="Search_key_type">Search key type</strong> box, select the
+                     type of search key to apply to the output. For more information about
+                     using search keys, see <a href="searchkeys.html" class="xref2 sect1 auto xstd" title="4.12 &nbsp; Setting up search keys"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">4.12</span> “</span><span class="otlbl-ttl">Setting up search
+                        keys</span><span class="otsLbl">”</span></a>.
+                  </p>
+               </dd>
+               <dt class="varlistentry"><a name="pdfapdf02" id="pdfapdf02"></a><span class="term"><a name="tmpid7100000016773" id="tmpid7100000016773"></a>PDF preset</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid7100000016775" id="tmpid7100000016775"></a>A PDF preset automatically sets up a PDF output object to create
+                     PDF output with the optimal PDF size, resource inclusion, and output
+                     quality for common delivery methods. For example, if you are delivering
+                     content through email, applying an <strong class="guilabel" data-cid="Email_Delivery">Email Delivery</strong> preset can ensure that you get the smallest possible file size so
+                     that you do not overcrowd customer inboxes.
+                  </p>
+                  <p><a name="tmpid7100000016777" id="tmpid7100000016777"></a>Before making a final decision to apply a preset, you can review
+                     preset settings to make sure that the settings meet your output needs.
+                     This can be useful if you are updating an existing PDF output object
+                     and you want to review how your current PDF output settings compare
+                     to using a specific preset.
+                  </p>
+                  <p><a name="tmpid7100000016778" id="tmpid7100000016778"></a>If needed, you can change any preset setting after a preset
+                     has been applied. When you change a setting that is associated with
+                     a preset, the <strong class="guilabel" data-cid="PDF_preset">PDF preset</strong> value is changed to <strong class="guilabel" data-cid="Custom">Custom</strong> to indicate that full preset settings are no longer
+                     in use. Keep in mind that custom PDF output settings cannot be stored
+                     as a preset for future use. If you have custom output settings and
+                     later apply a preset, you will not be able to restore the previous
+                     custom settings.
+                  </p>
+                  <div class="orderedlist">
+                     <p class="title"><b><span class="otlbl-ttl">To apply a PDF preset:</span></b></p>
+                     <ol class="orderedlist" type="1">
+                        <li class="listitem">
+                           <p><a name="tmpid7100000016791" id="tmpid7100000016791"></a>In the <strong class="guilabel" data-cid="PDF_preset">PDF preset</strong> area, click <strong class="guilabel" data-cid="Custom">Custom</strong>.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid7100000016795" id="tmpid7100000016795"></a>From the <strong class="guilabel" data-cid="PDF_Preset_Options">PDF Preset Options</strong> dialog
+                              box, in the <strong class="guilabel" data-cid="PDF_presets">PDF presets</strong> list, select one of the
+                              following preset options:
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid7100000016800" id="tmpid7100000016800"></a><b class="title"><strong class="guilabel" data-cid="Web_Delivery">Web Delivery</strong> – </b>This
+                                       preset optimizes PDF output for viewing over the web. Some key features
+                                       of this preset include a reduced file size and linearization for faster
+                                       viewing over the web.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid7100000016804" id="tmpid7100000016804"></a><b class="title"><strong class="guilabel" data-cid="Email_Delivery">Email Delivery</strong> – </b>This preset optimizes PDF output for delivery to customers through
+                                       email. Some key features of this preset include a reduced file size
+                                       and referenced resources for easier delivery.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid7100000016808" id="tmpid7100000016808"></a><b class="title"><strong class="guilabel" data-cid="Print_Standard_">Print (Standard)</strong> – </b>This preset optimizes PDF output for standard printing. Some key
+                                       features of this preset include an equal balance between files size
+                                       and print quality.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid7100000016812" id="tmpid7100000016812"></a><b class="title"><strong class="guilabel" data-cid="Print_High_Quality_">Print (High Quality)</strong> – </b>This preset optimizes PDF output for high quality printing. Some
+                                       key features of this preset include a high output resolution and higher
+                                       quality rendering of fonts and images included in the output.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid7100000016816" id="tmpid7100000016816"></a><b class="title"><strong class="guilabel" data-cid="Archive">Archive</strong> – </b>This preset
+                                       optimizes PDF output for archival storage. Some key features of this
+                                       preset include embedded fonts and image resources for ease of access.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid7100000016820" id="tmpid7100000016820"></a>In the <strong class="guilabel" data-cid="Changes">Changes</strong> area, review the
+                              settings that will be applied with the preset.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid7100000016823" id="tmpid7100000016823"></a>To approve the settings, click <strong class="guilabel" data-cid="OK">OK</strong>.
+                           </p>
+                           <p><a name="tmpid7100000016825" id="tmpid7100000016825"></a>The PDF preset settings are applied to the PDF output object.
+                           </p>
+                        </li>
+                     </ol>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="pdfarm07" id="pdfarm07"></a><span class="term"><a name="tmpid7200000016827" id="tmpid7200000016827"></a>Resolution (DPI)</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid7200000016829" id="tmpid7200000016829"></a>You can customize the output resolution settings to ensure that
+                     output is clear and readable. The output resolution specifies the
+                     sharpness of text and graphics, measured in dots per inch (DPI). If
+                     you are generating printed output, use a DPI at or lower than the
+                     maximum resolution supported by the output device that you are using
+                     for the best processing performance.
+                  </p>
+                  <p><a name="tmpid7200000016830" id="tmpid7200000016830"></a>In the <strong class="guilabel" data-cid="Resolution_DPI_">Resolution (DPI)</strong> list, select the
+                     DPI setting that you want to use from the available options.
+                  </p>
+                  <p><a name="mo074--pdfarm07--mo07ex01" id="mo074--pdfarm07--mo07ex01"></a>If you select <strong class="guilabel" data-cid="Custom">Custom</strong>, in
+                     the <strong class="guilabel" data-cid="Custom">Custom</strong> box, enter the custom image resolution
+                     that you want to use. The minimum valid resolution that you can set
+                     is <code class="literal">72</code>, and the maximum valid resolution is <code class="literal">2400</code>.
+                  </p>
+               </dd>
+               <dt class="varlistentry"><a name="pdfarm08" id="pdfarm08"></a><span class="term"><a name="tmpid7300000016838" id="tmpid7300000016838"></a>Simplex/Duplex</span></dt>
+               <dd class="varlistentry">
+                  <div class="itemizedlist">
+                     <p><a name="tmpid7300000016841" id="tmpid7300000016841"></a>Set up simplex or duplex output. In the <strong class="guilabel" data-cid="Simplex_Duplex">Simplex/Duplex</strong> list, select one of the following:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid7300000016844" id="tmpid7300000016844"></a><b class="title"><strong class="guilabel" data-cid="Simplex">Simplex</strong> – </b>Prints
+                              only on one side of a page
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid7300000016848" id="tmpid7300000016848"></a><b class="title"><strong class="guilabel" data-cid="Duplex">Duplex</strong> – </b>Prints on
+                              both sides of a page
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="pdfarm09" id="pdfarm09"></a><span class="term"><a name="tmpid7400000016852" id="tmpid7400000016852"></a>Color mode</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid7400000016854" id="tmpid7400000016854"></a>Specify the way color is produced in output.
+                  </p>
+               </dd>
+               <dt class="varlistentry"><a name="pdfarm10" id="pdfarm10"></a><span class="term"><a name="tmpid7500000016856" id="tmpid7500000016856"></a>Color model</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid7500000016858" id="tmpid7500000016858"></a>Specify whether to use RGB or CMYK colors in output.
+                  </p>
+               </dd>
+               <dt class="varlistentry"><a name="pdfarm11" id="pdfarm11"></a><span class="term"><a name="tmpid7600000016871" id="tmpid7600000016871"></a>Accessibility standard</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid7600000016873" id="tmpid7600000016873"></a>If you want to create output that can be read by a screen reader
+                     or text-to-speech converter, you can enable accessibility for the
+                     output objects. In the <strong class="guilabel" data-cid="Accessibility_standard">Accessibility standard</strong> list, select the accessibility standard that you want to use.
+                  </p>
+               </dd>
+               <dt class="varlistentry"><a name="pdfapdf03" id="pdfapdf03"></a><span class="term"><a name="tmpid7700000016876" id="tmpid7700000016876"></a>PDF bookmarks</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid7700000016878" id="tmpid7700000016878"></a>Control how bookmark entries are included in output
+                  </p>
+                  <p><a name="tmpid7700000016879" id="tmpid7700000016879"></a>You can control how bookmark entries are included in output
+                     by using the PDF output object properties. The properties allow you
+                     to suppress bookmarks even if they are already set up for communication
+                     objects or design objects. In addition, you can specify whether bookmarks
+                     will be generated based on customers, documents, pages, or objects.
+                     You can also use the properties to maintain the existing bookmarks
+                     in dynamically imported PDF content when producing <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span>-generated output.
+                  </p>
+                  <p><a name="tmpid7700000016886" id="tmpid7700000016886"></a>To control how bookmark entries are included in PDF output,
+                     in the <strong class="guilabel" data-cid="PDF_bookmarks">PDF bookmarks</strong> area, select one or more
+                     check boxes to include bookmarks for the objects in the communication:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid7700000016890" id="tmpid7700000016890"></a><b class="title"><strong class="guilabel" data-cid="Customers">Customers</strong> – </b>Bookmarks
+                              are generated for each customer .
+                           </p>
+                           <p><a name="tmpid7700000016895" id="tmpid7700000016895"></a>Without any customization, the customer bookmarks are blank
+                              in the PDF output. To customize customer bookmarks, you can add sequential
+                              numbering (which is useful if your PDF contains multiple customers)
+                              by selecting the <strong class="guilabel" data-cid="Include_numbering_for_customers">Include numbering for customers</strong> check box. The numbers added to the customer bookmarks are determined
+                              by the order in which the customer appears in the output file. The
+                              bookmark for the first customer in the file is <strong class="guilabel" data-cid="1">1</strong>, the bookmark for the second customer is <strong class="guilabel" data-cid="2">2</strong>,
+                              and so on.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid7700000016900" id="tmpid7700000016900"></a><b class="title"><strong class="guilabel" data-cid="Documents">Documents</strong> – </b>Bookmarks
+                              are generated for documents using either the name of the document
+                              or the variable specified by the <strong class="guilabel" data-cid="ID_for_bookmark">ID for bookmark</strong> option on the document properties.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid7700000016905" id="tmpid7700000016905"></a><b class="title"><strong class="guilabel" data-cid="Pages">Pages</strong> – </b>Bookmarks
+                              are generated using the name of the pages.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+                  <p><a name="tmpid7700000016916" id="tmpid7700000016916"></a>If you do not select any check boxes, no bookmarks will be generated
+                     in the output, even if you have set up variables or bookmark markers.
+                  </p>
+               </dd>
+               <dt class="varlistentry"><a name="pdfapdf04" id="pdfapdf04"></a><span class="term"><a name="tmpid7800000016918" id="tmpid7800000016918"></a>PDF controls</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid7800000016920" id="tmpid7800000016920"></a>The PDF controls area includes the following settings:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid7800000016923" id="tmpid7800000016923"></a><b class="title">Binary allowed – </b>Specify the encoding
+                              option for compressed data. For PDF output, you can specify how compressed
+                              data should be encoded in the PDF print stream. <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> allows either binary or ASCII85 formats. In general, binary data
+                              creates smaller files.
+                           </p>
+                           <p><a name="tmpid7800000016931" id="tmpid7800000016931"></a>To include binary data (such as images) in the PDF file, select
+                              the <strong class="guilabel" data-cid="Binary_allowed">Binary allowed</strong> check box. If you clear the <strong class="guilabel" data-cid="Binary_allowed">Binary allowed</strong> check box, <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> uses
+                              ASCII85 format to encode binary data.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid7800000016941" id="tmpid7800000016941"></a><b class="title">Linearized – </b>Create linearized PDF output
+                              for faster online viewing. Unlike normal PDF files, the first pages
+                              of a linearized PDF file appear on-screen before the entire PDF has
+                              downloaded. Linearized PDF lets you optimize the viewing speed for
+                              PDF files, which is helpful if you have large PDF files or if you
+                              intend to send PDF files over the internet through email or for downloading.
+                           </p>
+                           <p><a name="tmpid7800000016944" id="tmpid7800000016944"></a>To create linearized PDF output, select the <strong class="guilabel" data-cid="Linearized">Linearized</strong> check box.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid7800000016957" id="tmpid7800000016957"></a><b class="title">Compress – </b>You can compress PDF files
+                              to reduce the file size of the final customer PDF. This can be useful
+                              if you are creating PDF files for electronic delivery (such as PDFs
+                              posted online or delivered through email). You can select a compression
+                              level <strong class="guilabel" data-cid="1">1</strong> through <strong class="guilabel" data-cid="9">9</strong> (where <strong class="guilabel" data-cid="1">1</strong> is the lowest and <strong class="guilabel" data-cid="9">9</strong> is the highest)
+                              or <strong class="guilabel" data-cid="Max">Max</strong> (version 1.5 or higher).
+                           </p>
+                           <p><a name="tmpid7800000016964" id="tmpid7800000016964"></a>When selecting a compression level, keep in mind the following:
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid7800000016967" id="tmpid7800000016967"></a>Compression levels <strong class="guilabel" data-cid="1">1</strong> through <strong class="guilabel" data-cid="9">9</strong> compress the content of the PDF, such as text, tables,
+                                       or images. Higher compression levels typically result in smaller file
+                                       sizes, with no impact on visual fidelity. However, a higher compression
+                                       level can potentially increase the time that it takes to decompress
+                                       the file.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid7800000016971" id="tmpid7800000016971"></a>A compression level of <strong class="guilabel" data-cid="Max">Max</strong> compresses
+                                       the content of the PDF using a level <strong class="guilabel" data-cid="9">9</strong> compression
+                                       and applies additional object compression to the PDF. Object compression
+                                       compresses the content in the object streams of the PDF, such as dictionaries
+                                       of pages, annotations, or fonts, which are not yet included in the
+                                       print stream.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid7800000016975" id="tmpid7800000016975"></a>Standard PDF output typically uses a compression level
+                                       of <strong class="guilabel" data-cid="6">6</strong>.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="orderedlist">
+                              <p class="title"><b><span class="otlbl-ttl">To compress PDF files:</span></b></p>
+                              <ol class="orderedlist" type="1">
+                                 <li class="listitem">
+                                    <p><a name="tmpid7800000016980" id="tmpid7800000016980"></a>Select the <strong class="guilabel" data-cid="Compress">Compress</strong> check box.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid7800000016983" id="tmpid7800000016983"></a>In the <strong class="guilabel" data-cid="Compression_level">Compression level</strong> list,
+                                       select a compression level.
+                                    </p>
+                                 </li>
+                              </ol>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="pdfarm12" id="pdfarm12"></a><span class="term"><a name="tmpid7900000016986" id="tmpid7900000016986"></a>Character fidelity</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid7900000016988" id="tmpid7900000016988"></a>Use character fidelity settings to make sure fonts appear correctly
+                     in output. <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> pulls metrics, such as height
+                     and width, from the font. By default, the engine uses integer measurements,
+                     which are used most often by bitmap fonts. However, rounding errors
+                     can cause the cursor position in your output to be different from
+                     what you expected, especially if you use outline fonts. Usually, this
+                     issue can be corrected by increasing the output resolution. If this
+                     solution does not work, you can adjust the character fidelity.
+                  </p>
+                  <div class="itemizedlist">
+                     <p><a name="tmpid7900000016996" id="tmpid7900000016996"></a>For best results, use the default settings for character positioning.
+                         If you are experiencing issues with overlapping text or incorrect
+                        spacing between words or characters, the following can also influence
+                        your character positioning:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid7900000016998" id="tmpid7900000016998"></a>Adjusting your resolution settings.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="mo123--pdfarm12--mo12ex01" id="mo123--pdfarm12--mo12ex01"></a><a name="tmpid7900000017000" id="tmpid7900000017000"></a><span class="phrase">For PostScript printers, try
+                                 using Type1 fonts.</span></p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid7900000017003" id="tmpid7900000017003"></a>If you are using multiple output queues for production,
+                              some character fidelity settings might be affected.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="itemizedlist">
+                     <p class="title"><b><span class="otlbl-ttl">To adjust character fidelity settings:</span></b></p>
+                     <p><a name="tmpid7900000017006" id="tmpid7900000017006"></a>In the <strong class="guilabel" data-cid="Character_fidelity">Character fidelity</strong> list, select
+                        one of the following options to specify how text is placed:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid7900000017009" id="tmpid7900000017009"></a><b class="title"><strong class="guilabel" data-cid="Auto,_character">Auto, character</strong> – </b>This option is the default. Use this setting unless you are having
+                              issues with overlapping text or incorrect spacing in your output.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid7900000017013" id="tmpid7900000017013"></a><b class="title"><strong class="guilabel" data-cid="Auto,_word">Auto, word</strong> – </b>Adds
+                              positioning commands for each word in the output only if required;
+                              otherwise, positioning commands are added for each line of text. This
+                              option should allow you to set a lower print resolution, which reduces
+                              the size of images in output.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid7900000017017" id="tmpid7900000017017"></a><b class="title"><strong class="guilabel" data-cid="Auto,_line">Auto, line</strong> – </b>Adds
+                              positioning commands for each line of text and automatically positions
+                              text within that line. This option produces the smallest output size.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid7900000017021" id="tmpid7900000017021"></a><b class="title"><strong class="guilabel" data-cid="Position_every_word">Position every word</strong> – </b>Applies placement logic to every word in the output, which increases
+                              print sizes. This setting forces <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> to apply a new x/y
+                              coordinate for every word, rather than one x/y coordinate per line
+                              of text.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid7900000017031" id="tmpid7900000017031"></a><b class="title"><strong class="guilabel" data-cid="Position_every_character">Position every character</strong> – </b>Applies placement logic to every character in the output,
+                              which significantly increases print sizes. This setting forces <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> to apply a new x/y coordinate for every character, rather than one
+                              x/y coordinate per line of text. If you choose this option for any
+                              output driver in a multiple queue production run, the setting is applied
+                              to the text on all charts, such as data labels.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="pdfarm13" id="pdfarm13"></a><span class="term"><a name="tmpid8000000017041" id="tmpid8000000017041"></a>Text position adjustment</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid8000000017043" id="tmpid8000000017043"></a>If you are using more than one output queue, you can adjust
+                     the text position to accommodate for font differences between the
+                     output drivers that are associated with those output queues. You can
+                     use the text position adjustment feature to make output that uses
+                     an outline font look like output that uses bitmap fonts.
+                  </p>
+                  <div class="itemizedlist">
+                     <p><a name="tmpid8000000017045" id="tmpid8000000017045"></a>In the <strong class="guilabel" data-cid="Text_position_adjustment">Text position adjustment</strong> list, select
+                        one of the following options:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid8000000017048" id="tmpid8000000017048"></a><b class="title"><strong class="guilabel" data-cid="No_adjustment">No adjustment</strong> – </b>Text
+                              output is not changed.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid8000000017052" id="tmpid8000000017052"></a><b class="title"><strong class="guilabel" data-cid="Adjust_at_word_boundaries">Adjust at word boundaries</strong> – </b><span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> inserts position commands as
+                              necessary at word boundaries.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid8000000017062" id="tmpid8000000017062"></a><b class="title"><strong class="guilabel" data-cid="Adjust_characters">Adjust characters</strong> – </b><span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> inserts position commands as
+                              necessary on a per-character basis. Text is not searchable when you
+                              select <strong class="guilabel" data-cid="Adjust_characters">Adjust characters</strong>.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+            </dl>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv137">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732631747-069" id="vle2s1732631747-069"></a>Resource settings
+         </h2>
+         <p><a name="tmpid17977" id="tmpid17977"></a>The following list provides information about managing output
+            resources.
+         </p>
+         <div class="variablelist standard lvl1 lvlmax1">
+            <dl class="variablelist standard">
+               <dt class="varlistentry"><a name="pdfars01" id="pdfars01"></a><span class="term"><a name="tmpid8100000017078" id="tmpid8100000017078"></a>Font usage</span></dt>
+               <dd class="varlistentry">
+                  <div class="itemizedlist">
+                     <p><a name="tmpid8100000017081" id="tmpid8100000017081"></a>Specify whether to embed or reference fonts. In the <strong class="guilabel" data-cid="Font_usage">Font usage</strong> list, select one of the following options to
+                        indicate whether fonts used in a communication should be included
+                        in the output:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid8100000017084" id="tmpid8100000017084"></a><b class="title"><strong class="guilabel" data-cid="Embed_all_fonts">Embed all fonts</strong> – </b>All the fonts used in an application are embedded in the output.
+                              Using this option results in a larger file size, but it does not affect
+                              processing time and provides <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> the most control over
+                              the printed output.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="rs013--pdfars01--exrsaa" id="rs013--pdfars01--exrsaa"></a><a name="tmpid8100000017094" id="tmpid8100000017094"></a><b class="title"><strong class="guilabel" data-cid="Reference_all_fonts">Reference all fonts</strong> – </b>None of the fonts in a communication are included in the
+                              output. Referencing all fonts can help make the print file as small
+                              as possible. Keep in mind that when you reference fonts, your output
+                              might look slightly different from your design. For example, if you
+                              send files to customers who do not have the same output device or
+                              viewing software, these customers might not have the same fonts, in
+                              which case the output device or viewing software might either substitute
+                              a different font, or they might receive errors.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="pdfars02" id="pdfars02"></a><span class="term"><a name="tmpid8200000017098" id="tmpid8200000017098"></a>Font type</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid8200000017101" id="tmpid8200000017101"></a>Specify the type of font to embed in the communication. <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> supports any font loaded on your system and converts it to the correct
+                     font type for your output device. 
+                  </p>
+                  <div class="itemizedlist">
+                     <p><a name="tmpid8200000017109" id="tmpid8200000017109"></a>If you choose to embed fonts, for the best results, embed fonts
+                        as Type 1 whenever possible. <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> builds the characters
+                        needed for your application (such as East European or Western) as
+                        Type 1 fonts and includes them in the output. This setting provides
+                        the following benefits:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid8200000017117" id="tmpid8200000017117"></a>It reduces file size by packaging only the characters
+                              required in the communication, instead of building and loading all
+                              characters of a font.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid8200000017119" id="tmpid8200000017119"></a>It offers enhanced font metrics that can correct spacing
+                              errors with another font type, such as TrueType.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+                  <p><a name="tmpid8200000017120" id="tmpid8200000017120"></a>For more information on the best font embedding choice, consult
+                     the documentation for your output device or viewing software.
+                  </p>
+                  <div class="itemizedlist">
+                     <p class="title"><b><span class="otlbl-ttl">To specify the type of font to embed:</span></b></p>
+                     <p><a name="tmpid8200000017123" id="tmpid8200000017123"></a>In the <strong class="guilabel" data-cid="Font_type">Font type</strong> list, select one of the
+                        following options:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid8200000017130" id="tmpid8200000017130"></a><b class="title"><strong class="guilabel" data-cid="Build_Type_1_fonts">Build Type 1 fonts</strong> – </b>Embeds the characters in the current Windows code page, up to 256
+                              characters per font, as Type 1 fonts
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid8200000017134" id="tmpid8200000017134"></a><b class="title"><strong class="guilabel" data-cid="Build_Type_1_subset_fonts">Build Type 1 subset fonts</strong> – </b>Embeds only those characters in each font used in the output
+                              file, which reduces the output file size
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="vle2s1732631747-070" id="vle2s1732631747-070"></a><span class="term"><a name="tmpid17982" id="tmpid17982"></a>Include standard fonts</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid17984" id="tmpid17984"></a>Select the this option to include Standard (Base 14) fonts in
+                     the print stream. These fonts are not normally needed in the print
+                     stream. This option is especially helpful for archiving electronic
+                     output or for viewing output in a nonstandard reader (for example,
+                     if you are viewing PDF output in a program other than Adobe Acrobat).
+                     Adding standard fonts increases the output file size.
+                  </p>
+               </dd>
+               <dt class="varlistentry"><a name="pdfars03" id="pdfars03"></a><span class="term"><a name="tmpid8300000017138" id="tmpid8300000017138"></a>Image processing</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid8300000017141" id="tmpid8300000017141"></a>Specify where to place static images in the print stream. Static
+                     images can be placed at different places in the print stream. The
+                     options you use to specify where static images are placed depend on
+                     the output device or viewing software you will use. For example, some
+                     output devices can read resources from the top of the file into memory
+                     and then reuse them each time the image is called.
+                  </p>
+                  <div class="itemizedlist">
+                     <p class="title"><b><span class="otlbl-ttl">To specify where to place static images:</span></b></p>
+                     <p><a name="tmpid8300000017144" id="tmpid8300000017144"></a>In the <strong class="guilabel" data-cid="Image_processing">Image processing</strong> list, select one
+                        of the following options:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid8300000017147" id="tmpid8300000017147"></a><b class="title"><strong class="guilabel" data-cid="Include_on_each_page">Include on each page</strong> – </b>Includes a copy of all the images used in the application in your
+                              output file on each page where they occur
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid8300000017151" id="tmpid8300000017151"></a><b class="title"><strong class="guilabel" data-cid="Place_at_top_of_print_stream">Place at top of print stream</strong> – </b>Includes a copy of the images at the top of the print stream
+                              for insertion as needed. This option can increase production processing
+                              speed.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="rs033--pdfars03--rs03ex01" id="rs033--pdfars03--rs03ex01"></a><a name="tmpid8300000017155" id="tmpid8300000017155"></a><b class="title"><strong class="guilabel" data-cid="Reference_external_images">Reference external
+                                    images</strong> – </b>References images for the application in
+                              your print stream. If you use this option, output files will be smaller,
+                              but your output device must be able to find the image library.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="pdfars08" id="pdfars08"></a><span class="term"><a name="tmpid8500000017233" id="tmpid8500000017233"></a>Resource inclusion</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid8500000017235" id="tmpid8500000017235"></a>You can choose to include all available resources (for example,
+                     fonts and images) in your output, or you can include only the resources that are
+                     used.
+                  </p>
+                  <div class="itemizedlist">
+                     <p class="title"><b><span class="otlbl-ttl">To control which resources are included in your output:</span></b></p>
+                     <p><a name="tmpid8500000017239" id="tmpid8500000017239"></a>Select one of the following options in the <strong class="guilabel" data-cid="Resource_inclusion">Resource
+                           inclusion</strong> list:
+                     </p>
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid8500000017242" id="tmpid8500000017242"></a><b class="title"><strong class="guilabel" data-cid="Default">Default</strong> – </b>All available
+                              resources that are designed in your communication are included in
+                              the output file, even if they are not used. For example, if you have
+                              used rules to exclude some content, the resources in that content
+                              are still included in the output file.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid8500000017246" id="tmpid8500000017246"></a><b class="title"><strong class="guilabel" data-cid="Used_resources_only">Used resources only</strong> – </b>Only the resources used by your communication are included in the
+                              output file. If you select this option, programs can reference resources
+                              as needed rather than loading all available resources for each page.
+                              The <strong class="guilabel" data-cid="Used_resources_only">Used resources only</strong> option can slow the engine
+                              run; however, it can also reduce the file size, depending on the number
+                              of resources used by your application.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </dd>
+            </dl>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv138">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732631747-074" id="vle2s1732631747-074"></a>Additional settings
+         </h2>
+         <p><a name="pdfarmmoaa" id="pdfarmmoaa"></a>This output includes additional common settings. For more information
+            about any of these settings, see the following locations:
+         </p>
+         <div class="itemizedlist"><a name="pdfarmmobb" id="pdfarmmobb"></a><ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="mobb12--pdfarmmobb--mocc" id="mobb12--pdfarmmobb--mocc"></a><a name="tmpid8700000017256" id="tmpid8700000017256"></a><b class="title">Paper bins – </b>For information
+                     about setting up paper bins for an output, see <a href="paperbins.html" class="xref2 sect1 auto xstd" title="4.10 &nbsp; Setting up paper bins"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">4.10</span> “</span><span class="otlbl-ttl">Setting up paper
+                        bins</span><span class="otsLbl">”</span></a></p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid8700000017261" id="tmpid8700000017261"></a><b class="title">Domains – </b>For information about defining
+                     the domains to which a resource is assigned, see <a href="associatingresourceswithdomains.html" class="xref2 sect1 auto xstd" title="3.13 &nbsp; Associating resources&#xA;with domains"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.13</span> “</span><span class="otlbl-ttl">Associating resources
+                        with domains</span><span class="otsLbl">”</span></a>.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid8700000017269" id="tmpid8700000017269"></a><b class="title">Workflow – </b>For information about managing
+                     an approval workflow, see <a href="managingapprovalworkflows.html" class="xref2 sect1 auto xstd" title="3.6 &nbsp; Managing approval workflows"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.6</span> “</span><span class="otlbl-ttl">Managing approval
+                        workflows</span><span class="otsLbl">”</span></a>.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid8700000017273" id="tmpid8700000017273"></a><b class="title">References – </b>For information about viewing
+                     the linked resources connected to a selected resource, see <a href="usingassetlibraryviews.html" class="xref2 sect1 auto xstd" title="3.3 &nbsp; Viewing resources in asset&#xA;library views"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.3</span> “</span><span class="otlbl-ttl">Viewing resources
+                        in asset
+                        library views</span><span class="otsLbl">”</span></a>.
+                  </p>
+               </li>
+            </ul>
+         </div></div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.9.9</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">PDF/A output</span></div>
+         <div class="pgPrev"><a title="Preceding page: 4.9.8 &nbsp; PDF output" aria-label="Preceding page: 4.9.8 &nbsp; PDF output" href="pdfoutput.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 4.9 &nbsp; Setting up outputs" aria-label="Section one level up: 4.9 &nbsp; Setting up outputs" href="settingupoutputs.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.9.10 &nbsp; Postscript output" aria-label="Next page: 4.9.10 &nbsp; Postscript output" href="postscriptoutput.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

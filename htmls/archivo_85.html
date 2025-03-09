@@ -1,0 +1,617 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="2.5.1 ">2.5.1 Integrating OpenText Customer Data with designs</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="integratingadditionalcomponents.html" title="2.5 &nbsp; Integrating additional components"> -->
+      <link rel="prev" href="integratingadditionalcomponents.html" title="2.5 &nbsp; Integrating additional components">
+      <link rel="next" href="usecoresig.html" title="2.5.2 &nbsp; Integrating OpenText Core Signature for secure document signing">
+   <link rel="stylesheet" type="text/css" href="../../../../../cdpexpcdp/v240400/cdpexpcdp-uag/en/ofh/dynData/condstyles.css">
+<link rel="stylesheet" type="text/css" href="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/dynData/condstyles.css">
+<link rel="stylesheet" type="text/css" href="../../../../../ccca/v250100/ccca-h-ugd/en/ofh/dynData/condstyles.css">
+
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbrbt4wwnb-f-e2d0d1299-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d30c463","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61288,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741380001","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==vOKQsLAW+/4x6CAQBeCzfIEjtUX9nJaYWpo1FuMS5MyYxmqTxhO+vulTRNy5pkOXN0AnyuDdb9190csh/dJTJMTpkqLFlR4MaAQwWLWRgpJpyGSFw/mjFIEnQVx6IRwykAdx1w5qerEDzFIWNUr8E/MfN32I+buNl5XSnob0+g8o6BRtth8Keh+c7mu1nzs2suRcdmRfTzxdt4DWQvdtCg+6uW/bsDvW1Klvsa7HJ8T8zKdk+y1Af7bDNmHvVJyjE/719AYvMWd9f1KfggXFdF16XWj1jXrxUuoB2FV6gcEoh9LGn7zj2JqLwUdpEo1yR2me0ar5mFlrHutsdrA5D7oov9dLSqzQ6Kddnna8Mt67ns1BLn7nxhpXso2tWktHHtwnRgU/lAdwjkIK0RKk/ICBlrgZPb7l5ic7VTJLwwE=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="expcdp">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.5.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Integrating OpenText
+            Customer Data with designs</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.5 &nbsp; Integrating additional components" aria-label="Preceding page: 2.5 &nbsp; Integrating additional components" href="integratingadditionalcomponents.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.5 &nbsp; Integrating additional components" aria-label="Section one level up: 2.5 &nbsp; Integrating additional components" href="integratingadditionalcomponents.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.5.2 &nbsp; Integrating OpenText Core Signature for secure&#xA;document signing" aria-label="Next page: 2.5.2 &nbsp; Integrating OpenText Core Signature for secure&#xA;document signing" href="usecoresig.html">Next</a></div>
+      </div>
+      <div class="sect2 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="expcdp" id="expcdp"></a><span class="otsLbl"><span class="otlbl-num">2.5.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Integrating OpenText
+                     Customer Data with designs</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid6945" id="tmpid6945"></a>Experience Customer Data Platform (CDP) enables access to rich
+            customer data for advanced targeting and personalization across customer
+            touch points. By capturing a customer’s online behaviors and associating
+            those behaviors to an audience, <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> can build a profile of
+            the user for targeting and deeper personalization. This deeper personalization
+            can increase conversion rates by tailoring content and communications
+            based on user preferences and interests. <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> is intended as
+            a proxy to audience services  to capture customer activity on a website,
+            define audiences based on characteristics, and record audience membership
+            in each customer’s profile.  <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> can also integrate with <span class="namestring" data-cid="Google">Google</span> Analytics
+            or Google Big Query to allow for additional audience providers.
+         </p>
+         <p><a name="tmpid6953" id="tmpid6953"></a>For more information about the <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> platform, see <em class="emphasis"><span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> Cloud Deployment Guide (CDPEXPCDP-UAG)</em>.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref99" id="tmp4ref99"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid6960" id="tmpid6960"></a>For information about <span class="namestring" data-cid="OpenText">OpenText</span> product
+               compatibility, see the <span class="namestring" data-cid="OpenText">OpenText</span> compatibly information provided
+               in the release notes for the product. <span class="phrase">Release
+                  notes are available on My Support.</span></p>
+         </div>
+         <p><a name="tmpid6969" id="tmpid6969"></a>When you use <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span>, you can use the collected audience
+            data in your designs to better target and communicate with your customers.
+            From the web client, you can activate <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> so that you can
+            leverage this collected audience data using variables in your <span class="namestring" data-cid="Designer">Designer</span> and <span class="namestring" data-cid="Content_Author">Content Author</span> designs.
+         </p>
+         <p><a name="tmpid6976" id="tmpid6976"></a>To integrate <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> with <span class="namestring" data-cid="Designer">Designer</span> and <span class="namestring" data-cid="Content_Author">Content Author</span> designs,
+            you must complete the following high level steps:
+         </p>
+         <div class="informaltable">
+            <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+               <colgroup>
+                  <col class="col1">
+                  <col class="col2">
+               </colgroup>
+               <thead>
+                  <tr class="row">
+                     <th style="" valign="top"><a name="tmpid6987" id="tmpid6987"></a>Task
+                     </th>
+                     <th style="" valign="top"><a name="tmpid6988" id="tmpid6988"></a>Information
+                     </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid6991" id="tmpid6991"></a><a name="tmpid6992" id="tmpid6992"></a><span class="highlight"><strong>1</strong></span> In your  <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> hub, define
+                           any necessary permissions or authentications.
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid6996" id="tmpid6996"></a><a name="tmpid6997" id="tmpid6997"></a>See <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> Administration Site Guide (CDPEXPCDP).
+                        </p>
+                        <div class="note">
+                           <p class="title"><strong><a name="tmp4ref100" id="tmp4ref100"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                           </strong></p>
+                           <p><a name="tmpid7001" id="tmpid7001"></a>For information about <span class="namestring" data-cid="OpenText">OpenText</span> product
+                              compatibility, see the <span class="namestring" data-cid="OpenText">OpenText</span> compatibly information provided
+                              in the release notes for the product. <span class="phrase">Release
+                                 notes are available on My Support.</span></p>
+                        </div>
+                        
+                        
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid7011" id="tmpid7011"></a><a name="tmpid7012" id="tmpid7012"></a><span class="highlight"><strong>2</strong></span> In web client, activate  <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> so
+                           that it can be used in <span class="namestring" data-cid="Designer">Designer</span> and <span class="namestring" data-cid="Content_Author">Content Author</span> designs. 
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid7018" id="tmpid7018"></a><a name="tmpid7019" id="tmpid7019"></a>See <a href="expcdp.html#activexcdp" class="xref2 varlistentry auto xstd"><span class="otlbl-ttl">Activating OpenText Customer Data for use
+                              in Designer and Content Author designs </span></a>.
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid7022" id="tmpid7022"></a><a name="tmpid7023" id="tmpid7023"></a><span class="highlight"><strong>3</strong></span> In web client, create variables
+                           that can leverage <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> audience data.
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid7027" id="tmpid7027"></a><a name="tmpid7028" id="tmpid7028"></a>See <a href="expcdp.html#variablescdp" class="xref2 varlistentry auto xstd"><span class="otlbl-ttl">Creating variables that leverage OpenText Customer Data audience
+                              data</span></a>.
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid7031" id="tmpid7031"></a><a name="tmpid7032" id="tmpid7032"></a><span class="highlight"><strong>4</strong></span> In  <span class="namestring" data-cid="Designer">Designer</span> and <span class="namestring" data-cid="Content_Author">Content Author</span>,
+                           apply <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> variables to the design.
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid7038" id="tmpid7038"></a><a name="tmpid7039" id="tmpid7039"></a>In <span class="namestring" data-cid="Designer">Designer</span> and <span class="namestring" data-cid="Content_Author">Content Author</span> you can apply <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> variables
+                           anywhere that variables are used in a design, such as inserting variables
+                           in line with text or using variables with custom logic.
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid7046" id="tmpid7046"></a><a name="tmpid7047" id="tmpid7047"></a><span class="highlight"><strong>5</strong></span> In  <span class="namestring" data-cid="Designer">Designer</span> and <span class="namestring" data-cid="Content_Author">Content Author</span>,
+                           target content based on audience data.
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid7051" id="tmpid7051"></a><a name="tmpid7052" id="tmpid7052"></a>In a few specific scenarios, when you use <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> variables,
+                           you are prompted to select the <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> audience data so that you
+                           can target designs and design content based on <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> audiences.
+                        </p>
+                        <p><a name="tmpid7059" id="tmpid7059"></a>See <a href="expcdp.html#applycdp" class="xref2 varlistentry auto xstd"><span class="otlbl-ttl">Targeting content based on audience
+                              data</span></a>.
+                        </p>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div class="variablelist standard lvl1 lvlmax2">
+            <dl class="variablelist standard">
+               <dt class="varlistentry"><a name="activexcdp" id="activexcdp"></a><span class="term"><a name="tmpid7063" id="tmpid7063"></a>Activating <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> for use
+                     in <span class="namestring" data-cid="Designer">Designer</span> and <span class="namestring" data-cid="Content_Author">Content Author</span> designs </span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid7069" id="tmpid7069"></a>This task assumes that you have set up and defined your <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> hub
+                     with any necessary permissions or authentications. For more information
+                     about completing this setup, see
+                     <data-xpi><data-xproc name="ExtXrefStart" href="cdpexpcdp-uag.-" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                        ><A class="otModuleHide if-cdpexpcdp-uag-oto-show"  TARGET="_blank" HREF="../../../../../cdpexpcdp/v240400/cdpexpcdp-uag/en/ofh/index.html"><i>OpenText Customer Data - Cloud Deployment Guide (CDPEXPCDP-UAG)</i></A
+                        ><SPAN class="otModuleShow if-cdpexpcdp-uag-hide"><i>OpenText Customer Data - Cloud Deployment Guide (CDPEXPCDP-UAG)</i></SPAN><data-xproc name="ExtXrefEnd" href="cdpexpcdp-uag.-" fmt=""></data-xproc></data-xpi>.
+                  </p>
+                  <p><a name="tmpid7073" id="tmpid7073"></a>To activate <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> for use in <span class="namestring" data-cid="Designer">Designer</span> and <span class="namestring" data-cid="Content_Author">Content Author</span> designs:
+                  </p>
+                  <div class="procedure">
+                     <ol class="procedure" type="1">
+                        <li class="step">
+                           <p><a name="tmpid7080" id="tmpid7080"></a>In the web client, click the <strong class="guilabel" data-cid="Tenant_Management">Tenant Management</strong> button <img src="./img/b_WebApps_AppToolbar_AdminIcon.png" class="igrph" alt="" width="30" height="30">.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid7084" id="tmpid7084"></a>On the <strong class="guilabel" data-cid="Tenant_management">Tenant management</strong> page, click
+                              the <strong class="guilabel" data-cid="Configurations">Configurations</strong> tab.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid7088" id="tmpid7088"></a>In the <strong class="guilabel" data-cid="Name">Name</strong> area, select <strong class="guilabel" data-cid="Designer"><span class="namestring">Designer</span></strong>.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid7093" id="tmpid7093"></a>In the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, on the <strong class="guilabel" data-cid="General">General</strong> tab, select the <strong class="guilabel" data-cid="Data_Platform">Data Platform</strong> check box.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid7098" id="tmpid7098"></a>In the <strong class="guilabel" data-cid="Data_Platform_URL">Data Platform URL</strong> box, enter
+                              the URL of the hub service.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid7101" id="tmpid7101"></a>To test the URL, click <strong class="guilabel" data-cid="Validate">Validate</strong>.
+                              The URL is validated to confirm that you have access to the <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> service.
+                              If you receive a failure, contact your <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> administrator.
+                           </p>
+                        </li>
+                     </ol>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="variablescdp" id="variablescdp"></a><span class="term"><a name="tmpid7108" id="tmpid7108"></a>Creating variables that leverage <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> audience
+                     data</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid7112" id="tmpid7112"></a>Before you create variables that leverage <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> audience
+                     data you must first meet the following prerequisite: The <strong class="guilabel" data-cid="Data_Platform">Data Platform</strong> settings must be active on the Tenant. For
+                     information about activating <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> for use in <span class="namestring" data-cid="Designer">Designer</span> and <span class="namestring" data-cid="Content_Author">Content Author</span> designs,
+                     see <a href="expcdp.html#activexcdp" class="xref2 varlistentry auto xstd"><span class="otlbl-ttl">Activating OpenText Customer Data for use
+                        in Designer and Content Author designs </span></a></p>
+                  <p><a name="tmpid7121" id="tmpid7121"></a>To create variables the leverage <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> audience data:
+                  </p>
+                  <div class="procedure">
+                     <ol class="procedure" type="1">
+                        <li class="step">
+                           <p><a name="tmpid7126" id="tmpid7126"></a>Create a new variable with any configurations needed.
+                           </p>
+                           <p><a name="tmpid7127" id="tmpid7127"></a>For more information about creating a variable, see <a href="creatingvariables.html" class="xref2 sect2 auto xstd" title="4.6.2 &nbsp; Creating variables"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">4.6.2</span> “</span><span class="otlbl-ttl">Creating variables</span><span class="otsLbl">”</span></a>. 	
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid7130" id="tmpid7130"></a>In the web client, from the home page, click the <strong class="guilabel" data-cid="Communication_asset_library">Communication asset library</strong> button <img src="./img/b_WebApps_AppToolbar_CommunicationIcon.png" class="igrph" alt="" width="30" height="30">.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid7134" id="tmpid7134"></a>Click the <strong class="guilabel" data-cid="Data">Data</strong> tab.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid7137" id="tmpid7137"></a>In the <strong class="guilabel" data-cid="Library">Library</strong>, select the variable
+                              that you created to leverage <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> data.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid7142" id="tmpid7142"></a>In the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, on the <strong class="guilabel" data-cid="Value">Value</strong> tab, complete the following settings:
+                           </p>
+                           <ol type="a" class="substeps">
+                              <li class="step">
+                                 <p><a name="tmpid7147" id="tmpid7147"></a>Select the <strong class="guilabel" data-cid="Enable_selection_list">Enable selection list</strong> check
+                                    box.
+                                 </p>
+                              </li>
+                              <li class="step">
+                                 <p><a name="tmpid7150" id="tmpid7150"></a>In the <strong class="guilabel" data-cid="Selection_list">Selection list</strong> area, select <strong class="guilabel" data-cid="_OpenText_Customer_Data"><span class="namestring">OpenText Customer Data</span></strong>.	
+                                 </p>
+                              </li>
+                              <li class="step">
+                                 <p><a name="tmpid7156" id="tmpid7156"></a>If you want to filter the tags that are allowed when this
+                                    variable is selected, select the <strong class="guilabel" data-cid="Enable_filters">Enable filters</strong> check box and then select the tags that you want to allow.
+                                 </p>
+                              </li>
+                           </ol>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid7159" id="tmpid7159"></a>Map the variable to the <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> customer driver file
+                              that was provided. This customer driver file contains the collected
+                              audience data. 
+                           </p>
+                           <p><a name="tmpid7162" id="tmpid7162"></a>If you have questions about what customer driver file to use,
+                              contact your <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> administrator. 
+                           </p>
+                           <p><a name="tmpid7165" id="tmpid7165"></a><span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> variables are mapped exactly the same as any other
+                              variable. For more information about mapping variables, see <a href="mappingavariable.html" class="xref2 sect2 auto xstd" title="4.2.3 &nbsp; Mapping data sources"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">4.2.3</span> “</span><span class="otlbl-ttl">Mapping data sources</span><span class="otsLbl">”</span></a>.
+                           </p>
+                        </li>
+                     </ol>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="applycdp" id="applycdp"></a><span class="term"><a name="tmpid7170" id="tmpid7170"></a>Targeting content based on audience
+                     data</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid7172" id="tmpid7172"></a>If your <span class="namestring" data-cid="Designer">Designer</span> or <span class="namestring" data-cid="Content_Author">Content Author</span> designs includes <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> variables,
+                     you can target designs and design content based on <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> audiences.
+                     in the following scenarios:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid7181" id="tmpid7181"></a><a href="expcdp.html#cdpvariate" class="xref2 varlistentry auto xstd"><span class="otlbl-ttl">Targeting design variations based
+                                 on audience data</span></a></p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid7184" id="tmpid7184"></a><a href="expcdp.html#cdprules" class="xref2 varlistentry auto xstd"><span class="otlbl-ttl">Targeting custom rules based on
+                                 audience data</span></a></p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid7187" id="tmpid7187"></a><a href="expcdp.html#cdpscenarios" class="xref2 varlistentry auto xstd"><span class="otlbl-ttl">Targeting simulation previews
+                                 based on audience data</span></a></p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="variablelist standard lvl2 lvlmax2">
+                     <dl class="variablelist standard">
+                        <dt class="varlistentry"><a name="cdpvariate" id="cdpvariate"></a><span class="term"><a name="tmpid7191" id="tmpid7191"></a>Targeting design variations based
+                              on audience data</span></dt>
+                        <dd class="varlistentry">
+                           <p><a name="tmpid7193" id="tmpid7193"></a>Design variations allow you to create different designs that
+                              vary based on customer data. You can use variations as a simpler alternative
+                              to targeting rules that determine which content goes to which customers.
+                              With variations, you can use a single design as your base (the standard
+                              variation) and then customize communications for specific groups of
+                              customers by creating as many variations of that design (the alternate
+                              variations) as you need. Best of all, you can easily see all of the
+                              variations that are associated with a design as you work in Design
+                              view. Variations essentially take the place of targeting rules, so
+                              targeting rules that you apply to an alternate variation will not
+                              be honored by the engine; you can, however, apply targeting rules
+                              to a standard variation, and those rules will be honored by the engine.
+                           </p>
+                           <p><a name="tmpid7194" id="tmpid7194"></a>When creating a variation in a design that uses <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span>,
+                              you are prompted to identify the audience data that is unique to each
+                              variation. The available audience data available is determined by
+                              the available <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> variables and <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> data. 
+                           </p>
+                           <p><a name="tmpid7201" id="tmpid7201"></a>If you have questions about the available audience data, contact
+                              your <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> administrator.
+                           </p>
+                           <p><a name="tmpid7204" id="tmpid7204"></a>To target a variation based on audience data:
+                           </p>
+                           <div class="procedure">
+                              <ol class="procedure" type="1">
+                                 <li class="step">
+                                    <p><a name="tmpid7207" id="tmpid7207"></a>Create a variation and customize the settings as needed.
+                                    </p>
+                                    <p><a name="tmpid7208" id="tmpid7208"></a>For more information creating variations for use in <span class="namestring" data-cid="Designer">Designer</span> ,
+                                       see 
+                                       <data-xpi><data-xproc name="ExtXrefStart" href="cccd250100-h-ugd.creatingdesignvariations" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                                          ><A class="otModuleHide if-cccd-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/creatingdesignvariations.html"
+                                          ><span class="otsLbl"
+                                          ><span class="otlbl-num">section 25</span
+                                          ><span class="otlbl-sep"> </span></span
+                                          ><span class="otlbl-ttl">"Design variations"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></A
+                                          ><SPAN class="otModuleShow if-cccd-h-ugd-hide"
+                                          ><span class="otsLbl"
+                                          ><span class="otlbl-num">section 25</span
+                                          ><span class="otlbl-sep"> </span></span
+                                          ><span class="otlbl-ttl">"Design variations"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="cccd250100-h-ugd.creatingdesignvariations" fmt=""></data-xproc></data-xpi>.
+                                    </p>
+                                    <p><a name="tmpid7211" id="tmpid7211"></a>For more information creating variations for use in <span class="namestring" data-cid="Content_Author">Content Author</span>,
+                                       see 
+                                       <data-xpi><data-xproc name="ExtXrefStart" href="ccca250100-h-ugd.aid-32" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                                          ><A class="otModuleHide if-ccca-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../ccca/v250100/ccca-h-ugd/en/ofh/aid-32.html"
+                                          ><span class="otsLbl"
+                                          ><span class="otlbl-num">section 2.22.1</span
+                                          ><span class="otlbl-sep"> </span></span
+                                          ><span class="otlbl-ttl">"Creating variations of text messages, graphic messages, and clauses"</span> in <i>OpenText Communications - Content Author User Help (CCCA250100-H-UGD)</i></A
+                                          ><SPAN class="otModuleShow if-ccca-h-ugd-hide"
+                                          ><span class="otsLbl"
+                                          ><span class="otlbl-num">section 2.22.1</span
+                                          ><span class="otlbl-sep"> </span></span
+                                          ><span class="otlbl-ttl">"Creating variations of text messages, graphic messages, and clauses"</span> in <i>OpenText Communications - Content Author User Help (CCCA250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccca250100-h-ugd.aid-32" fmt=""></data-xproc></data-xpi>.
+                                    </p>
+                                 </li>
+                                 <li class="step">
+                                    <p><a name="tmpid7215" id="tmpid7215"></a>In the <strong class="guilabel" data-cid="Audiences">Audiences</strong> area, select the
+                                       check box for the audience data that you want to use. 
+                                    </p>
+                                    <div class="tip">
+                                       <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Tip</span></span></strong></p>
+                                       <p><a name="tmpid7218" id="tmpid7218"></a>To filter the audience data so that you can find the data that
+                                          you want to use, you can click the <strong class="guilabel" data-cid="Tag_filter">Tag filter</strong> button <img src="./img/b_WebApps_FilterAssets.png" class="igrph" alt="" width="30" height="30"> and in the <strong class="guilabel" data-cid="Available_tags">Available tags</strong> area, you can select
+                                          the tags that you want to view in the <strong class="guilabel" data-cid="Audiences">Audiences</strong> dialog box.
+                                       </p>
+                                    </div>
+                                 </li>
+                                 <li class="step">
+                                    <p><a name="tmpid7224" id="tmpid7224"></a>Click <strong class="guilabel" data-cid="Create">Create</strong>.
+                                    </p>
+                                 </li>
+                              </ol>
+                           </div>
+                        </dd>
+                     </dl>
+                  </div>
+                  <div class="variablelist standard lvl2 lvlmax2">
+                     <dl class="variablelist standard">
+                        <dt class="varlistentry"><a name="cdprules" id="cdprules"></a><span class="term"><a name="tmpid7228" id="tmpid7228"></a>Targeting custom rules based on
+                              audience data</span></dt>
+                        <dd class="varlistentry">
+                           <p><a name="tmpid7230" id="tmpid7230"></a>This task is specific to target custom rules based on audience
+                              data. If you create a custom rule based on an <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> variable,
+                              you are then prompted to select the audience data that you want to
+                              use to compare against the rule logic.
+                           </p>
+                           <p><a name="tmpid7233" id="tmpid7233"></a>For more information about creating rules for use in <span class="namestring" data-cid="Designer">Designer</span>,
+                              see 
+                              <data-xpi><data-xproc name="ExtXrefStart" href="cccd250100-h-ugd.usingtargetingrules" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                                 ><A class="otModuleHide if-cccd-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/usingtargetingrules.html"
+                                 ><span class="otsLbl"
+                                 ><span class="otlbl-num">section 22</span
+                                 ><span class="otlbl-sep"> </span></span
+                                 ><span class="otlbl-ttl">"Rules"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></A
+                                 ><SPAN class="otModuleShow if-cccd-h-ugd-hide"
+                                 ><span class="otsLbl"
+                                 ><span class="otlbl-num">section 22</span
+                                 ><span class="otlbl-sep"> </span></span
+                                 ><span class="otlbl-ttl">"Rules"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="cccd250100-h-ugd.usingtargetingrules" fmt=""></data-xproc></data-xpi>. 
+                           </p>
+                           <p><a name="tmpid7236" id="tmpid7236"></a>For more information about creating rules for use in <span class="namestring" data-cid="Content_Author">Content Author</span>,
+                              see 
+                              <data-xpi><data-xproc name="ExtXrefStart" href="ccca250100-h-ugd.addingrulestocontent" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                                 ><A class="otModuleHide if-ccca-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../ccca/v250100/ccca-h-ugd/en/ofh/addingrulestocontent.html"
+                                 ><span class="otsLbl"
+                                 ><span class="otlbl-num">section 2.19</span
+                                 ><span class="otlbl-sep"> </span></span
+                                 ><span class="otlbl-ttl">"Adding rules to content and communications"</span> in <i>OpenText Communications - Content Author User Help (CCCA250100-H-UGD)</i></A
+                                 ><SPAN class="otModuleShow if-ccca-h-ugd-hide"
+                                 ><span class="otsLbl"
+                                 ><span class="otlbl-num">section 2.19</span
+                                 ><span class="otlbl-sep"> </span></span
+                                 ><span class="otlbl-ttl">"Adding rules to content and communications"</span> in <i>OpenText Communications - Content Author User Help (CCCA250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccca250100-h-ugd.addingrulestocontent" fmt=""></data-xproc></data-xpi>.
+                           </p>
+                           <p><a name="tmpid7239" id="tmpid7239"></a>To target custom rules based on audience data:
+                           </p>
+                           <div class="procedure">
+                              <ol class="procedure" type="1">
+                                 <li class="step">
+                                    <p><a name="tmpid7242" id="tmpid7242"></a>In the Rule Composer, click the <strong class="guilabel" data-cid="Custom_rule">Custom rule</strong> tab.  
+                                    </p>
+                                 </li>
+                                 <li class="step">
+                                    <p><a name="tmpid7245" id="tmpid7245"></a>To create a condition for your rule, select whether to
+                                       include or exclude content based on the rule.  
+                                    </p>
+                                 </li>
+                                 <li class="step">
+                                    <p><a name="tmpid7247" id="tmpid7247"></a>Complete the following to specify how an <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> variable
+                                       is used in a custom rule:
+                                    </p>
+                                    <ol type="a" class="substeps">
+                                       <li class="step">
+                                          <p><a name="tmpid7252" id="tmpid7252"></a>In the <strong class="guilabel" data-cid="Rule_subject">Rule subject</strong> list, select
+                                             the <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> variable that you want to use as a base for the rule.
+                                          </p>
+                                       </li>
+                                       <li class="step">
+                                          <p><a name="tmpid7257" id="tmpid7257"></a>In the <strong class="guilabel" data-cid="Comparison">Comparison</strong> list, select the
+                                             type of comparison the rule will make.
+                                          </p>
+                                       </li>
+                                       <li class="step">
+                                          <p><a name="tmpid7260" id="tmpid7260"></a>In the <strong class="guilabel" data-cid="Select_an_Audience">Select an Audience</strong> box, click
+                                             the <strong class="guilabel" data-cid="Select_an_Audience">Select an Audience</strong> button <img src="./img/B_WebApps_SelectAnAudience.png" class="igrph" alt="" width="39" height="37">.
+                                          </p>
+                                          <div class="tip">
+                                             <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Tip</span></span></strong></p>
+                                             <p><a name="tmpid7265" id="tmpid7265"></a>To filter the audience data so that you can find the data that
+                                                you want to use, you can click the <strong class="guilabel" data-cid="Tag_filter">Tag filter</strong> button <img src="./img/b_WebApps_FilterAssets.png" class="igrph" alt="" width="30" height="30"> and in the <strong class="guilabel" data-cid="Available_tags">Available tags</strong> area, you can select
+                                                the tags that you want to view in the <strong class="guilabel" data-cid="Audiences">Audiences</strong> dialog box.
+                                             </p>
+                                          </div>
+                                       </li>
+                                       <li class="step">
+                                          <p><a name="tmpid7271" id="tmpid7271"></a>In the <strong class="guilabel" data-cid="Audiences">Audiences</strong> dialog box, select
+                                             the check box for the audience data that you want to use.
+                                          </p>
+                                       </li>
+                                       <li class="step">
+                                          <p><a name="tmpid7274" id="tmpid7274"></a>Click <strong class="guilabel" data-cid="OK">OK</strong>.
+                                          </p>
+                                       </li>
+                                    </ol>
+                                 </li>
+                                 <li class="step">
+                                    <p><a name="tmpid7277" id="tmpid7277"></a>Optionally, click the <strong class="guilabel" data-cid="Add_component">Add component</strong> button <img src="./img/b_WebApps_AddRule.PNG" class="igrph" alt="" width="22" height="24"> to
+                                       add another condition to your rule, or click the <strong class="guilabel" data-cid="Remove_values"><span class="guilabel">Remove</span> values</strong> button<img src="./img/b_WebApps_RemoveAssignment.png" class="igrph" alt="" width="34" height="34"> to remove a condition.  
+                                    </p>
+                                 </li>
+                                 <li class="step">
+                                    <p><a name="tmpid7284" id="tmpid7284"></a>Click <strong class="guilabel" data-cid="Next">Next</strong>. 
+                                    </p>
+                                 </li>
+                                 <li class="step">
+                                    <p><a name="tmpid7287" id="tmpid7287"></a>If the communication is based on a communication set,
+                                       use the <strong class="guilabel" data-cid="Location">Location</strong> list to select whether the rule
+                                       should be saved locally or as a library rule.  
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid7291" id="tmpid7291"></a>You can switch the <strong class="guilabel" data-cid="Local">Local</strong> or <strong class="guilabel" data-cid="Library">Library</strong> option after a rule is created. 
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid7295" id="tmpid7295"></a>Creating a library rule stores the rule in DAS. It
+                                                can be added to a communication set and has an approval workflow.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <li class="step">
+                                    <p><a name="tmpid7297" id="tmpid7297"></a>Specify a name and, optionally, a description for the
+                                       rule.  
+                                    </p>
+                                    <p><a name="tmpid7298" id="tmpid7298"></a>Names do not support the following special characters: <code class="literal">&amp; / : * ! ? &gt; &lt; | + # %</code> 
+                                    </p>
+                                 </li>
+                                 <li class="step">
+                                    <p><a name="tmpid7301" id="tmpid7301"></a>Click <strong class="guilabel" data-cid="Save_and_Insert">Save and Insert</strong>. 
+                                    </p>
+                                 </li>
+                              </ol>
+                           </div>
+                           <p><a name="tmpid7303" id="tmpid7303"></a>After you have applied the rule, the targeted content is included
+                              or excluded in customer communications based on whether or not the
+                              customer data meets the conditions of the rule. You can use Simulation
+                              view to see how the rule affects your content in different data scenarios.
+                           </p>
+                           <p><a name="tmpid7304" id="tmpid7304"></a>For more information about previewing <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> audience data
+                              in different data scenarios, see <a href="expcdp.html#cdpscenarios" class="xref2 varlistentry auto xstd"><span class="otlbl-ttl">Targeting simulation previews
+                                 based on audience data</span></a></p>
+                        </dd>
+                        <dt class="varlistentry"><a name="cdpscenarios" id="cdpscenarios"></a><span class="term"><a name="tmpid7309" id="tmpid7309"></a>Targeting simulation previews
+                              based on audience data</span></dt>
+                        <dd class="varlistentry">
+                           <p><a name="tmpid7311" id="tmpid7311"></a>Before you generate production output, you can use Simulation
+                              view to run the engine in preview mode to see your communication as
+                              it would appear in the final output. In Simulation view, the engine
+                              runs in preview mode to create output that is displayed in the browser
+                              window. If you are using <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span>, you can preview the alternate
+                              appearances for variations and audience data in the simulation by
+                              selecting the audience data you want to preview. 
+                           </p>
+                           <p><a name="tmpid7314" id="tmpid7314"></a>This task discusses targeting Simulation preview based on audience
+                              data; however, there are multiple ways to configure the appearance
+                              of the simulation preview. 
+                           </p>
+                           <p><a name="tmpid7315" id="tmpid7315"></a>For general information about simulation preview and other configuration
+                              options in <span class="namestring" data-cid="Designer">Designer</span>, see 
+                              <data-xpi><data-xproc name="ExtXrefStart" href="cccd250100-h-ugd.previewingcommunications" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                                 ><A class="otModuleHide if-cccd-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/previewingcommunications.html"
+                                 ><span class="otsLbl"
+                                 ><span class="otlbl-num">section 26</span
+                                 ><span class="otlbl-sep"> </span></span
+                                 ><span class="otlbl-ttl">"Previewing communications"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></A
+                                 ><SPAN class="otModuleShow if-cccd-h-ugd-hide"
+                                 ><span class="otsLbl"
+                                 ><span class="otlbl-num">section 26</span
+                                 ><span class="otlbl-sep"> </span></span
+                                 ><span class="otlbl-ttl">"Previewing communications"</span> in <i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="cccd250100-h-ugd.previewingcommunications" fmt=""></data-xproc></data-xpi>.
+                           </p>
+                           <p><a name="tmpid7318" id="tmpid7318"></a>For general information about simulation preview and other configuration
+                              options in <span class="namestring" data-cid="Content_Author">Content Author</span>, see 
+                              <data-xpi><data-xproc name="ExtXrefStart" href="ccca250100-h-ugd.datasimulationtools24-4" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                                 ><A class="otModuleHide if-ccca-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../ccca/v250100/ccca-h-ugd/en/ofh/datasimulationtools24-4.html"
+                                 ><span class="otsLbl"
+                                 ><span class="otlbl-num">section 3</span
+                                 ><span class="otlbl-sep"> </span></span
+                                 ><span class="otlbl-ttl">"Viewing a communication in different data scenarios"</span> in <i>OpenText Communications - Content Author User Help (CCCA250100-H-UGD)</i></A
+                                 ><SPAN class="otModuleShow if-ccca-h-ugd-hide"
+                                 ><span class="otsLbl"
+                                 ><span class="otlbl-num">section 3</span
+                                 ><span class="otlbl-sep"> </span></span
+                                 ><span class="otlbl-ttl">"Viewing a communication in different data scenarios"</span> in <i>OpenText Communications - Content Author User Help (CCCA250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccca250100-h-ugd.datasimulationtools24-4" fmt=""></data-xproc></data-xpi>.
+                           </p>
+                           <p><a name="tmpid7321" id="tmpid7321"></a>To target simulation previews based on audience data:
+                           </p>
+                           <div class="procedure">
+                              <ol class="procedure" type="1">
+                                 <li class="step">
+                                    <p><a name="tmpid7324" id="tmpid7324"></a>In the <strong class="guilabel" data-cid="Variations">Variations</strong> panel, click the <strong class="guilabel" data-cid="Edit">Edit</strong> button<img src="./img/b_WebApps_EditDomainAutoAssociations.png" class="igrph" alt="" width="34" height="34"> for the <span class="namestring" data-cid="OpenText_Customer_Data">OpenText Customer Data</span> variable that controls the design variation
+                                       you want to preview.
+                                    </p>
+                                 </li>
+                                 <li class="step">
+                                    <p><a name="tmpid7331" id="tmpid7331"></a>In the <strong class="guilabel" data-cid="Audiences">Audiences</strong> dialog box, select
+                                       the audience data that you want to preview, and click <strong class="guilabel" data-cid="OK">OK</strong>.
+                                    </p>
+                                 </li>
+                                 <li class="step">
+                                    <p><a name="tmpid7335" id="tmpid7335"></a>Click <strong class="guilabel" data-cid="Run">Run</strong>.
+                                    </p>
+                                 </li>
+                              </ol>
+                           </div>
+                           <p><a name="tmpid7337" id="tmpid7337"></a>To reset the variables to their original values, click <strong class="guilabel" data-cid="Reset">Reset</strong>. Variable values are also reset to the original
+                              values if you select a different sample file.
+                           </p>
+                        </dd>
+                     </dl>
+                  </div>
+               </dd>
+            </dl>
+         </div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.5.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Integrating OpenText
+            Customer Data with designs</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.5 &nbsp; Integrating additional components" aria-label="Preceding page: 2.5 &nbsp; Integrating additional components" href="integratingadditionalcomponents.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.5 &nbsp; Integrating additional components" aria-label="Section one level up: 2.5 &nbsp; Integrating additional components" href="integratingadditionalcomponents.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.5.2 &nbsp; Integrating OpenText Core Signature for secure&#xA;document signing" aria-label="Next page: 2.5.2 &nbsp; Integrating OpenText Core Signature for secure&#xA;document signing" href="usecoresig.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

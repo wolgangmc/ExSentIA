@@ -1,0 +1,871 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="8.3.1.6 ">8.3.1.6 Importing accessible HTML</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="importinghtmlcontent.html" title="8.3.1 &nbsp; Considerations for importing HTML content"> -->
+      <link rel="prev" href="tablesimportedhtml.html" title="8.3.1.5 &nbsp; Tables in imported HTML">
+      <link rel="next" href="tagstyleimportedhtml.html" title="8.3.1.7 &nbsp; Tag and style support for imported HTML">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wz6g-f-e0aa32969-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9e98dc62","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":63352,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741383622","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==S7Hiv/uXN9oj9oi2/ToHQNR6TezoQsUkAomYszUcRE2ji1KWC5VhSK0ijB2WrYq/zfXIYKYVP9Sv4Y2wqtRJ3Zr5kl/tqFmjeRT6x4zlcL3jw8W2P7k92chuN6aJDd69NEfVdnFnGhGwwIxLKNik4QJqYGbGSovCvPf+06i17jpI3t8ndLu6MYPxL4kWDZptRKRl9acJdO62wbgaEp9EHtvZrTgYdB3g94tBonzvAKLgFUU2HQ87URBuae8dRDlfvstmxhAstUmqqdmw7F4u2HTmuOoostWpQO66v2Bxb5+dYR53C16zrA6D/J642ZqVIiQP9dmX/H3/srI2gRkyGqPVB0kLU1QxoZ4/u2keAklzfyXWgd9pRSULMMarIZm4Q8nIEdT29CosSm909zj8whP1KP6RpGhgzjwg3o63t/A=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="importingaccessiblehtml">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">8.3.1.6</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Importing accessible
+            HTML</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 8.3.1.5 &nbsp; Tables in imported HTML" aria-label="Preceding page: 8.3.1.5 &nbsp; Tables in imported HTML" href="tablesimportedhtml.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 8.3.1 &nbsp; Considerations for importing&#xA;HTML content" aria-label="Section one level up: 8.3.1 &nbsp; Considerations for importing&#xA;HTML content" href="importinghtmlcontent.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 8.3.1.7 &nbsp; Tag and style support&#xA;for imported HTML" aria-label="Next page: 8.3.1.7 &nbsp; Tag and style support&#xA;for imported HTML" href="tagstyleimportedhtml.html">Next</a></div>
+      </div>
+      <div class="sect3 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="importingaccessiblehtml" id="importingaccessiblehtml"></a><span class="otsLbl"><span class="otlbl-num">8.3.1.6</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Importing accessible
+                     HTML</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid24189" id="tmpid24189"></a><span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> lets&nbsp;you retain accessibility
+            information, such as alternate text, that is present in the tagging
+            structure when you import the HTML content at run time and produce&nbsp;accessible
+            HTML&nbsp;output.
+         </p>
+         <div class="variablelist standard lvl1 lvlmax1">
+            <dl class="variablelist standard">
+               <dt class="varlistentry"><a name="vle2s1732631747-087" id="vle2s1732631747-087"></a><span class="term"><a name="tmpid24198" id="tmpid24198"></a>Specifying the reading
+                     language in accessible HTML</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid24200" id="tmpid24200"></a>If you're importing HTML content, and you want to specifically
+                     define the reading language that will be used by assistive technology
+                     tools for the imported content, then you must include the&nbsp;<code class="literal">lang</code>&nbsp;attribute in the imported HTML. If you do not
+                     include a&nbsp;<code class="literal">lang</code>&nbsp;attribute on the top-level
+                     tag, then&nbsp;<span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span>&nbsp;applies the language setting
+                     of the text paragraph that contains the placeholder variable as the
+                     default language.
+                  </p>
+                  <p><a name="tmpid24209" id="tmpid24209"></a>If you add a&nbsp;lang&nbsp;attribute on a&nbsp;<code class="literal">&lt;div&gt;</code>,&nbsp;<code class="literal">&lt;table&gt;</code>, or&nbsp;<code class="literal">&lt;p&gt;</code>&nbsp;tag,&nbsp;then <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span>&nbsp;applies that
+                     language to all child elements contained within that tag, unless the
+                     child element includes a&nbsp;<code class="literal">lang</code>&nbsp;attribute.
+                  </p>
+                  <p><a name="tmpid24220" id="tmpid24220"></a>For example, suppose that you have the following imported HTML
+                     content:</p>
+                  <pre class="screen noinltag">&lt;div lang="es"&gt;
+   &lt;h2&gt;¿Habla español?&lt;/h2&gt;
+   &lt;p&gt;Llame a uno de nuestros representantes de habla hispana.&lt;/p&gt;
+   &lt;img src="phone.jpg" alt="Image of a phone" lang="en-US"&gt;
+&lt;/div&gt;</pre><p><a name="tmpid24222" id="tmpid24222"></a>In this example, the corresponding&nbsp;<span class="namestring" data-cid="Designer">Designer</span>&nbsp;element
+                     is an image embedded in a text box. The specified reading language
+                     for the text box is Spanish, and the reading language for the image's
+                     alternate text is English. Because the child element (in this case,
+                     the image), includes a&nbsp;<code class="literal">lang</code>&nbsp;attribute
+                     value, the alternate text of the embedded object would be read using
+                     English pronunciation rules.
+                  </p>
+                  <p><a name="tmpid24225" id="tmpid24225"></a>You can include the&nbsp;<code class="literal">lang</code>&nbsp;attribute
+                     for the following elements:
+                  </p>
+                  <div class="informaltable">
+                     <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                        <colgroup>
+                           <col class="col1">
+                           <col class="col2">
+                        </colgroup>
+                        <thead>
+                           <tr class="row">
+                              <th style="" valign="top"><a name="tmpid24233" id="tmpid24233"></a>HTML tag category
+                              </th>
+                              <th style="" valign="top"><a name="tmpid24234" id="tmpid24234"></a>Tags that support the&nbsp;<code class="literal">lang</code>&nbsp;attribute during HTML import
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="row">
+                              <td style=""><a name="tmpid24238" id="tmpid24238"></a>Basic HTML structure
+                              </td>
+                              <td style=""><a name="tmpid24239" id="tmpid24239"></a><div class="itemizedlist">
+                                    <ul class="itemizedlist">
+                                       <li class="listitem">
+                                          <p><a name="tmpid24242" id="tmpid24242"></a><code class="literal">&lt;html&gt;</code></p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid24245" id="tmpid24245"></a><code class="literal">&lt;body&gt;</code></p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid24248" id="tmpid24248"></a><code class="literal">&lt;h1&gt;</code>&nbsp;through&nbsp;<code class="literal">&lt;h6&gt;</code></p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid24252" id="tmpid24252"></a><code class="literal">&lt;div&gt;</code></p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid24255" id="tmpid24255"></a><code class="literal">&lt;p&gt;</code></p>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="note">
+                                    <p class="title"><strong><a name="tmp4ref288" id="tmp4ref288"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                                    </strong></p>
+                                    <p><a name="tmpid24258" id="tmpid24258"></a>With unconverted HTML imports, the engine removes the&nbsp;<code class="literal">&lt;html&gt;</code>&nbsp;and&nbsp;<code class="literal">&lt;body&gt;</code>&nbsp;tag
+                                       from the resulting HTML output, and any language declarations made
+                                       in those tags would be lost. For converted HTML, however, these tags
+                                       are retained in the HTML output, as would the language declarations.
+                                    </p>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid24262" id="tmpid24262"></a>Hyperlinks
+                              </td>
+                              <td style=""><p><a name="tmpid24263" id="tmpid24263"></a><a name="tmpid24264" id="tmpid24264"></a><code class="literal">&lt;a&gt;</code></p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid24267" id="tmpid24267"></a>Images
+                              </td>
+                              <td style=""><p><a name="tmpid24268" id="tmpid24268"></a><a name="tmpid24269" id="tmpid24269"></a><code class="literal">&lt;img&gt;</code></p>
+                                 <p><a name="tmpid24271" id="tmpid24271"></a>If an image is
+                                    a hyperlink, and the&nbsp;<code class="literal">lang</code>&nbsp;attribute has
+                                    different values on the&nbsp;<code class="literal">&lt;a&gt;</code>&nbsp;and&nbsp;<code class="literal">&lt;img&gt;</code>&nbsp;elements, then the behavior for imported
+                                    HTML content differs from that of images placed in&nbsp;<span class="namestring" data-cid="Designer">Designer</span>.
+                                    For images included in the imported HTML content, the&nbsp;<code class="literal">lang</code>&nbsp;attribute value on the&nbsp;<code class="literal">&lt;img&gt;</code>&nbsp;tag is honored in the output. For images placed in&nbsp;<span class="namestring" data-cid="Designer">Designer</span>,
+                                    the&nbsp;<code class="literal">lang</code>&nbsp;attribute value on the&nbsp;<code class="literal">&lt;a&gt;</code>&nbsp;tag is honored in the output.
+                                 </p>
+                                 <p><a name="tmpid24281" id="tmpid24281"></a>For
+                                    example, suppose that an image has French specified as the reading
+                                    language for the alternate text and the hyperlink has English specified
+                                    as the reading language. In typical HTML, it might appear like the
+                                    following:</p>
+                                 <pre class="screen noinltag">&lt;a href="www.url.com" title="Our website" lang="en"&gt;
+    &lt;img src="logo.jpg" alt="Notre logo d'entreprise" lang="fr"&gt;
+&lt;/a&gt;</pre><p><a name="tmpid24283" id="tmpid24283"></a>In accessible HTML and PDF output, French is
+                                    specified as the reading language for both the alternate text and
+                                    the hyperlink.
+                                 </p>
+                                 <p><a name="tmpid24284" id="tmpid24284"></a>For example, the imported HTML content
+                                    would result in the following converted HTML output:</p>
+                                 <pre class="screen noinltag">&lt;a href="www.url.com" title="Our website" lang="fr"&gt;
+    &lt;img src="logo.jpg" alt="Notre logo d'entreprise" lang="fr"&gt;
+&lt;/a&gt;</pre><p><a name="tmpid24286" id="tmpid24286"></a>The same imported HTML content would result
+                                    in the following language properties in accessible PDF output:
+                                 </p>
+                                 <div class="graphic"><img src="./img/e_ImageWithAltTextLinkAndLanguage_HTMLImportAccessiblePDFOutput.png" class="grph" alt="" width="561" height="101"></div>
+                                 <p><a name="tmpid24288" id="tmpid24288"></a>Whereas the&nbsp;<span class="namestring" data-cid="Designer">Designer</span>&nbsp;content would
+                                    result in the following HTML output:</p>
+                                 <pre class="screen noinltag">&lt;a href="www.url.com" title="Our website" lang="en"&gt;
+    &lt;img src="logo.jpg" alt="Notre logo d'entreprise" lang="en"&gt;
+&lt;/a&gt;</pre><p><a name="tmpid24291" id="tmpid24291"></a>In the HTML output for either case, incorrect
+                                    rules of pronunciation will be applied to either the image alternate
+                                    text or the hyperlink. To avoid this issue, make sure that the&nbsp;lang&nbsp;attributes
+                                    for the&nbsp;<code class="literal">&lt;a&gt;</code>&nbsp;and&nbsp;<code class="literal">&lt;img&gt;</code>&nbsp;elements contain the same value. If you are producing HTML
+                                    output, then you can also choose to produce unconverted HTML output
+                                    to maintain the language declaration for the image and alternate text.
+                                    PDF output honors the language settings that you apply in&nbsp;<span class="namestring" data-cid="Designer">Designer</span>.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid24296" id="tmpid24296"></a>Lists
+                              </td>
+                              <td style=""><a name="tmpid24297" id="tmpid24297"></a><div class="itemizedlist">
+                                    <ul class="itemizedlist">
+                                       <li class="listitem">
+                                          <p><a name="tmpid24300" id="tmpid24300"></a><code class="literal">&lt;dd&gt;</code></p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid24303" id="tmpid24303"></a><code class="literal">&lt;dl&gt;</code></p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid24306" id="tmpid24306"></a><code class="literal">&lt;dt&gt;</code></p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid24309" id="tmpid24309"></a><code class="literal">&lt;li&gt;</code></p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid24312" id="tmpid24312"></a><code class="literal">&lt;ol&gt;</code></p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid24315" id="tmpid24315"></a><code class="literal">&lt;ul&gt;</code></p>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid24318" id="tmpid24318"></a>Special text formatting
+                              </td>
+                              <td style=""><p><a name="tmpid24319" id="tmpid24319"></a><a name="tmpid24320" id="tmpid24320"></a><code class="literal">&lt;blockquote&gt;</code></p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid24323" id="tmpid24323"></a>Tables
+                              </td>
+                              <td style=""><a name="tmpid24324" id="tmpid24324"></a><div class="itemizedlist">
+                                    <ul class="itemizedlist">
+                                       <li class="listitem">
+                                          <p><a name="tmpid24327" id="tmpid24327"></a><code class="literal">&lt;table&gt;</code></p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid24330" id="tmpid24330"></a><code class="literal">&lt;th&gt;</code></p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid24333" id="tmpid24333"></a><code class="literal">&lt;tr&gt;</code></p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid24336" id="tmpid24336"></a><code class="literal">&lt;td&gt;</code></p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid24339" id="tmpid24339"></a><code class="literal">&lt;thead&gt;</code></p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid24342" id="tmpid24342"></a><code class="literal">&lt;tbody&gt;</code></p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid24345" id="tmpid24345"></a><code class="literal">&lt;tfoot&gt;</code></p>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p><a name="tmpid24347" id="tmpid24347"></a>For more information about tag support for imported HTML&nbsp;content,
+                     see&nbsp;<a class="link" href="tagstyleimportedhtml.html" title="8.3.1.7 &nbsp; Tag and style support for imported HTML">Tag and Style Support
+                        for Imported HTML</a>.
+                  </p>
+               </dd>
+               <dt class="varlistentry"><a name="accessibilitycodes-rep" id="accessibilitycodes-rep"></a><span class="term"><a name="tmpid11200000018770" id="tmpid11200000018770"></a>Supported accessibility language codes</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid11200000018772" id="tmpid11200000018772"></a>If you want to use a variable as the <strong class="guilabel" data-cid="Accessibility_language_control_type">Accessibility
+                        language control type</strong> for a language object, you need to <a class="link" href="creatingvariables.html" title="4.6.2 &nbsp; Creating variables">create a scalar string variable</a> that contains an ISO 639–1 or ISO 639–2 language code
+                     as its value.
+                  </p>
+                  <div class="important">
+                     <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Important</span></span></strong></p>
+                     <p><a name="tmpid11200000018776" id="tmpid11200000018776"></a>Keep in mind that accessibility languages are the languages
+                        that are available to be read by assistive technology tools. The list
+                        of accessibility languages does not represent the languages supported
+                        in <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> output.
+                     </p>
+                  </div>
+                  <div class="table"><p class="title"><a name="accessibilitycodes1--accessibilitycodes-0000" id="accessibilitycodes1--accessibilitycodes-0000"></a><b><span class="otLbl"><span class="otlbl-kw">Table</span> <span class="otlbl-num">8.4</span>: </span><span class="otlbl-ttl">ISO 639–1 and ISO 639-2
+                           language codes supported in OpenText Communications (case-sensitive)</span></b></p>
+                     <div class="table-contents">
+                        <table summary="ISO 639–1 and ISO 639-2 language codes supported in OpenText Communications (case-sensitive)" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                           <colgroup>
+                              <col class="col1">
+                              <col class="col2">
+                              <col class="col3">
+                           </colgroup>
+                           <thead>
+                              <tr class="row">
+                                 <th style=""><a name="tmpid11200000018797" id="tmpid11200000018797"></a>Language name
+                                 </th>
+                                 <th style=""><a name="tmpid11200000018798" id="tmpid11200000018798"></a>ISO 639-1
+                                 </th>
+                                 <th style=""><a name="tmpid11200000018799" id="tmpid11200000018799"></a>ISO 639-2
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000018802" id="tmpid11200000018802"></a>Amharic
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018803" id="tmpid11200000018803"></a>am
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018804" id="tmpid11200000018804"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018806" id="tmpid11200000018806"></a><a name="tmpid11200000018807" id="tmpid11200000018807"></a>Arabic
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018808" id="tmpid11200000018808"></a><a name="tmpid11200000018809" id="tmpid11200000018809"></a>ar
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018810" id="tmpid11200000018810"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018812" id="tmpid11200000018812"></a><a name="tmpid11200000018813" id="tmpid11200000018813"></a>Armenian
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018814" id="tmpid11200000018814"></a><a name="tmpid11200000018815" id="tmpid11200000018815"></a>hy
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018816" id="tmpid11200000018816"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000018818" id="tmpid11200000018818"></a>Bengali
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018819" id="tmpid11200000018819"></a>bn
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018820" id="tmpid11200000018820"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018822" id="tmpid11200000018822"></a><a name="tmpid11200000018823" id="tmpid11200000018823"></a>Catalan
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018824" id="tmpid11200000018824"></a><a name="tmpid11200000018825" id="tmpid11200000018825"></a>ca
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018826" id="tmpid11200000018826"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000018828" id="tmpid11200000018828"></a>Cebuano
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018829" id="tmpid11200000018829"></a>&nbsp;
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018830" id="tmpid11200000018830"></a>ceb
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018832" id="tmpid11200000018832"></a><a name="tmpid11200000018833" id="tmpid11200000018833"></a>Chinese (PRC)
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018834" id="tmpid11200000018834"></a><a name="tmpid11200000018835" id="tmpid11200000018835"></a>zh-CN
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018836" id="tmpid11200000018836"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018838" id="tmpid11200000018838"></a><a name="tmpid11200000018839" id="tmpid11200000018839"></a>Chinese (Taiwan)
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018840" id="tmpid11200000018840"></a><a name="tmpid11200000018841" id="tmpid11200000018841"></a>zh-TW
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018842" id="tmpid11200000018842"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018844" id="tmpid11200000018844"></a><a name="tmpid11200000018845" id="tmpid11200000018845"></a>Chinese (Hong Kong SAR)
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018846" id="tmpid11200000018846"></a><a name="tmpid11200000018847" id="tmpid11200000018847"></a>zh-HK
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018848" id="tmpid11200000018848"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018850" id="tmpid11200000018850"></a><a name="tmpid11200000018851" id="tmpid11200000018851"></a>Chinese (Singapore)
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018852" id="tmpid11200000018852"></a><a name="tmpid11200000018853" id="tmpid11200000018853"></a>zh-SG
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018854" id="tmpid11200000018854"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018856" id="tmpid11200000018856"></a><a name="tmpid11200000018857" id="tmpid11200000018857"></a>Czech
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018858" id="tmpid11200000018858"></a><a name="tmpid11200000018859" id="tmpid11200000018859"></a>cs
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018860" id="tmpid11200000018860"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018862" id="tmpid11200000018862"></a><a name="tmpid11200000018863" id="tmpid11200000018863"></a>Danish
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018864" id="tmpid11200000018864"></a><a name="tmpid11200000018865" id="tmpid11200000018865"></a>da
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018866" id="tmpid11200000018866"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018868" id="tmpid11200000018868"></a><a name="tmpid11200000018869" id="tmpid11200000018869"></a>Dutch
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018870" id="tmpid11200000018870"></a><a name="tmpid11200000018871" id="tmpid11200000018871"></a>nl
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018872" id="tmpid11200000018872"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018874" id="tmpid11200000018874"></a><a name="tmpid11200000018875" id="tmpid11200000018875"></a>English (American)
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018876" id="tmpid11200000018876"></a><a name="tmpid11200000018877" id="tmpid11200000018877"></a>en-US
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018878" id="tmpid11200000018878"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018880" id="tmpid11200000018880"></a><a name="tmpid11200000018881" id="tmpid11200000018881"></a>English (Australian)
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018882" id="tmpid11200000018882"></a><a name="tmpid11200000018883" id="tmpid11200000018883"></a>en-AU
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018884" id="tmpid11200000018884"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018886" id="tmpid11200000018886"></a><a name="tmpid11200000018887" id="tmpid11200000018887"></a>English (British)
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018888" id="tmpid11200000018888"></a><a name="tmpid11200000018889" id="tmpid11200000018889"></a>en-GB
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018890" id="tmpid11200000018890"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018892" id="tmpid11200000018892"></a><a name="tmpid11200000018893" id="tmpid11200000018893"></a>Farsi (Persian)
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018894" id="tmpid11200000018894"></a><a name="tmpid11200000018895" id="tmpid11200000018895"></a>fa
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018896" id="tmpid11200000018896"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018898" id="tmpid11200000018898"></a><a name="tmpid11200000018899" id="tmpid11200000018899"></a>Finnish
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018900" id="tmpid11200000018900"></a><a name="tmpid11200000018901" id="tmpid11200000018901"></a>fi
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018902" id="tmpid11200000018902"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018904" id="tmpid11200000018904"></a><a name="tmpid11200000018905" id="tmpid11200000018905"></a>French
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018906" id="tmpid11200000018906"></a><a name="tmpid11200000018907" id="tmpid11200000018907"></a>fr
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018908" id="tmpid11200000018908"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018910" id="tmpid11200000018910"></a><a name="tmpid11200000018911" id="tmpid11200000018911"></a>French (Canadian)
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018912" id="tmpid11200000018912"></a><a name="tmpid11200000018913" id="tmpid11200000018913"></a>fr-CA
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018914" id="tmpid11200000018914"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000018916" id="tmpid11200000018916"></a>French (Creole)
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018917" id="tmpid11200000018917"></a>&nbsp;
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018918" id="tmpid11200000018918"></a>cpf
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018920" id="tmpid11200000018920"></a><a name="tmpid11200000018921" id="tmpid11200000018921"></a>German
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018922" id="tmpid11200000018922"></a><a name="tmpid11200000018923" id="tmpid11200000018923"></a>de
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018924" id="tmpid11200000018924"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000018926" id="tmpid11200000018926"></a>Gujarati
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018927" id="tmpid11200000018927"></a>gu
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018928" id="tmpid11200000018928"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000018930" id="tmpid11200000018930"></a>Hawaiian
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018931" id="tmpid11200000018931"></a>&nbsp;
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018932" id="tmpid11200000018932"></a>haw
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000018934" id="tmpid11200000018934"></a>Hindi
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018935" id="tmpid11200000018935"></a>hi
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018936" id="tmpid11200000018936"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018938" id="tmpid11200000018938"></a><a name="tmpid11200000018939" id="tmpid11200000018939"></a>Hmong
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018940" id="tmpid11200000018940"></a>&nbsp;
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018941" id="tmpid11200000018941"></a><a name="tmpid11200000018942" id="tmpid11200000018942"></a>hmn
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018944" id="tmpid11200000018944"></a><a name="tmpid11200000018945" id="tmpid11200000018945"></a>Hungarian
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018946" id="tmpid11200000018946"></a><a name="tmpid11200000018947" id="tmpid11200000018947"></a>hu
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018948" id="tmpid11200000018948"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000018950" id="tmpid11200000018950"></a>Igbo
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018951" id="tmpid11200000018951"></a>ig
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018952" id="tmpid11200000018952"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000018954" id="tmpid11200000018954"></a>Ilokano
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018955" id="tmpid11200000018955"></a>&nbsp;
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018956" id="tmpid11200000018956"></a>ilo
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018958" id="tmpid11200000018958"></a><a name="tmpid11200000018959" id="tmpid11200000018959"></a>Italian
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018960" id="tmpid11200000018960"></a><a name="tmpid11200000018961" id="tmpid11200000018961"></a>it
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018962" id="tmpid11200000018962"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018964" id="tmpid11200000018964"></a><a name="tmpid11200000018965" id="tmpid11200000018965"></a>Japanese
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018966" id="tmpid11200000018966"></a><a name="tmpid11200000018967" id="tmpid11200000018967"></a>ja
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018968" id="tmpid11200000018968"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018970" id="tmpid11200000018970"></a><a name="tmpid11200000018971" id="tmpid11200000018971"></a>Khmer
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018972" id="tmpid11200000018972"></a><a name="tmpid11200000018973" id="tmpid11200000018973"></a>km
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018974" id="tmpid11200000018974"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018976" id="tmpid11200000018976"></a><a name="tmpid11200000018977" id="tmpid11200000018977"></a>Korean
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018978" id="tmpid11200000018978"></a><a name="tmpid11200000018979" id="tmpid11200000018979"></a>ko
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018980" id="tmpid11200000018980"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000018982" id="tmpid11200000018982"></a>Kru
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018983" id="tmpid11200000018983"></a>&nbsp;
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018984" id="tmpid11200000018984"></a>kro
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000018986" id="tmpid11200000018986"></a>Lao
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018987" id="tmpid11200000018987"></a>lo
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018988" id="tmpid11200000018988"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000018990" id="tmpid11200000018990"></a>Marshallese
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018991" id="tmpid11200000018991"></a>mh
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018992" id="tmpid11200000018992"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000018994" id="tmpid11200000018994"></a><a name="tmpid11200000018995" id="tmpid11200000018995"></a>Navajo
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000018996" id="tmpid11200000018996"></a><a name="tmpid11200000018997" id="tmpid11200000018997"></a>nv
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000018998" id="tmpid11200000018998"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000019000" id="tmpid11200000019000"></a>Nepali
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019001" id="tmpid11200000019001"></a>ne
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019002" id="tmpid11200000019002"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000019004" id="tmpid11200000019004"></a><a name="tmpid11200000019005" id="tmpid11200000019005"></a>Norwegian
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000019006" id="tmpid11200000019006"></a><a name="tmpid11200000019007" id="tmpid11200000019007"></a>no
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019008" id="tmpid11200000019008"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000019010" id="tmpid11200000019010"></a>Norwegian (Bokmål)
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019011" id="tmpid11200000019011"></a>nb
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019012" id="tmpid11200000019012"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000019014" id="tmpid11200000019014"></a><a name="tmpid11200000019015" id="tmpid11200000019015"></a>Norwegian (Nynorsk)
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000019016" id="tmpid11200000019016"></a><a name="tmpid11200000019017" id="tmpid11200000019017"></a>nn
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019018" id="tmpid11200000019018"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000019020" id="tmpid11200000019020"></a>Oromo
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019021" id="tmpid11200000019021"></a>om
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019022" id="tmpid11200000019022"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000019024" id="tmpid11200000019024"></a>Pohnpeian
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019025" id="tmpid11200000019025"></a>&nbsp;
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019026" id="tmpid11200000019026"></a>pon
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000019028" id="tmpid11200000019028"></a><a name="tmpid11200000019029" id="tmpid11200000019029"></a>Polish
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000019030" id="tmpid11200000019030"></a><a name="tmpid11200000019031" id="tmpid11200000019031"></a>pl
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019032" id="tmpid11200000019032"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000019034" id="tmpid11200000019034"></a><a name="tmpid11200000019035" id="tmpid11200000019035"></a>Portuguese
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000019036" id="tmpid11200000019036"></a><a name="tmpid11200000019037" id="tmpid11200000019037"></a>pt
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019038" id="tmpid11200000019038"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000019040" id="tmpid11200000019040"></a><a name="tmpid11200000019041" id="tmpid11200000019041"></a>Portuguese (Brazilian)
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000019042" id="tmpid11200000019042"></a><a name="tmpid11200000019043" id="tmpid11200000019043"></a>pt-BR
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019044" id="tmpid11200000019044"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000019046" id="tmpid11200000019046"></a><a name="tmpid11200000019047" id="tmpid11200000019047"></a>Punjabi
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000019048" id="tmpid11200000019048"></a><a name="tmpid11200000019049" id="tmpid11200000019049"></a>pa
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019050" id="tmpid11200000019050"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000019052" id="tmpid11200000019052"></a>Romanian
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019053" id="tmpid11200000019053"></a>ro
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019054" id="tmpid11200000019054"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000019056" id="tmpid11200000019056"></a><a name="tmpid11200000019057" id="tmpid11200000019057"></a>Russian
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000019058" id="tmpid11200000019058"></a><a name="tmpid11200000019059" id="tmpid11200000019059"></a>ru
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019060" id="tmpid11200000019060"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000019062" id="tmpid11200000019062"></a>Samoan
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019063" id="tmpid11200000019063"></a>sm
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019064" id="tmpid11200000019064"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000019066" id="tmpid11200000019066"></a><a name="tmpid11200000019067" id="tmpid11200000019067"></a>Spanish
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000019068" id="tmpid11200000019068"></a><a name="tmpid11200000019069" id="tmpid11200000019069"></a>es
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019070" id="tmpid11200000019070"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000019072" id="tmpid11200000019072"></a><a name="tmpid11200000019073" id="tmpid11200000019073"></a>Swedish
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000019074" id="tmpid11200000019074"></a><a name="tmpid11200000019075" id="tmpid11200000019075"></a>sv
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019076" id="tmpid11200000019076"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000019078" id="tmpid11200000019078"></a><a name="tmpid11200000019079" id="tmpid11200000019079"></a>Tagalong
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000019080" id="tmpid11200000019080"></a><a name="tmpid11200000019081" id="tmpid11200000019081"></a>tl
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019082" id="tmpid11200000019082"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000019084" id="tmpid11200000019084"></a>Thai
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019085" id="tmpid11200000019085"></a>th
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019086" id="tmpid11200000019086"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000019088" id="tmpid11200000019088"></a>Tongan
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019089" id="tmpid11200000019089"></a>to
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019090" id="tmpid11200000019090"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000019092" id="tmpid11200000019092"></a>Turkish
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019093" id="tmpid11200000019093"></a>tr
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019094" id="tmpid11200000019094"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000019096" id="tmpid11200000019096"></a>Ukrainian
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019097" id="tmpid11200000019097"></a>uk
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019098" id="tmpid11200000019098"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000019100" id="tmpid11200000019100"></a>Urdu
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019101" id="tmpid11200000019101"></a>ur
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019102" id="tmpid11200000019102"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><p><a name="tmpid11200000019104" id="tmpid11200000019104"></a><a name="tmpid11200000019105" id="tmpid11200000019105"></a>Vietnamese
+                                    </p>
+                                 </td>
+                                 <td style=""><p><a name="tmpid11200000019106" id="tmpid11200000019106"></a><a name="tmpid11200000019107" id="tmpid11200000019107"></a>vi
+                                    </p>
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019108" id="tmpid11200000019108"></a>&nbsp;
+                                 </td>
+                              </tr>
+                              <tr class="row">
+                                 <td style=""><a name="tmpid11200000019110" id="tmpid11200000019110"></a>Yoruba
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019111" id="tmpid11200000019111"></a>yo
+                                 </td>
+                                 <td style=""><a name="tmpid11200000019112" id="tmpid11200000019112"></a>&nbsp;
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div><br class="table-break"></dd>
+            </dl>
+         </div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">8.3.1.6</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Importing accessible
+            HTML</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 8.3.1.5 &nbsp; Tables in imported HTML" aria-label="Preceding page: 8.3.1.5 &nbsp; Tables in imported HTML" href="tablesimportedhtml.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 8.3.1 &nbsp; Considerations for importing&#xA;HTML content" aria-label="Section one level up: 8.3.1 &nbsp; Considerations for importing&#xA;HTML content" href="importinghtmlcontent.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 8.3.1.7 &nbsp; Tag and style support&#xA;for imported HTML" aria-label="Next page: 8.3.1.7 &nbsp; Tag and style support&#xA;for imported HTML" href="tagstyleimportedhtml.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

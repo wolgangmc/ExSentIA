@@ -1,0 +1,200 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="3.7 ">3.7 Searching and replacing text</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="managingassetlibraryresources.html" title="Chapter 3 – Working with DAS&nbsp;resources"> -->
+      <link rel="prev" href="managingapprovalworkflows.html" title="3.6 &nbsp; Managing approval workflows">
+      <link rel="next" href="search-replace-editing-24-2.html" title="3.8 &nbsp; Searching and replacing text while editing">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wwum-f-75f9cfefc-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d4925d1","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61432,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741380236","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==HZqaU6nsECL4/zlEpbDdykDcRStAXI1S1fSkBC/qjwo5BXuxXQDRc5Z9XGkUDe9xZMmhM+KHlK++fT3udOyZPckeLUiJH0sjgONk5bscIe5kgAF3fIrCQtwCPtXTqamoD2M9YCzGHIcGnqGkTKySGOqAN5eUoez1IBi4N1m4uNsd5B6wBaJU6YIPQaJagj/gtbebi/1QkHNJz007zqQOuugq4qnQ/2pmwbDnqq4QWqgY/1kARVuFwdTYVUVZVUqxOYPUJ105bLlYO62hrT2GInnR0rxWX+BEW+CoVwyR0y40KgfOdA0fww08YdEU9L9TeSymMFSK8MWjo9bIGazbdcc11DBafWVLW+aIyyamH8lNPojQh0cSWnpi62yBWfPCeMFDaTaWy9maqxvU5Wj0ZGbGaXoEaVavJQ5JEKBDwj0=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="search-replace">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">3.7</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Searching and replacing
+            text</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 3.6 &nbsp; Managing approval workflows" aria-label="Preceding page: 3.6 &nbsp; Managing approval workflows" href="managingapprovalworkflows.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 3 – Working with DAS&nbsp;resources" aria-label="Section one level up: Chapter 3 – Working with DAS&nbsp;resources" href="managingassetlibraryresources.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 3.8 &nbsp; Searching and replacing text while editing" aria-label="Next page: 3.8 &nbsp; Searching and replacing text while editing" href="search-replace-editing-24-2.html">Next</a></div>
+      </div>
+      <div class="sect1 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="search-replace" id="search-replace"></a><span class="otsLbl"><span class="otlbl-num">3.7</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Searching and replacing
+                     text</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid10568" id="tmpid10568"></a>You can search and replace text <a class="link" href="search-replace-editing-24-2.html" title="3.8 &nbsp; Searching and replacing text while editing">while editing</a> or while <a class="link" href="search-replace-content-24-2.html" title="3.9 &nbsp; Searching and replacing text in multiple content resources">managing lists of text-based
+               content resources</a>, such as messages or clauses. You can also
+            apply filters to your search if you want to find text only in resources
+            with specific properties.
+         </p>
+         <div class="variablelist standard lvl1 lvlmax1">
+            <dl class="variablelist standard">
+               <dt class="varlistentry"><a name="tmp4ref139" id="tmp4ref139"></a><span class="term"><a name="tmpid10573" id="tmpid10573"></a>Differences: Searching while editing and searching
+                     across multiple resources</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid10575" id="tmpid10575"></a>The differences between searching and replacing text in an editing
+                     view and searching and replacing text starting from a resource list
+                     view are summarized as follows:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem"><p class="title"><a name="tmp4ref140" id="tmp4ref140"></a>To start a search:</p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid10586" id="tmpid10586"></a><span class="highlight"><strong>In an editing view:</strong></span> Click the <strong class="guilabel" data-cid="Search">Search</strong> button in the editing view toolbar and enter the search text.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid10591" id="tmpid10591"></a><span class="highlight"><strong>In a resource list view:</strong></span> Click
+                                       in the <strong class="guilabel" data-cid="Search">Search</strong> box for the list and enter the
+                                       search text.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                        <li class="listitem"><p class="title"><a name="tmp4ref141" id="tmp4ref141"></a>To select search filters:</p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid10604" id="tmpid10604"></a><span class="highlight"><strong>In an editing view:</strong></span> In the search bar, click the arrow
+                                       in the <strong class="guilabel" data-cid="Search_for...">Search for...</strong> box to open the <strong class="guilabel" data-cid="Advance_search_options">Advance search options</strong> list.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid10610" id="tmpid10610"></a><span class="highlight"><strong>In a resource list view:</strong></span> Click
+                                       the arrow in the <strong class="guilabel" data-cid="Search">Search</strong> box to open the <strong class="guilabel" data-cid="Advance_search_options">Advance search options</strong> dialog box.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                           <p><a name="tmpid10614" id="tmpid10614"></a>In both cases, you select the filters to apply before you search
+                              or replace. However, you have several more filters to choose from
+                              when searching across multiple resources. For more information about
+                              selecting filters when you search across multiple content resources,
+                              see <a href="advanced-search-options-24-2.html" class="xref2 sect2 auto xstd" title="3.9.2 &nbsp; Specifying advanced&#xA;search options"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.9.2</span> “</span><span class="otlbl-ttl">Specifying advanced
+                                 search options</span><span class="otsLbl">”</span></a>.
+                           </p>
+                        </li>
+                        <li class="listitem"><p class="title"><a name="tmp4ref142" id="tmp4ref142"></a>To review search results:</p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid10625" id="tmpid10625"></a><span class="highlight"><strong>In an editing view:</strong></span> In the search bar, click <strong class="guilabel" data-cid="Search">Search</strong>. All results a highlighted in the editing canvas,
+                                       or in multiple canvases if you are searching across variations, versions,
+                                       or clauses in a section.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid10630" id="tmpid10630"></a><span class="highlight"><strong>In a resource list view:</strong></span> Click
+                                       the <strong class="guilabel" data-cid="Search">Search</strong> button. The list updates to show only
+                                       resources that contain the search text, and that match the advanced
+                                       search filters.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                        <li class="listitem"><p class="title"><a name="tmp4ref143" id="tmp4ref143"></a>To replace search text:</p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid10643" id="tmpid10643"></a><span class="highlight"><strong>In an editing view:</strong></span> In the search bar, enter the search
+                                       text and replacement text, and then click <strong class="guilabel" data-cid="Replace">Replace</strong> or <strong class="guilabel" data-cid="Replace_all">Replace all</strong>.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid10649" id="tmpid10649"></a><span class="highlight"><strong>From a resource list view:</strong></span> In
+                                       the <strong class="guilabel" data-cid="Search">Search</strong> box, open the <strong class="guilabel" data-cid="Advanced_search_options">Advanced search
+                                          options</strong> dialog box, enter the search text and replacement
+                                       text, and then click <strong class="guilabel" data-cid="Replace">Replace</strong>. Next, perform the
+                                       following steps:
+                                    </p>
+                                    <div class="procedure">
+                                       <ol class="procedure" type="1">
+                                          <li class="step">
+                                             <p><a name="tmpid10656" id="tmpid10656"></a>In the results dialog box, select the resources in which
+                                                to replace text, and then click <strong class="guilabel" data-cid="Replace">Replace</strong> or <strong class="guilabel" data-cid="Replace_all">Replace all</strong>.
+                                             </p>
+                                          </li>
+                                          <li class="step">
+                                             <p><a name="tmpid10662" id="tmpid10662"></a>In each successive editing view for a selected resource, review the
+                                                highlighted search results and replace matches.
+                                             </p>
+                                          </li>
+                                          <li class="step">
+                                             <p><a name="tmpid10665" id="tmpid10665"></a>Save or abandon replacements to move to next selected
+                                                resource.
+                                             </p>
+                                          </li>
+                                          <li class="step">
+                                             <p><a name="tmpid10667" id="tmpid10667"></a>Review the replacement statistics for the selected resources.
+                                             </p>
+                                          </li>
+                                       </ol>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+                  <p><a name="tmpid10668" id="tmpid10668"></a>For more information about searching and replacing text in an
+                     editing view, see <a href="search-replace-editing-24-2.html" class="xref2 sect1 auto xstd" title="3.8 &nbsp; Searching and replacing text while editing"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.8</span> “</span><span class="otlbl-ttl">Searching and replacing
+                        text while editing</span><span class="otsLbl">”</span></a>.
+                  </p>
+                  <p><a name="tmpid10670" id="tmpid10670"></a>For more information about searching and replacing text starting
+                     from a resource list view, see <a href="search-replace-content-24-2.html" class="xref2 sect1 auto xstd" title="3.9 &nbsp; Searching and replacing text in multiple content resources"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.9</span> “</span><span class="otlbl-ttl">Searching and replacing
+                        text in multiple content resources</span><span class="otsLbl">”</span></a>.
+                  </p>
+               </dd>
+            </dl>
+         </div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">3.7</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Searching and replacing
+            text</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 3.6 &nbsp; Managing approval workflows" aria-label="Preceding page: 3.6 &nbsp; Managing approval workflows" href="managingapprovalworkflows.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 3 – Working with DAS&nbsp;resources" aria-label="Section one level up: Chapter 3 – Working with DAS&nbsp;resources" href="managingassetlibraryresources.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 3.8 &nbsp; Searching and replacing text while editing" aria-label="Next page: 3.8 &nbsp; Searching and replacing text while editing" href="search-replace-editing-24-2.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

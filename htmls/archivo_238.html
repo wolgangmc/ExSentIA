@@ -1,0 +1,818 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="8.3.1.7 ">8.3.1.7 Tag and style support for imported HTML</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="importinghtmlcontent.html" title="8.3.1 &nbsp; Considerations for importing HTML content"> -->
+      <link rel="prev" href="importingaccessiblehtml.html" title="8.3.1.6 &nbsp; Importing accessible HTML">
+      <link rel="next" href="rationalizingexternalcontent.html" title="8.3.2 &nbsp; Rationalizing external content">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wz6g-f-e0aa32969-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9e98e4bb","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":63353,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741383622","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==I2IFu5bfrXFtZywJjxzFZNOIQZDuu9tcUyz4ruWxMYD035F9NHc0MDeqi1c0NVqaLaInwj4n+HxU0XwBPoA4dEdQg7ZoGQfsbYB0fBkt3BsJRuwRPKCtTCWXD2sc7+GpxW/Dv6GjO6yRCU5ANLiMyBwSLOGbBXbrYuONVbbb/Wu6ul5uYM64Zm18VEX7rhX9YDR70l4nNEx7TVR8IC3lqqBffpNKqu5tnrnPsA7C2kYRaE6zdTvj93AiZmIVm1kJq1hDQaiekNC8D7zip7BMlZzjtRo8Y03nvx5E+99m7d4UGOclA2OvdJCV/NPDXaWOX4w42tZdF8I6yHZEynkzNeYjRHTjQ6Zeu7Q7mKZHJuFJ8+4sJwZ0Sg/GMkoDwaoT80sigD8HkX+LgH6GxJVlr5Wh0INoGcrOrYZmcYrN0u4=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="tagstyleimportedhtml">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">8.3.1.7</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Tag and style support
+            for imported HTML</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 8.3.1.6 &nbsp; Importing accessible&#xA;HTML" aria-label="Preceding page: 8.3.1.6 &nbsp; Importing accessible&#xA;HTML" href="importingaccessiblehtml.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 8.3.1 &nbsp; Considerations for importing&#xA;HTML content" aria-label="Section one level up: 8.3.1 &nbsp; Considerations for importing&#xA;HTML content" href="importinghtmlcontent.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 8.3.2 &nbsp; Rationalizing external content" aria-label="Next page: 8.3.2 &nbsp; Rationalizing external content" href="rationalizingexternalcontent.html">Next</a></div>
+      </div>
+      <div class="sect3 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="tagstyleimportedhtml" id="tagstyleimportedhtml"></a><span class="otsLbl"><span class="otlbl-num">8.3.1.7</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Tag and style support
+                     for imported HTML</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid24353" id="tmpid24353"></a>You can use HTML tags and style properties to declare inline
+            styles for the imported HTML, including support for multiple attributes
+            within tags. For example, the following HTML tag would instruct the
+            engine to produce Times New Roman 10-point blue text for that paragraph:</p>
+         <pre class="screen noinltag">&lt;p style="font-family: Times New Roman; font-size: 10pt; color: blue;"&gt;</pre><p><a name="tmpid24355" id="tmpid24355"></a>Declared inline styles override any formatting that you apply
+            in&nbsp;<span class="namestring" data-cid="Designer">Designer</span>, as well as default formatting for HTML tags (for
+            example, headings). If you do not include inline styles in the imported
+            HTML content, then the engine applies the formatting applied to the
+            placeholder variable in the design.
+         </p>
+         <div class="important">
+            <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Important</span></span></strong></p>
+            <p><a name="tmpid24358" id="tmpid24358"></a><span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span>&nbsp;does not honor the&nbsp;<code class="literal">display: inline-block</code>&nbsp;style property for elements
+               in imported HTML.
+            </p>
+         </div>
+         <p><a name="tmpid24366" id="tmpid24366"></a>The engine also applies any styles defined within an HTML&nbsp;<code class="literal">&lt;head&gt;</code>&nbsp;structure, except in unconverted HTML output.
+            For example, suppose that your imported HTML contains the following
+            style information in the&nbsp;<code class="literal">&lt;head&gt;</code>&nbsp;structure:</p>
+         <pre class="screen noinltag">&lt;head&gt;
+  &lt;style&gt;
+    h1 {
+      font-family: Arial;
+      font-size: 14pt;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;</pre><p><a name="tmpid24370" id="tmpid24370"></a>In this example, setting the font size to 14 point overrides
+            the 2 em font size that is the default for&nbsp;<code class="literal">&lt;h1&gt;</code>. For converted HTML output or any other output type, the engine
+            applies this style for&nbsp;<code class="literal">&lt;h1&gt;</code>&nbsp;content
+            (following HTML rules of precedence). For unconverted HTML output,
+            however, the engine discards the&nbsp;<code class="literal">&lt;head&gt;</code>&nbsp;content.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref289" id="tmp4ref289"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid24375" id="tmpid24375"></a>If the&nbsp;<code class="literal">&lt;head&gt;</code>&nbsp;content contains
+               a link to an external style sheet, the engine does not apply any styles
+               defined in the external style sheets, regardless of whether the HTML
+               is converted.
+            </p>
+         </div>
+         <p><a name="tmpid24377" id="tmpid24377"></a>For more information about converted and unconverted HTML output,
+            see&nbsp;<a class="link" href="convertedhtml.html" title="8.3.1.1 &nbsp; Converted vs. unconverted HTML output">Converted vs. unconverted HTML
+               output</a>.
+         </p>
+         <p><a name="tmpid24379" id="tmpid24379"></a><span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span>&nbsp;supports most valid HTML
+            style tags and properties when declaring formats for imported HTML
+            content. Be aware that some text formats require special considerations
+            during the communication development process. Review the following
+            table for more information.
+         </p>
+         <div class="table"><p class="title"><a name="htmlimportformatconsiderations" id="htmlimportformatconsiderations"></a><b><span class="otLbl"><span class="otlbl-kw">Table</span> <span class="otlbl-num">8.5</span>: </span><span class="otlbl-ttl">HTML format considerations</span></b></p>
+            <div class="table-contents">
+               <table summary="HTML format considerations" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                  <colgroup>
+                     <col style="width: 1.30in;" class="col-formats">
+                     <col style="width: 1.30in;" class="col-supportedtags">
+                     <col style="width: 1.29in;" class="col-supportedproperties">
+                     <col style="width: 1.31in;" class="col-designconsiderations">
+                  </colgroup>
+                  <thead>
+                     <tr class="row">
+                        <th style="" valign="top"><a name="tmpid24395" id="tmpid24395"></a>Formats
+                        </th>
+                        <th style="" valign="top"><a name="tmpid24396" id="tmpid24396"></a>Supported tags
+                        </th>
+                        <th style="" valign="top"><a name="tmpid24397" id="tmpid24397"></a>Supported style properties and attributes
+                        </th>
+                        <th style="" valign="top"><a name="tmpid24398" id="tmpid24398"></a>Design considerations
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24401" id="tmpid24401"></a>Aligned text
+                        </td>
+                        <td style=""><a name="tmpid24402" id="tmpid24402"></a>N/A
+                        </td>
+                        <td style=""><a name="tmpid24403" id="tmpid24403"></a><code class="literal">text-align: [value]</code></td>
+                        <td style=""><p><a name="tmpid24405" id="tmpid24405"></a><a name="tmpid24406" id="tmpid24406"></a><span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span>&nbsp;supports&nbsp;<code class="literal">left</code>,&nbsp;<code class="literal">center</code>, and&nbsp;<code class="literal">right</code>&nbsp;alignment values when you use the inline style
+                              property&nbsp;<code class="literal">text-align</code>.
+                           </p>
+                           <p><a name="tmpid24417" id="tmpid24417"></a>The engine
+                              ignores text alignment settings applied in&nbsp;<span class="namestring" data-cid="Designer">Designer</span>.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24420" id="tmpid24420"></a>Block quote
+                        </td>
+                        <td style=""><a name="tmpid24421" id="tmpid24421"></a><code class="literal">&lt;blockquote&gt;</code></td>
+                        <td style=""><a name="tmpid24423" id="tmpid24423"></a>N/A
+                        </td>
+                        <td style=""><p><a name="tmpid24424" id="tmpid24424"></a><a name="tmpid24425" id="tmpid24425"></a>The engine indents the text one level in the output.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24430" id="tmpid24430"></a>Bold
+                        </td>
+                        <td style=""><p><a name="tmpid24431" id="tmpid24431"></a><a name="tmpid24432" id="tmpid24432"></a><code class="literal">&lt;b&gt;</code></p>
+                           <p><a name="tmpid24434" id="tmpid24434"></a><code class="literal">&lt;strong&gt;</code></p>
+                        </td>
+                        <td style=""><a name="tmpid24436" id="tmpid24436"></a><code class="literal">font-weight: bold</code></td>
+                        <td style=""><p><a name="tmpid24438" id="tmpid24438"></a><a name="tmpid24439" id="tmpid24439"></a>Be sure to have the bold variant included in the corresponding
+                              DAS font.
+                           </p>
+                           <p><a name="tmpid24440" id="tmpid24440"></a>For more information about font considerations
+                              for imported HTML content, see&nbsp;<a class="link" href="fontsimportedhtml.html" title="8.3.1.3 &nbsp; Font management for imported HTML">Font management for imported HTML</a>.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24443" id="tmpid24443"></a>Borders
+                        </td>
+                        <td style=""><a name="tmpid24444" id="tmpid24444"></a>N/A
+                        </td>
+                        <td style=""><p><a name="tmpid24445" id="tmpid24445"></a><a name="tmpid24446" id="tmpid24446"></a><code class="literal">border-width: [value]</code></p>
+                           <p><a name="tmpid24448" id="tmpid24448"></a><code class="literal">border-top: [value]</code></p>
+                           <p><a name="tmpid24450" id="tmpid24450"></a><code class="literal">border-right:
+                                 [value]</code></p>
+                           <p><a name="tmpid24452" id="tmpid24452"></a><code class="literal">border-bottom: [value]</code></p>
+                           <p><a name="tmpid24454" id="tmpid24454"></a><code class="literal">border-left: [value]</code></p>
+                           <p><a name="tmpid24456" id="tmpid24456"></a><code class="literal">border-style: [value]</code></p>
+                           <p><a name="tmpid24458" id="tmpid24458"></a><code class="literal">border-color:
+                                 [value]</code></p>
+                        </td>
+                        <td style=""><p><a name="tmpid24460" id="tmpid24460"></a><a name="tmpid24461" id="tmpid24461"></a>The border width can be expressed in points, pixels,
+                              or em values.
+                           </p>
+                           <p><a name="tmpid24462" id="tmpid24462"></a>Border color values can be expressed using
+                              hexadecimal, RGB values, RGBA values, or HTML color names.
+                           </p>
+                           <p><a name="tmpid24463" id="tmpid24463"></a>If the imported HTML is not converted, then borders on text will
+                              appear in HTML output as expected.
+                           </p>
+                           <p><a name="tmpid24464" id="tmpid24464"></a><span class="highlight"><strong>Example
+                                    of unconverted HTML to HTML output</strong></span></p>
+                           <div class="graphic"><img src="./img/e_HTMLImport_Borders_UnconvertedHTML.png" class="grph" alt="" width="381" height="245"></div>
+                           <p><a name="tmpid24467" id="tmpid24467"></a>However, if the imported HTML is converted,
+                              then any borders around text will not be included in the output. Instead,
+                              it will be added to the margin and padding values to control the spacing
+                              of the content. If the border width and style are not fully-defined,
+                              then the engine will discard the border width from this calculation.
+                           </p>
+                           <p><a name="tmpid24468" id="tmpid24468"></a>For example, if the imported HTML includes&nbsp;<code class="literal">&lt;p
+                                 style="border-width: 1px; border-style: solid; border-color: blue;"&gt;</code>, then the engine will add 1 pixel to the margin and padding values.
+                              If any of the border style properties are missing from the imported
+                              HTML, then the engine will not add 1 pixel to the margin and padding
+                              values.
+                           </p>
+                           <p><a name="tmpid24470" id="tmpid24470"></a><span class="highlight"><strong>Example of converted HTML to any output</strong></span></p>
+                           <div class="graphic"><img src="./img/e_HTMLImport_Borders_ConvertedHTML.png" class="grph" alt="" width="381" height="245"></div>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24474" id="tmpid24474"></a>Bulleted list
+                        </td>
+                        <td style=""><p><a name="tmpid24475" id="tmpid24475"></a><a name="tmpid24476" id="tmpid24476"></a><code class="literal">&lt;ul&gt;</code></p>
+                           <p><a name="tmpid24478" id="tmpid24478"></a><code class="literal">&nbsp;&nbsp;&lt;li&gt;</code></p>
+                        </td>
+                        <td style=""><a name="tmpid24480" id="tmpid24480"></a>N/A
+                        </td>
+                        <td style=""><p><a name="tmpid24481" id="tmpid24481"></a><a name="tmpid24482" id="tmpid24482"></a><span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span>&nbsp;supports nesting of bulleted
+                              lists. The engine adjusts the text indent for each level automatically
+                              using the default tab spacing.
+                           </p>
+                           <p><a name="tmpid24489" id="tmpid24489"></a>The default bullet types
+                              and colors are defined in the <strong class="guilabel" data-cid="Configurations">Configurations</strong> panel
+                              of Tenant management view, on the&nbsp;<a class="link" href="creatingconfigurations-cdr.html#textandfontstab" title="On the Text and Fonts tab:"><strong class="guilabel" data-cid="Text_and_Fonts">Text and Fonts</strong></a>&nbsp;tab. You can override the default
+                              bullet types and colors for a design in <span class="namestring" data-cid="Designer">Designer</span>.
+                           </p>
+                           <p><a name="tmpid24494" id="tmpid24494"></a>The
+                              engine ignores some HTML style properties for bulleted lists included
+                              in the imported HTML. For example, suppose the default settings in
+                              your design define first-level bullets as round and black. If you
+                              include a first-level bulleted list with an alternate style property,
+                              such as&nbsp;<code class="literal">&lt;ul style="list-style-type: square; color:
+                                 blue;&gt;</code>, in the imported HTML, these bullets will appear
+                              as round and black in the output instead of square and blue.
+                           </p>
+                           <p><a name="tmpid24496" id="tmpid24496"></a>For more information about font considerations for imported
+                              HTML content, see&nbsp;<a class="link" href="fontsimportedhtml.html" title="8.3.1.3 &nbsp; Font management for imported HTML">Font management
+                                 for imported HTML</a>.
+                           </p>
+                           <p><a name="tmpid24498" id="tmpid24498"></a>Note that when you produce PDF
+                              output, bulleted lists with multiple paragraphs are not supported.
+                              Suppose that you have the following list structure:</p>
+                           <pre class="screen noinltag">&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;List item 1&lt;/p&gt;
+    &lt;p&gt;List item 2&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre><p><a name="tmpid24500" id="tmpid24500"></a>The PDF output will contain only the first
+                              paragraph as part of the list. The list is then closed and the second
+                              paragraph is placed outside of the list.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24502" id="tmpid24502"></a>Description list
+                        </td>
+                        <td style=""><p><a name="tmpid24503" id="tmpid24503"></a><a name="tmpid24504" id="tmpid24504"></a><code class="literal">&lt;dl&gt;</code></p>
+                           <p><a name="tmpid24506" id="tmpid24506"></a><code class="literal">&nbsp;&nbsp;&lt;dt&gt;</code></p>
+                           <p><a name="tmpid24508" id="tmpid24508"></a><code class="literal">&nbsp;&nbsp;&nbsp;&lt;dd&gt;</code></p>
+                        </td>
+                        <td style=""><a name="tmpid24510" id="tmpid24510"></a>N/A
+                        </td>
+                        <td style=""><p><a name="tmpid24511" id="tmpid24511"></a><a name="tmpid24512" id="tmpid24512"></a><span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span>&nbsp;supports nesting of description
+                              lists. The engine adjusts the text indent for each level automatically
+                              using the default tab spacing.
+                           </p>
+                           <p><a name="tmpid24519" id="tmpid24519"></a>In accessible HTML and
+                              PDF output,&nbsp;<code class="literal">&lt;dt&gt;</code>&nbsp;tags are interpreted
+                              as list items, and the list items enclosed in&nbsp;<code class="literal">&lt;dd&gt;</code>&nbsp;tags are interpreted as items in a nested list. Suppose that
+                              you have the following list structure:</p>
+                           <pre class="screen noinltag">&lt;dl&gt;
+  &lt;dt&gt;Term&lt;/dt&gt;
+    &lt;dd&gt;List item 1&lt;/dd&gt;
+    &lt;dd&gt;List item 2&lt;/dd&gt;
+    &lt;dd&gt;List item 3&lt;/dd&gt;
+&lt;/dl&gt;</pre><p><a name="tmpid24523" id="tmpid24523"></a>In the HTML and PDF output, the list will be
+                              interpreted as having a list with one item and a nested list with
+                              three items.
+                           </p>
+                           <p><a name="tmpid24524" id="tmpid24524"></a>Note that when you produce PDF output, description
+                              lists with multiple paragraphs are not supported. Suppose that you
+                              have the following list structure:</p>
+                           <pre class="screen noinltag">&lt;dl&gt;
+  &lt;dt&gt;List Heading&lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;p&gt;List item 1&lt;/p&gt;
+    &lt;p&gt;List item 2&lt;/p&gt;
+  &lt;/dd&gt;
+&lt;/dl&gt;</pre><p><a name="tmpid24526" id="tmpid24526"></a>The PDF output will contain only the first
+                              paragraph as part of the list. The list is then closed and the second
+                              paragraph is placed outside of the list.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24528" id="tmpid24528"></a>Font color
+                        </td>
+                        <td style=""><a name="tmpid24529" id="tmpid24529"></a>N/A
+                        </td>
+                        <td style=""><a name="tmpid24530" id="tmpid24530"></a><code class="literal">color: [value]</code></td>
+                        <td style=""><p><a name="tmpid24532" id="tmpid24532"></a><a name="tmpid24533" id="tmpid24533"></a>Font color values can be expressed using hexadecimal,
+                              RGB values, RGBA values, or HTML color names. For example, if you
+                              want to use navy blue text for first-level headings, either of the
+                              following are valid:
+                           </p>
+                           <p><a name="tmpid24534" id="tmpid24534"></a><code class="literal">&lt;h1 style="color: #000080"&gt;</code></p>
+                           <p><a name="tmpid24536" id="tmpid24536"></a><code class="literal">&lt;h1 style="color: Navy"&gt;</code></p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24539" id="tmpid24539"></a>Font family
+                        </td>
+                        <td style=""><a name="tmpid24540" id="tmpid24540"></a>N/A
+                        </td>
+                        <td style=""><a name="tmpid24541" id="tmpid24541"></a><code class="literal">font-family: [value]</code></td>
+                        <td style=""><p><a name="tmpid24543" id="tmpid24543"></a><a name="tmpid24544" id="tmpid24544"></a>For each font family used in the design, be sure to include
+                              all necessary font variants in DAS.
+                           </p>
+                           <p><a name="tmpid24545" id="tmpid24545"></a>If you convert your
+                              imported HTML, any font-family information in your imported HTML content
+                              is lost when you convert.
+                           </p>
+                           <p><a name="tmpid24546" id="tmpid24546"></a>For more information about font
+                              considerations for imported HTML content, see&nbsp;<a class="link" href="fontsimportedhtml.html" title="8.3.1.3 &nbsp; Font management for imported HTML">Font management for imported HTML</a>.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24549" id="tmpid24549"></a>Font size
+                        </td>
+                        <td style=""><a name="tmpid24550" id="tmpid24550"></a>N/A
+                        </td>
+                        <td style=""><a name="tmpid24551" id="tmpid24551"></a><code class="literal">font-size: [value]</code></td>
+                        <td style=""><p><a name="tmpid24553" id="tmpid24553"></a><a name="tmpid24554" id="tmpid24554"></a>The font size can be expressed in points, pixels, em
+                              values, or percentages.
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid24557" id="tmpid24557"></a><span class="highlight"><strong>Points</strong></span>—The font size
+                                       in the output is the font size declared in the HTML. For example,
+                                       text within&nbsp;<code class="literal">&lt;p style="font-size: 14pt";&gt;</code>&nbsp;would appear as 14-point text in the output.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid24561" id="tmpid24561"></a><span class="highlight"><strong>Pixels</strong></span>—The engine converts
+                                       the pixel size to points (1 pixel = 0.75 points) and then rounds up
+                                       or down to the nearest point size. For example, 13 pixels converts
+                                       to 9.75 points, so&nbsp;<code class="literal">&lt;p style="font-size: 13px";&gt;</code>,would appear as 10-point text in the output.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid24565" id="tmpid24565"></a><span class="highlight"><strong>Em Values</strong></span>—The font size
+                                       present in the output is calculated based on the font size declared
+                                       in the parent element, for which the value is equal to 1 em. If no
+                                       parent structure is present, then the font size is calculated based
+                                       on the font size of the placeholder variable text in&nbsp;<span class="namestring" data-cid="Designer">Designer</span>.
+                                       For example, if the parent element is&nbsp;<code class="literal">&lt;div style="font-size:
+                                          10pt";&gt;</code>, then text within&nbsp;<code class="literal">&lt;p style="font-size:
+                                          1.25em";&gt;</code>&nbsp;would appear as 12.5-point text in the output.
+                                       Likewise, if the parent element is&nbsp;<code class="literal">&lt;div style="font-size:
+                                          12pt";&gt;</code>, then text within&nbsp;<code class="literal">&lt;p style="font-size:
+                                          2em";&gt;</code>&nbsp;would appear as 24-point text in the output.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid24573" id="tmpid24573"></a><span class="highlight"><strong>Percentages</strong></span>—The font
+                                       size present in the output is calculated based on the font size declared
+                                       in the parent element. If the HTML does not declare a font size for
+                                       the parent element, then the font size is calculated based on the
+                                       font size of the placeholder variable text in&nbsp;<span class="namestring" data-cid="Designer">Designer</span>. For
+                                       example, if the parent element is&nbsp;<code class="literal">&lt;div style="font-size:
+                                          9pt";&gt;</code>, then text within&nbsp;<code class="literal">&lt;p style="font-size:
+                                          200%";&gt;</code>&nbsp;would appear as 18-point text in the output.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                           <p><a name="tmpid24578" id="tmpid24578"></a>For more information about font considerations
+                              for imported HTML content, see&nbsp;<a class="link" href="fontsimportedhtml.html" title="8.3.1.3 &nbsp; Font management for imported HTML">Font management for imported HTML</a>.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24581" id="tmpid24581"></a>Headings
+                        </td>
+                        <td style=""><p><a name="tmpid24582" id="tmpid24582"></a><a name="tmpid24583" id="tmpid24583"></a><code class="literal">&lt;h1&gt;</code></p>
+                           <p><a name="tmpid24585" id="tmpid24585"></a><code class="literal">&lt;h2&gt;</code></p>
+                           <p><a name="tmpid24587" id="tmpid24587"></a><code class="literal">&lt;h3&gt;</code></p>
+                           <p><a name="tmpid24589" id="tmpid24589"></a><code class="literal">&lt;h4&gt;</code></p>
+                           <p><a name="tmpid24591" id="tmpid24591"></a><code class="literal">&lt;h5&gt;</code></p>
+                           <p><a name="tmpid24593" id="tmpid24593"></a><code class="literal">&lt;h6&gt;</code></p>
+                        </td>
+                        <td style=""><a name="tmpid24595" id="tmpid24595"></a>N/A
+                        </td>
+                        <td style=""><p><a name="tmpid24596" id="tmpid24596"></a><a name="tmpid24597" id="tmpid24597"></a>For all heading levels, the engine adds a line break
+                              before the heading text and calculates the font size based on the
+                              font size declared in the parent element. Text within all heading
+                              levels is bold by default.
+                           </p>
+                           <p><a name="tmpid24598" id="tmpid24598"></a>Be sure to include the heading
+                              font size and variant in DAS. Consider the following HTML:</p>
+                           <pre class="screen noinltag">&lt;div style="font-family: Arial; font-size: 10pt;"&gt;
+  &lt;h1&gt;Text&lt;/h1&gt;
+  &lt;p&gt;More text&lt;/p&gt;
+&lt;/div&gt;</pre><p><a name="tmpid24600" id="tmpid24600"></a>In this example, the text within the&nbsp;<code class="literal">&lt;p&gt;</code>&nbsp;tag uses the styles defined in the&nbsp;<code class="literal">&lt;div&gt;</code>&nbsp;tag, so Arial must be available in the DAS
+                              instance. The default size for&nbsp;<code class="literal">&lt;h1&gt;</code>&nbsp;text
+                              is twice the size of the font declared in the parent element, and
+                              bold, so you must also include Arial bold in the DAS font.
+                           </p>
+                           <p><a name="tmpid24604" id="tmpid24604"></a>You can also add any supported inline style attributes within the
+                              heading tag in the imported HTML content. If you include inline styles,
+                              the heading text is formatted based on the heading defaults plus the
+                              style attribute values.
+                           </p>
+                           <p><a name="tmpid24605" id="tmpid24605"></a>Suppose that, in the previous
+                              example, the HTML also declared an inline font variant for&nbsp;<code class="literal">&lt;h1&gt;</code>&nbsp;text, as in the following:</p>
+                           <pre class="screen noinltag">&lt;div style="font-family: Arial; font-size: 10pt;"&gt;
+  &lt;h1 style="font-style=italic;"&gt;Text&lt;/h1&gt;
+  &lt;p&gt;More text&lt;/p&gt;
+&lt;/div&gt;</pre><p><a name="tmpid24608" id="tmpid24608"></a>The default&nbsp;<code class="literal">&lt;h1&gt;</code> style of Arial 20-point bold would still be applied to the heading
+                              text, and italics would also be added. This means that you must include
+                              Arial bold italic in DAS.
+                           </p>
+                           <p><a name="tmpid24610" id="tmpid24610"></a>For more information about font
+                              considerations for imported HTML content, see&nbsp;<a class="link" href="fontsimportedhtml.html" title="8.3.1.3 &nbsp; Font management for imported HTML">Font management for imported HTML</a>.
+                           </p>
+                           <p><a name="tmpid24612" id="tmpid24612"></a>If you have nested headings in the imported HTML content,
+                              but they are not sequenced properly (for example, if you have an&nbsp;<code class="literal">&lt;h1&gt;</code>&nbsp;followed by an&nbsp;<code class="literal">&lt;h5&gt;</code>&nbsp;without any levels in between), then this design carries through
+                              to the output. However, it can cause some output types with structural
+                              requirements, such as PDF, to fail a validation check.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24616" id="tmpid24616"></a>Hyperlinks
+                        </td>
+                        <td style=""><a name="tmpid24617" id="tmpid24617"></a><code class="literal">&lt;a&gt;</code></td>
+                        <td style=""><p><a name="tmpid24619" id="tmpid24619"></a><a name="tmpid24620" id="tmpid24620"></a><code class="literal">href=[url]</code></p>
+                           <p><a name="tmpid24622" id="tmpid24622"></a><code class="literal">title=[text
+                                 string]</code></p>
+                           <p><a name="tmpid24624" id="tmpid24624"></a><code class="literal">target=[value]</code></p>
+                        </td>
+                        <td style=""><a name="tmpid24626" id="tmpid24626"></a><div class="itemizedlist">
+                              <p><a name="tmpid24628" id="tmpid24628"></a>Hyperlinks are supported for the following output types:
+                              </p>
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid24630" id="tmpid24630"></a>HTML
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid24632" id="tmpid24632"></a>HTML Email
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid24636" id="tmpid24636"></a>PDF
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                           <p><a name="tmpid24639" id="tmpid24639"></a>The&nbsp;<code class="literal">href</code>&nbsp;value must
+                              be defined using a URL rather than a variable.
+                           </p>
+                           <div class="note">
+                              <p class="title"><strong><a name="tmp4ref290" id="tmp4ref290"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                              </strong></p>
+                              <p><a name="tmpid24642" id="tmpid24642"></a>When creating PDF output, the engine ignores the&nbsp;<code class="literal">title</code>&nbsp;and&nbsp;<code class="literal">target</code>&nbsp;properties.
+                              </p>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24649" id="tmpid24649"></a>Images
+                        </td>
+                        <td style=""><a name="tmpid24650" id="tmpid24650"></a><code class="literal">&lt;img&gt;</code></td>
+                        <td style=""><p><a name="tmpid24652" id="tmpid24652"></a><a name="tmpid24653" id="tmpid24653"></a><code class="literal">src=[path]</code></p>
+                           <p><a name="tmpid24655" id="tmpid24655"></a><code class="literal">alt=[text
+                                 string]</code></p>
+                           <p><a name="tmpid24657" id="tmpid24657"></a><code class="literal">width=[value]</code></p>
+                           <p><a name="tmpid24659" id="tmpid24659"></a><code class="literal">height=[value]</code></p>
+                           <p><a name="tmpid24661" id="tmpid24661"></a><code class="literal">border=[value]</code></p>
+                           <p><a name="tmpid24663" id="tmpid24663"></a><code class="literal">border-color: [value]</code></p>
+                           <p><a name="tmpid24665" id="tmpid24665"></a><code class="literal">border-style: [value]</code></p>
+                           <p><a name="tmpid24667" id="tmpid24667"></a><code class="literal">border-width:
+                                 [value]</code></p>
+                           <p><a name="tmpid24669" id="tmpid24669"></a><code class="literal">float: [value]</code></p>
+                           <p><a name="tmpid24671" id="tmpid24671"></a><code class="literal">clear: [value]</code></p>
+                        </td>
+                        <td style=""><p><a name="tmpid24673" id="tmpid24673"></a><a name="tmpid24674" id="tmpid24674"></a><span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span>&nbsp;supports including images
+                              in PNG and JPG formats. The image source must be defined using a URL
+                              rather than a variable.
+                           </p>
+                           <p><a name="tmpid24681" id="tmpid24681"></a>Image height and width settings
+                              can be expressed in pixels.
+                           </p>
+                           <p><a name="tmpid24682" id="tmpid24682"></a>Image border widths can be
+                              expressed in points, pixels, or em values. You can use the following
+                              border styles:&nbsp;<code class="literal">none</code>,&nbsp;<code class="literal">dashed</code>,&nbsp;<code class="literal">dotted</code>, or&nbsp;<code class="literal">solid</code>.
+                           </p>
+                           <p><a name="tmpid24687" id="tmpid24687"></a>Image border color values can be expressed using hexadecimal,
+                              RGB values, RGBA values, or HTML color names.
+                           </p>
+                           <p><a name="tmpid24688" id="tmpid24688"></a>The following&nbsp;<code class="literal">float</code>&nbsp;values are supported:&nbsp;<code class="literal">left</code>,&nbsp;<code class="literal">right</code>,&nbsp;<code class="literal">inherit</code>,
+                              or&nbsp;<code class="literal">none</code>.
+                           </p>
+                           <p><a name="tmpid24694" id="tmpid24694"></a>The following&nbsp;<code class="literal">clear</code>&nbsp;values are supported:&nbsp;<code class="literal">left</code>,&nbsp;<code class="literal">right</code>,&nbsp;<code class="literal">both</code>, or&nbsp;<code class="literal">none</code>.
+                           </p>
+                           <p><a name="tmpid24700" id="tmpid24700"></a>For more information about using images
+                              in imported HTML content, see&nbsp;<a class="link" href="imagesimportedhtml.html" title="8.3.1.4 &nbsp; Images in imported HTML">Images in imported HTML</a>.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24703" id="tmpid24703"></a>Italic
+                        </td>
+                        <td style=""><p><a name="tmpid24704" id="tmpid24704"></a><a name="tmpid24705" id="tmpid24705"></a><code class="literal">&lt;i&gt;</code></p>
+                           <p><a name="tmpid24707" id="tmpid24707"></a><code class="literal">&lt;em&gt;</code></p>
+                        </td>
+                        <td style=""><a name="tmpid24709" id="tmpid24709"></a><code class="literal">font-style: italic</code></td>
+                        <td style=""><p><a name="tmpid24711" id="tmpid24711"></a><a name="tmpid24712" id="tmpid24712"></a>Be sure to include the italic variant in the available
+                              DAS font or the italicized text will not appear correctly in the output.
+                           </p>
+                           <p><a name="tmpid24713" id="tmpid24713"></a>For more information about font considerations for imported
+                              HTML content, see&nbsp;<a class="link" href="fontsimportedhtml.html" title="8.3.1.3 &nbsp; Font management for imported HTML">Font management
+                                 for imported HTML</a>.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24716" id="tmpid24716"></a>Margin settings
+                        </td>
+                        <td style=""><a name="tmpid24717" id="tmpid24717"></a>N/A
+                        </td>
+                        <td style=""><p><a name="tmpid24718" id="tmpid24718"></a><a name="tmpid24719" id="tmpid24719"></a><code class="literal">margin: [value]</code></p>
+                           <p><a name="tmpid24721" id="tmpid24721"></a><code class="literal">margin-top: [value]</code></p>
+                           <p><a name="tmpid24723" id="tmpid24723"></a><code class="literal">margin-right:
+                                 [value]</code></p>
+                           <p><a name="tmpid24725" id="tmpid24725"></a><code class="literal">margin-bottom: [value]</code></p>
+                           <p><a name="tmpid24727" id="tmpid24727"></a><code class="literal">margin-left: [value]</code></p>
+                        </td>
+                        <td style=""><p><a name="tmpid24729" id="tmpid24729"></a><a name="tmpid24730" id="tmpid24730"></a>Margin widths can be expressed in points, pixels, em
+                              values, or percentages. If the HTML expresses the margin width as
+                              a percentage, be sure that you define the size of the parent element.
+                              You can express the values individually or using the CSS shorthand.
+                           </p>
+                           <p><a name="tmpid24731" id="tmpid24731"></a>For example, for 10-pixel margins on all sides, <code class="literal">&lt;p
+                                 style="margin: 10px;"&gt;</code>&nbsp;and <code class="literal">&lt;p style="margin:
+                                 10px 10px 10px 10px;"&gt;</code>&nbsp;are both valid.
+                           </p>
+                           <p><a name="tmpid24734" id="tmpid24734"></a>If the imported HTML is converted, the text will be aligned based
+                              on the margin width values, plus any values expressed for borders
+                              and padding.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24736" id="tmpid24736"></a>Numbered list
+                        </td>
+                        <td style=""><p><a name="tmpid24737" id="tmpid24737"></a><a name="tmpid24738" id="tmpid24738"></a><code class="literal">&lt;ol&gt;</code></p>
+                           <p><a name="tmpid24740" id="tmpid24740"></a><code class="literal">&nbsp;&nbsp;&lt;li&gt;</code></p>
+                        </td>
+                        <td style=""><a name="tmpid24742" id="tmpid24742"></a>N/A
+                        </td>
+                        <td style=""><p><a name="tmpid24743" id="tmpid24743"></a><a name="tmpid24744" id="tmpid24744"></a><span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span>&nbsp;supports nesting of numbered
+                              lists. The engine adjusts the text indent for each level automatically
+                              using the default tab spacing.
+                           </p>
+                           <p><a name="tmpid24751" id="tmpid24751"></a>To define the color of
+                              a number, you must apply settings in&nbsp;Tenant management view. The engine
+                              does not honor any color defined in the imported HTML. The default
+                              number colors are defined in the <strong class="guilabel" data-cid="Configurations">Configurations</strong> panel of Tenant management view, on the&nbsp;<a class="link" href="creatingconfigurations-cdr.html#textandfontstab" title="On the Text and Fonts tab:"><strong class="guilabel" data-cid="Text_and_Fonts">Text and Fonts</strong></a>&nbsp;tab. You can override
+                              the default number colors for a design in <span class="namestring" data-cid="Designer">Designer</span>.
+                           </p>
+                           <p><a name="tmpid24756" id="tmpid24756"></a>The
+                              default numbering style applied to all levels of numbered lists is
+                              1, 2, 3, and so on. If you want to define a different numbering style,
+                              you must include the&nbsp;<code class="literal">list-style-type</code>&nbsp;property
+                              in the imported HTML. The numbering style must correspond to one of
+                              the supported number styles in&nbsp;<span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span>. For example, if you
+                              want to use lowercase alpha numbering (a, b, c, and so on), then your
+                              imported HTML must define that list style, as in the following:
+                           </p>
+                           <p><a name="tmpid24764" id="tmpid24764"></a><code class="literal">&lt;ol style="list-style-type: lower-alpha;"&gt;</code></p>
+                           <p><a name="tmpid24766" id="tmpid24766"></a>If you specify a font to use for the number characters
+                              in the imported HTML, be sure to include the number font in DAS. Otherwise,
+                              the number character will not appear correctly in the output.
+                           </p>
+                           <p><a name="tmpid24767" id="tmpid24767"></a>For more information about font considerations for imported
+                              HTML content, see&nbsp;<a class="link" href="fontsimportedhtml.html" title="8.3.1.3 &nbsp; Font management for imported HTML">Font management
+                                 for imported HTML</a>.
+                           </p>
+                           <p><a name="tmpid24769" id="tmpid24769"></a>Note that when you produce PDF
+                              output, numbered lists with multiple paragraphs are not supported.
+                              Suppose that you have the following list structure:</p>
+                           <pre class="screen noinltag">&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;List item 1&lt;/p&gt;
+    &lt;p&gt;List item 2&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</pre><p><a name="tmpid24771" id="tmpid24771"></a>The PDF output will contain only the first
+                              paragraph as part of the list. The list is then closed and the second
+                              paragraph is placed outside of the list.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24773" id="tmpid24773"></a>Padding settings
+                        </td>
+                        <td style=""><a name="tmpid24774" id="tmpid24774"></a>N/A
+                        </td>
+                        <td style=""><p><a name="tmpid24775" id="tmpid24775"></a><a name="tmpid24776" id="tmpid24776"></a><code class="literal">padding: [value]</code></p>
+                           <p><a name="tmpid24778" id="tmpid24778"></a><code class="literal">padding: [value]</code></p>
+                           <p><a name="tmpid24780" id="tmpid24780"></a><code class="literal">padding-top: [value]</code></p>
+                           <p><a name="tmpid24782" id="tmpid24782"></a><code class="literal">padding-right: [value]</code></p>
+                           <p><a name="tmpid24784" id="tmpid24784"></a><code class="literal">padding-bottom: [value]</code></p>
+                           <p><a name="tmpid24786" id="tmpid24786"></a><code class="literal">padding-left:
+                                 [value]</code></p>
+                        </td>
+                        <td style=""><p><a name="tmpid24788" id="tmpid24788"></a><a name="tmpid24789" id="tmpid24789"></a>Padding widths can be expressed in points, pixels, em
+                              values, or percentages. If the HTML expresses the border width as
+                              a percentage, be sure that you define the size of the parent element.
+                              You can express the values individually or using the CSS shorthand.
+                           </p>
+                           <p><a name="tmpid24790" id="tmpid24790"></a>For example, for 5-pixel padding on all sides,&nbsp;<code class="literal">&lt;p style="padding: 5px;"&gt;</code>&nbsp;and&nbsp;<code class="literal">&lt;p
+                                 style="padding: 5px 5px 5px 5px;"&gt;</code>&nbsp;are both valid.
+                           </p>
+                           <p><a name="tmpid24793" id="tmpid24793"></a>If the imported HTML is converted, the text will be aligned
+                              based on the padding width values, plus any values expressed for borders
+                              and margins. The engine ignores values for top and bottom padding
+                              if they are placed within a&nbsp;<code class="literal">&lt;span&gt;</code>&nbsp;element.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24796" id="tmpid24796"></a>Short quote
+                        </td>
+                        <td style=""><a name="tmpid24797" id="tmpid24797"></a><code class="literal">&lt;q&gt;</code></td>
+                        <td style=""><a name="tmpid24799" id="tmpid24799"></a>N/A
+                        </td>
+                        <td style=""><a name="tmpid24800" id="tmpid24800"></a>The engine adds double quotes around the text in the output.
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24802" id="tmpid24802"></a>Special characters
+                        </td>
+                        <td style=""><a name="tmpid24803" id="tmpid24803"></a>N/A
+                        </td>
+                        <td style=""><a name="tmpid24804" id="tmpid24804"></a>N/A
+                        </td>
+                        <td style=""><p><a name="tmpid24805" id="tmpid24805"></a><a name="tmpid24806" id="tmpid24806"></a>The engine resolves character entities included in the
+                              imported HTML content in the output.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24817" id="tmpid24817"></a>Strikethrough
+                        </td>
+                        <td style=""><p><a name="tmpid24818" id="tmpid24818"></a><a name="tmpid24819" id="tmpid24819"></a><code class="literal">&lt;del&gt;</code></p>
+                           <p><a name="tmpid24821" id="tmpid24821"></a><code class="literal">&lt;strike&gt;</code></p>
+                           <p><a name="tmpid24823" id="tmpid24823"></a><code class="literal">&lt;s&gt;</code></p>
+                        </td>
+                        <td style=""><a name="tmpid24825" id="tmpid24825"></a><code class="literal">text-decoration: line-through</code></td>
+                        <td style=""><a name="tmpid24827" id="tmpid24827"></a>N/A
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24829" id="tmpid24829"></a>Subscript
+                        </td>
+                        <td style=""><a name="tmpid24830" id="tmpid24830"></a><code class="literal">&lt;sub&gt;</code></td>
+                        <td style=""><a name="tmpid24832" id="tmpid24832"></a><code class="literal">vertical-align: sub</code></td>
+                        <td style=""><p><a name="tmpid24834" id="tmpid24834"></a><a name="tmpid24835" id="tmpid24835"></a>If you use&nbsp;<code class="literal">&lt;sub&gt;</code>, the engine
+                              shifts the text below the baseline and calculates the font size at
+                              65% of the font size declared in the parent element. If the HTML does
+                              not declare a font size in the parent element, then the engine calculates
+                              the subscript font size based on the font size of the placeholder
+                              variable text in&nbsp;<span class="namestring" data-cid="Designer">Designer</span>.
+                           </p>
+                           <p><a name="tmpid24838" id="tmpid24838"></a>If you use&nbsp;<code class="literal">vertical-align: sub</code>, the engine shifts the text below the
+                              baseline, but does not change the font size.
+                           </p>
+                           <p><a name="tmpid24840" id="tmpid24840"></a>Be sure to
+                              include the DAS font to use for subscript in your DAS instance. For
+                              example, if the baseline font size is 10-point Times New Roman font,
+                              then you must have the DAS font Times New Roman for the subscript
+                              font.
+                           </p>
+                           <p><a name="tmpid24841" id="tmpid24841"></a>For more information about using font considerations
+                              for imported HTML content, see&nbsp;<a class="link" href="fontsimportedhtml.html" title="8.3.1.3 &nbsp; Font management for imported HTML">Font management for imported HTML</a>.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24844" id="tmpid24844"></a>Superscript
+                        </td>
+                        <td style=""><a name="tmpid24845" id="tmpid24845"></a><code class="literal">&lt;sup&gt;</code></td>
+                        <td style=""><a name="tmpid24847" id="tmpid24847"></a><code class="literal">vertical-align: sup</code></td>
+                        <td style=""><p><a name="tmpid24849" id="tmpid24849"></a><a name="tmpid24850" id="tmpid24850"></a>If you use&nbsp;<code class="literal">&lt;sup&gt;</code>, the engine
+                              shifts the text above the baseline and calculates the font size at
+                              65% of the font size declared for the parent element. If the HTML
+                              does not specify a font size for the parent element, the engine calculates
+                              the superscript font size based on the font size of the placeholder
+                              variable text in&nbsp;<span class="namestring" data-cid="Designer">Designer</span>.
+                           </p>
+                           <p><a name="tmpid24853" id="tmpid24853"></a>If you use&nbsp;<code class="literal">vertical-align: sup</code>, the engine shifts the text above the
+                              baseline, but does not change the font size.
+                           </p>
+                           <p><a name="tmpid24855" id="tmpid24855"></a>Be sure to
+                              include the DAS font to use for superscript in your DAS instance.
+                              For example, if the baseline font size is 10-point Times New Roman
+                              font, then you must have the DAS font Times New Roman for the superscript
+                              font.
+                           </p>
+                           <p><a name="tmpid24856" id="tmpid24856"></a>For more information about font considerations for
+                              imported HTML content, see&nbsp;<a class="link" href="fontsimportedhtml.html" title="8.3.1.3 &nbsp; Font management for imported HTML">Font management for imported HTML</a>.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24859" id="tmpid24859"></a>Tables
+                        </td>
+                        <td style=""><p><a name="tmpid24860" id="tmpid24860"></a><a name="tmpid24861" id="tmpid24861"></a><code class="literal">&lt;table&gt;</code></p>
+                           <p><a name="tmpid24863" id="tmpid24863"></a><code class="literal">&lt;th&gt;</code></p>
+                           <p><a name="tmpid24865" id="tmpid24865"></a><code class="literal">&lt;tr&gt;</code></p>
+                           <p><a name="tmpid24867" id="tmpid24867"></a><code class="literal">&lt;td&gt;</code></p>
+                           <p><a name="tmpid24869" id="tmpid24869"></a><code class="literal">&lt;thead&gt;</code></p>
+                           <p><a name="tmpid24871" id="tmpid24871"></a><code class="literal">&lt;tbody&gt;</code></p>
+                           <p><a name="tmpid24873" id="tmpid24873"></a><code class="literal">&lt;tfoot&gt;</code></p>
+                           <p><a name="tmpid24875" id="tmpid24875"></a><code class="literal">&lt;colgroup&gt;</code></p>
+                        </td>
+                        <td style=""><p><a name="tmpid24877" id="tmpid24877"></a><a name="tmpid24878" id="tmpid24878"></a><code class="literal">background-color: [value]</code></p>
+                           <p><a name="tmpid24880" id="tmpid24880"></a><code class="literal">border: [value]</code></p>
+                           <p><a name="tmpid24882" id="tmpid24882"></a><code class="literal">margin: [value]</code></p>
+                           <p><a name="tmpid24884" id="tmpid24884"></a><code class="literal">padding: [value]</code></p>
+                           <p><a name="tmpid24886" id="tmpid24886"></a><code class="literal">width: [value]</code></p>
+                           <p><a name="tmpid24888" id="tmpid24888"></a><code class="literal">colspan="number"</code></p>
+                           <p><a name="tmpid24890" id="tmpid24890"></a><code class="literal">float: [value]</code></p>
+                           <p><a name="tmpid24892" id="tmpid24892"></a><code class="literal">clear: [value]</code></p>
+                           <p><a name="tmpid24894" id="tmpid24894"></a><code class="literal">text-align: [value]</code></p>
+                           <p><a name="tmpid24896" id="tmpid24896"></a><code class="literal">vertical-align: [value]</code></p>
+                        </td>
+                        <td style=""><p><a name="tmpid24898" id="tmpid24898"></a><a name="tmpid24899" id="tmpid24899"></a>Table border widths can be expressed in points, pixels,
+                              or em values. You can use the following border styles:&nbsp;<code class="literal">none</code>,&nbsp;<code class="literal">dashed</code>,&nbsp;<code class="literal">dotted</code>, or&nbsp;<code class="literal">solid</code>.
+                           </p>
+                           <p><a name="tmpid24904" id="tmpid24904"></a>Table background
+                              and border color values can be expressed using hexadecimal, RGB values,
+                              or HTML color names.
+                           </p>
+                           <p><a name="tmpid24905" id="tmpid24905"></a>The width of a table or table cell
+                              can be expressed in pixels, em values, or percentages.
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid24908" id="tmpid24908"></a><span class="highlight"><strong>Pixels</strong></span>—The size of the
+                                       table or table cell is the exact pixel value.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid24911" id="tmpid24911"></a><span class="highlight"><strong>Em Values</strong></span>—The engine
+                                       calculates the table or table cell width based on the default font
+                                       size. For example, if the default font size is 10-point, then&nbsp;<code class="literal">&lt;td style="width: 2em"&gt;</code>&nbsp;results in 20-point, which
+                                       the engine converts to 0.28 inches.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid24915" id="tmpid24915"></a><span class="highlight"><strong>Percentages</strong></span>—The engine
+                                       calculates the table or cell width based on the percentage of the
+                                       width of the text paragraph that contains the placeholder variable.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                           <p><a name="tmpid24917" id="tmpid24917"></a>You can add the&nbsp;<code class="literal">colspan</code>&nbsp;attribute to&nbsp;<code class="literal">&lt;td&gt;</code>&nbsp;and&nbsp;<code class="literal">&lt;th&gt;</code>&nbsp;tags. For example, if you declare&nbsp;<code class="literal">&lt;td colspan="3"&gt;</code>&nbsp;in your HTML, then that particular
+                              cell will span three columns.
+                           </p>
+                           <p><a name="tmpid24922" id="tmpid24922"></a>The following&nbsp;<code class="literal">float</code>&nbsp;values are supported:&nbsp;<code class="literal">left</code>,&nbsp;<code class="literal">right</code>,&nbsp;<code class="literal">inherit</code>,
+                              or&nbsp;<code class="literal">none</code>.
+                           </p>
+                           <p><a name="tmpid24928" id="tmpid24928"></a>The following&nbsp;<code class="literal">clear</code>&nbsp;values are supported:&nbsp;<code class="literal">left</code>,&nbsp;<code class="literal">right</code>,&nbsp;<code class="literal">both</code>, or&nbsp;<code class="literal">none</code>.
+                           </p>
+                           <p><a name="tmpid24934" id="tmpid24934"></a>The following&nbsp;<code class="literal">vertical-align</code>&nbsp;values are supported:&nbsp;<code class="literal">top</code>,&nbsp;<code class="literal">middle</code>, or&nbsp;<code class="literal">bottom</code>.
+                           </p>
+                           <p><a name="tmpid24939" id="tmpid24939"></a>All font styles are supported within tables.
+                           </p>
+                           <p><a name="tmpid24940" id="tmpid24940"></a>For more
+                              information about including tables in imported HTML content, see&nbsp;<a class="link" href="tablesimportedhtml.html" title="8.3.1.5 &nbsp; Tables in imported HTML">Tables in imported HTML</a>.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid24943" id="tmpid24943"></a>Underline
+                        </td>
+                        <td style=""><a name="tmpid24944" id="tmpid24944"></a><code class="literal">&lt;u&gt;</code></td>
+                        <td style=""><a name="tmpid24946" id="tmpid24946"></a><code class="literal">text-decoration: underline</code></td>
+                        <td style=""><a name="tmpid24948" id="tmpid24948"></a>N/A
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div><br class="table-break"></div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">8.3.1.7</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Tag and style support
+            for imported HTML</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 8.3.1.6 &nbsp; Importing accessible&#xA;HTML" aria-label="Preceding page: 8.3.1.6 &nbsp; Importing accessible&#xA;HTML" href="importingaccessiblehtml.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 8.3.1 &nbsp; Considerations for importing&#xA;HTML content" aria-label="Section one level up: 8.3.1 &nbsp; Considerations for importing&#xA;HTML content" href="importinghtmlcontent.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 8.3.2 &nbsp; Rationalizing external content" aria-label="Next page: 8.3.2 &nbsp; Rationalizing external content" href="rationalizingexternalcontent.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

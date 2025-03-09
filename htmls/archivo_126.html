@@ -1,0 +1,247 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="3.13 ">3.13 Associating resources with domains</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="managingassetlibraryresources.html" title="Chapter 3 – Working with DAS&nbsp;resources"> -->
+      <link rel="prev" href="workingwithversionedresources.html" title="3.12 &nbsp; Working with versioned resources">
+      <link rel="next" href="deletingresources.html" title="3.14 &nbsp; Deleting resources">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wxhn-f-95df5fb08-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":5,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d8425e2","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61802,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741380845","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==KrqjBn6uOZUUznMYbm56J/H2f8zNEAfG9+9qwb2pWIGUaf0/5T10Apu2F68jMxX5lyU2GAJS43B1z66bBz+XtK5rbUsAkf1if3LrWHtbcSf66E99EweWveOdCO60gcnMn17l2guTd/64FL7CQoRcIxNO9U+/ZpZDHFXrWb2F/FxWsoCYwmLLJ5Lcna0QmzAnj1gq5tprJfvY0VA5AgjcEeHPYG3sI9UrEukKEln8B+T4NU8siV7+c1i7lKsyf6ix7hVhGTXnTc0xLhqd76jpRHihlrR2vOWjwTMR0UxOZL4AZQk8HaafXB1f+xAZ+OHr/jDBIWeLU3GebRgaAFvKwFl26Z31d5gI/rU+rPWQ9oJDcGn1xNrhHwJjoNHaV50HbRVI1PlrJ7fFob5xzgkRCK5OP4daBqwiksQTIObqK7w=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="associatingresourceswithdomains">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">3.13</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Associating resources
+            with domains</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 3.12 &nbsp; Working with versioned&#xA;resources" aria-label="Preceding page: 3.12 &nbsp; Working with versioned&#xA;resources" href="workingwithversionedresources.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 3 – Working with DAS&nbsp;resources" aria-label="Section one level up: Chapter 3 – Working with DAS&nbsp;resources" href="managingassetlibraryresources.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 3.14 &nbsp; Deleting resources" aria-label="Next page: 3.14 &nbsp; Deleting resources" href="deletingresources.html">Next</a></div>
+      </div>
+      <div class="sect1 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="associatingresourceswithdomains" id="associatingresourceswithdomains"></a><span class="otsLbl"><span class="otlbl-num">3.13</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Associating resources
+                     with domains</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid11954" id="tmpid11954"></a>By default, when you add or create a resource, it is associated
+            with the domain in which it is created. After you approve a resource,
+            you can associate it with other domains as needed, for example, if
+            you created a theme in a development domain and wanted to test it
+            in a test domain. You can view the currently associated domains for
+            a selected resource on the <strong class="guilabel" data-cid="Domains">Domains</strong> tab in the <strong class="guilabel" data-cid="Properties">Properties</strong> panel.
+         </p>
+         <p><a name="tmpid11957" id="tmpid11957"></a>You can modify a resource in one domain without affecting other
+            versions of that resource in the other domains that it is associated
+            with. When you associate a resource with a domain, all of its linked
+            resources are also associated with that domain. However, when you
+            remove a domain association from a resource, it does not remove that
+            domain association from its linked resources.
+         </p>
+         <div class="tip">
+            <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Tip</span></span></strong></p>
+            <p><a name="tmpid11959" id="tmpid11959"></a>If you always associate all approved resources in your domain
+               with other domains, then you can link the other domains to your domain.
+               After linking, your domain automatically associates approved resources
+               to the linked domains. For more information on linking domains, see <a href="domainassociations.html" class="xref2 sect3 auto xstd" title="2.3.2.7 &nbsp; Linking domains to auto-associate&#xA;resources"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">2.3.2.7</span> “</span><span class="otlbl-ttl">Linking domains
+                  to auto-associate
+                  resources</span><span class="otsLbl">”</span></a>.
+            </p></div>
+         <div class="vl2formalsect-list vl2bhseq" id="aid4pidiv78">
+         <h2 class="bridgehead subheading2"><a name="associateresourcedomain" id="associateresourcedomain"></a>Associating a resource
+            with a domain
+         </h2>
+         <p><a name="tmpid11965" id="tmpid11965"></a>You can associate a resource with a domain if the resource,
+            and all of its linked resources, are approved.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref165" id="tmp4ref165"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid11967" id="tmpid11967"></a><em class="emphasis">Exception:</em> You can associate an approved
+               application package with a domain, whether or not its subpackages
+               are approved. Likewise, you can associate an approved subpackage with
+               a domain if at least one version of its associated application package
+               is approved. For more about application package and subpackage resources,
+               see <a class="link" href="workingwithversionedresources.html#managing-application-packages" title=" Managing application packages and subpackages ">Managing application
+                  packages and subpackages</a>.
+            </p>
+         </div>
+         <div class="procedure"><h3 class="title"><a name="d0e20882" id="d0e20882"></a><b><span class="otlbl-ttl">To associate a resource with a domain:</span></b></h3>
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid11973" id="tmpid11973"></a>In the asset library panel, click the resource.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid11975" id="tmpid11975"></a>In the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, click the <strong class="guilabel" data-cid="Domains">Domains</strong> tab.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid11979" id="tmpid11979"></a>In the <strong class="guilabel" data-cid="Available_domains">Available domains</strong> list, in
+                     the row for the domain to associate, click <strong class="guilabel" data-cid="Associate">Associate</strong>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid11983" id="tmpid11983"></a>In the dialog box that asks you to confirm the object’s
+                     association with the domain, do one of the following:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid11986" id="tmpid11986"></a>Select the <strong class="guilabel" data-cid="Grant_edit_permissions_with_association">Grant edit permissions with association</strong> check box (default) to make the object editable in the associated
+                              domain.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid11989" id="tmpid11989"></a>Clear the <strong class="guilabel" data-cid="Grant_edit_permissions_with_association">Grant edit permissions with association</strong> to make the object noneditable (read-only) in the associated domain.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid11992" id="tmpid11992"></a>Click <strong class="guilabel" data-cid="Apply">Apply</strong>.
+                  </p>
+               </li>
+            </ol>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv79">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732631747-014" id="vle2s1732631747-014"></a>Changing permissions
+            when associating a resource with a domain
+         </h2>
+         <div class="procedure">
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid11999" id="tmpid11999"></a><a class="link" href="associatingresourceswithdomains.html#associateresourcedomain" title="Associating a resource with a domain">Associate an approved
+                        resource with a domain</a>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid12002" id="tmpid12002"></a>In the <strong class="guilabel" data-cid="Currently_associated_domains">Currently associated domains</strong> list, point to the domain that you associated with the resource
+                     and click the <strong class="guilabel" data-cid="More_actions">More actions</strong> button <img src="./img/b_WebApps_ActionMenu.png" class="igrph" alt="" width="30" height="30"> in
+                     that row.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid12007" id="tmpid12007"></a>Point to <strong class="guilabel" data-cid="Permissions">Permissions</strong> and click one
+                     of the following options:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid12011" id="tmpid12011"></a><strong class="guilabel" data-cid="Read-only">Read-only</strong> to make the resource
+                              noneditable in the associated domain.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid12014" id="tmpid12014"></a><strong class="guilabel" data-cid="Edit">Edit</strong> to make the resource editable
+                              in the associated domain.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid12017" id="tmpid12017"></a>Click <strong class="guilabel" data-cid="OK">OK</strong> to confirm the permission
+                     change.
+                  </p>
+               </li>
+            </ol>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv80">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732631747-015" id="vle2s1732631747-015"></a>Removing a domain association
+            from a resource
+         </h2>
+         <p><a name="tmpid12022" id="tmpid12022"></a>You can remove any domain association from a resource except
+            its association to the current domain.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref166" id="tmp4ref166"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <div class="itemizedlist">
+               <ul class="itemizedlist">
+                  <li class="listitem">
+                     <p><a name="tmpid12026" id="tmpid12026"></a>If a resource is associated with only one domain,
+                        you cannot remove that domain association from the resource. Also,
+                        if the resource is noneditable (read-only) in the current domain,
+                        you cannot remove domain associations from the resource.
+                     </p>
+                  </li>
+                  <li class="listitem">
+                     <p><a name="tmpid12028" id="tmpid12028"></a>If you have a data source that is associated with
+                        multiple domains, and that data source includes a migration set, if
+                        you remove the data source from one domain, that action will not automatically
+                        remove the associated migration set from that same domain.
+                     </p>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="procedure"><h3 class="title"><a name="d0e20986" id="d0e20986"></a><b><span class="otlbl-ttl">To remove a domain association from a resource:</span></b></h3>
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid12032" id="tmpid12032"></a>In the asset library panel, select the resource.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid12034" id="tmpid12034"></a>In the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, click the <strong class="guilabel" data-cid="Domains">Domains</strong> tab.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid12038" id="tmpid12038"></a>In the <strong class="guilabel" data-cid="Currently_associated_domains">Currently associated domains</strong> list, select a domain, and then click the <strong class="guilabel" data-cid="More_actions">More actions</strong> button <img src="./img/b_WebApps_ActionMenu.png" class="igrph" alt="" width="30" height="30"> in
+                     that row.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid12043" id="tmpid12043"></a>Click <strong class="guilabel" data-cid="Remove_Association">Remove Association</strong>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid12046" id="tmpid12046"></a>Click <strong class="guilabel" data-cid="Proceed">Proceed</strong> to confirm the removal.
+                  </p>
+               </li>
+            </ol>
+         </div></div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">3.13</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Associating resources
+            with domains</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 3.12 &nbsp; Working with versioned&#xA;resources" aria-label="Preceding page: 3.12 &nbsp; Working with versioned&#xA;resources" href="workingwithversionedresources.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 3 – Working with DAS&nbsp;resources" aria-label="Section one level up: Chapter 3 – Working with DAS&nbsp;resources" href="managingassetlibraryresources.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 3.14 &nbsp; Deleting resources" aria-label="Next page: 3.14 &nbsp; Deleting resources" href="deletingresources.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

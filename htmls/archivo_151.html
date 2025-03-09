@@ -1,0 +1,1118 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="4.6.3 ">4.6.3 Updating variable properties</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="workingwithvariables.html" title="4.6 &nbsp; Setting up variables"> -->
+      <link rel="prev" href="creatingvariables.html" title="4.6.2 &nbsp; Creating variables">
+      <link rel="next" href="creatingacustomformatstring.html" title="4.6.3.1 &nbsp; Creating a custom output format for a variable">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wx5w-f-bce303163-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":6,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9dcaa6c7","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":62210,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741381558","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==yaMd0DnZJ+jVFHyJa0TwOXiIutg2fUYB1Twg9TMDeqSSVUq5NPt5x8vN8oGWeW8dqj2937lgdDiCfgqqgAtONVvU1/BKLmqvJcurKy/9SH84W6SWskfNOz5RlIVK3vFGm5v3Z1Ea4f61VRkyIdkXf3yCv4uki/kpiPFOEpVpL9icPHzZXrLJerSwRrqkv32B5rnrn3IJH1jAJMjo1+rlxP3SqqOUb6dwV4OY47Qt+96ApeBdIp6xAU+FuewpJYiD9VCHzPgfwmvszjmbtLA9PxwOr8ZfzN41pwp4VWf1MWyuqFqqTgxm3K2cllpXjUi9O0sLJfEN3KvQMN2aUOw5CwvDfemLWASV9j85eMnIchWF/jGKciWHGv9pAZ60SxBugFVIeOtBKypkmnRquNzK3PpZueQAd6wzKsapgrCl3bk=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="updatingvariableproperties">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.6.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Updating variable
+            properties</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 4.6.2 &nbsp; Creating variables" aria-label="Preceding page: 4.6.2 &nbsp; Creating variables" href="creatingvariables.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 4.6 &nbsp; Setting up variables" aria-label="Section one level up: 4.6 &nbsp; Setting up variables" href="workingwithvariables.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.6.3.1 &nbsp; Creating a custom&#xA;output format for a variable" aria-label="Next page: 4.6.3.1 &nbsp; Creating a custom&#xA;output format for a variable" href="creatingacustomformatstring.html">Next</a></div>
+      </div>
+      <div class="sect2 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="updatingvariableproperties" id="updatingvariableproperties"></a><span class="otsLbl"><span class="otlbl-num">4.6.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Updating variable
+                     properties</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid13441" id="tmpid13441"></a>After you <a class="link" href="creatingvariables.html" title="4.6.2 &nbsp; Creating variables">create a variable</a>, you can use the <strong class="guilabel" data-cid="Properties">Properties</strong> panel to view and modify the variable properties. You can modify
+            only those variables that were created in Mapping view or directly
+            in the Communication asset library view. <span class="phrase">To modify
+               variables from your design pack, make your changes in <span class="namestring" data-cid="Design_Manager">Design Manager</span>.</span></p>
+         <p><a name="tmpid13446" id="tmpid13446"></a>You can edit variable properties in the following locations:
+         </p>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid13449" id="tmpid13449"></a>Mapping view— Either select the variable in the <strong class="guilabel" data-cid="Variables">Variables</strong> panel or select the variable chip in the <strong class="guilabel" data-cid="Data_Source_Editor">Data Source Editor</strong> area. You can use the following cards
+                     in the <strong class="guilabel" data-cid="Variable_properties">Variable properties</strong> panel to view and
+                     modify the variable properties: <strong class="guilabel" data-cid="General">General</strong> <img src="./img/b_WebApps_Cards_Variables_mapping.png" class="igrph" alt="" width="28" height="28">, <strong class="guilabel" data-cid="Value">Value</strong> <img src="./img/b_WebApps_Cards_VariableValues.png" class="igrph" alt="" width="28" height="28">, and <strong class="guilabel" data-cid="Used_by">Used by</strong> <img src="./img/b_WebApps_Cards_UsedBy.png" class="igrph" alt="" width="29" height="30">.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid13460" id="tmpid13460"></a>Communication asset library view—In the <strong class="guilabel" data-cid="Data">Data</strong> panel, select the variable. You can use the <strong class="guilabel" data-cid="General">General</strong>, <strong class="guilabel" data-cid="Value">Value</strong>, <strong class="guilabel" data-cid="Domains">Domains</strong>, and <strong class="guilabel" data-cid="Reference">Reference</strong> tabs in the <strong class="guilabel" data-cid="Properties">Properties</strong> panel
+                     to view and modify the variable properties.
+                  </p>
+                  <div class="note">
+                     <p class="title"><strong><a name="tmp4ref192" id="tmp4ref192"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                     </strong></p>
+                     <p><a name="tmpid13468" id="tmpid13468"></a>Unlike other resources, variables do not require workflow steps
+                        and cannot be locked by a user.
+                     </p>
+                  </div>
+               </li>
+            </ul></div>
+         <div class="vl2formalsect-list vl2bhseq" id="aid4pidiv111">
+         <h2 class="bridgehead subheading2"><a name="dl2vl-491" id="dl2vl-491"></a>Modifying general properties
+         </h2>
+         <p><a name="tmpid13473" id="tmpid13473"></a>The following table lists the properties available on the <strong class="guilabel" data-cid="General">General</strong> tab:
+         </p>
+         <div class="table"><p class="title"><a name="tbl-98846" id="tbl-98846"></a><b><span class="otLbl"><span class="otlbl-kw">Table</span> <span class="otlbl-num">4.2</span>: </span><span class="otlbl-ttl">General properties</span></b></p>
+            <div class="table-contents">
+               <table summary="General properties" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                  <colgroup>
+                     <col class="col1">
+                     <col class="col2">
+                  </colgroup>
+                  <thead>
+                     <tr class="row">
+                        <th style=""><a name="tmpid13482" id="tmpid13482"></a>Property
+                        </th>
+                        <th style=""><a name="tmpid13483" id="tmpid13483"></a>Description
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid13486" id="tmpid13486"></a><a name="tmpid13487" id="tmpid13487"></a><strong class="guilabel" data-cid="Name">Name</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid13489" id="tmpid13489"></a><a name="tmpid13490" id="tmpid13490"></a>The name of the variable. Variable names must be alphanumeric
+                              and cannot exclusively use numerical characters.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid13492" id="tmpid13492"></a><strong class="guilabel" data-cid="Description">Description</strong></td>
+                        <td style=""><a name="tmpid13494" id="tmpid13494"></a>(Optional)&nbsp;A description of the variable
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid13496" id="tmpid13496"></a><a name="tmpid13497" id="tmpid13497"></a><strong class="guilabel" data-cid="User-friendly_name">User-friendly name</strong></p>
+                        </td>
+                        <td style=""><a name="tmpid13499" id="tmpid13499"></a>(Optional)&nbsp;An alternate name for the variable that users
+                           will see in the design environment
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid13501" id="tmpid13501"></a><strong class="guilabel" data-cid="Type">Type</strong></td>
+                        <td style=""><p><a name="tmpid13503" id="tmpid13503"></a><a name="tmpid13504" id="tmpid13504"></a>The type of data that is represented by the variable
+                           </p> 
+                           <div class="note">
+                              <p class="title"><strong><a name="tmp4ref193" id="tmp4ref193"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                              </strong></p>
+                              <p><a name="tmpid13506" id="tmpid13506"></a>Use caution when changing the variable type after a variable
+                                 has been created. If a variable is in use, changing the type may prevent
+                                 the objects it is associated with from working properly.
+                              </p>
+                              <p><a name="tmpid13507" id="tmpid13507"></a>For example, if changing the variable type of a variable that
+                                 is used in a rule causes the rule to be invalid, the engine will not
+                                 finish its set up process and no output will be produced. The invalid
+                                 rule must either be fixed or removed from the design.
+                              </p>
+                              <p><a name="tmpid13508" id="tmpid13508"></a>In the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, you can use the <strong class="guilabel" data-cid="References">References</strong> tab to see where the selected variable is used
+                                 in the current domain. However, changing the variable type will also
+                                 affect anywhere it is used in the tenant, including other domains.
+                              </p>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid13512" id="tmpid13512"></a><strong class="guilabel" data-cid="Array">Array</strong></td>
+                        <td style=""><p><a name="tmpid13514" id="tmpid13514"></a><a name="tmpid13515" id="tmpid13515"></a>Indicates that the variable can represent more than one
+                              value per customer.
+                           </p> 
+                           <p><a name="tmpid13516" id="tmpid13516"></a>For placeholder variables, select
+                              the <strong class="guilabel" data-cid="Array">Array</strong> check box if the variable references
+                              more than one external file.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid13519" id="tmpid13519"></a><strong class="guilabel" data-cid="placeholdertype"><a name="placeholdertype" id="placeholdertype"></a>Placeholder type</strong></td>
+                        <td style=""><p><a name="tmpid13521" id="tmpid13521"></a><a name="tmpid13522" id="tmpid13522"></a>The type of file that you want to import at run time.
+                           </p> 
+                           <p><a name="tmpid13523" id="tmpid13523"></a>The <strong class="guilabel" data-cid="Placeholder_type">Placeholder type</strong> list is active only
+                              when the variable type is <strong class="guilabel" data-cid="Placeholder">Placeholder</strong>.
+                           </p> 
+                           <p><a name="tmpid13526" id="tmpid13526"></a>You can select from the following options:
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid13529" id="tmpid13529"></a><strong class="guilabel" data-cid="EPS">EPS</strong>—For EPS files
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13532" id="tmpid13532"></a><strong class="guilabel" data-cid="HTML">HTML</strong>—For HTML pass-through
+                                       files
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13535" id="tmpid13535"></a><strong class="guilabel" data-cid="Image_resource">Image resource</strong>—For images
+                                       from a printer resource (such as PostScript TIFF images or Metacode
+                                       IMGs)
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13538" id="tmpid13538"></a><strong class="guilabel" data-cid="Interactive"><span class="namestring">Interactive</span></strong>—For <span class="namestring" data-cid="Interactive">Interactive</span> documents
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13543" id="tmpid13543"></a><strong class="guilabel" data-cid="JPEG">JPEG</strong>—For JPEG files
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13546" id="tmpid13546"></a><strong class="guilabel" data-cid="PDF">PDF</strong>—For PDF files
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13549" id="tmpid13549"></a><strong class="guilabel" data-cid="PNG">PNG</strong>—For PNG files
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13552" id="tmpid13552"></a><strong class="guilabel" data-cid="TIFF_B&amp;W_G4_or_uncomp_">TIFF (B&amp;W G4 or uncomp)</strong>—For
+                                       Group 4 Tiff Standard or 1-bit uncompressed black and white TIFF images
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13555" id="tmpid13555"></a><strong class="guilabel" data-cid="TIFF_Color_">TIFF (Color)</strong>—For full-color
+                                       TIFF files
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13558" id="tmpid13558"></a>Word (*.docx)—For DOCX files. 
+                                    </p>
+                                    <div class="caution">
+                                       <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Caution</span></span></strong></p>
+                                       <p><a name="tmpid13560" id="tmpid13560"></a>Not all DOCX design settings have an equivalent in <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span>. Because of this limitation, before you select the DOCX file that
+                                          you want to import, see the list of DOCX design considerations and
+                                          supported features. See xxx.
+                                       </p>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div> 
+                           <div class="note">
+                              <p class="title"><strong><a name="tmp4ref194" id="tmp4ref194"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                              </strong></p>
+                              <p><a name="tmpid13568" id="tmpid13568"></a>If you want to import images that include transparency, the
+                                 images must be in PNG format.
+                              </p>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid13570" id="tmpid13570"></a><strong class="guilabel" data-cid="Pages_to_import">Pages to import</strong></td>
+                        <td style=""><p><a name="tmpid13572" id="tmpid13572"></a><a name="tmpid13573" id="tmpid13573"></a>Specifies which pages to import at run time.
+                           </p> 
+                           <p><a name="tmpid13574" id="tmpid13574"></a>The <strong class="guilabel" data-cid="Pages_to_import">Pages to import</strong> list is active only when
+                              the variable type is <strong class="guilabel" data-cid="Placeholder">Placeholder</strong> and the placeholder
+                              type is <strong class="guilabel" data-cid="PDF">PDF</strong>.
+                           </p> 
+                           <p><a name="tmpid13578" id="tmpid13578"></a>You can select from
+                              the following options:
+                           </p> 
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid13581" id="tmpid13581"></a><strong class="guilabel" data-cid="All">All</strong>—Import all the pages
+                                       in the file
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13584" id="tmpid13584"></a><strong class="guilabel" data-cid="Range">Range</strong>—Specify a range of
+                                       pages to import
+                                    </p>
+                                    <p><a name="tmpid13586" id="tmpid13586"></a>In the <strong class="guilabel" data-cid="Range">Range</strong> box, enter the starting and
+                                       ending pages.
+                                    </p>
+                                    <p><a name="tmpid13588" id="tmpid13588"></a>To indicate a range, separate the numbers with a hyphen (for
+                                       example: <strong class="guilabel" data-cid="1-5">1-5</strong>). To indicate separate pages or
+                                       identify multiple ranges, separate the numbers with a comma (for example: <strong class="guilabel" data-cid="3-17,22-28,31">3-17,22-28,31</strong>).
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13592" id="tmpid13592"></a><strong class="guilabel" data-cid="Variable">Variable</strong>—Use a variable
+                                       to identify which pages to import
+                                    </p>
+                                    <p><a name="tmpid13594" id="tmpid13594"></a>In the <strong class="guilabel" data-cid="Variable">Variable</strong> list, select a variable
+                                       to control the imported pages. Only non-system scalar string variables
+                                       can be used, and the content of the variable should use the same format
+                                       as the <strong class="guilabel" data-cid="Range">Range</strong> option.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid13598" id="tmpid13598"></a><a name="tmpid13599" id="tmpid13599"></a><strong class="guilabel" data-cid="Each_customer_file_is_unique">Each customer file is unique</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid13601" id="tmpid13601"></a><a name="tmpid13602" id="tmpid13602"></a>Indicates that the file to be imported is different for
+                              each customer.
+                           </p>
+                           <p><a name="tmpid13603" id="tmpid13603"></a>The <strong class="guilabel" data-cid="Each_customer_file_is_unique">Each customer file is unique</strong> check box is active only when the variable type is <strong class="guilabel" data-cid="Placeholder">Placeholder</strong>, with the exception of HTML placeholders.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid13607" id="tmpid13607"></a><strong class="guilabel" data-cid="Do_not_convert_HTML">Do not convert HTML</strong></td>
+                        <td style=""><p><a name="tmpid13609" id="tmpid13609"></a><a name="tmpid13610" id="tmpid13610"></a>Specifies that the imported HTML is displayed in the
+                              browser according to the styles applied inline within the HTML.
+                           </p>
+                           <p><a name="tmpid13611" id="tmpid13611"></a>The <strong class="guilabel" data-cid="Do_not_convert_HTML">Do not convert HTML</strong> check box is active
+                              only when the variable type is <strong class="guilabel" data-cid="Placeholder">Placeholder</strong> and
+                              the placeholder type is <strong class="guilabel" data-cid="HTML">HTML</strong>.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="tmpid13616" id="tmpid13616"></a><strong class="guilabel" data-cid="Design_sample">Design sample</strong></td>
+                        <td style=""><p><a name="tmpid13618" id="tmpid13618"></a><a name="tmpid13619" id="tmpid13619"></a>(Optional) The text string that you want to appear when
+                              the variable is placed in a design
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="outputformat" id="outputformat"></a><strong class="guilabel" data-cid="Output_format">Output format</strong></td>
+                        <td style=""><p><a name="tmpid13623" id="tmpid13623"></a><a name="tmpid13624" id="tmpid13624"></a>The formatting method to use for the variable in final
+                              output.
+                           </p>
+                           <p><a name="tmpid13625" id="tmpid13625"></a>The <strong class="guilabel" data-cid="Output_format">Output format</strong> list is
+                              not active when the variable type is <strong class="guilabel" data-cid="Placeholder">Placeholder</strong>.
+                           </p>
+                           <p><a name="tmpid13628" id="tmpid13628"></a>Depending on the variable type, you can select from
+                              the following options:
+                           </p>
+                           <div class="variablelist standard lvl1 lvlmax1">
+                              <dl class="variablelist standard">
+                                 <dt class="varlistentry"><a name="dl2vl-493" id="dl2vl-493"></a><span class="term"><a name="tmpid13631" id="tmpid13631"></a>String</span></dt>
+                                 <dd class="varlistentry">
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid13635" id="tmpid13635"></a><strong class="guilabel" data-cid="Custom">Custom</strong>—Applies a <a class="link" href="creatingacustomformatstring.html" title="4.6.3.1 &nbsp; Creating a custom output format for a variable">custom
+                                                   format string</a> that you create
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13639" id="tmpid13639"></a><strong class="guilabel" data-cid="Keep_blanks">Keep blanks</strong>—Preserves spaces
+                                                as they appear in the string
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13642" id="tmpid13642"></a><strong class="guilabel" data-cid="Trim_blanks">Trim blanks</strong>—Removes all
+                                                of the spaces found before the first character and after the last
+                                                character of the string
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13645" id="tmpid13645"></a><strong class="guilabel" data-cid="Lower,_keep_blanks">Lower, keep blanks</strong>—Converts
+                                                the string to all lowercase characters and preserve all of the spaces
+                                                as they appear in the string
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13648" id="tmpid13648"></a><strong class="guilabel" data-cid="Lower_+_exceptions,_keep_blanks">Lower + exceptions, keep blanks</strong>—Converts the string to all lowercase characters, except those
+                                                words found in an exceptions file, and preserve all of the spaces
+                                                as they appear in the string
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13651" id="tmpid13651"></a><strong class="guilabel" data-cid="Upper,_keep_blanks">Upper, keep blanks</strong>—Converts
+                                                the string to all uppercase characters and preserve all of the spaces
+                                                as they appear in the string
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13654" id="tmpid13654"></a><strong class="guilabel" data-cid="Upper_+_exceptions,_keep_blanks">Upper + exceptions, keep blanks</strong>—Converts the string to all uppercase characters, except those
+                                                words found in an exceptions file, and preserve all of the spaces
+                                                as they appear in the string
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13657" id="tmpid13657"></a><strong class="guilabel" data-cid="InitCap,_keep,_blanks">InitCap, keep, blanks</strong>—Converts
+                                                the string so that each word begins with an uppercase character and
+                                                preserve all of the spaces as they appear in the string
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13660" id="tmpid13660"></a><strong class="guilabel" data-cid="InitCap_+_exceptions,_keep_blanks">InitCap + exceptions, keep blanks</strong>—Converts the string so that each word begins with an uppercase
+                                                character, except those words found in an exceptions file, and preserve
+                                                all of the spaces as they appear in the string
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13663" id="tmpid13663"></a><strong class="guilabel" data-cid="Sentence,_keep_blanks">Sentence, keep blanks</strong>—Converts
+                                                the string so that only the first word of a sentence begins with an
+                                                uppercase character and preserve all of the spaces as they appear
+                                                in the string
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13666" id="tmpid13666"></a><strong class="guilabel" data-cid="Sentence_+_exceptions,_keep_blanks">Sentence + exceptions, keep blanks</strong>—Converts the string so that only the first word of a sentence
+                                                begins with an uppercase character, except those words found in an
+                                                exceptions file, and preserve all of the spaces as they appear in
+                                                the string
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13669" id="tmpid13669"></a><strong class="guilabel" data-cid="Exceptions_only,_keep_blanks">Exceptions only, keep blanks</strong>—Converts
+                                                the words found in the exception file to match their format in the
+                                                file and preserve all of the spaces as they appear in the string
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13672" id="tmpid13672"></a><strong class="guilabel" data-cid="Phone_number_999_999-9999">Phone number (999) 999-9999</strong>—Converts
+                                                string values to a telephone number with parentheses around the area
+                                                code and with a hyphen between the first three and last four digits
+                                                of the number
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13675" id="tmpid13675"></a><strong class="guilabel" data-cid="Phone_number_999_999_9999">Phone number (999) 999 9999</strong>—Converts
+                                                string values to a telephone number with parentheses around the area
+                                                code and with a space between the first three and last four digits
+                                                of the number
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13678" id="tmpid13678"></a><strong class="guilabel" data-cid="Phone_number_999_999-9999">Phone number 999 999-9999</strong>—Converts
+                                                string values to a telephone number with no parentheses around the
+                                                area code and with a hyphen between the first three and last four
+                                                digits of the number
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13681" id="tmpid13681"></a><strong class="guilabel" data-cid="Phone_number_999_999_9999">Phone number 999 999 9999</strong>—Converts
+                                                string values to a telephone number with no parentheses around the
+                                                area code and with a space between the first three and last four digits
+                                                of the number
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </dd>
+                                 <dt class="varlistentry"><a name="dl2vl-495" id="dl2vl-495"></a><span class="term"><a name="tmpid13684" id="tmpid13684"></a>Integer</span></dt>
+                                 <dd class="varlistentry">
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid13688" id="tmpid13688"></a><strong class="guilabel" data-cid="Custom">Custom</strong>—Applies a <a class="link" href="creatingacustomformatstring.html" title="4.6.3.1 &nbsp; Creating a custom output format for a variable">custom
+                                                   format string</a> that you create
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13692" id="tmpid13692"></a><strong class="guilabel" data-cid="General_number">General number</strong>—Uses simple
+                                                numbers
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13695" id="tmpid13695"></a><strong class="guilabel" data-cid="Percentage">Percentage</strong>—Adds a percent
+                                                (%) symbol to the end of the number
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13698" id="tmpid13698"></a><strong class="guilabel" data-cid="Text_upper_ONE,_TWO_">Text upper (ONE, TWO)</strong>—Converts
+                                                integer values to uppercase words
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13701" id="tmpid13701"></a><strong class="guilabel" data-cid="Text_mixed_One,_Two_">Text mixed (One, Two)</strong>—Converts
+                                                integer values to mixed-case words
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13704" id="tmpid13704"></a><strong class="guilabel" data-cid="Text_lower_one_two_">Text lower (one two)</strong>—Converts
+                                                integer values to lowercase words
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13707" id="tmpid13707"></a><strong class="guilabel" data-cid="Alpha_upper_A,_B,_C_">Alpha upper (A, B, C)</strong>—Converts
+                                                integer values to uppercase alpha characters
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13710" id="tmpid13710"></a><strong class="guilabel" data-cid="Alpha_lower_a_b,_c_">Alpha lower (a b, c)</strong>—Converts
+                                                integer values to lowercase alpha characters
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13713" id="tmpid13713"></a><strong class="guilabel" data-cid="Roman_upper_I,_II,_III_">Roman upper (I, II, III)</strong>—Converts
+                                                integer values to uppercase Roman numerals
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13716" id="tmpid13716"></a><strong class="guilabel" data-cid="Roman_lower_i,_ii,_iii_">Roman lower (i, ii, iii)</strong>—Converts
+                                                integer values to lowercase Roman numerals
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13719" id="tmpid13719"></a><strong class="guilabel" data-cid="Fixed_decimal_with_currency">Fixed decimal with currency</strong>—Inserts
+                                                a fixed decimal point and the proper currency symbol for the locale
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13722" id="tmpid13722"></a><strong class="guilabel" data-cid="Fixed_or_integer_with_currency">Fixed or integer with currency</strong>—Inserts a whole number if the number does not have a fraction
+                                                and inserts the proper currency symbol for the locale. If the number
+                                                has a fraction, the engine formats it as a floating number and inserts
+                                                the proper currency symbol for the locale.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13725" id="tmpid13725"></a><strong class="guilabel" data-cid="Absolute_value">Absolute value</strong>—Converts
+                                                the values to the absolute value. This option lets you produce a negative
+                                                number without a negative sign. For example, both <strong class="guilabel" data-cid="1">1</strong> and <strong class="guilabel" data-cid="–1">–1</strong> appear as <strong class="guilabel" data-cid="1">1</strong>.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </dd>
+                                 <dt class="varlistentry"><a name="dl2vl-497" id="dl2vl-497"></a><span class="term"><a name="tmpid13731" id="tmpid13731"></a>Boolean</span></dt>
+                                 <dd class="varlistentry">
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid13735" id="tmpid13735"></a><strong class="guilabel" data-cid="T_F">T/F</strong>—Returns <strong class="guilabel" data-cid="T">T</strong> when the condition is true or <strong class="guilabel" data-cid="F">F</strong> when the condition
+                                                is false
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13740" id="tmpid13740"></a><strong class="guilabel" data-cid="Y_N">Y/N</strong>—Returns <strong class="guilabel" data-cid="Y">Y</strong> when the condition is true or <strong class="guilabel" data-cid="N">N</strong> when the condition
+                                                is false
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13745" id="tmpid13745"></a><strong class="guilabel" data-cid="1_0">1/0</strong>—Returns <strong class="guilabel" data-cid="1">1</strong> when the condition is true or <strong class="guilabel" data-cid="0">0</strong> when the condition
+                                                is false
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13750" id="tmpid13750"></a><strong class="guilabel" data-cid="TRUE_FALSE">TRUE/FALSE</strong>—Returns <strong class="guilabel" data-cid="True">True</strong> when the condition is true or <strong class="guilabel" data-cid="False">False</strong> when the condition is false
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13755" id="tmpid13755"></a><strong class="guilabel" data-cid="YES_NO">YES/NO</strong>—Returns <strong class="guilabel" data-cid="Yes">Yes</strong> when the condition is true or <strong class="guilabel" data-cid="No">No</strong> when the condition is false
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </dd>
+                                 <dt class="varlistentry"><a name="dl2vl-499" id="dl2vl-499"></a><span class="term"><a name="tmpid13760" id="tmpid13760"></a>Float</span></dt>
+                                 <dd class="varlistentry">
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid13764" id="tmpid13764"></a><strong class="guilabel" data-cid="Custom">Custom</strong>—Applies a <a class="link" href="creatingacustomformatstring.html" title="4.6.3.1 &nbsp; Creating a custom output format for a variable">custom
+                                                   format string</a> that you create
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13768" id="tmpid13768"></a><strong class="guilabel" data-cid="Use_locale_specification">Use locale specification</strong>—Uses
+                                                the format indicated in the 'SYS_LocaleCustomer' variable
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13771" id="tmpid13771"></a><strong class="guilabel" data-cid="General_number">General number</strong>—Uses simple
+                                                numbers
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13774" id="tmpid13774"></a><strong class="guilabel" data-cid="Percentage">Percentage</strong>—Adds a percent
+                                                (%) symbol to the end of the number
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13777" id="tmpid13777"></a><strong class="guilabel" data-cid="Percentage_x_100">Percentage x 100</strong>—Adds a
+                                                percent (%) symbol at the end of the number and multiply by 100. This
+                                                option lets you format fractions as percents. For example, <span class="keycap"><strong>.75</strong></span> appears as <span class="keycap"><strong>75%</strong></span>.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13782" id="tmpid13782"></a><strong class="guilabel" data-cid="Fixed_decimal">Fixed decimal</strong>—Adds zeros
+                                                to pad the number of digits after the decimal point
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13785" id="tmpid13785"></a><strong class="guilabel" data-cid="Fixed_decimal_with_currency">Fixed decimal with currency</strong>—Inserts
+                                                a fixed decimal point and the proper currency symbol for the locale
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13788" id="tmpid13788"></a><strong class="guilabel" data-cid="Fixed_or_integer_with_currency">Fixed or integer with currency</strong>—Inserts a whole number if the number does not have a fraction
+                                                and inserts the proper currency symbol for the locale. If the number
+                                                has a fraction, the engine formats it as a floating number and inserts
+                                                the proper currency symbol for the locale.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13791" id="tmpid13791"></a><strong class="guilabel" data-cid="Significant_decimal">Significant decimal</strong>—Inserts
+                                                the least number of decimal values possible after the whole number
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13794" id="tmpid13794"></a><strong class="guilabel" data-cid="Fixed_or_integer">Fixed or integer</strong>—Inserts
+                                                a whole number if the number does not have a fraction. If the number
+                                                has a fraction, the engine formats it as a floating number.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13797" id="tmpid13797"></a><strong class="guilabel" data-cid="Absolute_value">Absolute value</strong>—Converts
+                                                the values to the absolute value. This option lets you produce a negative
+                                                number without a negative sign. For example, both <span class="keycap"><strong>1</strong></span> and <span class="keycap"><strong>-1</strong></span> appear as <span class="keycap"><strong>1</strong></span>.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </dd>
+                                 <dt class="varlistentry"><a name="dl2vl-501" id="dl2vl-501"></a><span class="term"><a name="tmpid13803" id="tmpid13803"></a>Date</span></dt>
+                                 <dd class="varlistentry">
+                                    <p><a name="tmpid13805" id="tmpid13805"></a><span class="namestring" data-cid="Designer">Designer</span> provides multiple options for formatting date values.
+                                       For example: <strong class="guilabel" data-cid="mm-dd-yy">mm-dd-yy</strong>, <strong class="guilabel" data-cid="dd_mm_yyyy">dd/mm/yyyy</strong>, <strong class="guilabel" data-cid="mm_yyyy">mm/yyyy</strong>.
+                                    </p>
+                                    <p><a name="tmpid13810" id="tmpid13810"></a>If you select <strong class="guilabel" data-cid="Custom">Custom</strong>, you must create a <a class="link" href="creatingacustomformatstring.html" title="4.6.3.1 &nbsp; Creating a custom output format for a variable">customized
+                                          formatting</a>.
+                                    </p>
+                                    <p><a name="tmpid13813" id="tmpid13813"></a>If you select <strong class="guilabel" data-cid="Use_locale_specification">Use locale specification</strong>,
+                                       output uses the format indicated in the 'SYS_LocaleCustomer' variable.
+                                    </p>
+                                 </dd>
+                                 <dt class="varlistentry"><a name="dl2vl-503" id="dl2vl-503"></a><span class="term"><a name="tmpid13816" id="tmpid13816"></a>Currency</span></dt>
+                                 <dd class="varlistentry">
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid13820" id="tmpid13820"></a><strong class="guilabel" data-cid="Custom">Custom</strong>—Applies a <a class="link" href="creatingacustomformatstring.html" title="4.6.3.1 &nbsp; Creating a custom output format for a variable">custom
+                                                   format string</a> that you create
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13824" id="tmpid13824"></a><strong class="guilabel" data-cid="Use_locale_specification">Use locale specification</strong>—Uses
+                                                the format indicated in the 'SYS_LocaleCustomer' variable
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13827" id="tmpid13827"></a><strong class="guilabel" data-cid="General_number">General number</strong>—Uses simple
+                                                numbers
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13830" id="tmpid13830"></a><strong class="guilabel" data-cid="Fixed_decimal">Fixed decimal</strong>—Adds zeros
+                                                to pad the number of digits after the decimal point
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13833" id="tmpid13833"></a><strong class="guilabel" data-cid="Fixed_decimal_with_currency">Fixed decimal with currency</strong>—Inserts
+                                                a fixed decimal point and the proper currency symbol for the locale
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13836" id="tmpid13836"></a><strong class="guilabel" data-cid="Fixed_or_integer_with_currency">Fixed or integer with currency</strong>—Inserts a whole number if the number does not have a fraction
+                                                and inserts the proper currency symbol for the locale. If the number
+                                                has a fraction, the engine formats it as a floating number and inserts
+                                                the proper currency symbol for the locale.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13839" id="tmpid13839"></a><strong class="guilabel" data-cid="Significant_decimal">Significant decimal</strong>—Inserts
+                                                the least number of decimal values possible after the whole number
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid13842" id="tmpid13842"></a><strong class="guilabel" data-cid="Fixed_or_integer">Fixed or integer</strong>—Inserts
+                                                a whole number if the number does not have a fraction. If the number
+                                                has a fraction, the engine formats it as a floating number.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </dd>
+                              </dl>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div><br class="table-break"></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv112"><h2 class="bridgehead subheading2"><a name="dl2vl-505" id="dl2vl-505"></a>Modifying value properties
+         </h2>
+         <p><a name="tmpid13847" id="tmpid13847"></a>The following table lists the properties available on the <strong class="guilabel" data-cid="Value">Value</strong> tab:
+         </p>
+         <div class="table"><p class="title"><a name="tbl-64166" id="tbl-64166"></a><b><span class="otLbl"><span class="otlbl-kw">Table</span> <span class="otlbl-num">4.3</span>: </span><span class="otlbl-ttl">Value properties</span></b></p>
+            <div class="table-contents">
+               <table summary="Value properties" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                  <colgroup>
+                     <col class="col1">
+                     <col class="col2">
+                  </colgroup>
+                  <thead>
+                     <tr class="row">
+                        <th style=""><a name="tmpid13856" id="tmpid13856"></a>Property
+                        </th>
+                        <th style=""><a name="tmpid13857" id="tmpid13857"></a>Description
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid13860" id="tmpid13860"></a><a name="tmpid13861" id="tmpid13861"></a><strong class="guilabel" data-cid="Initial_value">Initial value</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid13863" id="tmpid13863"></a><a name="tmpid13864" id="tmpid13864"></a>The default or initial value of the variable. If the
+                              variable type is <strong class="guilabel" data-cid="Boolean">Boolean</strong>, the <strong class="guilabel" data-cid="Initial_value">Initial
+                                 value</strong> can be either <strong class="guilabel" data-cid="false">false</strong> or <strong class="guilabel" data-cid="true">true</strong>.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid13870" id="tmpid13870"></a><a name="tmpid13871" id="tmpid13871"></a><strong class="guilabel" data-cid="Source">Source</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid13873" id="tmpid13873"></a><a name="tmpid13874" id="tmpid13874"></a>The method used to access or calculate the variable.
+                              You can select from the following options:
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid13877" id="tmpid13877"></a><strong class="guilabel" data-cid="User_value">User value</strong>—The variable
+                                       value is specified in the variable properties
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13880" id="tmpid13880"></a><strong class="guilabel" data-cid="File_only">File only</strong>—The variable
+                                       value is read from a data file
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13883" id="tmpid13883"></a><strong class="guilabel" data-cid="Counter">Counter</strong>—The variable value
+                                       counts events
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13886" id="tmpid13886"></a><strong class="guilabel" data-cid="Crossref_page_number">Crossref page number</strong>—The
+                                       variable value is the page number of the target that references this
+                                       variable. This option is active only when the variable type is <strong class="guilabel" data-cid="Integer">Integer</strong>.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid13890" id="tmpid13890"></a><a name="tmpid13891" id="tmpid13891"></a><strong class="guilabel" data-cid="Reset_timing">Reset timing</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid13893" id="tmpid13893"></a><a name="tmpid13894" id="tmpid13894"></a>Specifies when the variable value is reinitialized (reset
+                              to zero). You can select from the following options:
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid13897" id="tmpid13897"></a><strong class="guilabel" data-cid="Automatically">Automatically</strong>—Resets before
+                                       each customer
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13900" id="tmpid13900"></a><strong class="guilabel" data-cid="Before_each_customer">Before each customer</strong>—Resets
+                                       only before each customer is read
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13903" id="tmpid13903"></a><strong class="guilabel" data-cid="Never_reset">Never reset</strong>—Resets only
+                                       at the beginning of each engine run
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13906" id="tmpid13906"></a><strong class="guilabel" data-cid="Named_data_segment">Named data segment</strong>—Resets
+                                       before the engine reads the section that you choose in the <strong class="guilabel" data-cid="Data_segment">Data segment</strong> list that appears
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13910" id="tmpid13910"></a><strong class="guilabel" data-cid="All_data_segments">All data segments</strong>—Resets
+                                       before all data segments
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><a name="staticselectionlist" id="staticselectionlist"></a><strong class="guilabel" data-cid="Enable_selection_list">Enable selection list</strong></td>
+                        <td style=""><p><a name="tmpid13915" id="tmpid13915"></a><a name="tmpid13916" id="tmpid13916"></a>Associates a static list of options with the variable.
+                              These list items are used as attributes when users in <span class="namestring" data-cid="Designer">Designer</span> and <span class="namestring" data-cid="Content_Author">Content Author</span> create
+                              variations. They are also available when the variable is used to build
+                              custom rules or is used in Simulation view.
+                           </p>
+                           <p><a name="tmpid13919" id="tmpid13919"></a>The <strong class="guilabel" data-cid="Enable_selection_list">Enable selection list</strong> option is active only when the variable
+                              type is <strong class="guilabel" data-cid="String">String</strong>, <strong class="guilabel" data-cid="Currency">Currency</strong>, <strong class="guilabel" data-cid="Float">Float</strong>, or <strong class="guilabel" data-cid="Integer">Integer</strong>.
+                           </p>
+                           <div class="orderedlist">
+                              <p><a name="tmpid13926" id="tmpid13926"></a>To associate a static list with the selected variable:
+                              </p>
+                              <ol class="orderedlist" type="1">
+                                 <li class="listitem">
+                                    <p><a name="tmpid13928" id="tmpid13928"></a>Select the <strong class="guilabel" data-cid="Enable_selection_list">Enable selection list</strong> check box.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13931" id="tmpid13931"></a>Under the <strong class="guilabel" data-cid="List_items">List items</strong> box, click <strong class="guilabel" data-cid="Edit">Edit</strong>.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13935" id="tmpid13935"></a>In the <strong class="guilabel" data-cid="Add_new_static_selection_list_item">Add new static selection list item</strong> box, enter the first entry for the static list.
+                                    </p>
+                                    <p><a name="tmpid13937" id="tmpid13937"></a>Repeat this step to add as many items as needed to the list.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13939" id="tmpid13939"></a>Click <strong class="guilabel" data-cid="Save">Save</strong> twice.
+                                    </p>
+                                 </li>
+                              </ol>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid13942" id="tmpid13942"></a><a name="tmpid13943" id="tmpid13943"></a><strong class="guilabel" data-cid="Watch_level">Watch level</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid13945" id="tmpid13945"></a><a name="tmpid13946" id="tmpid13946"></a>Specifies when the engine should write information to
+                              a debug file. You can select from the following options:
+                           </p> 
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid13949" id="tmpid13949"></a><strong class="guilabel" data-cid="None">None</strong>—The engine disables
+                                       watch level activities
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13952" id="tmpid13952"></a><strong class="guilabel" data-cid="Changed">Changed</strong>—The engine writes
+                                       information each time the variable changes
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13955" id="tmpid13955"></a><strong class="guilabel" data-cid="Set">Set</strong>—The engine writes information
+                                       when the variable is set
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid13958" id="tmpid13958"></a><a name="tmpid13959" id="tmpid13959"></a><strong class="guilabel" data-cid="Validation_method">Validation method</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid13961" id="tmpid13961"></a><a name="tmpid13962" id="tmpid13962"></a>The method for automatically validating the value of
+                              the variable for both the initial value and values that are mapped
+                              in the data source. This option is not active when the variable type
+                              is <strong class="guilabel" data-cid="Placeholder">Placeholder</strong> or <strong class="guilabel" data-cid="Boolean">Boolean</strong>. You can select from the following options:
+                           </p> 
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid13967" id="tmpid13967"></a><strong class="guilabel" data-cid="None">None</strong>—The variable value
+                                       is not validated when the value changes
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13970" id="tmpid13970"></a><strong class="guilabel" data-cid="Equal_to">Equal to</strong>—Specify a precise
+                                       valid value
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13973" id="tmpid13973"></a><strong class="guilabel" data-cid="Not_equal_to">Not equal to</strong>—Specify a
+                                       precise value that is not valid
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13976" id="tmpid13976"></a><strong class="guilabel" data-cid="Greater_than">Greater than</strong>—Specify a
+                                       value that the variable value must be greater than
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13979" id="tmpid13979"></a><strong class="guilabel" data-cid="Greater_than_or_equal_to">Greater than or equal to</strong>—Specify
+                                       a value that the variable value must be greater than or equal to
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13982" id="tmpid13982"></a><strong class="guilabel" data-cid="Less_than">Less than</strong>—Specify a value
+                                       that the variable value must be less than
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13985" id="tmpid13985"></a><strong class="guilabel" data-cid="Less_than_or_equal_to">Less than or equal to</strong>—Specify
+                                       a value that the variable value must be less than or equal to
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13988" id="tmpid13988"></a><strong class="guilabel" data-cid="Value_range">Value range</strong>—Specify the
+                                       range of valid values
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid13991" id="tmpid13991"></a><strong class="guilabel" data-cid="Length_range">Length range</strong>—Specify the
+                                       minimum and maximum lengths of the variable. This option is active
+                                       only if the variable type is <strong class="guilabel" data-cid="String">String</strong>.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid13995" id="tmpid13995"></a><a name="tmpid13996" id="tmpid13996"></a><strong class="guilabel" data-cid="Validation_value">Validation value</strong></p>
+                        </td>
+                        <td style=""><a name="tmpid13998" id="tmpid13998"></a>The validation value to check against. This box is active only
+                           if the <strong class="guilabel" data-cid="Validation_method">Validation method</strong> is set, and is not a
+                           range.
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid14001" id="tmpid14001"></a><a name="tmpid14002" id="tmpid14002"></a><strong class="guilabel" data-cid="From">From</strong></p>
+                        </td>
+                        <td style=""><a name="tmpid14004" id="tmpid14004"></a>The lower value in a validation range
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid14006" id="tmpid14006"></a><a name="tmpid14007" id="tmpid14007"></a><strong class="guilabel" data-cid="To">To</strong></p>
+                        </td>
+                        <td style=""><a name="tmpid14009" id="tmpid14009"></a>The upper value in a validation range
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid14011" id="tmpid14011"></a><a name="tmpid14012" id="tmpid14012"></a><strong class="guilabel" data-cid="Action_if_invalid">Action if invalid</strong></p>
+                        </td>
+                        <td style=""><p><a name="tmpid14014" id="tmpid14014"></a><a name="tmpid14015" id="tmpid14015"></a>The type of error processing to perform if the value
+                              is invalid. This option is active only if the <strong class="guilabel" data-cid="Validation_method">Validation
+                                 method</strong> is set.
+                           </p> 
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid14019" id="tmpid14019"></a><strong class="guilabel" data-cid="Message,_continue">Message, continue</strong>—You receive
+                                       a message and the engine continues processing
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid14022" id="tmpid14022"></a><strong class="guilabel" data-cid="Message,_set_to_default">Message, set to default</strong>—You
+                                       receive a message and the engine resets the variable to its default
+                                       value and continues processing
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid14025" id="tmpid14025"></a><strong class="guilabel" data-cid="Message,_stop">Message, stop</strong>—You receive
+                                       a message and the engine stops processing
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid14028" id="tmpid14028"></a><strong class="guilabel" data-cid="Message,_skip_document">Message, skip document</strong>—The
+                                       engine skips the document if the variable is not valid or is not found
+                                       in the data
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div><br class="table-break"><div class="variablelist standard lvl1 lvlmax1">
+            <dl class="variablelist standard">
+               <dt class="varlistentry"><a name="vle2s1732631747-038" id="vle2s1732631747-038"></a><span class="term"><a name="tmpid14032" id="tmpid14032"></a>Inserting images using
+                     a placeholder variable</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid14034" id="tmpid14034"></a>You can use a placeholder variable to insert DAS images into
+                     a <span class="namestring" data-cid="Designer">Designer</span> or <span class="namestring" data-cid="Content_Author">Content Author</span> communication at run time. To insert images,
+                     the placeholder variable value needs to use the syntax <code class="literal">ot:das/&lt;Image_ID&gt;</code>, where <code class="literal">&lt;Image_ID&gt;</code> is the DAS resource identifier
+                     string that is found in the <a class="link" href="usingassetlibraryviews.html#advancedresourcedetails" title=" Viewing advanced resource details ">advanced resource details</a>.
+                  </p>
+                  <div class="informalexample">
+                     <p><a name="tmpid14041" id="tmpid14041"></a><b class="title"><span class="otLbl"><span class="otlbl-kw">Example</span>: </span></b><code class="literal">ot:das/168cacd3-19d5-4eca-b3ed-ad36bed0cdc5</code></p>
+                  </div>
+                  <div class="note">
+                     <p class="title"><strong><a name="tmp4ref195" id="tmp4ref195"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                     </strong></p>
+                     <p><a name="tmpid14044" id="tmpid14044"></a>Placeholder variables only import the type of file that is specified
+                        in the variable <a class="link" href="updatingvariableproperties.html#placeholdertype">type</a>, such
+                        as JPG or PNG. If you use <code class="literal">ot:das/&lt;Image_ID&gt;</code> to
+                        pull images from DAS, all the DAS images that you want to use must
+                        use the same format as the placeholder variable type; images that
+                        are different from the placeholder variable type do not appear in
+                        the output.
+                     </p>
+                  </div>
+               </dd>
+            </dl>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv113">
+         <h2 class="bridgehead subheading2"><a name="used" id="used"></a>Viewing references for a selected variable 
+         </h2>
+         <p><a name="tmpid14050" id="tmpid14050"></a>The <strong class="guilabel" data-cid="Used_by">Used by</strong> card <img src="./img/b_WebApps_Cards_UsedBy.png" class="igrph" alt="" width="29" height="30"> in Mapping view and the <strong class="guilabel" data-cid="References">References</strong> tab in the Communication asset library view show the data sources and <span class="namestring" data-cid="Designer">Designer</span> communications
+            that reference the selected variable.
+         </p>
+         <p><a name="tmpid14055" id="tmpid14055"></a>The information displayed here is not editable. This information
+            can provide you with some impact control, in that it is useful in
+            determining how a change to any of the variable properties might affect
+            other referenced objects, such as data sources and communication objects.
+         </p></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv114">
+         <h2 class="bridgehead subheading2"><a name="dl2vl-510" id="dl2vl-510"></a>Specifying how array variable elements
+            are displayed
+         </h2>
+         <p><a name="tmpid14059" id="tmpid14059"></a>If your design includes an array variable, you can specify how
+            the elements in the array are displayed. This can be useful for situations
+            like  controlling how the engine selects the correct external file when
+            using a placeholder variable.
+         </p>
+         <div class="procedure"><h3 class="title"><a name="d0e24683" id="d0e24683"></a><b><span class="otlbl-ttl">To specify how array elements are displayed:</span></b></h3>
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid14064" id="tmpid14064"></a>Open the design in Design view.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid14066" id="tmpid14066"></a>Within the design area, select the array variable.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid14068" id="tmpid14068"></a>In the <strong class="guilabel" data-cid="Variables">Variables</strong> panel, open the <strong class="guilabel" data-cid="General_properties">General properties</strong> card.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid14072" id="tmpid14072"></a>In the <strong class="guilabel" data-cid="Array_element_to_use">Array element to use</strong> list,
+                     select one of the following options:
+                  </p>
+                  <div class="informaltable">
+                     <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                        <colgroup>
+                           <col class="col1">
+                           <col class="col2">
+                        </colgroup>
+                        <thead>
+                           <tr class="row">
+                              <th style=""><p><a name="tmpid14080" id="tmpid14080"></a><a name="tmpid14081" id="tmpid14081"></a>Option
+                                 </p>
+                              </th>
+                              <th style=""><p><a name="tmpid14082" id="tmpid14082"></a><a name="tmpid14083" id="tmpid14083"></a>Description
+                                 </p>
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid14086" id="tmpid14086"></a><a name="tmpid14087" id="tmpid14087"></a>Automatically display an array element for each occurrence
+                                    of the variable
+                                 </p>
+                              </td>
+                              <td style=""><p><a name="tmpid14088" id="tmpid14088"></a><a name="tmpid14089" id="tmpid14089"></a>Select <strong class="guilabel" data-cid="Automatic">Automatic</strong>.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid14092" id="tmpid14092"></a><a name="tmpid14093" id="tmpid14093"></a>Display a specific element in the array
+                                 </p>
+                              </td>
+                              <td style=""><a name="tmpid14094" id="tmpid14094"></a><div class="orderedlist">
+                                    <ol class="orderedlist" type="1">
+                                       <li class="listitem">
+                                          <p><a name="tmpid14097" id="tmpid14097"></a>Select <strong class="guilabel" data-cid="Specified">Specified</strong>.
+                                          </p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid14100" id="tmpid14100"></a>In the adjacent box, select the specific element number
+                                             you want to use for this variable.
+                                          </p>
+                                       </li>
+                                    </ol>
+                                 </div> 
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid14104" id="tmpid14104"></a><a name="tmpid14105" id="tmpid14105"></a>Display all instances of the array in the data file for
+                                    each occurrence of the variable, including blank spaces
+                                 </p>
+                              </td>
+                              <td style=""><p><a name="tmpid14106" id="tmpid14106"></a><a name="tmpid14107" id="tmpid14107"></a>Select <strong class="guilabel" data-cid="All,_blanks">All, blanks</strong>.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid14110" id="tmpid14110"></a><a name="tmpid14111" id="tmpid14111"></a>Display all instances of the array in the data file for
+                                    each occurrence of the variable, and separate each element in content
+                                    using a line break (soft return).
+                                 </p>
+                              </td>
+                              <td style=""><p><a name="tmpid14112" id="tmpid14112"></a><a name="tmpid14113" id="tmpid14113"></a>Select <strong class="guilabel" data-cid="All,_line_breaks">All, line breaks</strong>.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid14116" id="tmpid14116"></a><a name="tmpid14117" id="tmpid14117"></a>Display all instances of the array in the data file for
+                                    each occurrence of the variable, and separate each element in the
+                                    content using a paragraph break (hard return).
+                                 </p>
+                              </td>
+                              <td style=""><p><a name="tmpid14118" id="tmpid14118"></a><a name="tmpid14119" id="tmpid14119"></a>Select <strong class="guilabel" data-cid="All,_paragraphs">All, paragraphs</strong>.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid14122" id="tmpid14122"></a>Display all instances of the array in the data file for each
+                                 occurrence of the variable, and list them in order.
+                              </td>
+                              <td style=""><a name="tmpid14123" id="tmpid14123"></a>Select <strong class="guilabel" data-cid="All,_print_as_list">All, print as list</strong>.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </li>
+            </ol>
+         </div></div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div id="localtocBottom" data-piref="xlm_LclTocBtm" role="navigation" aria-label="Link list to sub sections">
+         <div class="title"><h2 class="dfltlabel">Table of Contents</h2></div>
+         <ul>
+            <li><a href="creatingacustomformatstring.html">Creating a custom
+                  output format for a variable</a></li>
+         </ul>
+      </div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.6.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Updating variable
+            properties</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 4.6.2 &nbsp; Creating variables" aria-label="Preceding page: 4.6.2 &nbsp; Creating variables" href="creatingvariables.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 4.6 &nbsp; Setting up variables" aria-label="Section one level up: 4.6 &nbsp; Setting up variables" href="workingwithvariables.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.6.3.1 &nbsp; Creating a custom&#xA;output format for a variable" aria-label="Next page: 4.6.3.1 &nbsp; Creating a custom&#xA;output format for a variable" href="creatingacustomformatstring.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

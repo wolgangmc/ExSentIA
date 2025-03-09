@@ -1,0 +1,424 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="4.6.3.1 ">4.6.3.1 Creating a custom output format for a variable</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="updatingvariableproperties.html" title="4.6.3 &nbsp; Updating variable properties"> -->
+      <link rel="prev" href="updatingvariableproperties.html" title="4.6.3 &nbsp; Updating variable properties">
+      <link rel="next" href="systemvariables.html" title="4.6.4 &nbsp; Using system variables">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wx5w-f-bce303163-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9dcab042","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":62211,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741381558","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==9V8NUnVw1ytkjRAjAwan1iAfqQet/Oe27f/6IY2xPBo+nrVXH6HcCWa18acIHhnteroo2wxfTbofOLUVC0RETt6aVouAIqSvh7airl+z8yF/xcNFlOoLNeV7KU8QHu2NRkRdqRJHbtpeSMqtw0T3mokf0FQwmXbDWJvHUSyQDarLjRopoJmTtmeKUCF9FytXvCzLaiym6Z5/eyGsUtoUuvvmsQ/pxHmafX5ScCGZB9DhbE3fu39uGhm4b81FF4BnUjl6rR67PguJc8ptRJrXgd+SbGNbAkaFzQivGEMzvqqr5ymkB8RejgRBP/w0lijAHA4c0znTI8/RzqWrBo5ljA7RBMfaSNZ65/XfiVkQpudcHQyz1uzFn7xtjy2G4E35iWlMF5qkzs9gXTFio17OGm2hu4SIUiSQHF+o25e0wIg=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="creatingacustomformatstring">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.6.3.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating a custom
+            output format for a variable</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 4.6.3 &nbsp; Updating variable&#xA;properties" aria-label="Preceding page: 4.6.3 &nbsp; Updating variable&#xA;properties" href="updatingvariableproperties.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 4.6.3 &nbsp; Updating variable&#xA;properties" aria-label="Section one level up: 4.6.3 &nbsp; Updating variable&#xA;properties" href="updatingvariableproperties.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.6.4 &nbsp; Using system variables" aria-label="Next page: 4.6.4 &nbsp; Using system variables" href="systemvariables.html">Next</a></div>
+      </div>
+      <div class="sect3 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="creatingacustomformatstring" id="creatingacustomformatstring"></a><span class="otsLbl"><span class="otlbl-num">4.6.3.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating a custom
+                     output format for a variable</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid14127" id="tmpid14127"></a>If you selected <strong class="guilabel" data-cid="Custom">Custom</strong> in the <a class="link" href="updatingvariableproperties.html" title="4.6.3 &nbsp; Updating variable properties">Output format</a> list for a variable, you must construct a custom string in the <strong class="guilabel" data-cid="Custom_format_string">Custom format string</strong> box.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref197" id="tmp4ref197"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid14132" id="tmpid14132"></a>This option is only available for string, integer, float, date,
+               and currency output types.
+            </p>
+         </div>
+         <p><a name="tmpid14133" id="tmpid14133"></a>You can construct a custom format string by manually entering
+            characters in the box and by selecting format symbols to add to the
+            string.
+         </p>
+         <p><a name="tmpid14134" id="tmpid14134"></a>To add a custom format symbol to the <strong class="guilabel" data-cid="Custom_format_string">Custom format string</strong> box:
+         </p>
+         <div class="procedure">
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid14138" id="tmpid14138"></a>Click the <strong class="guilabel" data-cid="Custom_format_symbols">Custom format
+                        symbols</strong> button <img src="./img/b_WebApps_CustomFormat.png" class="igrph" alt="" width="18" height="18">.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid14142" id="tmpid14142"></a>In the <strong class="guilabel" data-cid="Formatting">Formatting</strong> dialog box, select the custom format that you want to insert.
+                  </p>
+                  <p><a name="tmpid14144" id="tmpid14144"></a>If you want to narrow down the list of formatting strings, in
+                     the <strong class="guilabel" data-cid="Data_type">Data type</strong> list, select
+                     the data type that you want to use to filter the list of available
+                     custom formatting options. Currency variables can be modified using
+                     the integer data type strings.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid14147" id="tmpid14147"></a>Click <strong class="guilabel" data-cid="Insert">Insert</strong>.
+                  </p>
+                  <p><a name="tmpid14149" id="tmpid14149"></a>The <strong class="guilabel" data-cid="Formatting">Formatting</strong> dialog
+                     box closes and the format appears in the <strong class="guilabel" data-cid="Custom_format_string">Custom format string</strong> box.
+                  </p>
+               </li>
+            </ol>
+         </div>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref198" id="tmp4ref198"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <div class="itemizedlist">
+               <ul class="itemizedlist">
+                  <li class="listitem">
+                     <p><a name="tmpid14155" id="tmpid14155"></a>Additional format symbols are added to the end of
+                        the existing string.
+                     </p>
+                  </li>
+                  <li class="listitem">
+                     <p><a name="tmpid14157" id="tmpid14157"></a>Some custom formats require you to enter text. For
+                        example, if you selected <span class="quote">“<span class="quote">ABC</span>”</span> replace ABC with your
+                        custom text.
+                     </p>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="variablelist standard lvl1 lvlmax1">
+            <dl class="variablelist standard">
+               <dt class="varlistentry"><a name="tmp4ref199" id="tmp4ref199"></a><span class="term"><a name="tmpid14161" id="tmpid14161"></a>Custom format string symbols</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid14163" id="tmpid14163"></a>You can use the following symbols in the <strong class="guilabel" data-cid="Custom_format_string">Custom format string</strong> box to construct
+                     a format string:
+                  </p>
+                  <div class="informaltable">
+                     <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                        <colgroup>
+                           <col align="center" class="col1">
+                           <col class="col2">
+                        </colgroup>
+                        <thead>
+                           <tr class="row">
+                              <th style="" align="center"><a name="tmpid14171" id="tmpid14171"></a>Symbol
+                              </th>
+                              <th style=""><a name="tmpid14172" id="tmpid14172"></a>Function
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14175" id="tmpid14175"></a><strong class="guilabel" data-cid="0">0</strong></td>
+                              <td style=""><a name="tmpid14177" id="tmpid14177"></a>Displays a digit or displays zero if there is no digit to display
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14179" id="tmpid14179"></a><strong class="guilabel" data-cid="#">#</strong></td>
+                              <td style=""><a name="tmpid14181" id="tmpid14181"></a>Displays a digit or displays nothing if there is no digit to
+                                 display
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14183" id="tmpid14183"></a><strong class="guilabel" data-cid=".">.</strong></td>
+                              <td style=""><a name="tmpid14185" id="tmpid14185"></a>Displays a decimal placeholder
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14187" id="tmpid14187"></a><strong class="guilabel" data-cid="%">%</strong></td>
+                              <td style=""><a name="tmpid14189" id="tmpid14189"></a>Multiplies the value by 100 and displays the number as a percentage
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14191" id="tmpid14191"></a><strong class="guilabel" data-cid=",">,</strong></td>
+                              <td style=""><a name="tmpid14193" id="tmpid14193"></a>Displays a thousands separator
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14195" id="tmpid14195"></a><strong class="guilabel" data-cid=":">:</strong></td>
+                              <td style=""><a name="tmpid14197" id="tmpid14197"></a>Displays a time separator
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14199" id="tmpid14199"></a><strong class="guilabel">/</strong></td>
+                              <td style=""><a name="tmpid14201" id="tmpid14201"></a>Displays a date separator
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14203" id="tmpid14203"></a><strong class="guilabel" data-cid="E-">E-</strong>, <strong class="guilabel" data-cid="E+">E+</strong>, <strong class="guilabel" data-cid="e-">e-</strong>, or <strong class="guilabel" data-cid="e+">e+</strong></td>
+                              <td style=""><a name="tmpid14208" id="tmpid14208"></a>Displays the number in scientific format
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14210" id="tmpid14210"></a><strong class="guilabel" data-cid="-">-</strong></td>
+                              <td style=""><a name="tmpid14212" id="tmpid14212"></a>Displays a minus sign
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14214" id="tmpid14214"></a><strong class="guilabel" data-cid="+">+</strong></td>
+                              <td style=""><a name="tmpid14216" id="tmpid14216"></a>Displays a plus sign
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14218" id="tmpid14218"></a><strong class="guilabel" data-cid="$">$</strong></td>
+                              <td style=""><a name="tmpid14220" id="tmpid14220"></a>Displays a dollar sign
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14222" id="tmpid14222"></a><strong class="guilabel">(</strong> or <strong class="guilabel">)</strong></td>
+                              <td style=""><a name="tmpid14225" id="tmpid14225"></a>Displays a left or right parenthesis
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14227" id="tmpid14227"></a><strong class="guilabel">\</strong></td>
+                              <td style=""><a name="tmpid14229" id="tmpid14229"></a>Displays the next literal character
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14231" id="tmpid14231"></a><strong class="guilabel" data-cid="_ABC_">"ABC"</strong></td>
+                              <td style=""><a name="tmpid14233" id="tmpid14233"></a>Displays the characters within the quotation marks (for example, <strong class="guilabel" data-cid="ABC">ABC</strong>)
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14236" id="tmpid14236"></a><strong class="guilabel" data-cid="@">@</strong></td>
+                              <td style=""><a name="tmpid14238" id="tmpid14238"></a>Displays a character or displays a space if there is no character
+                                 to display
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14240" id="tmpid14240"></a><strong class="guilabel" data-cid="&amp;">&amp;</strong></td>
+                              <td style=""><a name="tmpid14242" id="tmpid14242"></a>Displays a character or displays nothing if there is no character
+                                 to display
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14244" id="tmpid14244"></a><strong class="guilabel" data-cid="<">&lt;</strong></td>
+                              <td style=""><a name="tmpid14246" id="tmpid14246"></a>Forces all characters to appear in lowercase
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14248" id="tmpid14248"></a><strong class="guilabel" data-cid="&gt;">&gt;</strong></td>
+                              <td style=""><a name="tmpid14250" id="tmpid14250"></a>Forces all characters to appear in uppercase
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14252" id="tmpid14252"></a><strong class="guilabel" data-cid="!">!</strong></td>
+                              <td style=""><a name="tmpid14254" id="tmpid14254"></a>Forces placeholders to fill left to right
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14256" id="tmpid14256"></a><strong class="guilabel" data-cid="a_p">a/p</strong></td>
+                              <td style=""><a name="tmpid14258" id="tmpid14258"></a>Displays the hour using the 12-hour clock followed by <strong class="guilabel" data-cid="a">a</strong> or <strong class="guilabel" data-cid="p">p</strong></td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14262" id="tmpid14262"></a><strong class="guilabel" data-cid="am_pm">am/pm</strong></td>
+                              <td style=""><a name="tmpid14264" id="tmpid14264"></a>Displays the hour using the 12-hour clock followed by <strong class="guilabel" data-cid="am">am</strong> or <strong class="guilabel" data-cid="pm">pm</strong></td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14268" id="tmpid14268"></a><strong class="guilabel" data-cid="A_P">A/P</strong></td>
+                              <td style=""><a name="tmpid14270" id="tmpid14270"></a>Displays the hour using the 12-hour clock followed by <strong class="guilabel" data-cid="A">A</strong> or <strong class="guilabel" data-cid="P">P</strong></td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14274" id="tmpid14274"></a><strong class="guilabel" data-cid="AM_PM">AM/PM</strong></td>
+                              <td style=""><a name="tmpid14276" id="tmpid14276"></a>Displays the hour using the 12-hour clock followed by <strong class="guilabel" data-cid="AM">AM</strong> or <strong class="guilabel" data-cid="PM">PM</strong></td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14280" id="tmpid14280"></a><strong class="guilabel" data-cid="AMPM">AMPM</strong></td>
+                              <td style=""><a name="tmpid14282" id="tmpid14282"></a>Displays <strong class="guilabel" data-cid="AM">AM</strong> or <strong class="guilabel" data-cid="PM">PM</strong> for the specified hour
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14286" id="tmpid14286"></a><strong class="guilabel" data-cid="c">c</strong></td>
+                              <td style=""><a name="tmpid14288" id="tmpid14288"></a>Displays the date and time as <strong class="guilabel" data-cid="m_d_yy_h:nn:ss">m/d/yy h:nn:ss</strong> without a leading zero
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14291" id="tmpid14291"></a><strong class="guilabel" data-cid="d">d</strong></td>
+                              <td style=""><a name="tmpid14293" id="tmpid14293"></a>Displays the day as a number without a leading zero
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14295" id="tmpid14295"></a><strong class="guilabel" data-cid="dd">dd</strong></td>
+                              <td style=""><a name="tmpid14297" id="tmpid14297"></a>Displays the day as a number with a leading zero
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14299" id="tmpid14299"></a><strong class="guilabel" data-cid="ddd">ddd</strong></td>
+                              <td style=""><a name="tmpid14301" id="tmpid14301"></a>Displays the abbreviated name of the day of the week
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14303" id="tmpid14303"></a><strong class="guilabel" data-cid="dddd">dddd</strong></td>
+                              <td style=""><a name="tmpid14305" id="tmpid14305"></a>Displays the full name of the day of the week
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14307" id="tmpid14307"></a><strong class="guilabel" data-cid="ddddd">ddddd</strong></td>
+                              <td style=""><a name="tmpid14309" id="tmpid14309"></a>Displays the date as <strong class="guilabel" data-cid="m_d_yy">m/d/yy</strong> without a
+                                 leading zero
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14312" id="tmpid14312"></a><strong class="guilabel" data-cid="dddddd">dddddd</strong></td>
+                              <td style=""><a name="tmpid14314" id="tmpid14314"></a>Displays the date as <strong class="guilabel" data-cid="mmmm_d,_yyyy">mmmm d, yyyy</strong> (where <strong class="guilabel" data-cid="mmmm">mmmm</strong> is the full name of the month)
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14318" id="tmpid14318"></a><strong class="guilabel" data-cid="DDD">DDD</strong></td>
+                              <td style=""><a name="tmpid14320" id="tmpid14320"></a>Displays the abbreviated name of the day of the week in uppercase
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14322" id="tmpid14322"></a><strong class="guilabel" data-cid="DDDD">DDDD</strong></td>
+                              <td style=""><a name="tmpid14324" id="tmpid14324"></a>Displays the full name of the day of the week in uppercase
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14326" id="tmpid14326"></a><strong class="guilabel" data-cid="h">h</strong></td>
+                              <td style=""><a name="tmpid14328" id="tmpid14328"></a>Displays the hour as a number without a leading zero
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14330" id="tmpid14330"></a><strong class="guilabel" data-cid="hh">hh</strong></td>
+                              <td style=""><a name="tmpid14332" id="tmpid14332"></a>Displays the hour as a number with a leading zero
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14334" id="tmpid14334"></a><strong class="guilabel" data-cid="m">m</strong></td>
+                              <td style=""><a name="tmpid14336" id="tmpid14336"></a>Displays the month as a number without a leading zero
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14338" id="tmpid14338"></a><strong class="guilabel" data-cid="mm">mm</strong></td>
+                              <td style=""><a name="tmpid14340" id="tmpid14340"></a>Displays the month as a number with a leading zero
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14342" id="tmpid14342"></a><strong class="guilabel" data-cid="mmm">mmm</strong></td>
+                              <td style=""><a name="tmpid14344" id="tmpid14344"></a>Displays the abbreviated name of the month
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14346" id="tmpid14346"></a><strong class="guilabel" data-cid="mmmm">mmmm</strong></td>
+                              <td style=""><a name="tmpid14348" id="tmpid14348"></a>Displays the full name of the month
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14350" id="tmpid14350"></a><strong class="guilabel" data-cid="MMM">MMM</strong></td>
+                              <td style=""><a name="tmpid14352" id="tmpid14352"></a>Displays the abbreviated name of the month in uppercase
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14354" id="tmpid14354"></a><strong class="guilabel" data-cid="MMMM">MMMM</strong></td>
+                              <td style=""><a name="tmpid14356" id="tmpid14356"></a>Displays the full name of the month in uppercase
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14358" id="tmpid14358"></a><strong class="guilabel" data-cid="n">n</strong></td>
+                              <td style=""><a name="tmpid14360" id="tmpid14360"></a>Displays the minute as a number without a leading zero
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14362" id="tmpid14362"></a><strong class="guilabel" data-cid="nn">nn</strong></td>
+                              <td style=""><a name="tmpid14364" id="tmpid14364"></a>Displays the minute as a number with a leading zero
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14366" id="tmpid14366"></a><strong class="guilabel" data-cid="q">q</strong></td>
+                              <td style=""><a name="tmpid14368" id="tmpid14368"></a>Displays the calendar quarter as a number
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14370" id="tmpid14370"></a><strong class="guilabel" data-cid="s">s</strong></td>
+                              <td style=""><a name="tmpid14372" id="tmpid14372"></a>Displays the second as a number without a leading zero
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14374" id="tmpid14374"></a><strong class="guilabel" data-cid="ss">ss</strong></td>
+                              <td style=""><a name="tmpid14376" id="tmpid14376"></a>Displays the second as a number with a leading zero
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14378" id="tmpid14378"></a><strong class="guilabel" data-cid="ttttt">ttttt</strong></td>
+                              <td style=""><a name="tmpid14380" id="tmpid14380"></a>Displays the complete time as <strong class="guilabel" data-cid="h:nn:ss">h:nn:ss</strong></td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14383" id="tmpid14383"></a><strong class="guilabel" data-cid="w">w</strong></td>
+                              <td style=""><a name="tmpid14385" id="tmpid14385"></a>Displays the numeric day of the week, 1-7
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14387" id="tmpid14387"></a><strong class="guilabel" data-cid="ww">ww</strong></td>
+                              <td style=""><a name="tmpid14389" id="tmpid14389"></a>Displays the number of the week within the current year, 0-52
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14391" id="tmpid14391"></a><strong class="guilabel" data-cid="y">y</strong></td>
+                              <td style=""><a name="tmpid14393" id="tmpid14393"></a>Displays the day of the year as a number
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14395" id="tmpid14395"></a><strong class="guilabel" data-cid="yy">yy</strong></td>
+                              <td style=""><a name="tmpid14397" id="tmpid14397"></a>Displays the last two digits of the year
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14399" id="tmpid14399"></a><strong class="guilabel" data-cid="yyyy">yyyy</strong></td>
+                              <td style=""><a name="tmpid14401" id="tmpid14401"></a>Displays the year
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" align="center"><a name="tmpid14403" id="tmpid14403"></a><strong class="guilabel" data-cid="I">I</strong></td>
+                              <td style=""><a name="tmpid14405" id="tmpid14405"></a>Displays the number of days between January 1, 1900 and the
+                                 date value stored in the variable
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </dd>
+            </dl>
+         </div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.6.3.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating a custom
+            output format for a variable</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 4.6.3 &nbsp; Updating variable&#xA;properties" aria-label="Preceding page: 4.6.3 &nbsp; Updating variable&#xA;properties" href="updatingvariableproperties.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 4.6.3 &nbsp; Updating variable&#xA;properties" aria-label="Section one level up: 4.6.3 &nbsp; Updating variable&#xA;properties" href="updatingvariableproperties.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.6.4 &nbsp; Using system variables" aria-label="Next page: 4.6.4 &nbsp; Using system variables" href="systemvariables.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

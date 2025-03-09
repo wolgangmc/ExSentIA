@@ -1,0 +1,183 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="3.9.1 ">3.9.1 Specifying the text to find or replace</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="search-replace-content-24-2.html" title="3.9 &nbsp; Searching and replacing text in multiple content resources"> -->
+      <link rel="prev" href="search-replace-content-24-2.html" title="3.9 &nbsp; Searching and replacing text in multiple content resources">
+      <link rel="next" href="advanced-search-options-24-2.html" title="3.9.2 &nbsp; Specifying advanced search options">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wwuo-f-0ed9bd005-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":7,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d496e7f","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61441,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741380238","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==01+dSn+cSJWhaq8uKA8duEtPWJ4s8OOEPCVTsb4+6YZkLxh/hmZRxamvq63hRe7E6Wo97/xpBDogE9hGhnpaWNSUpy1BGVhvJ3SpZzK5TIhkkOrm5+oGY71uRlen80nKwezjak8yDwLxKcuUOjKIZYaI5CSW2IanvM1PkDHBMxO1hv7+uLcgUfAHtjAHKJlTV0ggXDRAZPqTt3fSlEnh6NKS0zXO87/+3t5XBylFtj2NRRyIpup6/iYO7lkFxC7e+s6ifV0IsfMaxkyx7AAWDerPmeizV4Gh1CnvX7oJLYwZlotWiS5OKDYah5K8C4v6FB0SHnCFzlnb2/IY7/fo5/YWZ100Vp8EtHB6DnPQBcgyw26s8fStz9G/GNvhJKvFAbd3UDVCuHWu7aKVmnZJUcJ5dhNQ4MW1uACrJMWQV1E=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="specify-search-text-24-2">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">3.9.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Specifying the
+            text to find or replace</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 3.9 &nbsp; Searching and replacing text in multiple content resources" aria-label="Preceding page: 3.9 &nbsp; Searching and replacing text in multiple content resources" href="search-replace-content-24-2.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 3.9 &nbsp; Searching and replacing text in multiple content resources" aria-label="Section one level up: 3.9 &nbsp; Searching and replacing text in multiple content resources" href="search-replace-content-24-2.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 3.9.2 &nbsp; Specifying advanced&#xA;search options" aria-label="Next page: 3.9.2 &nbsp; Specifying advanced&#xA;search options" href="advanced-search-options-24-2.html">Next</a></div>
+      </div>
+      <div class="sect2 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="specify-search-text-24-2" id="specify-search-text-24-2"></a><span class="otsLbl"><span class="otlbl-num">3.9.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Specifying the
+                     text to find or replace</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid11037" id="tmpid11037"></a>To search or replace text across multiple resources, start by
+            specifying the search text. Then, if needed, specify the replacement
+            text. The search text or replacement text can be a word, a phrase,
+            or a sequence of characters.
+         </p>
+         <p><a name="tmpid11038" id="tmpid11038"></a>To specify the search text or replacement text, in the <strong class="guilabel" data-cid="Search">Search</strong> box, do the following:
+         </p>
+         <div class="informaltable">
+            <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+               <colgroup>
+                  <col class="col1">
+                  <col class="col2">
+               </colgroup>
+               <thead>
+                  <tr class="row">
+                     <th style="" valign="top"><p><a name="tmpid11046" id="tmpid11046"></a><a name="tmpid11047" id="tmpid11047"></a>Task
+                        </p>
+                     </th>
+                     <th style="" valign="top"><p><a name="tmpid11048" id="tmpid11048"></a><a name="tmpid11049" id="tmpid11049"></a>Action
+                        </p>
+                     </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid11052" id="tmpid11052"></a><a name="tmpid11053" id="tmpid11053"></a>To specify search text
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid11054" id="tmpid11054"></a><a name="tmpid11055" id="tmpid11055"></a>Enter the search text. Or, click the down arrow to open
+                           the <a class="link" href="advanced-search-options-24-2.html" title="3.9.2 &nbsp; Specifying advanced search options"><strong class="guilabel" data-cid="Advanced_search_options">Advanced
+                                 search options</strong></a> dialog box, and then enter the search
+                           text in the <strong class="guilabel" data-cid="Search...">Search...</strong> box.
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><p><a name="tmpid11060" id="tmpid11060"></a><a name="tmpid11061" id="tmpid11061"></a>To specify replacement text
+                        </p>
+                     </td>
+                     <td style=""><p><a name="tmpid11062" id="tmpid11062"></a><a name="tmpid11063" id="tmpid11063"></a>Click the down arrow to open the <strong class="guilabel" data-cid="Advanced_search_options">Advanced search
+                              options</strong> dialog box, and then enter the replacement text
+                           in the <strong class="guilabel" data-cid="Replace...">Replace...</strong> box.
+                        </p>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <p><a name="tmpid11066" id="tmpid11066"></a>Search text and replacement text can contain letters, numerals,
+            spaces, and any of the following characters:
+         </p>
+         <p><a name="tmpid11067" id="tmpid11067"></a><code class="literal">~ ` @ $ ^ ( ) _ - = ; <code class="literal">"</code> ' , .</code></p>
+         <p><a name="tmpid11070" id="tmpid11070"></a>Search text and replacement text cannot contain any of these
+            characters:
+         </p>
+         <p><a name="tmpid11071" id="tmpid11071"></a><code class="literal">! # % &amp; * + | \ / &lt;&gt; : ?</code></p>
+         <div class="tip">
+            <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Tip</span></span></strong></p>
+            <p><a name="tmpid11074" id="tmpid11074"></a>If you enter invalid search text or replacement text, a red
+               outline appears around the text and you cannot search or replace.
+            </p>
+         </div>
+         <p><a name="tmpid11075" id="tmpid11075"></a>You can put quotation marks around the search text to change
+            the type of text matching that occurs in content resources. The following
+            table shows the results if you enclose the search text in quotation
+            marks, and the results if you do not:
+         </p>
+         <div class="informaltable">
+            <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+               <colgroup>
+                  <col class="col1">
+                  <col class="col2">
+               </colgroup>
+               <thead>
+                  <tr class="row">
+                     <th style="" valign="top"><a name="tmpid11082" id="tmpid11082"></a>Search text in quotation marks
+                     </th>
+                     <th style="" valign="top"><a name="tmpid11083" id="tmpid11083"></a>Results
+                     </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr class="row">
+                     <td style=""><a name="tmpid11086" id="tmpid11086"></a>Yes
+                     </td>
+                     <td style=""><a name="tmpid11087" id="tmpid11087"></a>The search returns content resources that contain one or more
+                        instances of the whole search text. The words in each instance are
+                        in the same order as the words in the search text.
+                     </td>
+                  </tr>
+                  <tr class="row">
+                     <td style=""><a name="tmpid11089" id="tmpid11089"></a>No
+                     </td>
+                     <td style=""><a name="tmpid11090" id="tmpid11090"></a>The search returns content resources that contain one or more
+                        instances of every word in the search text, in any order.
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref148" id="tmp4ref148"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid11092" id="tmpid11092"></a>In search text, a word is any string of one or more consecutive,
+               valid characters, including dictionary words. Spaces separate words
+               in the search text.
+            </p>
+         </div>
+         <p><a name="tmpid11093" id="tmpid11093"></a>If you are replacing text, then the search text in the <strong class="guilabel" data-cid="Search...">Search...</strong> box and the replacement text in the <strong class="guilabel" data-cid="Replace...">Replace...</strong> box are both enclosed in quotation marks that
+            cannot be removed. As a result, a <strong class="guilabel" data-cid="Replace">Replace</strong> operation
+            finds and replaces only text that matches the whole search text.
+         </p>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">3.9.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Specifying the
+            text to find or replace</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 3.9 &nbsp; Searching and replacing text in multiple content resources" aria-label="Preceding page: 3.9 &nbsp; Searching and replacing text in multiple content resources" href="search-replace-content-24-2.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 3.9 &nbsp; Searching and replacing text in multiple content resources" aria-label="Section one level up: 3.9 &nbsp; Searching and replacing text in multiple content resources" href="search-replace-content-24-2.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 3.9.2 &nbsp; Specifying advanced&#xA;search options" aria-label="Next page: 3.9.2 &nbsp; Specifying advanced&#xA;search options" href="advanced-search-options-24-2.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

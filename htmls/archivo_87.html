@@ -1,0 +1,138 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="2.5.3 ">2.5.3 Enabling OpenText Core Journey integration</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="integratingadditionalcomponents.html" title="2.5 &nbsp; Integrating additional components"> -->
+      <link rel="prev" href="usecoresig.html" title="2.5.2 &nbsp; Integrating OpenText Core Signature for secure document signing">
+      <link rel="next" href="configuringeiingration.html" title="2.5.3.1 &nbsp; Configuring OpenText Core Journey integration">
+   <link rel="stylesheet" type="text/css" href="../../../../../ccmce/v250100/ccmce-igd/en/ofh/dynData/condstyles.css">
+<link rel="stylesheet" type="text/css" href="../../../../../ccmceorc/v250100/ccmceorc-h-ugd/en/ofh/dynData/condstyles.css">
+
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbrbt4wwnb-f-e2d0d1299-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d30d521","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61291,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741380001","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==dO6XZ+Aj8Fk/Pg6qd79Iz2Q1zr7g7CbiAU7r08V/5/qvJXQF08XsgpClfFJqa4qlulGyVZ5OpQGqTGnw5VWgNsXCH1l1j5d/D4vRBRcAb/gOs30MY9pioq2C+lw61d8BgoZ5NX8JXx+Y8Iut9p3jXk9Hp7WKaCjK8q3zE0JKQXaRKVr6rfgG1pNxhTar1tIqdM2A5Pfy4qxm8d/rbxKGx+lbI8IxHnf463bpFAr54M7Jzi7+Ng6FYcbCYDlwygH6KdEKo5snGBOT2JOZv1pJi8IJ59q2EYXa+NIxp8R/lBXRsak5PE7VS22WHD7B+kPKOR/MWngPQqPlJf8iqj5wQpjoWkrmbxBX51UGjSdzBk9OasLRldo9yQCE23k94LPEyvt1QxiTPxzRDK7ZpYe8dnsVprnX7LNoj+YB2c0Ohkg=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="enablingcxi">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.5.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Enabling OpenText Core
+            Journey integration</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.5.2 &nbsp; Integrating OpenText Core Signature for secure&#xA;document signing" aria-label="Preceding page: 2.5.2 &nbsp; Integrating OpenText Core Signature for secure&#xA;document signing" href="usecoresig.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.5 &nbsp; Integrating additional components" aria-label="Section one level up: 2.5 &nbsp; Integrating additional components" href="integratingadditionalcomponents.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.5.3.1 &nbsp; Configuring OpenText Core Journey integration" aria-label="Next page: 2.5.3.1 &nbsp; Configuring OpenText Core Journey integration" href="configuringeiingration.html">Next</a></div>
+      </div>
+      <div class="sect2 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="enablingcxi" id="enablingcxi"></a><span class="otsLbl"><span class="otlbl-num">2.5.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Enabling OpenText Core
+                     Journey integration</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid7649" id="tmpid7649"></a><span class="namestring" data-cid="OpenText_Core_Journey">OpenText Core Journey</span> allows organizations to map customer journeys
+            and track customer activity for every event, across all customer journey
+            touchpoints. The solution helps identify which events are working
+            and which need improvement. To let users view event data for <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> communications,
+            you must integrate your <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> environment with <span class="namestring" data-cid="OpenText_Core_Journey">OpenText Core Journey</span>.
+            Event data, which is sent to <span class="namestring" data-cid="OpenText_Core_Journey">OpenText Core Journey</span> as a <a class="link" href="eventjson.html" title="2.5.3.2 &nbsp; Event JSON file">JSON file</a>, can include information such
+            as the number and types of documents that are generated by <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> and
+            user-interaction information for output delivery channels.
+         </p>
+         <div class="procedure"><h2 class="title"><a name="d0e13720" id="d0e13720"></a><b><span class="otlbl-ttl">To enable <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> to send data to <span class="namestring" data-cid="OpenText_Core_Journey">OpenText Core Journey</span>:</span></b></h2>
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid7674" id="tmpid7674"></a>Use a Helm command to enable the <span class="namestring" data-cid="OpenText_Core_Journey">OpenText Core Journey</span> integration
+                     service within the <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> deployment. For information about deploying <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span>,
+                     see 
+                     <data-xpi><data-xproc name="ExtXrefStart" href="ccmce250100-igd.-" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                        ><A class="otModuleHide if-ccmce-igd-oto-show"  TARGET="_blank" HREF="../../../../../ccmce/v250100/ccmce-igd/en/ofh/index.html"><i>OpenText Communications - Cloud Deployment Guide (CCMCE250100-IGD)</i></A
+                        ><SPAN class="otModuleShow if-ccmce-igd-hide"><i>OpenText Communications - Cloud Deployment Guide (CCMCE250100-IGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccmce250100-igd.-" fmt=""></data-xproc></data-xpi>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid7684" id="tmpid7684"></a>In Tenant management view in the <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> web client, configure <span class="namestring" data-cid="OpenText_Core_Journey">OpenText Core Journey</span> integration
+                     for each domain from which you want to send data. For more information,
+                     see <a class="link" href="configuringeiingration.html" title="2.5.3.1 &nbsp; Configuring OpenText Core Journey integration">Configuring <span class="namestring" data-cid="OpenText_Core_Journey">OpenText Core Journey</span> integration</a>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid7695" id="tmpid7695"></a>In <span class="namestring" data-cid="Orchestrator">Orchestrator</span>, enable document tracking for communications
+                     and output channels. For more information about enabling tracking,
+                     see 
+                     <data-xpi><data-xproc name="ExtXrefStart" href="ccmceorc-h-ugd.-" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                        ><A class="otModuleHide if-ccmceorc-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../ccmceorc/v250100/ccmceorc-h-ugd/en/ofh/index.html"><i>OpenText Communications - Orchestrator User Help (CCMCEORC-H-UGD)</i></A
+                        ><SPAN class="otModuleShow if-ccmceorc-h-ugd-hide"><i>OpenText Communications - Orchestrator User Help (CCMCEORC-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccmceorc-h-ugd.-" fmt=""></data-xproc></data-xpi>.
+                  </p>
+               </li>
+            </ol>
+         </div>
+         <p><a name="tmpid7698" id="tmpid7698"></a>By default, the event cron job for the Journey integration in
+            your deployment runs every 10 minutes to send event data from <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> to <span class="namestring" data-cid="OpenText_Core_Journey">OpenText Core Journey</span>.
+            You can change this frequency by using a Helm command to set the <strong class="command"><code>ei.schedule.event</code></strong> parameter. For more information, see 
+            <data-xpi><data-xproc name="ExtXrefStart" href="ccmce250100-igd.-" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+               ><A class="otModuleHide if-ccmce-igd-oto-show"  TARGET="_blank" HREF="../../../../../ccmce/v250100/ccmce-igd/en/ofh/index.html"><i>OpenText Communications - Cloud Deployment Guide (CCMCE250100-IGD)</i></A
+               ><SPAN class="otModuleShow if-ccmce-igd-hide"><i>OpenText Communications - Cloud Deployment Guide (CCMCE250100-IGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccmce250100-igd.-" fmt=""></data-xproc></data-xpi>.
+         </p>
+         <p><a name="tmpid7706" id="tmpid7706"></a>To visualize the data points that are sent from <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span>, you
+            can <a class="link" href="creatingcustomerjourneys.html" title="2.5.3.3 &nbsp; Creating customer journeys">create customer journeys</a> in <span class="namestring" data-cid="OpenText_Core_Journey">OpenText Core Journey</span>. For more information about creating customer
+            journeys, see <em class="emphasis"><span class="namestring" data-cid="OpenText_Core_Journey">OpenText Core Journey</span> User Guide (CDPEXPCDI-UGD)</em>.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref102" id="tmp4ref102"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid7718" id="tmpid7718"></a>For information about <span class="namestring" data-cid="OpenText">OpenText</span> product
+               compatibility, see the <span class="namestring" data-cid="OpenText">OpenText</span> compatibly information provided
+               in the release notes for the product. <span class="phrase">Release
+                  notes are available on My Support.</span></p>
+         </div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div id="localtocBottom" data-piref="xlm_LclTocBtm" role="navigation" aria-label="Link list to sub sections">
+         <div class="title"><h2 class="dfltlabel">Table of Contents</h2></div>
+         <ul>
+            <li><a href="configuringeiingration.html">Configuring OpenText Core Journey integration</a></li>
+            <li><a href="eventjson.html">Event JSON file</a></li>
+            <li><a href="creatingcustomerjourneys.html">Creating customer journeys</a></li>
+         </ul>
+      </div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.5.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Enabling OpenText Core
+            Journey integration</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.5.2 &nbsp; Integrating OpenText Core Signature for secure&#xA;document signing" aria-label="Preceding page: 2.5.2 &nbsp; Integrating OpenText Core Signature for secure&#xA;document signing" href="usecoresig.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.5 &nbsp; Integrating additional components" aria-label="Section one level up: 2.5 &nbsp; Integrating additional components" href="integratingadditionalcomponents.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.5.3.1 &nbsp; Configuring OpenText Core Journey integration" aria-label="Next page: 2.5.3.1 &nbsp; Configuring OpenText Core Journey integration" href="configuringeiingration.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

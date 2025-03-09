@@ -1,0 +1,746 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="4.6.4.6 ">4.6.4.6 High-volume output processing related system variables</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="systemvariables.html" title="4.6.4 &nbsp; Using system variables"> -->
+      <link rel="prev" href="daterelatedsystemvariables.html" title="4.6.4.5 &nbsp; Date related system variables">
+      <link rel="next" href="productionrelatedsystemvariables.html" title="4.6.4.7 &nbsp; Production related system variables">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wx5y-f-d62deda21-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9dcaecd8","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":62219,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741381560","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==eECZncF3XERJ318bK8zTphPj6aX38UwrGcpJaBo3AYzKL60U0QhGxs4e5VRBEU99ItSuWFg7+eIM8wIm/O26Ufly/7zW0B8KTZPTie5DzBC1k4T7xM+5D1Qnl2IMr7XbhP0lR3m5VR4jxyBE0HIZ1RwQEtQrOlBujeKy5Is/Oktmir6EWNe9c+S2u0yteBv1PIIWCnzSMOeEs9+C9LGYL5Zd35fD8N7t+oyXvXuptz1o22YndBhlQh5M86SYQ1/vqpJsYxSDSRToyvUcQdFBcTpbTFFlqeQJShcLJc+Tu3Te7iYbegToDbj0SFlorr3lshKA/EBk2nn6RT5Rz6XabOSazrqIuxRJoTO3QJ1aOj8H1dVSpzPNn5MKh39DkC2U9FfspFdFFtdOVZ8kNCwGl1QoZg6DDTqFlGBeGaL7QYc=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="high-volumeoutputprocessingre">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.6.4.6</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">High-volume output
+            processing related system variables</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 4.6.4.5 &nbsp; Date related system&#xA;variables" aria-label="Preceding page: 4.6.4.5 &nbsp; Date related system&#xA;variables" href="daterelatedsystemvariables.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 4.6.4 &nbsp; Using system variables" aria-label="Section one level up: 4.6.4 &nbsp; Using system variables" href="systemvariables.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.6.4.7 &nbsp; Production related&#xA;system variables" aria-label="Next page: 4.6.4.7 &nbsp; Production related&#xA;system variables" href="productionrelatedsystemvariables.html">Next</a></div>
+      </div>
+      <div class="sect3 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="high-volumeoutputprocessingre" id="high-volumeoutputprocessingre"></a><span class="otsLbl"><span class="otlbl-num">4.6.4.6</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">High-volume output
+                     processing related system variables</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid15670" id="tmpid15670"></a>The system variables in the following table are related to output
+            processes such as sorting and bundling, and to objects such as multiple
+            up pages and inserters. 
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref206" id="tmp4ref206"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid15672" id="tmpid15672"></a>In the following table, if a system variable name is in <span class="highlight"><strong>bold</strong></span>, its value can be calculated using a rule<span class="phrase"> or formula</span>.
+            </p>
+         </div>
+         <div class="table"><p class="title"><a name="tbl-24880" id="tbl-24880"></a><b><span class="otLbl"><span class="otlbl-kw">Table</span> <span class="otlbl-num">4.9</span>: </span><span class="otlbl-ttl">High-volume output processing
+                  related system variables</span></b></p>
+            <div class="table-contents">
+               <table summary="High-volume output processing related system variables" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                  <colgroup>
+                     <col class="col1">
+                     <col class="col2">
+                  </colgroup>
+                  <thead>
+                     <tr class="row">
+                        <th style=""><p><a name="tmpid15682" id="tmpid15682"></a><a name="tmpid15683" id="tmpid15683"></a>Variable name
+                           </p>
+                        </th>
+                        <th style=""><p><a name="tmpid15684" id="tmpid15684"></a><a name="tmpid15685" id="tmpid15685"></a>Description
+                           </p>
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15737" id="tmpid15737"></a><a name="tmpid15738" id="tmpid15738"></a>SYS_BreaksInQueue
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15739" id="tmpid15739"></a><a name="tmpid15740" id="tmpid15740"></a>The total number of convenience breaks created using
+                              the current output queue
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15742" id="tmpid15742"></a><a name="tmpid15743" id="tmpid15743"></a>SYS_BundleCustomer1
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15744" id="tmpid15744"></a><a name="tmpid15745" id="tmpid15745"></a>The sequence number of the current customer within the
+                              first tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15747" id="tmpid15747"></a><a name="tmpid15748" id="tmpid15748"></a>SYS_BundleCustomer2
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15749" id="tmpid15749"></a><a name="tmpid15750" id="tmpid15750"></a>The sequence number of the current customer within the
+                              second tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15752" id="tmpid15752"></a><a name="tmpid15753" id="tmpid15753"></a>SYS_BundleCustomer3
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15754" id="tmpid15754"></a><a name="tmpid15755" id="tmpid15755"></a>The sequence number of the current customer within the
+                              third tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15757" id="tmpid15757"></a><a name="tmpid15758" id="tmpid15758"></a>SYS_BundleCustomer4
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15759" id="tmpid15759"></a><a name="tmpid15760" id="tmpid15760"></a>The sequence number of the current customer within the
+                              fourth tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15762" id="tmpid15762"></a><a name="tmpid15763" id="tmpid15763"></a>SYS_BundleCustomer5
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15764" id="tmpid15764"></a><a name="tmpid15765" id="tmpid15765"></a>The sequence number of the current customer within the
+                              fifth tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15767" id="tmpid15767"></a><a name="tmpid15768" id="tmpid15768"></a>SYS_BundleCustomerTotal1
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15769" id="tmpid15769"></a><a name="tmpid15770" id="tmpid15770"></a>The total number of customers included in the first tier
+                              of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15772" id="tmpid15772"></a><a name="tmpid15773" id="tmpid15773"></a>SYS_BundleCustomerTotal2
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15774" id="tmpid15774"></a><a name="tmpid15775" id="tmpid15775"></a>The total number of customers included in the second
+                              tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15777" id="tmpid15777"></a><a name="tmpid15778" id="tmpid15778"></a>SYS_BundleCustomerTotal3
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15779" id="tmpid15779"></a><a name="tmpid15780" id="tmpid15780"></a>The total number of customers included in the third tier
+                              of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15782" id="tmpid15782"></a><a name="tmpid15783" id="tmpid15783"></a>SYS_BundleCustomerTotal4
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15784" id="tmpid15784"></a><a name="tmpid15785" id="tmpid15785"></a>The total number of customers included in the fourth
+                              tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15787" id="tmpid15787"></a><a name="tmpid15788" id="tmpid15788"></a>SYS_BundleCustomerTotal5
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15789" id="tmpid15789"></a><a name="tmpid15790" id="tmpid15790"></a>The total number of customers included in the fifth tier
+                              of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15792" id="tmpid15792"></a><a name="tmpid15793" id="tmpid15793"></a>SYS_BundleInBreak1
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15794" id="tmpid15794"></a><a name="tmpid15795" id="tmpid15795"></a>The sequence number of the current bundle within the
+                              convenience break for the first tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15797" id="tmpid15797"></a><a name="tmpid15798" id="tmpid15798"></a>SYS_BundleInBreak2
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15799" id="tmpid15799"></a><a name="tmpid15800" id="tmpid15800"></a>The sequence number of the current bundle within the
+                              convenience break for the second tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15802" id="tmpid15802"></a><a name="tmpid15803" id="tmpid15803"></a>SYS_BundleInBreak3
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15804" id="tmpid15804"></a><a name="tmpid15805" id="tmpid15805"></a>The sequence number of the current bundle within the
+                              convenience break for the third tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15807" id="tmpid15807"></a><a name="tmpid15808" id="tmpid15808"></a>SYS_BundleInBreak4
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15809" id="tmpid15809"></a><a name="tmpid15810" id="tmpid15810"></a>The sequence number of the current bundle within the
+                              convenience break for the fourth tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15812" id="tmpid15812"></a><a name="tmpid15813" id="tmpid15813"></a>SYS_BundleInBreak5
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15814" id="tmpid15814"></a><a name="tmpid15815" id="tmpid15815"></a>The sequence number of the current bundle within the
+                              convenience break for the fifth tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15817" id="tmpid15817"></a><a name="tmpid15818" id="tmpid15818"></a>SYS_BundleInQueue1
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15819" id="tmpid15819"></a><a name="tmpid15820" id="tmpid15820"></a>The sequence number of the current bundle within the
+                              output queue for the first tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15822" id="tmpid15822"></a><a name="tmpid15823" id="tmpid15823"></a>SYS_BundleInQueue2
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15824" id="tmpid15824"></a><a name="tmpid15825" id="tmpid15825"></a>The sequence number of the current bundle within the
+                              output queue for the second tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15827" id="tmpid15827"></a><a name="tmpid15828" id="tmpid15828"></a>SYS_BundleInQueue3
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15829" id="tmpid15829"></a><a name="tmpid15830" id="tmpid15830"></a>The sequence number of the current bundle within the
+                              output queue for the third tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15832" id="tmpid15832"></a><a name="tmpid15833" id="tmpid15833"></a>SYS_BundleInQueue4
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15834" id="tmpid15834"></a><a name="tmpid15835" id="tmpid15835"></a>The sequence number of the current bundle within the
+                              output queue for the fourth tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15837" id="tmpid15837"></a><a name="tmpid15838" id="tmpid15838"></a>SYS_BundleInQueue5
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15839" id="tmpid15839"></a><a name="tmpid15840" id="tmpid15840"></a>The sequence number of the current bundle within the
+                              output queue for the fifth tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15842" id="tmpid15842"></a><a name="tmpid15843" id="tmpid15843"></a>SYS_BundlePage1
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15844" id="tmpid15844"></a><a name="tmpid15845" id="tmpid15845"></a>The sequence number of the current page within the first
+                              tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15847" id="tmpid15847"></a><a name="tmpid15848" id="tmpid15848"></a>SYS_BundlePage2
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15849" id="tmpid15849"></a><a name="tmpid15850" id="tmpid15850"></a>The sequence number of the current page within the second
+                              tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15852" id="tmpid15852"></a><a name="tmpid15853" id="tmpid15853"></a>SYS_BundlePage3
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15854" id="tmpid15854"></a><a name="tmpid15855" id="tmpid15855"></a>The sequence number of the current page within the third
+                              tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15857" id="tmpid15857"></a><a name="tmpid15858" id="tmpid15858"></a>SYS_BundlePage4
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15859" id="tmpid15859"></a><a name="tmpid15860" id="tmpid15860"></a>The sequence number of the current page within the fourth
+                              tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15862" id="tmpid15862"></a><a name="tmpid15863" id="tmpid15863"></a>SYS_BundlePage5
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15864" id="tmpid15864"></a><a name="tmpid15865" id="tmpid15865"></a>The sequence number of the current page within the fifth
+                              tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15867" id="tmpid15867"></a><a name="tmpid15868" id="tmpid15868"></a>SYS_BundlePageTotal1
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15869" id="tmpid15869"></a><a name="tmpid15870" id="tmpid15870"></a>The total number of pages included in the first tier
+                              of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15872" id="tmpid15872"></a><a name="tmpid15873" id="tmpid15873"></a>SYS_BundlePageTotal2
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15874" id="tmpid15874"></a><a name="tmpid15875" id="tmpid15875"></a>The total number of pages included in the second tier
+                              of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15877" id="tmpid15877"></a><a name="tmpid15878" id="tmpid15878"></a>SYS_BundlePageTotal3
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15879" id="tmpid15879"></a><a name="tmpid15880" id="tmpid15880"></a>The total number of pages included in the third tier
+                              of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15882" id="tmpid15882"></a><a name="tmpid15883" id="tmpid15883"></a>SYS_BundlePageTotal4
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15884" id="tmpid15884"></a><a name="tmpid15885" id="tmpid15885"></a>The total number of pages included in the fourth tier
+                              of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15887" id="tmpid15887"></a><a name="tmpid15888" id="tmpid15888"></a>SYS_BundlePageTotal5
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15889" id="tmpid15889"></a><a name="tmpid15890" id="tmpid15890"></a>The total number of pages included in the fifth tier
+                              of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15892" id="tmpid15892"></a><a name="tmpid15893" id="tmpid15893"></a>SYS_BundleSheet1
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15894" id="tmpid15894"></a><a name="tmpid15895" id="tmpid15895"></a>The sequence number of the current sheet within the first
+                              tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15897" id="tmpid15897"></a><a name="tmpid15898" id="tmpid15898"></a>SYS_BundleSheet2
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15899" id="tmpid15899"></a><a name="tmpid15900" id="tmpid15900"></a>The sequence number of the current sheet within the second
+                              tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15902" id="tmpid15902"></a><a name="tmpid15903" id="tmpid15903"></a>SYS_BundleSheet3
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15904" id="tmpid15904"></a><a name="tmpid15905" id="tmpid15905"></a>The sequence number of the current sheet within the third
+                              tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15907" id="tmpid15907"></a><a name="tmpid15908" id="tmpid15908"></a>SYS_BundleSheet4
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15909" id="tmpid15909"></a><a name="tmpid15910" id="tmpid15910"></a>The sequence number of the current sheet within the fourth
+                              tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15912" id="tmpid15912"></a><a name="tmpid15913" id="tmpid15913"></a>SYS_BundleSheet5
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15914" id="tmpid15914"></a><a name="tmpid15915" id="tmpid15915"></a>The sequence number of the current sheet within the fifth
+                              tier of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15917" id="tmpid15917"></a><a name="tmpid15918" id="tmpid15918"></a>SYS_BundleSheetTotal1
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15919" id="tmpid15919"></a><a name="tmpid15920" id="tmpid15920"></a>The total number of sheets included in the first tier
+                              of bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15922" id="tmpid15922"></a><a name="tmpid15923" id="tmpid15923"></a>SYS_BundleSheetTotal2
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15924" id="tmpid15924"></a><a name="tmpid15925" id="tmpid15925"></a>The total number of sheets included the second tier of
+                              bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15927" id="tmpid15927"></a><a name="tmpid15928" id="tmpid15928"></a>SYS_BundleSheetTotal3
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15929" id="tmpid15929"></a><a name="tmpid15930" id="tmpid15930"></a>The total number of sheets included the third tier of
+                              bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15932" id="tmpid15932"></a><a name="tmpid15933" id="tmpid15933"></a>SYS_BundleSheetTotal4
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15934" id="tmpid15934"></a><a name="tmpid15935" id="tmpid15935"></a>The total number of sheets included the fourth tier of
+                              bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15937" id="tmpid15937"></a><a name="tmpid15938" id="tmpid15938"></a>SYS_BundleSheetTotal5
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15939" id="tmpid15939"></a><a name="tmpid15940" id="tmpid15940"></a>The total number of sheets included the fifth tier of
+                              bundling
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15942" id="tmpid15942"></a><a name="tmpid15943" id="tmpid15943"></a><span class="highlight"><strong>SYS_ByteInBreak</strong></span></p>
+                        </td>
+                        <td style=""><p><a name="tmpid15945" id="tmpid15945"></a><a name="tmpid15946" id="tmpid15946"></a>The total number of bytes written to the current break
+                              of the current output queue
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15948" id="tmpid15948"></a><a name="tmpid15949" id="tmpid15949"></a><span class="highlight"><strong>SYS_ByteInQueue</strong></span></p>
+                        </td>
+                        <td style=""><p><a name="tmpid15951" id="tmpid15951"></a><a name="tmpid15952" id="tmpid15952"></a>The total number of bytes written to the current output
+                              queue
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15954" id="tmpid15954"></a><a name="tmpid15955" id="tmpid15955"></a>SYS_CustomerBegByte
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15956" id="tmpid15956"></a><a name="tmpid15957" id="tmpid15957"></a>The integer byte offset in the convenience break of the
+                              output queue for the beginning of the current customer
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15959" id="tmpid15959"></a><a name="tmpid15960" id="tmpid15960"></a>SYS_CustomerBegRecord
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15961" id="tmpid15961"></a><a name="tmpid15962" id="tmpid15962"></a>The integer record position in the convenience break
+                              of the output queue for the beginning of the current customer
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15964" id="tmpid15964"></a><a name="tmpid15965" id="tmpid15965"></a>SYS_DocumentInBreak
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15966" id="tmpid15966"></a><a name="tmpid15967" id="tmpid15967"></a>The sequence number of the current document within the
+                              convenience break of the output queue
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15969" id="tmpid15969"></a><a name="tmpid15970" id="tmpid15970"></a>SYS_DocumentInQueue
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid15971" id="tmpid15971"></a><a name="tmpid15972" id="tmpid15972"></a>The sequence number of the current customer within the
+                              output queue
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15984" id="tmpid15984"></a><a name="tmpid15985" id="tmpid15985"></a><span class="highlight"><strong>SYS_InserterBins</strong></span></p>
+                        </td>
+                        <td style=""><p><a name="tmpid15987" id="tmpid15987"></a><a name="tmpid15988" id="tmpid15988"></a>An array of Boolean values that specifies which inserters
+                              bins that have been selected for the current customer in the output
+                              queue
+                           </p>
+                           <div class="tip">
+                              <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Tip</span></span></strong></p>
+                              <p><a name="tmpid15990" id="tmpid15990"></a>You can use the <code class="literal">Count</code> function to determine
+                                 the number of output queues used.
+                              </p>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid15993" id="tmpid15993"></a><a name="tmpid15994" id="tmpid15994"></a><span class="highlight"><strong>SYS_InserterBinString</strong></span></p>
+                        </td>
+                        <td style=""><p><a name="tmpid15996" id="tmpid15996"></a><a name="tmpid15997" id="tmpid15997"></a>A string containing a 1 for each inserter bin selected
+                              and a 0 for each inserter bin not selected for the current customer
+                           </p>
+                           <div class="tip">
+                              <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Tip</span></span></strong></p>
+                              <p><a name="tmpid15999" id="tmpid15999"></a>You can use the <code class="literal">Count</code> function to determine
+                                 the number of output queues used.
+                              </p>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16002" id="tmpid16002"></a><a name="tmpid16003" id="tmpid16003"></a>SYS_InserterInQueue
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid16004" id="tmpid16004"></a><a name="tmpid16005" id="tmpid16005"></a>The name you have specified for the current inserter
+                              bin in the output queue
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16098" id="tmpid16098"></a><a name="tmpid16099" id="tmpid16099"></a>SYS_NumBannersinQueue
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid16100" id="tmpid16100"></a><a name="tmpid16101" id="tmpid16101"></a>The sequence number of the current banner page within
+                              the output queue
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16103" id="tmpid16103"></a><a name="tmpid16104" id="tmpid16104"></a>SYS_PageInBreak
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid16105" id="tmpid16105"></a><a name="tmpid16106" id="tmpid16106"></a>The sequence number of the current page within the convenience
+                              break of the output queue
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16109" id="tmpid16109"></a><a name="tmpid16110" id="tmpid16110"></a><span class="highlight"><strong>SYS_PageInQueue</strong></span></p>
+                        </td>
+                        <td style=""><p><a name="tmpid16112" id="tmpid16112"></a><a name="tmpid16113" id="tmpid16113"></a>The total number of physical pages included in the current
+                              output queue.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16116" id="tmpid16116"></a><a name="tmpid16117" id="tmpid16117"></a><span class="highlight"><strong>SYS_PagePrintEnd</strong></span></p>
+                        </td>
+                        <td style=""><p><a name="tmpid16119" id="tmpid16119"></a><a name="tmpid16120" id="tmpid16120"></a>The page number of the last physical page for page-level
+                              reprints
+                           </p>
+                           <p><a name="tmpid16121" id="tmpid16121"></a>The <span class="quote">‘<span class="quote">SYS_PagePrintEnd</span>‘</span> system variable is used only with post-sort processing runs.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16124" id="tmpid16124"></a><a name="tmpid16125" id="tmpid16125"></a><span class="highlight"><strong>SYS_PagePrintStart</strong></span></p>
+                        </td>
+                        <td style=""><p><a name="tmpid16127" id="tmpid16127"></a><a name="tmpid16128" id="tmpid16128"></a>The page number of the first physical page for page-level
+                              reprints
+                           </p>
+                           <p><a name="tmpid16129" id="tmpid16129"></a>The <span class="quote">‘<span class="quote">SYS_PagePrintStart</span>‘</span> system variable is used only with post-sort processing runs.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16132" id="tmpid16132"></a><a name="tmpid16133" id="tmpid16133"></a>SYS_PDLInQueue
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid16134" id="tmpid16134"></a><a name="tmpid16135" id="tmpid16135"></a>The type of output device that is associated with the
+                              current output queue
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16137" id="tmpid16137"></a><a name="tmpid16138" id="tmpid16138"></a>SYS_PostSort
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid16139" id="tmpid16139"></a><a name="tmpid16140" id="tmpid16140"></a>A Boolean value that returns T in post-sort and F in
+                              pre-sort processing
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16142" id="tmpid16142"></a><a name="tmpid16143" id="tmpid16143"></a>SYS_PrinterInQueue
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid16144" id="tmpid16144"></a><a name="tmpid16145" id="tmpid16145"></a>The name you have specified for the output device that
+                              is associated with the current output queue
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16147" id="tmpid16147"></a><a name="tmpid16148" id="tmpid16148"></a>SYS_QueueCurrent
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid16149" id="tmpid16149"></a><a name="tmpid16150" id="tmpid16150"></a>The name you have specified for the current output queue
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16152" id="tmpid16152"></a><a name="tmpid16153" id="tmpid16153"></a>SYS_QueueFileName
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid16154" id="tmpid16154"></a><a name="tmpid16155" id="tmpid16155"></a>The system file name and location of the current output
+                              queue
+                           </p>
+                           <p><a name="tmpid16156" id="tmpid16156"></a>The system file name ( <code class="literal">C:\EXSTREAM\OUTPUT.PS</code>, for example) is the queue name used for  archives.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16160" id="tmpid16160"></a><a name="tmpid16161" id="tmpid16161"></a>SYS_QueueReportFileName
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid16162" id="tmpid16162"></a><a name="tmpid16163" id="tmpid16163"></a>The current output queue report file name
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16165" id="tmpid16165"></a><a name="tmpid16166" id="tmpid16166"></a>SYS_QueuesToCustomer
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid16167" id="tmpid16167"></a><a name="tmpid16168" id="tmpid16168"></a>The total number of output queues for which the current
+                              customer qualified
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16170" id="tmpid16170"></a><a name="tmpid16171" id="tmpid16171"></a><span class="highlight"><strong>SYS_RecordInBreak</strong></span></p>
+                        </td>
+                        <td style=""><p><a name="tmpid16173" id="tmpid16173"></a><a name="tmpid16174" id="tmpid16174"></a>The total number of records written to the current convenience
+                              break of the output queue
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16176" id="tmpid16176"></a><a name="tmpid16177" id="tmpid16177"></a><span class="highlight"><strong>SYS_RecordInQueue</strong></span></p>
+                        </td>
+                        <td style=""><p><a name="tmpid16179" id="tmpid16179"></a><a name="tmpid16180" id="tmpid16180"></a>The total number of records written to the current output
+                              queue
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16182" id="tmpid16182"></a><a name="tmpid16183" id="tmpid16183"></a>SYS_SheetInBreak
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid16184" id="tmpid16184"></a><a name="tmpid16185" id="tmpid16185"></a>The sequence number of the current sheet within the convenience
+                              break of the output queue
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16187" id="tmpid16187"></a><a name="tmpid16188" id="tmpid16188"></a>SYS_SheetInQueue
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid16189" id="tmpid16189"></a><a name="tmpid16190" id="tmpid16190"></a>The sequence number of the current sheet within the output
+                              queue
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16193" id="tmpid16193"></a><a name="tmpid16194" id="tmpid16194"></a>SYS_SortIndex
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid16195" id="tmpid16195"></a><a name="tmpid16196" id="tmpid16196"></a>A 20-byte variable used in sort index files for the indexing
+                              information.
+                           </p>
+                           <p><a name="tmpid16197" id="tmpid16197"></a>The <span class="quote">‘<span class="quote">SYS_SortIndex</span>‘</span> system variable is used only in post-sort processing.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16200" id="tmpid16200"></a><a name="tmpid16201" id="tmpid16201"></a>SYS_SortIndexDocument
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid16202" id="tmpid16202"></a><a name="tmpid16203" id="tmpid16203"></a>A 15-byte variable used in sort index files to select
+                              documents to include and exclude for certain customers
+                           </p>
+                           <p><a name="tmpid16204" id="tmpid16204"></a>The <span class="quote">‘<span class="quote">SYS_SortIndexDocument</span>‘</span> system
+                              variable is used only in post-sort processing.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16207" id="tmpid16207"></a><a name="tmpid16208" id="tmpid16208"></a>SYS_SubDocumentInBreak
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid16209" id="tmpid16209"></a><a name="tmpid16210" id="tmpid16210"></a>The sequence number of the current document within the
+                              convenience break of the output queue
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row">
+                        <td style=""><p><a name="tmpid16212" id="tmpid16212"></a><a name="tmpid16213" id="tmpid16213"></a>SYS_SubDocumentInQueue
+                           </p>
+                        </td>
+                        <td style=""><p><a name="tmpid16214" id="tmpid16214"></a><a name="tmpid16215" id="tmpid16215"></a>The sequence number of the current document within the
+                              output queue
+                           </p>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div><br class="table-break"></div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.6.4.6</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">High-volume output
+            processing related system variables</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 4.6.4.5 &nbsp; Date related system&#xA;variables" aria-label="Preceding page: 4.6.4.5 &nbsp; Date related system&#xA;variables" href="daterelatedsystemvariables.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 4.6.4 &nbsp; Using system variables" aria-label="Section one level up: 4.6.4 &nbsp; Using system variables" href="systemvariables.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.6.4.7 &nbsp; Production related&#xA;system variables" aria-label="Next page: 4.6.4.7 &nbsp; Production related&#xA;system variables" href="productionrelatedsystemvariables.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

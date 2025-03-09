@@ -1,0 +1,212 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="2.2.5.2 ">2.2.5.2 Step 2: Activate an OTDS resource for the tenant</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="installingproductkeys.html" title="2.2.5 &nbsp; Installing product keys for tenants"> -->
+      <link rel="prev" href="vle2s1732631747-030.html" title="2.2.5.1 &nbsp; Step 1: Activate the product key on My Support">
+      <link rel="next" href="createlicensekey.html" title="2.2.5.3 &nbsp; Step 3: Associate a product key with the resource in OTDS">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wwae-f-02af7918e-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":5,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d07a69f","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61028,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741379588","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==3oapb0BjSSXXJqkUceC58pqEMHhbjWopsyHSBuikKa8pFXrubK7qjl9OE5b0+OeICvgjqk2MM94bPgDxlUXxH6b558bvKiyuBpeIIPFND01lmmLbioJOCh08hydYBt8+ynfJHn6l0b0zoOhtEnkChXlV/n1X0RP6vJCmoTZOZJY4UU58VP4GSDbsO+jx5/Z9xhB392nBk12iI/ZVArtmcFXWJYSxr+no5ROYWHKtlA9vcdVKUYd6A0kIeIK05diVTyKjfUhUoGPmhemygVlt3S1PilIIKEjjF4bpKtwe+L7lEGmfdW/TQghYvcXY9LXxFy6LUkzHCf0EsrfxA/YW6RHsAiAU7udoMEgzFqrpCkVE4aZ7kNmYCIq9w8UatwRUafm3w514kKgTbH2J8sdbeQDM6vZnus2dcVIBG7UeMe4=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="vle2s1732631747-031">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.2.5.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Step 2: Activate
+            an OTDS resource
+            for the tenant</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.2.5.1 &nbsp; Step 1: Activate the&#xA;product key on My Support" aria-label="Preceding page: 2.2.5.1 &nbsp; Step 1: Activate the&#xA;product key on My Support" href="vle2s1732631747-030.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.2.5 &nbsp; Installing&#xA;product keys for tenants" aria-label="Section one level up: 2.2.5 &nbsp; Installing&#xA;product keys for tenants" href="installingproductkeys.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.2.5.3 &nbsp; Step 3: Associate a product&#xA;key with the resource in OTDS" aria-label="Next page: 2.2.5.3 &nbsp; Step 3: Associate a product&#xA;key with the resource in OTDS" href="createlicensekey.html">Next</a></div>
+      </div>
+      <div class="sect3 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="vle2s1732631747-031" id="vle2s1732631747-031"></a><span class="otsLbl"><span class="otlbl-num">2.2.5.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Step 2: Activate
+                     an OTDS resource
+                     for the tenant</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid3203" id="tmpid3203"></a>Each resource in <span class="namestring" data-cid="OTDS">OTDS</span> represents an <span class="namestring" data-cid="OpenText">OpenText</span> product.
+            A product key that authorizes the use of the <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> deployment must
+            be associated with a resource. You must have an active resource for
+            your tenant so that <span class="namestring" data-cid="OTDS">OTDS</span> can use it to authenticate users
+            in your <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> deployment.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref50" id="tmp4ref50"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid3212" id="tmpid3212"></a>If you are using a production product key and a non-production
+               product key on the same tenant, then you must create separate resources
+               for each product key.
+            </p>
+         </div>
+         <p><a name="tmpid3213" id="tmpid3213"></a>To activate a resource for the tenant:
+         </p>
+         <div class="procedure">
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid3216" id="tmpid3216"></a>In the <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> web client, sign into the following URL
+                     as a tenant administrator user:
+                  </p>
+                  <p><a name="tmpid3219" id="tmpid3219"></a></p><pre class="screen isinltag">https://&lt;host&gt;:&lt;optionalPort&gt;/otdstenant/&lt;tenant&gt;/otds-admin/</pre></li>
+               <li class="step">
+                  <p><a name="tmpid3222" id="tmpid3222"></a>In the <strong class="guilabel" data-cid="Setup">Setup</strong> menu, click <strong class="guilabel" data-cid="Resources">Resources</strong> and then complete the following steps to create
+                     a new <span class="namestring" data-cid="OTDS">OTDS</span> resource:
+                  </p>
+                  <div class="note">
+                     <p class="title"><strong><a name="keybootstrap" id="keybootstrap"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                     </strong></p>
+                     <p><a name="tmpid3227" id="tmpid3227"></a>If you used a bootstrap configuration to set up your <span class="namestring" data-cid="OTDS">OTDS</span> resource,
+                        then you do not need to create a new resource. In the <strong class="guilabel" data-cid="Actions">Actions</strong> menu for the existing resource, click <strong class="guilabel" data-cid="Activation_status">Activation status</strong>, and then go to the next step.
+                     </p>
+                  </div>
+                  <div class="procedure">
+                     <ol class="procedure" type="1">
+                        <li class="step">
+                           <p><a name="tmpid3233" id="tmpid3233"></a>From the button bar, click <strong class="guilabel" data-cid="Add">Add</strong>.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid3236" id="tmpid3236"></a>On the <strong class="guilabel" data-cid="General">General</strong> tab, in the <strong class="guilabel" data-cid="Resource_Name">Resource Name</strong> field, specify a name for the resource and
+                              other general settings as needed, and then click <strong class="guilabel" data-cid="Next">Next</strong>.
+                           </p>
+                           <div class="tip">
+                              <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Tip</span></span></strong></p>
+                              <p><a name="tmpid3241" id="tmpid3241"></a>Use a name that helps you easily identify whether the resource
+                                 is associated with a production product key or a non-production product
+                                 key.
+                              </p>
+                           </div>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid3243" id="tmpid3243"></a>On the <strong class="guilabel" data-cid="Synchronization">Synchronization</strong> tab, specify
+                              synchronization settings as needed, and then click <strong class="guilabel" data-cid="Next">Next</strong>.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid3247" id="tmpid3247"></a>On the <strong class="guilabel" data-cid="Principal_Attribute">Principal Attribute</strong> tab, specify
+                              an authentication principal attribute, and then click <strong class="guilabel" data-cid="Next">Next</strong>.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid3251" id="tmpid3251"></a>From the button bar, click <strong class="guilabel" data-cid="Save">Save</strong>.
+                           </p>
+                        </li>
+                     </ol>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid3254" id="tmpid3254"></a>In the <strong class="guilabel" data-cid="Resource_Activation">Resource Activation</strong> dialog
+                     box, copy the resource identifier string.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid3257" id="tmpid3257"></a>Go to the Directory Services API for <span class="namestring" data-cid="OTDS">OTDS</span> at
+                     the following URL:
+                  </p>
+                  <p><a name="tmpid3259" id="tmpid3259"></a><strong class="command"><code>https://&lt;host&gt;:&lt;optionalPort&gt;/otdstenant/&lt;tenant&gt;/otdsws/rest</code></strong></p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid3262" id="tmpid3262"></a>In the Directory Services API, click <strong class="guilabel" data-cid="Authorize">Authorize</strong> near the top of the screen, and complete the following steps in
+                     the <strong class="guilabel" data-cid="Available_authorizations">Available authorizations</strong> dialog:
+                  </p>
+                  <div class="procedure">
+                     <ol class="procedure" type="1">
+                        <li class="step">
+                           <p><a name="tmpid3267" id="tmpid3267"></a>Specify scopes settings as needed, then click <strong class="guilabel" data-cid="Authorize">Authorize</strong>.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid3270" id="tmpid3270"></a>If you are prompted to sign in, use <span class="namestring" data-cid="OTDS">OTDS</span> administrator
+                              credentials.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid3273" id="tmpid3273"></a>In the <strong class="guilabel" data-cid="Available_authorizations">Available authorizations</strong> dialog,
+                              click <strong class="guilabel" data-cid="Close">Close</strong>.
+                           </p>
+                        </li>
+                     </ol>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid3277" id="tmpid3277"></a>In the Directory Services API, complete the following
+                     steps to activate the resource:&nbsp;
+                  </p>
+                  <div class="procedure">
+                     <ol class="procedure" type="1">
+                        <li class="step">
+                           <p><a name="tmpid3280" id="tmpid3280"></a>In <strong class="guilabel" data-cid="resources">resources</strong>, click the <strong class="command"><code>/resources/{resource_id}/activate</code></strong> endpoint, then click <strong class="guilabel" data-cid="Try_it_out">Try it out</strong>.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid3285" id="tmpid3285"></a>Paste the resource identifier value that you previously
+                              copied into the <strong class="guilabel" data-cid="Resource_ID">Resource ID</strong> box.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid3288" id="tmpid3288"></a>Click <strong class="guilabel" data-cid="Execute">Execute</strong> and scroll down to
+                              verify that you did not receive an error. The returned response should
+                              be something in the 200 range.
+                           </p>
+                        </li>
+                     </ol>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid3291" id="tmpid3291"></a>Return to the <span class="namestring" data-cid="OTDS">OTDS</span> web client, and in the <strong class="guilabel" data-cid="Resource_Activation">Resource Activation</strong> dialog box, click <strong class="guilabel" data-cid="Verify_Activation">Verify
+                        Activation</strong>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid3296" id="tmpid3296"></a>Click <strong class="guilabel" data-cid="OK">OK</strong>.
+                  </p>
+               </li>
+            </ol>
+         </div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.2.5.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Step 2: Activate
+            an OTDS resource
+            for the tenant</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.2.5.1 &nbsp; Step 1: Activate the&#xA;product key on My Support" aria-label="Preceding page: 2.2.5.1 &nbsp; Step 1: Activate the&#xA;product key on My Support" href="vle2s1732631747-030.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.2.5 &nbsp; Installing&#xA;product keys for tenants" aria-label="Section one level up: 2.2.5 &nbsp; Installing&#xA;product keys for tenants" href="installingproductkeys.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.2.5.3 &nbsp; Step 3: Associate a product&#xA;key with the resource in OTDS" aria-label="Next page: 2.2.5.3 &nbsp; Step 3: Associate a product&#xA;key with the resource in OTDS" href="createlicensekey.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

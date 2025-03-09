@@ -1,0 +1,454 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="4.12 ">4.12 Setting up search keys</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="addingcommunicationassets.html" title="Chapter 4 – Managing communication resources"> -->
+      <link rel="prev" href="settinguprecipientprofiles.html" title="4.11 &nbsp; Setting up recipient profiles">
+      <link rel="next" href="creatinglanguageobjects.html" title="4.13 &nbsp; Creating language objects">
+   <link rel="stylesheet" type="text/css" href="../../../../../ccwc/v250100/ccwc-h-ugd/en/ofh/dynData/condstyles.css">
+
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wyb5-f-d6d8acece-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9dd80c9b","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":62310,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741381693","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==Dk6b6zuA2HGqERfjFZlPLSZtuwkmkz5n7BYGU0nxEjfe37GUm3l2LiB3bguA+UdSvmLNL9Vfn/S/QfS7hhE5hjabsHUj1MeBEnUNUeuhtXgeq92Mdjr2m5RUPHYfnsiJd5PWug95T6cAQ6dZXSvieNGXWImS/1ezmVZNH80QWQoqQZe43dqShTLvF9ICmft0rGkvLlzf1Srn6PWzy7YM13kTx/VfemfosaquFHzRCWaI6qKJB+6jfbgyyqXZ7z+OEab49JIt5OCdbXTc+RQGDbEvat9Pg51JE8X3RZdR6Cl2g8ZBD5sVq+a8G8go4csWmxdLM3NUl+qPbjTDMV6MrBgSKMjqpK3Bd+FGflGmpWKvtcb52EuhPuq5cQ6lkyI965sF6wlM/ycHUN1ABxxms2g38XQp0Bt9jrcGnBu0iZw=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="searchkeys">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.12</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Setting up search keys</span></div>
+         <div class="pgPrev"><a title="Preceding page: 4.11 &nbsp; Setting up recipient&#xA;profiles" aria-label="Preceding page: 4.11 &nbsp; Setting up recipient&#xA;profiles" href="settinguprecipientprofiles.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 4 – Managing communication resources" aria-label="Section one level up: Chapter 4 – Managing communication resources" href="addingcommunicationassets.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.13 &nbsp; Creating language objects" aria-label="Next page: 4.13 &nbsp; Creating language objects" href="creatinglanguageobjects.html">Next</a></div>
+      </div>
+      <div class="sect1 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="searchkeys" id="searchkeys"></a><span class="otsLbl"><span class="otlbl-num">4.12</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Setting up search keys</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid18391" id="tmpid18391"></a>Search&nbsp;keys&nbsp;let you add data to the print stream to
+            both electronic and print output. Data you can add includes comments,&nbsp;searchable
+            tags, instructions to print devices, and more.
+         </p>
+         <p><a name="tmpid18392" id="tmpid18392"></a>Since you can customize the output driver, value, timing, and
+            other properties,&nbsp;search&nbsp;keys&nbsp;can be used to define
+            unique methods of counting or as a way of inserting output device
+            or post-processing commands (for example, specifying the stapling
+            options).
+         </p>
+         <div class="itemizedlist">
+            <p><a name="tmpid18394" id="tmpid18394"></a>You can create the following types of&nbsp;search&nbsp;keys:
+            </p>
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid18396" id="tmpid18396"></a><span class="highlight"><strong>Library search keys</strong></span>—If
+                     you know you are creating a&nbsp;search&nbsp;key that will be used
+                     in multiple locations, you can&nbsp;create a search&nbsp;key that
+                     is stored as a resource in the asset library. Library search&nbsp;keys&nbsp;are
+                     placed in the print stream around content.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid18399" id="tmpid18399"></a><span class="highlight"><strong>Local search&nbsp;keys</strong></span>—If
+                     your&nbsp;search&nbsp;key is for only one communication, you can&nbsp;create
+                     a local search&nbsp;key&nbsp;and place it directly in the content
+                     of the design. Local&nbsp;search&nbsp;keys&nbsp;are placed in the
+                     print stream within content.
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <div class="procedure"><h2 class="title"><a name="d0e31517" id="d0e31517"></a><b><span class="otlbl-ttl">Creating a search key</span></b></h2>
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid18404" id="tmpid18404"></a>Do any of the following to create a search key:
+                  </p>
+                  <div class="informaltable">
+                     <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                        <colgroup>
+                           <col class="col1">
+                           <col class="col2">
+                        </colgroup>
+                        <tbody>
+                           <tr class="row">
+                              <td style=""><a name="tmpid18411" id="tmpid18411"></a>Task
+                              </td>
+                              <td style=""><a name="tmpid18412" id="tmpid18412"></a>Action
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid18414" id="tmpid18414"></a>Create a library search key from the asset library
+                              </td>
+                              <td style=""><a name="tmpid18415" id="tmpid18415"></a><div class="orderedlist">
+                                    <ol class="orderedlist" type="1">
+                                       <li class="listitem">
+                                          <p><a name="tmpid18418" id="tmpid18418"></a>In the Communication asset library, click the <strong class="guilabel" data-cid="Delivery">Delivery</strong> tab.
+                                          </p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid18421" id="tmpid18421"></a>Click <strong class="guilabel" data-cid="Add">Add</strong> and then click <strong class="guilabel" data-cid="Search_key">Search key</strong>.
+                                          </p>
+                                       </li>
+                                    </ol>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid18425" id="tmpid18425"></a>Create a local search key from the <strong class="guilabel" data-cid="Communication_Composer">Communication
+                                    Composer</strong>, in <span class="namestring" data-cid="Designer">Designer</span></td>
+                              <td style=""><a name="tmpid18428" id="tmpid18428"></a><div class="orderedlist">
+                                    <ol class="orderedlist" type="1">
+                                       <li class="listitem">
+                                          <p><a name="tmpid18431" id="tmpid18431"></a>From <span class="namestring" data-cid="Designer">Designer</span>, in the <strong class="guilabel" data-cid="Communication_Composer">Communication Composer</strong>, select a communication. 
+                                          </p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid18435" id="tmpid18435"></a>Click the <strong class="guilabel" data-cid="Search_Keys">Search Keys</strong> tab.
+                                          </p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid18438" id="tmpid18438"></a>Click the <strong class="guilabel" data-cid="Add_a_search_key">Add a search key</strong> button <img src="./img/b_WebApps_AddListItem.png" class="igrph" alt="" width="30" height="30">.
+                                          </p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid18442" id="tmpid18442"></a>From the <strong class="guilabel" data-cid="Location">Location</strong> list, select <strong class="guilabel" data-cid="Local">Local</strong>. 
+                                          </p>
+                                       </li>
+                                    </ol>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid18446" id="tmpid18446"></a>Create an library search key from the <strong class="guilabel" data-cid="Communication_Composer">Communication
+                                    Composer</strong>, in <span class="namestring" data-cid="Designer">Designer</span></td>
+                              <td style=""><a name="tmpid18449" id="tmpid18449"></a><div class="orderedlist">
+                                    <ol class="orderedlist" type="1">
+                                       <li class="listitem">
+                                          <p><a name="tmpid18452" id="tmpid18452"></a>From <span class="namestring" data-cid="Designer">Designer</span>, in the <strong class="guilabel" data-cid="Communication_Composer">Communication Composer</strong>, select a communication. 
+                                          </p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid18456" id="tmpid18456"></a>Click the <strong class="guilabel" data-cid="Search_Keys">Search Keys</strong> tab.
+                                          </p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid18459" id="tmpid18459"></a>Click the <strong class="guilabel" data-cid="Add_a_search_key">Add a search key</strong> button <img src="./img/b_WebApps_AddListItem.png" class="igrph" alt="" width="30" height="30">.
+                                          </p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid18463" id="tmpid18463"></a>From the <strong class="guilabel" data-cid="Location">Location</strong> list, select <strong class="guilabel" data-cid="Library">Library</strong>. 
+                                          </p>
+                                       </li>
+                                    </ol>
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid18467" id="tmpid18467"></a>In the <strong class="guilabel" data-cid="Name">Name</strong> box, enter a name for
+                     the search key.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid18471" id="tmpid18471"></a><span class="boxed-text optional">Optional</span> In the <strong class="guilabel" data-cid="Description">Description</strong> box, enter a description for the search key.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid18474" id="tmpid18474"></a>In the <strong class="guilabel" data-cid="Key">Key</strong> box, enter the key text
+                     to be output.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid18477" id="tmpid18477"></a>From the <strong class="guilabel" data-cid="Timing">Timing</strong> list, select the
+                     timing of the search key if used in sorting and bundling.<span class="phrase"> For more information about sorting and bundling,
+                        see 
+                        <data-xpi><data-xproc name="ExtXrefStart" href="ccwc250100-h-ugd.sortbundle" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                           ><A class="otModuleHide if-ccwc-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../ccwc/v250100/ccwc-h-ugd/en/ofh/sortbundle.html"
+                           ><span class="otsLbl"
+                           ><span class="otlbl-num">section 9.7</span
+                           ><span class="otlbl-sep"> </span></span
+                           ><span class="otlbl-ttl">"Sorting and bundling output"</span> in <i>OpenText Communications - Web Client User Help (CCWC250100-H-UGD)</i></A
+                           ><SPAN class="otModuleShow if-ccwc-h-ugd-hide"
+                           ><span class="otsLbl"
+                           ><span class="otlbl-num">section 9.7</span
+                           ><span class="otlbl-sep"> </span></span
+                           ><span class="otlbl-ttl">"Sorting and bundling output"</span> in <i>OpenText Communications - Web Client User Help (CCWC250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccwc250100-h-ugd.sortbundle" fmt=""></data-xproc></data-xpi>.</span></p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid18482" id="tmpid18482"></a>From the <strong class="guilabel" data-cid="Location_in_file">Location in file</strong> list, select
+                     the location where you want to place the search key in the print stream. 
+                  </p>
+                  <p><a name="tmpid18484" id="tmpid18484"></a>If you select <strong class="guilabel" data-cid="Before_named_page">Before named page</strong> or <strong class="guilabel" data-cid="After_named_page">After named page</strong>, complete the following additional steps:
+                  </p>
+                  <div class="orderedlist">
+                     <ol class="orderedlist" type="a">
+                        <li class="listitem">
+                           <p><a name="tmpid18489" id="tmpid18489"></a>To specify the named page, click in the <strong class="guilabel" data-cid="Named_page">Named page</strong> box, select the named page, and click <strong class="guilabel" data-cid="OK">OK</strong>. 
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid18493" id="tmpid18493"></a>In the <strong class="guilabel" data-cid="Pages_to_include">Pages to include</strong> list,
+                              select the pages on which the search key is placed:
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid18497" id="tmpid18497"></a><b class="title"><strong class="guilabel" data-cid="All_pages">All pages</strong> – </b>Apply
+                                       the&nbsp;search&nbsp;key&nbsp;to all instances of the named page.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid18501" id="tmpid18501"></a><b class="title"><strong class="guilabel" data-cid="First_page">First page</strong> – </b>Apply
+                                       the&nbsp;search&nbsp;key&nbsp;only to the first instance of the named
+                                       page.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid18505" id="tmpid18505"></a><b class="title"><strong class="guilabel" data-cid="Last_page">Last page</strong> – </b>Apply
+                                       the search key only if the named page is the last page in the output
+                                       for a customer.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                     </ol>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid18509" id="tmpid18509"></a>From the <strong class="guilabel" data-cid="Source">Source</strong> list, complete the
+                     following steps to specify the content or value of the search key:
+                  </p>
+                  <div class="informaltable">
+                     <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                        <colgroup>
+                           <col class="1">
+                           <col class="2">
+                        </colgroup>
+                        <thead>
+                           <tr class="row">
+                              <th style="" valign="top"><p><a name="tmpid18517" id="tmpid18517"></a><a name="tmpid18518" id="tmpid18518"></a>Task
+                                 </p>
+                              </th>
+                              <th style="" valign="top"><p><a name="tmpid18519" id="tmpid18519"></a><a name="tmpid18520" id="tmpid18520"></a>Action
+                                 </p>
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid18523" id="tmpid18523"></a><a name="tmpid18524" id="tmpid18524"></a>Use a variable to set the value of the&nbsp;key
+                                 </p>
+                              </td>
+                              <td style=""><a name="tmpid18525" id="tmpid18525"></a><div class="orderedlist">
+                                    <ol class="orderedlist" type="1">
+                                       <li class="listitem">
+                                          <p><a name="tmpid18528" id="tmpid18528"></a>In the <strong class="guilabel" data-cid="Source">Source</strong> list, select <strong class="guilabel" data-cid="Variable">Variable</strong>.
+                                          </p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid18532" id="tmpid18532"></a>To select the variable that sets the value of the
+                                             key, click in the <strong class="guilabel" data-cid="Variable">Variable</strong>&nbsp;box, select a
+                                             variable, and click <strong class="guilabel" data-cid="OK">OK</strong>.
+                                          </p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid18536" id="tmpid18536"></a>If you do not want to add a&nbsp;search&nbsp;key&nbsp;if
+                                             the variable has no value, select <strong class="guilabel" data-cid="Do_not_create_if_variable_is_empty">Do not create if variable
+                                                is empty</strong>.
+                                          </p>
+                                       </li>
+                                    </ol>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid18539" id="tmpid18539"></a><a name="tmpid18540" id="tmpid18540"></a>Use text to set the value of the&nbsp;key
+                                 </p>
+                              </td>
+                              <td style=""><a name="tmpid18541" id="tmpid18541"></a><div class="orderedlist">
+                                    <ol class="orderedlist" type="1">
+                                       <li class="listitem">
+                                          <p><a name="tmpid18544" id="tmpid18544"></a>In the <strong class="guilabel" data-cid="Source">Source</strong> list, select <strong class="guilabel" data-cid="Text">Text</strong>.
+                                          </p>
+                                       </li>
+                                       <li class="listitem">
+                                          <p><a name="tmpid18548" id="tmpid18548"></a>In the&nbsp;<strong class="guilabel" data-cid="Text_Value">Text Value</strong>&nbsp;box,
+                                             enter the text you want to use.
+                                          </p>
+                                       </li>
+                                    </ol>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><p><a name="tmpid18551" id="tmpid18551"></a><a name="tmpid18552" id="tmpid18552"></a>Use the name of the object where you place
+                                    the&nbsp;key, such as a page name or document name, as the value of
+                                    the&nbsp;key
+                                 </p>
+                              </td>
+                              <td style=""><p><a name="tmpid18553" id="tmpid18553"></a><a name="tmpid18554" id="tmpid18554"></a>In the <strong class="guilabel" data-cid="Source">Source</strong> list,
+                                    select <strong class="guilabel" data-cid="Name_of_object">Name of object</strong>.
+                                 </p>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="note">
+                     <p class="title"><strong><a name="tmp4ref222" id="tmp4ref222"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                     </strong></p>
+                     <p><a name="tmpid18558" id="tmpid18558"></a>For AFP output, a colon and space are added, followed by the
+                        data from the variable or text.
+                     </p>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid18560" id="tmpid18560"></a>From the <strong class="guilabel" data-cid="Output_type">Output type</strong> list, select
+                     which outputs receive search keys. 
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid18564" id="tmpid18564"></a><b class="title"><strong class="guilabel" data-cid="All_outputs">All outputs</strong> – </b>Applies
+                              search keys to all outputs that support search keys. Search keys are
+                              supported only by AFP, PDF, and PostScript outputs. 
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid18568" id="tmpid18568"></a><b class="title"><strong class="guilabel" data-cid="Specified_output_type">Specified output type</strong> – </b>Applies search keys only to the selected output type. To select the
+                              output type you want to use, choose an output from the <strong class="guilabel" data-cid="PDL">PDL</strong> list. 
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid18573" id="tmpid18573"></a><b class="title"><strong class="guilabel" data-cid="Specified_output_queue">Specified output queue</strong> – </b>Applies search keys only to outputs included in a specified
+                              output queue. To select the output queue you want to use, click in
+                              the <strong class="guilabel" data-cid="Queue">Queue</strong> box, and then select an output queue. 
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid18578" id="tmpid18578"></a>From the <strong class="guilabel" data-cid="Search_key_type">Search key type</strong> list, select
+                     one of the following types of search keys to use in the output: 
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid18582" id="tmpid18582"></a><b class="title"><strong class="guilabel" data-cid="Default">Default</strong> – </b>Uses the&nbsp;default&nbsp;search&nbsp;key&nbsp;setting
+                              from the properties of the output object.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid18586" id="tmpid18586"></a><b class="title"><strong class="guilabel" data-cid="As_is">As is</strong> – </b>Adds a record
+                              with no comment or NOP characters. This method can be used to add&nbsp;search&nbsp;data
+                              such as special indexing or Table of Contents tags. Use this method
+                              to enter custom printer commands and secondary device commands (for
+                              example, for staplers).
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid18590" id="tmpid18590"></a><b class="title"><strong class="guilabel" data-cid="NOP_comments">NOP comments</strong> – </b>Prefixes
+                              the&nbsp;search&nbsp;key&nbsp;with the appropriate No Operation (NOP)
+                              comment value for the driver (such as&nbsp;%). This method is useful
+                              for adding information that can be used for indexing, archiving, future
+                              machine instructions, or a very large instruction word (VLIW).
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid18594" id="tmpid18594"></a><b class="title"><strong class="guilabel" data-cid="TLEs">TLEs</strong> – </b>Supported
+                              only with AFP output. Adds Tagged Logical Elements (TLEs). TLEs serve
+                              as begin and end records in AFP output. These can be array variables
+                              so that each element is included as a separate entry in the print
+                              stream.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid18598" id="tmpid18598"></a><b class="title"><strong class="guilabel" data-cid="NOP_comments_and_TLEs">NOP comments and TLEs</strong> – </b>Supported only with AFP output. Allows the engine to write&nbsp;search&nbsp;keys
+                              to both TLEs and NOP comments in AFP output.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid18602" id="tmpid18602"></a>Click <strong class="guilabel" data-cid="Create">Create</strong>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid18605" id="tmpid18605"></a>Click <strong class="guilabel" data-cid="Save">Save</strong>.
+                  </p>
+               </li>
+            </ol>
+         </div>
+         <p><a name="tmpid18607" id="tmpid18607"></a>If you create a library search key, you can also define additional
+            common settings. For information about these settings see the following
+            locations:
+         </p>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid18610" id="tmpid18610"></a><b class="title">Domains – </b>For information about defining
+                     the domains to which a resource is assigned, see <a href="associatingresourceswithdomains.html" class="xref2 sect1 auto xstd" title="3.13 &nbsp; Associating resources&#xA;with domains"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.13</span> “</span><span class="otlbl-ttl">Associating resources
+                        with domains</span><span class="otsLbl">”</span></a>.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid18614" id="tmpid18614"></a><b class="title">Workflow – </b>For information about managing
+                     an approval workflow, see <a href="managingapprovalworkflows.html" class="xref2 sect1 auto xstd" title="3.6 &nbsp; Managing approval workflows"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.6</span> “</span><span class="otlbl-ttl">Managing approval
+                        workflows</span><span class="otsLbl">”</span></a>.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid18618" id="tmpid18618"></a><b class="title">References – </b>For information about viewing
+                     the linked resources connected to a selected resource, see <a href="usingassetlibraryviews.html" class="xref2 sect1 auto xstd" title="3.3 &nbsp; Viewing resources in asset&#xA;library views"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">3.3</span> “</span><span class="otlbl-ttl">Viewing resources
+                        in asset
+                        library views</span><span class="otsLbl">”</span></a>.
+                  </p>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.12</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Setting up search keys</span></div>
+         <div class="pgPrev"><a title="Preceding page: 4.11 &nbsp; Setting up recipient&#xA;profiles" aria-label="Preceding page: 4.11 &nbsp; Setting up recipient&#xA;profiles" href="settinguprecipientprofiles.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 4 – Managing communication resources" aria-label="Section one level up: Chapter 4 – Managing communication resources" href="addingcommunicationassets.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.13 &nbsp; Creating language objects" aria-label="Next page: 4.13 &nbsp; Creating language objects" href="creatinglanguageobjects.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

@@ -1,0 +1,651 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="3.6 ">3.6 Managing approval workflows</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="managingassetlibraryresources.html" title="Chapter 3 – Working with DAS&nbsp;resources"> -->
+      <link rel="prev" href="applyingmetadata.html" title="3.5 &nbsp; Applying metadata tags to resources">
+      <link rel="next" href="search-replace.html" title="3.7 &nbsp; Searching and replacing text">
+   <link rel="stylesheet" type="text/css" href="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/dynData/condstyles.css">
+<link rel="stylesheet" type="text/css" href="../../../../../ccdpdi/v250100/ccdpdi-h-ugd/en/ofh/dynData/condstyles.css">
+
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wwul-f-8d6c5ceca-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":6,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d491e6a","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61431,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741380235","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==U7/hV8YxcDlAgm1g9JTm39TwJxOW6LumhXXzI1b+irDdSC++U5mBjElKPPzj7/8sU6Y3OBUwAvEVa/q3vsnL0krLVcbgiyNnpPSBeSkb00AFz2Co/uOcVhXOpOWvkKtSp6MuIdN3F0OusQCKjGB1U7n9GRbNDOPaq7a1tKDkFyEhU8mtRTJGM7Q40TGAewvjMLmvZbx3oITLtXfFNy2wKOogDth50rfYxuWBhkI1+QNndYhapv0R1ggRLtcoRhetBGC4Hs8inn9QsOq3OlJziWRGF3qY7gNgaxOCJfCHWQThMQTaLzZkoHCEB/5vtCEFsWGAQXCFKAmsCgyrSjsGWZixYyoC+gFDxKi5pNS+1Cair6XjNagVzcXEWacmIuVbOLd1aPPGxGCLPfGQ1x7PNGvn7KNCp5xeJxlEDXQRAu0=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="managingapprovalworkflows">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">3.6</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Managing approval workflows</span></div>
+         <div class="pgPrev"><a title="Preceding page: 3.5 &nbsp; Applying metadata tags to resources" aria-label="Preceding page: 3.5 &nbsp; Applying metadata tags to resources" href="applyingmetadata.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 3 – Working with DAS&nbsp;resources" aria-label="Section one level up: Chapter 3 – Working with DAS&nbsp;resources" href="managingassetlibraryresources.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 3.7 &nbsp; Searching and replacing text" aria-label="Next page: 3.7 &nbsp; Searching and replacing text" href="search-replace.html">Next</a></div>
+      </div>
+      <div class="sect1 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="managingapprovalworkflows" id="managingapprovalworkflows"></a><span class="otsLbl"><span class="otlbl-num">3.6</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Managing approval workflows</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid10234" id="tmpid10234"></a>The approval workflow is the progression of a resource from
+            initial version to final approval. Using the standard, simple, or
+            advanced workflow in <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> helps to ensure that
+            new and updated content is properly reviewed for accuracy and conforms
+            to company standards.
+         </p>
+         <p><a name="tmpid10241" id="tmpid10241"></a>For more information about the standard, simple, and advanced
+            workflow types, see <a href="configdomainworkflows.html" class="xref2 sect2 auto xstd" title="2.3.3 &nbsp; Configuring domain workflows"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">2.3.3</span> “</span><span class="otlbl-ttl">Configuring domain
+               workflows</span><span class="otsLbl">”</span></a>.
+         </p>
+         <p><a name="tmpid10243" id="tmpid10243"></a>Keep the following in mind when approving resources:
+         </p>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid10246" id="tmpid10246"></a>All child resources must be approved before a parent
+                     resource. For a communication, this includes the communication and
+                     all of its associated resources, such as images that are used in designs
+                     and the sample files that are referenced by the communication. If
+                     you try to approve a resource that references other unapproved resource,
+                     you receive a message indicating that you must first approve all of
+                     the linked resources before you can approve that resource.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid10248" id="tmpid10248"></a>You can only approve a new <a class="link" href="supportedresourcesdas.html#design-pack">design pack</a> if it contains at least all
+                     the attributes and tags in approved <a class="link" href="configuringcommunicationsets.html#including-variation-variables" title="Including variation variables">variations</a> of the communications
+                     that use the design pack. If you try to approve a design pack that
+                     is missing attributes or tags, a list of affected variations opens
+                     and prompts you to remove the attributes or tags before resubmitting
+                     the design pack for approval. For more information about using variations
+                     in a communication, see 
+                     <data-xpi><data-xproc name="ExtXrefStart" href="cccd250100-h-ugd.-" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                        ><A class="otModuleHide if-cccd-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/index.html"><i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></A
+                        ><SPAN class="otModuleShow if-cccd-h-ugd-hide"><i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="cccd250100-h-ugd.-" fmt=""></data-xproc></data-xpi>.
+                  </p>
+                  <div class="note">
+                     <p class="title"><strong><a name="tmp4ref135" id="tmp4ref135"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                     </strong></p>
+                     <p><a name="tmpid10253" id="tmpid10253"></a>Alternatively, you can use <span class="namestring" data-cid="Design_Manager">Design Manager</span> to add the missing attributes
+                        or tags to the design pack and then re-upload the design pack to DAS.
+                        For more information about uploading design packs, see 
+                        <data-xpi><data-xproc name="ExtXrefStart" href="ccdpdi250100-h-ugd.uploadingappstocas" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+                           ><A class="otModuleHide if-ccdpdi-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../ccdpdi/v250100/ccdpdi-h-ugd/en/ofh/uploadingappstocas.html"
+                           ><span class="otsLbl"
+                           ><span class="otlbl-num">section 2.5</span
+                           ><span class="otlbl-sep"> </span></span
+                           ><span class="otlbl-ttl">"Packaging and uploading applications"</span> in <i>OpenText Exstream Design and Production - Design and Import Help (CCDPDI250100-H-UGD)</i></A
+                           ><SPAN class="otModuleShow if-ccdpdi-h-ugd-hide"
+                           ><span class="otsLbl"
+                           ><span class="otlbl-num">section 2.5</span
+                           ><span class="otlbl-sep"> </span></span
+                           ><span class="otlbl-ttl">"Packaging and uploading applications"</span> in <i>OpenText Exstream Design and Production - Design and Import Help (CCDPDI250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccdpdi250100-h-ugd.uploadingappstocas" fmt=""></data-xproc></data-xpi>.
+                     </p>
+                  </div>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid10257" id="tmpid10257"></a>You can change the workflow state of a single resource
+                     or multiple resources at the same time. If you select multiple resources,
+                     only those whose workflow state matches that of the resource you actively
+                     select to move are changed.
+                  </p>
+                  <div class="note">
+                     <p class="title"><strong><a name="tmp4ref136" id="tmp4ref136"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                     </strong></p>
+                     <p><a name="tmpid10259" id="tmpid10259"></a>The following exceptions apply when you change the workflow
+                        state for multiple resources:
+                     </p>
+                     <div class="itemizedlist">
+                        <ul class="itemizedlist">
+                           <li class="listitem">
+                              <p><a name="tmpid10262" id="tmpid10262"></a>Selecting the <strong class="guilabel" data-cid="Discard_draft">Discard draft</strong> option
+                                 discards the draft of the selected resource only.
+                              </p>
+                           </li>
+                           <li class="listitem">
+                              <p><a name="tmpid10265" id="tmpid10265"></a>In the advanced workflow, the resource types for all
+                                 selected resources must be assigned to the approval role set. For
+                                 more information about assigning resource types to an approval role
+                                 set, see <a href="domainworkflowconfigadvanced.html" class="xref2 sect3 auto xstd" title="2.3.3.6 &nbsp; Configuring&#xA;advanced workflow settings for a domain"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">2.3.3.6</span> “</span><span class="otlbl-ttl">Configuring
+                                    advanced workflow settings for a domain</span><span class="otsLbl">”</span></a>.
+                              </p>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </li>
+            </ul></div>
+         <div class="vl2formalsect-list vl2bhseq" id="aid4pidiv70">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732631747-010" id="vle2s1732631747-010"></a>Workflow state symbols
+            on workflow state buttons
+         </h2>
+         <p><a name="tmpid10271" id="tmpid10271"></a>In the design applications and the asset library views, you
+            can select the workflow state button next to a resource to move the
+            resource to its next workflow state. The symbol on the button indicates
+            the current workflow state for the resource.
+         </p>
+         <p><a name="tmpid10272" id="tmpid10272"></a>The following table tells you what each workflow symbol means
+            and which workflow types it can appear in:
+         </p>
+         <div class="informaltable">
+            <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+               <colgroup>
+                  <col class="col1">
+                  <col class="col2">
+                  <col align="center" class="col3">
+                  <col align="center" class="col4">
+                  <col align="center" class="col5">
+                  <col class="col6">
+               </colgroup>
+               <thead>
+                  <tr class="row">
+                     <th style="" rowspan="2"><p><a name="tmpid10283" id="tmpid10283"></a><a name="tmpid10284" id="tmpid10284"></a>Symbol
+                        </p>
+                     </th>
+                     <th style="" rowspan="2"><p><a name="tmpid10285" id="tmpid10285"></a><a name="tmpid10286" id="tmpid10286"></a>State
+                        </p>
+                     </th>
+                     <th style="" colspan="3" align="center"><p><a name="tmpid10287" id="tmpid10287"></a><a name="tmpid10288" id="tmpid10288"></a>Workflow
+                           type
+                        </p>
+                     </th>
+                     <th style="" rowspan="2"><p><a name="tmpid10289" id="tmpid10289"></a><a name="tmpid10290" id="tmpid10290"></a>Description
+                        </p>
+                     </th>
+                  </tr>
+                  <tr class="row">
+                     <th style="" align="center"><p><a name="tmpid10292" id="tmpid10292"></a><a name="tmpid10293" id="tmpid10293"></a>Standard
+                        </p>
+                     </th>
+                     <th style="" align="center"><p><a name="tmpid10294" id="tmpid10294"></a><a name="tmpid10295" id="tmpid10295"></a>Simple
+                        </p>
+                     </th>
+                     <th style="" align="center"><p><a name="tmpid10296" id="tmpid10296"></a><a name="tmpid10297" id="tmpid10297"></a>Advanced
+                        </p>
+                     </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr class="row" valign="middle">
+                     <td style="" valign="middle"><p><a name="tmpid10300" id="tmpid10300"></a><a name="tmpid10301" id="tmpid10301"></a><img src="./img/b_WebApps_Workflow_Draft.png" class="igrph" alt="" width="38" height="38"></p>
+                     </td>
+                     <td style="" valign="middle"><p><a name="tmpid10303" id="tmpid10303"></a><a name="tmpid10304" id="tmpid10304"></a>Draft
+                        </p>
+                     </td>
+                     <td style="" align="center" valign="middle"><p><a name="tmpid10305" id="tmpid10305"></a><a name="tmpid10306" id="tmpid10306"></a>✓
+                        </p>
+                     </td>
+                     <td style="" align="center" valign="middle"><p><a name="tmpid10307" id="tmpid10307"></a><a name="tmpid10308" id="tmpid10308"></a>✓
+                        </p>
+                     </td>
+                     <td style="" align="center" valign="middle"><p><a name="tmpid10309" id="tmpid10309"></a><a name="tmpid10310" id="tmpid10310"></a>✓
+                        </p>
+                     </td>
+                     <td style="" valign="middle"><p><a name="tmpid10311" id="tmpid10311"></a><a name="tmpid10312" id="tmpid10312"></a>The resource is available for editing.
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="row" valign="middle">
+                     <td style="" valign="middle"><p><a name="tmpid10314" id="tmpid10314"></a><a name="tmpid10315" id="tmpid10315"></a><img src="./img/B_WebApps_Workflow_Submitted.png" class="igrph" alt="" width="38" height="38"></p>
+                     </td>
+                     <td style="" valign="middle"><p><a name="tmpid10317" id="tmpid10317"></a><a name="tmpid10318" id="tmpid10318"></a>Submitted for&nbsp;approval
+                        </p>
+                     </td>
+                     <td style="" align="center" valign="middle"><p><a name="tmpid10319" id="tmpid10319"></a><a name="tmpid10320" id="tmpid10320"></a>✓
+                        </p>
+                     </td>
+                     <td style="" align="center" valign="middle"><p><a name="tmpid10321" id="tmpid10321"></a><a name="tmpid10322" id="tmpid10322"></a>&nbsp;
+                        </p>
+                     </td>
+                     <td style="" align="center" valign="middle"><p><a name="tmpid10323" id="tmpid10323"></a><a name="tmpid10324" id="tmpid10324"></a>✓
+                        </p>
+                     </td>
+                     <td style="" valign="middle"><p><a name="tmpid10325" id="tmpid10325"></a><a name="tmpid10326" id="tmpid10326"></a>The resource has been submitted for approval and cannot
+                           be edited. To make changes, an approver must return the resource to
+                           a draft state.
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="row" valign="middle">
+                     <td style="" valign="middle"><p><a name="tmpid10328" id="tmpid10328"></a><a name="tmpid10329" id="tmpid10329"></a><img src="./img/b_WebApps_Workflow_Pending.png" class="igrph" alt="" width="38" height="39"></p>
+                     </td>
+                     <td style="" valign="middle"><p><a name="tmpid10331" id="tmpid10331"></a><a name="tmpid10332" id="tmpid10332"></a>Pending approval
+                        </p>
+                     </td>
+                     <td style="" align="center" valign="middle"><p><a name="tmpid10333" id="tmpid10333"></a><a name="tmpid10334" id="tmpid10334"></a>&nbsp;
+                        </p>
+                     </td>
+                     <td style="" align="center" valign="middle"><p><a name="tmpid10335" id="tmpid10335"></a><a name="tmpid10336" id="tmpid10336"></a>&nbsp;
+                        </p>
+                     </td>
+                     <td style="" align="center" valign="middle"><p><a name="tmpid10337" id="tmpid10337"></a><a name="tmpid10338" id="tmpid10338"></a>✓
+                        </p>
+                     </td>
+                     <td style="" valign="middle"><p><a name="tmpid10339" id="tmpid10339"></a><a name="tmpid10340" id="tmpid10340"></a>The resource has approvals pending in a multi-level advanced
+                           workflow and cannot be edited. To make changes, an approver in the
+                           active approver group level must return the resource to the draft
+                           state.
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="row" valign="middle">
+                     <td style="" valign="middle"><p><a name="tmpid10342" id="tmpid10342"></a><a name="tmpid10343" id="tmpid10343"></a><img src="./img/B_WebApps_Workflow_Approved.png" class="igrph" alt="" width="38" height="38"></p>
+                     </td>
+                     <td style="" valign="middle"><p><a name="tmpid10345" id="tmpid10345"></a><a name="tmpid10346" id="tmpid10346"></a>Approved
+                        </p>
+                     </td>
+                     <td style="" align="center" valign="middle"><p><a name="tmpid10347" id="tmpid10347"></a><a name="tmpid10348" id="tmpid10348"></a>✓
+                        </p>
+                     </td>
+                     <td style="" align="center" valign="middle"><p><a name="tmpid10349" id="tmpid10349"></a><a name="tmpid10350" id="tmpid10350"></a>✓
+                        </p>
+                     </td>
+                     <td style="" align="center" valign="middle"><p><a name="tmpid10351" id="tmpid10351"></a><a name="tmpid10352" id="tmpid10352"></a>✓
+                        </p>
+                     </td>
+                     <td style="" valign="middle"><p><a name="tmpid10353" id="tmpid10353"></a><a name="tmpid10354" id="tmpid10354"></a>The resource is approved and is ready to be used in customer
+                           output. To make changes, an approver must create a new draft.
+                        </p>
+                     </td>
+                  </tr>
+                  <tr class="row" valign="middle">
+                     <td style="" valign="middle"><p><a name="tmpid10356" id="tmpid10356"></a><a name="tmpid10357" id="tmpid10357"></a><img src="./img/B_WebApps_Workflow_Rejected.png" class="igrph" alt="" width="38" height="38"></p>
+                     </td>
+                     <td style="" valign="middle"><p><a name="tmpid10359" id="tmpid10359"></a><a name="tmpid10360" id="tmpid10360"></a>Rejected
+                        </p>
+                     </td>
+                     <td style="" align="center" valign="middle"><p><a name="tmpid10361" id="tmpid10361"></a><a name="tmpid10362" id="tmpid10362"></a>✓
+                        </p>
+                     </td>
+                     <td style="" align="center" valign="middle"><p><a name="tmpid10363" id="tmpid10363"></a><a name="tmpid10364" id="tmpid10364"></a>&nbsp;
+                        </p>
+                     </td>
+                     <td style="" align="center" valign="middle"><p><a name="tmpid10365" id="tmpid10365"></a><a name="tmpid10366" id="tmpid10366"></a>✓
+                        </p>
+                     </td>
+                     <td style="" valign="middle"><p><a name="tmpid10367" id="tmpid10367"></a><a name="tmpid10368" id="tmpid10368"></a>The resource has been rejected and cannot be edited.
+                           To make changes, an approver must return the resource to a draft state.
+                        </p>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv71">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732631747-011" id="vle2s1732631747-011"></a> Moving through the approval
+            process
+         </h2>
+         <p><a name="tmpid10372" id="tmpid10372"></a>As you move through the approval process, keep in mind that
+            resources are only editable in the draft state. After a resource is
+            approved, a new draft of the resource must be created before it can
+            be edited. Likewise, if a resource is rejected, it must be moved to
+            the draft state before it can be edited.
+         </p>
+         <div class="procedure"><h3 class="title"><a name="d0e18440" id="d0e18440"></a><b><span class="otlbl-ttl">To move resources through the approval process:</span></b></h3>
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid10376" id="tmpid10376"></a>On the web client home page, click the toolbar button
+                     for the asset library view that contains the resources that you want
+                     to move to the next workflow state.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid10378" id="tmpid10378"></a>In the asset library panel, select the check box for each
+                     resource that you want to move to the next state.
+                  </p>
+                  <p><a name="tmpid10379" id="tmpid10379"></a>If you are moving only one resource to the next state, you do
+                     not need to select its check box.
+                  </p>
+                  <div class="note">
+                     <p class="title"><strong><a name="tmp4ref137" id="tmp4ref137"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                     </strong></p>
+                     <p><a name="tmpid10381" id="tmpid10381"></a>You can only select resources on the active page. Selecting
+                        the check box in the heading row selects all resources on the page.
+                        Navigating away from the page clears your selections.
+                     </p>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid10383" id="tmpid10383"></a>Click the workflow state button for the selected resource,
+                     or click the button for one of the selected resources.
+                  </p>
+                  <p><a name="tmpid10384" id="tmpid10384"></a>If you selected multiple resources, clicking the workflow button
+                     for one of them will change the workflow state of the others only
+                     if they are currently in the same state.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid10386" id="tmpid10386"></a>Depending on the current workflow state of the resource
+                     to change, select one of the following options in the table below
+                     to move the resource through the approval process:
+                  </p>
+                  <div class="informaltable">
+                     <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                        <colgroup>
+                           <col class="col1">
+                           <col class="col2">
+                           <col align="center" class="col3">
+                           <col align="center" class="col4">
+                           <col align="char" class="col5">
+                           <col class="col6">
+                        </colgroup>
+                        <thead>
+                           <tr class="row">
+                              <th style="" rowspan="2"><p><a name="tmpid10397" id="tmpid10397"></a><a name="tmpid10398" id="tmpid10398"></a>Current state
+                                 </p>
+                              </th>
+                              <th style="" rowspan="2"><p><a name="tmpid10399" id="tmpid10399"></a><a name="tmpid10400" id="tmpid10400"></a>Option
+                                 </p>
+                              </th>
+                              <th style="" colspan="3" align="center"><p><a name="tmpid10401" id="tmpid10401"></a><a name="tmpid10402" id="tmpid10402"></a>Workflow type
+                                 </p>
+                              </th>
+                              <th style="" rowspan="2"><p><a name="tmpid10403" id="tmpid10403"></a><a name="tmpid10404" id="tmpid10404"></a>Description
+                                 </p>
+                              </th>
+                           </tr>
+                           <tr class="row">
+                              <th style="" align="center"><p><a name="tmpid10406" id="tmpid10406"></a><a name="tmpid10407" id="tmpid10407"></a>Standard
+                                 </p>
+                              </th>
+                              <th style="" align="center"><p><a name="tmpid10408" id="tmpid10408"></a><a name="tmpid10409" id="tmpid10409"></a>Simple
+                                 </p>
+                              </th>
+                              <th style="" align="center"><p><a name="tmpid10410" id="tmpid10410"></a><a name="tmpid10411" id="tmpid10411"></a>Advanced
+                                 </p>
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="row">
+                              <td style="" valign="middle"><p><a name="tmpid10414" id="tmpid10414"></a><a name="tmpid10415" id="tmpid10415"></a>Draft
+                                 </p>
+                              </td>
+                              <td style="" valign="middle"><p><a name="tmpid10416" id="tmpid10416"></a><a name="tmpid10417" id="tmpid10417"></a><strong class="guilabel" data-cid="Submit_for&nbsp;approval">Submit for&nbsp;approval</strong></p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10419" id="tmpid10419"></a><a name="tmpid10420" id="tmpid10420"></a>✓
+                                 </p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10421" id="tmpid10421"></a><a name="tmpid10422" id="tmpid10422"></a>&nbsp;
+                                 </p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10423" id="tmpid10423"></a><a name="tmpid10424" id="tmpid10424"></a>✓
+                                 </p>
+                              </td>
+                              <td style="" valign="middle"><p><a name="tmpid10425" id="tmpid10425"></a><a name="tmpid10426" id="tmpid10426"></a>Submit the draft version for approval.
+                                 </p>
+                                 <p><a name="tmpid10427" id="tmpid10427"></a>After you submit a version for approval, you can no longer
+                                    make changes to it. In order to make changes, you must return the
+                                    content to a draft state, and then submit the updated draft for approval
+                                    when ready.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" valign="middle"><p><a name="tmpid10429" id="tmpid10429"></a><a name="tmpid10430" id="tmpid10430"></a>Draft
+                                 </p>
+                              </td>
+                              <td style="" valign="middle"><p><a name="tmpid10431" id="tmpid10431"></a><a name="tmpid10432" id="tmpid10432"></a><strong class="guilabel" data-cid="Approve">Approve</strong> <br>
+                                 </p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10434" id="tmpid10434"></a><a name="tmpid10435" id="tmpid10435"></a>&nbsp;
+                                 </p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10436" id="tmpid10436"></a><a name="tmpid10437" id="tmpid10437"></a>✓
+                                 </p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10438" id="tmpid10438"></a><a name="tmpid10439" id="tmpid10439"></a>&nbsp;
+                                 </p>
+                              </td>
+                              <td style="" rowspan="2" valign="middle"><p><a name="tmpid10440" id="tmpid10440"></a><a name="tmpid10441" id="tmpid10441"></a>Approve the submitted resource.
+                                 </p>
+                                 <p><a name="tmpid10442" id="tmpid10442"></a>Select this option only for resources that are ready to be
+                                    used in customer output. Only approved resources will be included
+                                    in customer output.
+                                 </p>
+                                 <p><a name="tmpid10443" id="tmpid10443"></a>You can approve a resource only if
+                                    all of the child resources that are associated with that resource
+                                    have also been approved. For example, to approve a document, you must
+                                    first approve all of the designs that are contained within that resource
+                                    and any components or asset library resources that are used in those
+                                    designs.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" valign="middle"><p><a name="tmpid10445" id="tmpid10445"></a><a name="tmpid10446" id="tmpid10446"></a>Submitted for&nbsp;approval
+                                 </p>
+                              </td>
+                              <td style="" valign="middle"><p><a name="tmpid10447" id="tmpid10447"></a><a name="tmpid10448" id="tmpid10448"></a><strong class="guilabel" data-cid="Approve">Approve</strong></p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10450" id="tmpid10450"></a><a name="tmpid10451" id="tmpid10451"></a>✓
+                                 </p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10452" id="tmpid10452"></a><a name="tmpid10453" id="tmpid10453"></a>&nbsp;
+                                 </p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10454" id="tmpid10454"></a><a name="tmpid10455" id="tmpid10455"></a>✓
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" valign="middle"><p><a name="tmpid10457" id="tmpid10457"></a><a name="tmpid10458" id="tmpid10458"></a>Submitted for&nbsp;approval
+                                 </p>
+                              </td>
+                              <td style="" valign="middle"><p><a name="tmpid10459" id="tmpid10459"></a><a name="tmpid10460" id="tmpid10460"></a><strong class="guilabel" data-cid="Reject">Reject</strong></p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10462" id="tmpid10462"></a><a name="tmpid10463" id="tmpid10463"></a>✓
+                                 </p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10464" id="tmpid10464"></a><a name="tmpid10465" id="tmpid10465"></a>&nbsp;
+                                 </p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10466" id="tmpid10466"></a><a name="tmpid10467" id="tmpid10467"></a>✓
+                                 </p>
+                              </td>
+                              <td style="" valign="middle"><p><a name="tmpid10468" id="tmpid10468"></a><a name="tmpid10469" id="tmpid10469"></a>Reject the submitted resource.
+                                 </p>
+                                 <p><a name="tmpid10470" id="tmpid10470"></a>Select this option if the resource must be changed before it
+                                    can be used in customer output. When you reject a resource, designers
+                                    must then return the rejected resource to a draft state and submit
+                                    the updated draft for approval after making any required changes.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" valign="middle"><p><a name="tmpid10472" id="tmpid10472"></a><a name="tmpid10473" id="tmpid10473"></a>Submitted for&nbsp;approval
+                                 </p>
+                              </td>
+                              <td style="" rowspan="2" valign="middle"><p><a name="tmpid10474" id="tmpid10474"></a><a name="tmpid10475" id="tmpid10475"></a><strong class="guilabel" data-cid="Return_to_draft">Return to draft</strong></p>
+                              </td>
+                              <td style="" rowspan="2" align="center" valign="middle"><p><a name="tmpid10477" id="tmpid10477"></a><a name="tmpid10478" id="tmpid10478"></a>✓
+                                 </p>
+                              </td>
+                              <td style="" rowspan="2" align="center" valign="middle"><p><a name="tmpid10479" id="tmpid10479"></a><a name="tmpid10480" id="tmpid10480"></a>&nbsp;
+                                 </p>
+                              </td>
+                              <td style="" rowspan="2" align="center" valign="middle"><p><a name="tmpid10481" id="tmpid10481"></a><a name="tmpid10482" id="tmpid10482"></a>✓
+                                 </p>
+                              </td>
+                              <td style="" rowspan="2" valign="middle"><p><a name="tmpid10483" id="tmpid10483"></a><a name="tmpid10484" id="tmpid10484"></a>Return the submitted or
+                                    rejected resource to a draft state.
+                                 </p>
+                                 <p><a name="tmpid10485" id="tmpid10485"></a>Select this option
+                                    to make updates to content that has already been submitted for approval
+                                    or that has been rejected. A resource that is returned to a draft
+                                    state is not treated as a new version; it simply resets the approval
+                                    workflow process.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" valign="middle"><p><a name="tmpid10487" id="tmpid10487"></a><a name="tmpid10488" id="tmpid10488"></a>Rejected
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" valign="middle"><a name="tmpid10490" id="tmpid10490"></a>Pending approval
+                              </td>
+                              <td style="" valign="middle"><p><a name="tmpid10491" id="tmpid10491"></a><a name="tmpid10492" id="tmpid10492"></a>Wait <br>or<br>Click&nbsp;<img src="./img/b_WebApps_Workflow_Pending_small.png" class="igrph" alt="" width="25" height="25"></p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10494" id="tmpid10494"></a><a name="tmpid10495" id="tmpid10495"></a>&nbsp;
+                                 </p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10496" id="tmpid10496"></a><a name="tmpid10497" id="tmpid10497"></a>&nbsp;
+                                 </p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10498" id="tmpid10498"></a><a name="tmpid10499" id="tmpid10499"></a>✓
+                                 </p>
+                              </td>
+                              <td style="" valign="middle"><a name="tmpid10500" id="tmpid10500"></a>Wait for all approver groups on the current
+                                 level to approve the draft or click the workflow state button <img src="./img/b_WebApps_Workflow_Pending_small.png" class="igrph" alt="" width="25" height="25"> to check the approval status.
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" valign="middle"><p><a name="tmpid10503" id="tmpid10503"></a><a name="tmpid10504" id="tmpid10504"></a>Approved
+                                 </p>
+                              </td>
+                              <td style="" valign="middle"><p><a name="tmpid10505" id="tmpid10505"></a><a name="tmpid10506" id="tmpid10506"></a><strong class="guilabel" data-cid="Make_new_draft">Make new draft</strong></p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10508" id="tmpid10508"></a><a name="tmpid10509" id="tmpid10509"></a>✓
+                                 </p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10510" id="tmpid10510"></a><a name="tmpid10511" id="tmpid10511"></a>✓
+                                 </p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10512" id="tmpid10512"></a><a name="tmpid10513" id="tmpid10513"></a>✓
+                                 </p>
+                              </td>
+                              <td style="" valign="middle"><p><a name="tmpid10514" id="tmpid10514"></a><a name="tmpid10515" id="tmpid10515"></a>Create a new draft version of a previously
+                                    approved resource.
+                                 </p>
+                                 <p><a name="tmpid10516" id="tmpid10516"></a>When you create a draft, it creates
+                                    a new version of the content that must again go through the approval
+                                    process to be used in customer output.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" valign="middle"><p><a name="tmpid10518" id="tmpid10518"></a><a name="tmpid10519" id="tmpid10519"></a>Draft
+                                 </p>
+                              </td>
+                              <td style="" valign="middle"><p><a name="tmpid10520" id="tmpid10520"></a><a name="tmpid10521" id="tmpid10521"></a><strong class="guilabel" data-cid="Discard_draft">Discard draft</strong></p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10523" id="tmpid10523"></a><a name="tmpid10524" id="tmpid10524"></a>✓
+                                 </p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10525" id="tmpid10525"></a><a name="tmpid10526" id="tmpid10526"></a>✓
+                                 </p>
+                              </td>
+                              <td style="" align="center" valign="middle"><p><a name="tmpid10527" id="tmpid10527"></a><a name="tmpid10528" id="tmpid10528"></a>✓
+                                 </p>
+                              </td>
+                              <td style="" valign="middle"><p><a name="tmpid10529" id="tmpid10529"></a><a name="tmpid10530" id="tmpid10530"></a>Discard a draft version without moving
+                                    it through the approval process.
+                                 </p>
+                                 <p><a name="tmpid10531" id="tmpid10531"></a>You can delete a draft
+                                    version of a resource at any point before it has been submitted for
+                                    approval. When you discard a draft version, you lose your edits, and
+                                    the resource is replaced by the latest approved version.
+                                 </p>
+                                 <p><a name="tmpid10532" id="tmpid10532"></a>This option is available only if a previously approved version of
+                                    the resource exists.
+                                 </p>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid10534" id="tmpid10534"></a>In the <strong class="guilabel" data-cid="Workflow_state_change">Workflow state change</strong> dialog
+                     box that opens, enter an optional workflow comment to help other users
+                     understand any changes or decisions that you made, and then click <strong class="guilabel" data-cid="Change">Change</strong>.
+                  </p>
+                  <p><a name="tmpid10537" id="tmpid10537"></a>To see the workflow history for a selected resource, in the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, click the <strong class="guilabel" data-cid="Workflow">Workflow</strong> tab.
+                  </p>
+               </li>
+            </ol>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv72">
+         <h2 class="bridgehead subheading2"><a name="workflowadvancedstatus" id="workflowadvancedstatus"></a>Checking the approval
+            status for a draft in an advanced workflow
+         </h2>
+         <div class="procedure">
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid10545" id="tmpid10545"></a>In a domain with an advanced workflow, if the workflow
+                     state button for a submitted resource shows the pending approval symbol <img src="./img/b_WebApps_Workflow_Pending_small.png" class="igrph" alt="" width="25" height="25">, click the button, and then click <strong class="guilabel" data-cid="Workflow_status">Workflow status</strong>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid10549" id="tmpid10549"></a>In the <strong class="guilabel" data-cid="Advanced_Workflow">Advanced Workflow</strong> dialog box,
+                     in the <strong class="guilabel" data-cid="Approval">Approval</strong> column, review the mix of approved
+                     symbols <img src="./img/B_WebApps_Workflow_Approved_small.png" class="igrph" alt="" width="25" height="26"> to pending approval symbols <img src="./img/b_WebApps_Workflow_Pending_small.png" class="igrph" alt="" width="25" height="25"> for the approver groups in the active level.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid10555" id="tmpid10555"></a>Click <strong class="guilabel" data-cid="Close">Close</strong>.
+                  </p>
+                  <div class="note">
+                     <p class="title"><strong><a name="tmp4ref138" id="tmp4ref138"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                     </strong></p>
+                     <div class="itemizedlist">
+                        <ul class="itemizedlist">
+                           <li class="listitem">
+                              <p><a name="tmpid10560" id="tmpid10560"></a>For more information about approvers and approver
+                                 groups, see <a href="approversapprovergroups.html" class="xref2 sect3 auto xstd" title="2.3.3.3 &nbsp; Approvers and approver&#xA;groups in workflows"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">2.3.3.3</span> “</span><span class="otlbl-ttl">Approvers and
+                                    approver
+                                    groups in workflows</span><span class="otsLbl">”</span></a>.
+                              </p>
+                           </li>
+                           <li class="listitem">
+                              <p><a name="tmpid10563" id="tmpid10563"></a>For more information about configuring an advanced
+                                 workflow with multiple levels of approver groups, see <a href="domainworkflowconfigadvanced.html" class="xref2 sect3 auto xstd" title="2.3.3.6 &nbsp; Configuring&#xA;advanced workflow settings for a domain"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">2.3.3.6</span> “</span><span class="otlbl-ttl">Configuring
+                                    advanced workflow settings for a domain</span><span class="otsLbl">”</span></a>.
+                              </p>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </li>
+            </ol>
+         </div></div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">3.6</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Managing approval workflows</span></div>
+         <div class="pgPrev"><a title="Preceding page: 3.5 &nbsp; Applying metadata tags to resources" aria-label="Preceding page: 3.5 &nbsp; Applying metadata tags to resources" href="applyingmetadata.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 3 – Working with DAS&nbsp;resources" aria-label="Section one level up: Chapter 3 – Working with DAS&nbsp;resources" href="managingassetlibraryresources.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 3.7 &nbsp; Searching and replacing text" aria-label="Next page: 3.7 &nbsp; Searching and replacing text" href="search-replace.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

@@ -1,0 +1,379 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="9.8.2 ">9.8.2 Post-Sort engine processing with general data and data segments</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="enginetiming.html" title="9.8 &nbsp; Engine timing"> -->
+      <link rel="prev" href="engine-processing-flow-for-gene.html" title="9.8.1 &nbsp; Engine processing with general data and data segments">
+      <link rel="next" href="usingdashboards.html" title="Chapter 10 – Using Dashboards">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbrbt4wz6v-f-5c8e39ddc-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9e9a5560","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":63404,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741383637","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==awiSjM5WaZnTeajgOHVVNRHDBpLJo1rDU6riPAccVKGU5/8qaRvmanhHSip0psBDBwrrPWy60yjyZSOy33IRvZxU2U1VhXw0bCYOlUi9kR6FHbdShAC1GISIpCLWsDDK8aAvHvpQTxQ/lz4IHLl1L0s0srfKj+eQ74URsbOuoURtPCflZeRH9mpnRKhVmV3mEabQmtMZxNxCguohUknksUbbzhgnuNjQeRZ8OndO+fdWfdEd8rCuXNl1eJAp6GaLiRfLX+TaBQTpcULpfEv/w+PQz4mf1MO2Z7eIlzmrkS7qPTmV9J7GLs+YUdllyAulqYsa6ym1orqg1CbdIMwGy8IV+41kz4Dp7bhDSDGIEhBa3gI7vn0zj2M1Y5+43nP99peJvdjJOwzf67D98sQFFhUrqr3DO9H35QETXRRUj0Y=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="aid-1592">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">9.8.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Post-Sort engine processing
+            with general
+            data and data segments</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 9.8.1 &nbsp; Engine processing&#xA;with general data and data segments" aria-label="Preceding page: 9.8.1 &nbsp; Engine processing&#xA;with general data and data segments" href="engine-processing-flow-for-gene.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 9.8 &nbsp; Engine timing" aria-label="Section one level up: 9.8 &nbsp; Engine timing" href="enginetiming.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: Chapter 10 – Using Dashboards" aria-label="Next page: Chapter 10 – Using Dashboards" href="usingdashboards.html">Next</a></div>
+      </div>
+      <div class="sect2 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="aid-1592" id="aid-1592"></a><span class="otsLbl"><span class="otlbl-num">9.8.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Post-Sort engine processing
+                     with general
+                     data and data segments</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid27339" id="tmpid27339"></a>With two-pass
+            engine processing, keep in mind the following considerations:
+         </p>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid27343" id="tmpid27343"></a>All documents and designs are stored in pre-sort engine
+                     processing and re-read in post-sort engine processing.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid27345" id="tmpid27345"></a>Only late-compose objects are drawn in post-sort engine
+                     processing.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid27347" id="tmpid27347"></a>Post-sort engine processing does not read the driver
+                     or reference data files, nor does it perform many of the events of
+                     pre-sort engine processing.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid27350" id="tmpid27350"></a>Sort data file entries are a capture of the engine
+                     before the final late-compose step is performed. Each entry contains
+                     the following:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid27353" id="tmpid27353"></a>The drawn documents and designs
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid27355" id="tmpid27355"></a>The design objects to be drawn in post-sort engine
+                              processing
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid27357" id="tmpid27357"></a>Any variables that are used in post-sort engine processing
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid27359" id="tmpid27359"></a>When each customer's sort data entry is read, all
+                     post-sort engine processing variables are reset to their pre-sort
+                     engine processing value. Simple tasks like user-defined counters will
+                     seem to work incorrectly. Thus, variables that are used in post-sort
+                     engine processing, but that are not to be restored to their pre-sort
+                     engine processing values for each entry, must be flagged as such. 
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <p><a name="tmpid27360" id="tmpid27360"></a>The following flowchart illustrates
+            how engine processing differs when you use the two-pass engine process
+            that is required for output sorting and bundling:
+         </p>
+         <div class="graphic"><img src="./img/E_Engine_Processing_horizontal_TwoPassWC.png" class="grph" alt="" width="551" height="610"></div>
+         <p><a name="tmpid27362" id="tmpid27362"></a>The following table explains how pre-sort
+            engine processing differs from a general engine run when you use two-pass
+            engine processing:
+         </p>
+         <div class="table"><p class="title"><a name="tbl-2719" id="tbl-2719"></a><b><span class="otLbl"><span class="otlbl-kw">Table</span> <span class="otlbl-num">9.4</span>: </span><span class="otlbl-ttl">Pre-sort engine processing
+                  in a two-pass engine process</span></b></p>
+            <div class="table-contents">
+               <table summary="Pre-sort engine processing in a two-pass engine process" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                  <colgroup>
+                     <col class="col1">
+                     <col class="col2">
+                  </colgroup>
+                  <thead>
+                     <tr class="row">
+                        <th style=""><p><a name="tmpid27370" id="tmpid27370"></a><a name="tmpid27371" id="tmpid27371"></a>Step
+                           </p>
+                        </th>
+                        <th style=""><p><a name="tmpid27372" id="tmpid27372"></a><a name="tmpid27373" id="tmpid27373"></a>Engine action
+                           </p>
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr class="row" valign="top">
+                        <td style="" valign="top"><a name="tmpid27376" id="tmpid27376"></a>1-9
+                        </td>
+                        <td style="" valign="top"><p><a name="tmpid27377" id="tmpid27377"></a><a name="tmpid27378" id="tmpid27378"></a>In pre-sort engine processing for two-pass engine processes,
+                              the engine actions and system variables that are populated for step
+                              1 through step 9 are identical to engine processing with general data
+                              and data segments.
+                           </p> 
+                           <p><a name="tmpid27379" id="tmpid27379"></a>For more information about engine
+                              processing for general data and data segments, see <a href="engine-processing-flow-for-gene.html" class="xref2 sect2 auto xstd" title="9.8.1 &nbsp; Engine processing&#xA;with general data and data segments"><span class="otsLbl"><span class="otlbl-kw">Section</span>&nbsp;<span class="otlbl-num">9.8.1</span> “</span><span class="otlbl-ttl">Engine processing
+                                 with general data and data segments</span><span class="otsLbl">”</span></a>.
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row" valign="top">
+                        <td style="" valign="top"><p><a name="tmpid27382" id="tmpid27382"></a><a name="tmpid27383" id="tmpid27383"></a>10. Queue
+                           </p>
+                        </td>
+                        <td style="" valign="top"><a name="tmpid27384" id="tmpid27384"></a><div class="orderedlist">
+                              <ol class="orderedlist" type="a">
+                                 <li class="listitem">
+                                    <p><a name="tmpid27387" id="tmpid27387"></a>Set the queue system variables.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid27389" id="tmpid27389"></a>Write report files with IO time of queue break and
+                                       end of queue.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid27391" id="tmpid27391"></a>Run queue rules and perform final document selection
+                                       per queue.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid27393" id="tmpid27393"></a>Evaluate recipient data and update content as necessary
+                                       for recipient copies.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid27395" id="tmpid27395"></a>Write customer and recipient entries to the sort index
+                                       data source.
+                                    </p>
+                                 </li>
+                              </ol>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr class="row" valign="top">
+                        <td style="" colspan="2" valign="top"><p><a name="tmpid27397" id="tmpid27397"></a><a name="tmpid27398" id="tmpid27398"></a><span class="highlight"><strong>After all customers:</strong></span></p>
+                        </td>
+                     </tr>
+                     <tr class="row" valign="top">
+                        <td style="" valign="top"><p><a name="tmpid27401" id="tmpid27401"></a><a name="tmpid27402" id="tmpid27402"></a>12. Complete IO
+                           </p>
+                        </td>
+                        <td style="" valign="top"><p><a name="tmpid27403" id="tmpid27403"></a><a name="tmpid27404" id="tmpid27404"></a>Write report files with IO time of <strong class="guilabel" data-cid="Completion_of_all_customers">Completion of all customers</strong>.
+                           </p>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div><br class="table-break"><p><a name="tmpid27406" id="tmpid27406"></a>At the end of pre-sort processing, you can sort the sort index
+            data source and change the fields that can be updated.
+         </p>
+         <p><a name="tmpid27407" id="tmpid27407"></a>During post-sort engine processing, the engine produces output
+            based on information that is sorted in pre-sort engine processing.
+         </p>
+         <p><a name="tmpid27408" id="tmpid27408"></a>The following table explains in detail
+            what happens during each step of the post-sort engine processing,
+            as shown in the previous flowchart, and when system variables are
+            populated:
+         </p>
+         <div class="table"><p class="title"><a name="tbl-29864" id="tbl-29864"></a><b><span class="otLbl"><span class="otlbl-kw">Table</span> <span class="otlbl-num">9.5</span>: </span><span class="otlbl-ttl">Post-sort engine processing
+                  in a two-pass engine process</span></b></p>
+            <div class="table-contents">
+               <table summary="Post-sort engine processing in a two-pass engine process" style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                  <colgroup>
+                     <col class="col1">
+                     <col class="col2">
+                     <col class="col3">
+                  </colgroup>
+                  <thead>
+                     <tr class="row">
+                        <th style=""><p><a name="tmpid27417" id="tmpid27417"></a><a name="tmpid27418" id="tmpid27418"></a>Step
+                           </p>
+                        </th>
+                        <th style=""><p><a name="tmpid27419" id="tmpid27419"></a><a name="tmpid27420" id="tmpid27420"></a>Engine action
+                           </p>
+                        </th>
+                        <th style=""><p><a name="tmpid27421" id="tmpid27421"></a><a name="tmpid27422" id="tmpid27422"></a>Variables populated
+                           </p>
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr class="row" valign="top">
+                        <td style="" valign="top"><p><a name="tmpid27425" id="tmpid27425"></a><a name="tmpid27426" id="tmpid27426"></a>1. Engine Start
+                           </p>
+                        </td>
+                        <td style="" valign="top"><a name="tmpid27427" id="tmpid27427"></a><div class="orderedlist">
+                              <ol class="orderedlist" type="a">
+                                 <li class="listitem">
+                                    <p><a name="tmpid27430" id="tmpid27430"></a>Orchestration reads the flow model configuration. 
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid27432" id="tmpid27432"></a>Docgen processes all reference links and creates a
+                                       cache of resources and data for the communication.
+                                    </p>
+                                 </li>
+                              </ol>
+                           </div>
+                        </td>
+                        <td style="" valign="top"><a name="tmpid27433" id="tmpid27433"></a>Not applicable
+                        </td>
+                     </tr>
+                     <tr class="row" valign="top">
+                        <td style="" valign="top"><p><a name="tmpid27435" id="tmpid27435"></a><a name="tmpid27436" id="tmpid27436"></a>2. Initialize
+                           </p>
+                        </td>
+                        <td style="" valign="top"><a name="tmpid27437" id="tmpid27437"></a><div class="orderedlist">
+                              <ol class="orderedlist" type="a">
+                                 <li class="listitem">
+                                    <p><a name="tmpid27440" id="tmpid27440"></a>Reset system variables.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid27442" id="tmpid27442"></a>Compute formulas.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid27444" id="tmpid27444"></a>Write queue report files with IO time of <strong class="guilabel" data-cid="After_initialization_files_read">After initialization files read</strong>.
+                                    </p>
+                                 </li>
+                              </ol>
+                           </div>
+                        </td>
+                        <td style="" valign="top"><a name="tmpid27446" id="tmpid27446"></a>Not applicable
+                        </td>
+                     </tr>
+                     <tr class="row" valign="top">
+                        <td style="" colspan="3" valign="top"><p><a name="tmpid27448" id="tmpid27448"></a><a name="tmpid27449" id="tmpid27449"></a><span class="highlight"><strong>For each sort
+                                    index entry:</strong></span></p>
+                        </td>
+                     </tr>
+                     <tr class="row" valign="top">
+                        <td style="" valign="top"><p><a name="tmpid27452" id="tmpid27452"></a><a name="tmpid27453" id="tmpid27453"></a>3. Queue
+                           </p>
+                        </td>
+                        <td style="" valign="top"><a name="tmpid27454" id="tmpid27454"></a><div class="orderedlist">
+                              <ol class="orderedlist" type="a">
+                                 <li class="listitem">
+                                    <p><a name="tmpid27457" id="tmpid27457"></a>Read and verify the current sort index entry.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid27459" id="tmpid27459"></a>Find the corresponding sort data file and read back
+                                       into memory (restoring the state of the engine as it was when the
+                                       sort data entry was written out).
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid27461" id="tmpid27461"></a>Last pass compose—process all remaining late-compose
+                                       objects.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid27463" id="tmpid27463"></a>Pages in documents sorted if required.
+                                    </p>
+                                 </li>
+                              </ol>
+                           </div>
+                        </td>
+                        <td style="" valign="top"><p><a name="tmpid27464" id="tmpid27464"></a><a name="tmpid27465" id="tmpid27465"></a>Post-sort only:
+                           </p>
+                           <p><a name="tmpid27466" id="tmpid27466"></a>SYS_Bundle Customer1-5
+                           </p>
+                           <p><a name="tmpid27467" id="tmpid27467"></a>SYS_BundleCustomerTotal1- 5
+                           </p>
+                           <p><a name="tmpid27468" id="tmpid27468"></a>SYS_BundleInBreak1-5
+                           </p>
+                           <p><a name="tmpid27469" id="tmpid27469"></a>SYS_BundleInQueue1-5
+                           </p>
+                           <p><a name="tmpid27470" id="tmpid27470"></a>SYS_BundlePage1-5
+                           </p>
+                           <p><a name="tmpid27471" id="tmpid27471"></a>SYS_BundlePageTotal1-5
+                           </p>
+                           <p><a name="tmpid27472" id="tmpid27472"></a>SYS_BundleSheet1-5
+                           </p>
+                           <p><a name="tmpid27473" id="tmpid27473"></a>SYS_BundleSheetTotal1-5
+                           </p>
+                        </td>
+                     </tr>
+                     <tr class="row" valign="top">
+                        <td style="" valign="top"><p><a name="tmpid27475" id="tmpid27475"></a><a name="tmpid27476" id="tmpid27476"></a>4. Page IO
+                           </p>
+                        </td>
+                        <td style="" valign="top"><a name="tmpid27477" id="tmpid27477"></a><div class="orderedlist">
+                              <ol class="orderedlist" type="a">
+                                 <li class="listitem">
+                                    <p><a name="tmpid27480" id="tmpid27480"></a>Compute Events.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid27482" id="tmpid27482"></a>Write report files with IO time of <strong class="guilabel" data-cid="When_each_page_is_selected">When each page is selected</strong>.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid27485" id="tmpid27485"></a>Produce pages.
+                                    </p>
+                                 </li>
+                              </ol>
+                           </div>
+                        </td>
+                        <td style="" valign="top"><a name="tmpid27486" id="tmpid27486"></a>&nbsp;
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div><br class="table-break"></div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">9.8.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Post-Sort engine processing
+            with general
+            data and data segments</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 9.8.1 &nbsp; Engine processing&#xA;with general data and data segments" aria-label="Preceding page: 9.8.1 &nbsp; Engine processing&#xA;with general data and data segments" href="engine-processing-flow-for-gene.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 9.8 &nbsp; Engine timing" aria-label="Section one level up: 9.8 &nbsp; Engine timing" href="enginetiming.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: Chapter 10 – Using Dashboards" aria-label="Next page: Chapter 10 – Using Dashboards" href="usingdashboards.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

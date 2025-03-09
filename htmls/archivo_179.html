@@ -1,0 +1,406 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="4.14 ">4.14 Creating locale objects</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="addingcommunicationassets.html" title="Chapter 4 – Managing communication resources"> -->
+      <link rel="prev" href="creatinglanguageobjects.html" title="4.13 &nbsp; Creating language objects">
+      <link rel="next" href="addingdesignassets.html" title="Chapter 5 – Managing design resources">
+   <link rel="stylesheet" type="text/css" href="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/dynData/condstyles.css">
+
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wyb5-f-d6d8acece-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9dd81a28","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":62312,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741381693","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==GZ67tbDWlY8+WC0xKGy3UgtWspcX4MBg20s/EJvJ1XlkHy1jCqoasZfh0m7hSH51uD1Oq0979dbeakFqsQLHmEJaLM/VkQSa+5b4LYH8aT+s59jMVbt/GlhoaZOotLOhlTOcQfCUj4I0KHkT3ajn6ND4o1XimLbadSpeDs36j8lvyPIX0laOeWGrk5Yg4zZYPfnr9ROXdrAjpO+1WRNnTfYXESqa/S5D32T1SZy12P0LCOVpNwFvXio5aGmrzFH25XutjALXyIpe8+9x22X84ZTmpmYb2c/vlgNF2f+t6DTv2cL4AnwXpJnY57se3ZB65Qp5kbLLSiV8x5LzUI2bbMS3Hd7S7R3Gi1MI4R+7I3wGZVgLdNZt0ps7ZlTfA0vSfPoGwgNrd1p58LnU7ejo6TUO6Kk/DCoxWW2ZIl1jdXs=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="creatinglocaleobjects">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.14</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating locale objects</span></div>
+         <div class="pgPrev"><a title="Preceding page: 4.13 &nbsp; Creating language objects" aria-label="Preceding page: 4.13 &nbsp; Creating language objects" href="creatinglanguageobjects.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 4 – Managing communication resources" aria-label="Section one level up: Chapter 4 – Managing communication resources" href="addingcommunicationassets.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: Chapter 5 – Managing design resources" aria-label="Next page: Chapter 5 – Managing design resources" href="addingdesignassets.html">Next</a></div>
+      </div>
+      <div class="sect1 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="creatinglocaleobjects" id="creatinglocaleobjects"></a><span class="otsLbl"><span class="otlbl-num">4.14</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating locale objects</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid19127" id="tmpid19127"></a>Locale objects are resources that allow you to differentiate
+            variable data not only by language, but also by geography.
+         </p>
+         <p><a name="tmpid19128" id="tmpid19128"></a>If your organization has a multi-regional or an international
+            customer base, your customers might not only speak various languages,
+            but they might also use different currencies, date formats, and numeric
+            notation systems. For example, in the United States, dates are expressed
+            in <span class="quote">“<span class="quote">month/day/year</span>”</span> format, whereas in other countries/regions,
+            dates are expressed in <span class="quote">“<span class="quote">day/month/year</span>”</span> format. In <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span>, you can create locale objects to specify how monetary amounts,
+            numbers, and dates must be presented in communications intended for
+            specific geographical areas.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref225" id="tmp4ref225"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid19138" id="tmpid19138"></a>If the format setting for an individual variable differs from
+               the locale object setting, the variable format is used in output.
+            </p>
+         </div>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid19141" id="tmpid19141"></a><strong class="guilabel" data-cid="Date_format">Date format</strong>—Specifies how
+                     dates are represented in a locale.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid19144" id="tmpid19144"></a><strong class="guilabel" data-cid="Currency_format">Currency format</strong>—Specifies
+                     the characters and appearance a locale uses to represent currency.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid19147" id="tmpid19147"></a><strong class="guilabel" data-cid="Default_floating_format">Default floating format</strong>—Specifies
+                     the characters and appearance a locale uses to represent floating
+                     point numbers. Floating point numbers are numbers that are not whole
+                     numbers (for example, 3.173).
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <p><a name="tmpid19149" id="tmpid19149"></a>Keep in mind that locale objects reference <a class="link" href="creatinglanguageobjects.html" title="4.13 &nbsp; Creating language objects">language objects</a>; therefore, you must create language objects for each language that
+            your organization supports before you can create locale objects.
+         </p>
+         <p><a name="tmpid19151" id="tmpid19151"></a>Multiple locale objects can reference the same language object.
+            However, you must create a separate locale object for a country/region
+            when you need to specify at least one unique property for that country/region.
+            For example, if you have customers in Mexico and Spain, you must create
+            two separate locale objects for these countries—even though
+            the customers in both countries speak Spanish—because these
+            countries use different currencies.
+         </p>
+         <p><a name="tmpid19152" id="tmpid19152"></a>When using locales with a communication that is based on a <a class="link" href="configuringcommunicationsets.html" title="4.1 &nbsp; Configuring communication sets">communication
+               set</a>, <span class="namestring" data-cid="OpenText">OpenText</span> recommends the following:
+         </p>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid19157" id="tmpid19157"></a>If you plan to include more than one language variation
+                     in a design, you can specify a default locale for the communication.
+                     This is done from <span class="namestring" data-cid="Designer">Designer</span>, in <strong class="guilabel" data-cid="Communication_Composer">Communication Composer</strong>, on the <strong class="guilabel" data-cid="General">General</strong> properties panel of the communication.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid19162" id="tmpid19162"></a>For any locales you plan to use in a communication,
+                     include the appropriate locale resource objects in the communication
+                     set. This ensures that they are available to the engine during production
+                     runs.
+                  </p>
+               </li>
+            </ul></div>
+         <div class="vl2formalsect-list vl2bhseq" id="aid4pidiv149">
+         <h2 class="bridgehead subheading2"><a name="dl2vl-154" id="dl2vl-154"></a>Creating a new locale object
+         </h2>
+         <div class="procedure">
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid19169" id="tmpid19169"></a>In the <strong class="guilabel" data-cid="Region">Region</strong> panel, click <strong class="guilabel" data-cid="Add">Add</strong>, then click <strong class="guilabel" data-cid="Locale">Locale</strong> in the selection
+                     list.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid19174" id="tmpid19174"></a>In the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, enter a
+                     name and, optionally, a description for the locale object resource.
+                  </p>
+                  <p><a name="tmpid19176" id="tmpid19176"></a>Names do not support the following special characters: <code class="literal">&amp; / : * ! ? &gt; &lt; | + # %</code> 
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid19179" id="tmpid19179"></a>In the <strong class="guilabel" data-cid="Language">Language</strong> list, select the <a class="link" href="creatinglanguageobjects.html" title="4.13 &nbsp; Creating language objects">language object</a> for this
+                     locale from the list of available languages.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid19183" id="tmpid19183"></a>Click <strong class="guilabel" data-cid="Create">Create</strong>.
+                  </p>
+                  <p><a name="tmpid19185" id="tmpid19185"></a>The locale object resource is created and the <strong class="guilabel" data-cid="Properties">Properties</strong> panel displays the locale properties.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="localesettings" id="localesettings"></a>Use the <strong class="guilabel" data-cid="Properties">Properties</strong> panel to define the following attributes:
+                  </p>
+                  <div class="informaltable">
+                     <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                        <colgroup>
+                           <col class="col1">
+                           <col class="col2">
+                           <col class="col3">
+                        </colgroup>
+                        <thead>
+                           <tr class="row">
+                              <th style="" colspan="2"><a name="tmpid19197" id="tmpid19197"></a>Property
+                              </th>
+                              <th style=""><a name="tmpid19198" id="tmpid19198"></a>Description
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="row">
+                              <td style="" colspan="2"><a name="tmpid19201" id="tmpid19201"></a><strong class="guilabel" data-cid="Language">Language</strong></td>
+                              <td style=""><a name="tmpid19203" id="tmpid19203"></a>The primarily spoken language of the region.
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" colspan="2"><a name="tmpid19205" id="tmpid19205"></a><strong class="guilabel" data-cid="Date_format">Date format</strong></td>
+                              <td style=""><a name="tmpid19207" id="tmpid19207"></a>The preferred date notation for the region.
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" rowspan="7"><a name="tmpid19209" id="tmpid19209"></a><strong class="guilabel" data-cid="Currency_format">Currency format</strong></td>
+                              <td style=""><a name="tmpid19211" id="tmpid19211"></a><strong class="guilabel" data-cid="Symbol">Symbol</strong></td>
+                              <td style=""><p><a name="tmpid19213" id="tmpid19213"></a><a name="tmpid19214" id="tmpid19214"></a>The shorthand notation for the region’s basic unit
+                                    of currency. For example, <span class="quote">“<span class="quote">$</span>”</span> or <span class="quote">“<span class="quote">£</span>”</span>.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid19218" id="tmpid19218"></a><strong class="guilabel" data-cid="Thousands">Thousands</strong></td>
+                              <td style=""><p><a name="tmpid19220" id="tmpid19220"></a><a name="tmpid19221" id="tmpid19221"></a>The character symbol used as the thousands separator
+                                    in monetary amounts and numbers. For example, <span class="quote">“<span class="quote">,</span>”</span> (comma)
+                                    or <span class="quote">“<span class="quote">.</span>”</span> (period). That is, the number <span class="quote">“<span class="quote">one thousand</span>”</span> is expressed numerically as <span class="quote">“<span class="quote">1,000</span>”</span> in some countries/regions
+                                    and as <span class="quote">“<span class="quote">1.000</span>”</span> in other countries/regions.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid19228" id="tmpid19228"></a><strong class="guilabel" data-cid="Decimal">Decimal</strong></td>
+                              <td style=""><p><a name="tmpid19230" id="tmpid19230"></a><a name="tmpid19231" id="tmpid19231"></a>The character symbol used as the decimal separator in
+                                    decimal numbers and monetary amounts. For example, <span class="quote">“<span class="quote">,</span>”</span> (comma) or <span class="quote">“<span class="quote">.</span>”</span> (period). That is, the amount <span class="quote">“<span class="quote">one dollar</span>”</span> (or other unit of currency) is expressed numerically
+                                    as <span class="quote">“<span class="quote">1.00</span>”</span> in some countries/regions and as <span class="quote">“<span class="quote">1,00</span>”</span> in other countries/regions.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid19238" id="tmpid19238"></a><strong class="guilabel" data-cid="Negative">Negative</strong></td>
+                              <td style=""><p><a name="tmpid19240" id="tmpid19240"></a><a name="tmpid19241" id="tmpid19241"></a>The format used to express negative numbers and monetary
+                                    amounts. For example, <span class="quote">“<span class="quote">($1)</span>”</span> or <span class="quote">“<span class="quote">-£1</span>”</span>.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid19245" id="tmpid19245"></a><strong class="guilabel" data-cid="Positive">Positive</strong></td>
+                              <td style=""><p><a name="tmpid19247" id="tmpid19247"></a><a name="tmpid19248" id="tmpid19248"></a>The format used to express positive currency amounts.
+                                    For example, <span class="quote">“<span class="quote">$1</span>”</span> or <span class="quote">“<span class="quote">£1</span>”</span>.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid19252" id="tmpid19252"></a><strong class="guilabel" data-cid="Digits">Digits</strong></td>
+                              <td style=""><p><a name="tmpid19254" id="tmpid19254"></a><a name="tmpid19255" id="tmpid19255"></a>The number of digits shown after the decimal point in
+                                    decimal numbers. This number can range from 0 to 4.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid19257" id="tmpid19257"></a><strong class="guilabel" data-cid="Set_zero">Set zero</strong></td>
+                              <td style=""><p><a name="tmpid19259" id="tmpid19259"></a><a name="tmpid19260" id="tmpid19260"></a>If you want to specify text to display when the value
+                                    is zero (0), select the <strong class="guilabel" data-cid="Set_zero">Set zero</strong> check box and
+                                    enter the character or string that you want to use in place of <strong class="guilabel" data-cid="0">0</strong> in the text box.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" rowspan="6"><a name="tmpid19264" id="tmpid19264"></a><strong class="guilabel" data-cid="Default_floating_format">Default floating format</strong></td>
+                              <td style=""><a name="tmpid19266" id="tmpid19266"></a><strong class="guilabel" data-cid="Digits">Digits</strong></td>
+                              <td style=""><p><a name="tmpid19268" id="tmpid19268"></a><a name="tmpid19269" id="tmpid19269"></a>The number of digits to show after the decimal point
+                                    when calculating numbers. This number can range from 0 to 4.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid19271" id="tmpid19271"></a><strong class="guilabel" data-cid="Thousands">Thousands</strong></td>
+                              <td style=""><p><a name="tmpid19273" id="tmpid19273"></a><a name="tmpid19274" id="tmpid19274"></a>The character to use for the thousands separator in floating
+                                    point numbers.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid19276" id="tmpid19276"></a><strong class="guilabel" data-cid="Decimal">Decimal</strong></td>
+                              <td style=""><p><a name="tmpid19278" id="tmpid19278"></a><a name="tmpid19279" id="tmpid19279"></a>The character to use as the decimal separator in floating
+                                    point numbers.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid19281" id="tmpid19281"></a><strong class="guilabel" data-cid="Negative">Negative</strong></td>
+                              <td style=""><p><a name="tmpid19283" id="tmpid19283"></a><a name="tmpid19284" id="tmpid19284"></a>The formatting method to indicate negative floating point
+                                    numbers.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid19286" id="tmpid19286"></a><strong class="guilabel" data-cid="Set_zero">Set zero</strong></td>
+                              <td style=""><p><a name="tmpid19288" id="tmpid19288"></a><a name="tmpid19289" id="tmpid19289"></a>If you want to specify text to display when the value
+                                    is zero (0), select the <strong class="guilabel" data-cid="Set_zero">Set zero</strong> check box and
+                                    enter the character or string that you want to use in place of <strong class="guilabel" data-cid="0">0</strong> in the text box.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid19293" id="tmpid19293"></a><strong class="guilabel" data-cid="Show_leading_zero">Show leading zero</strong></td>
+                              <td style=""><p><a name="tmpid19295" id="tmpid19295"></a><a name="tmpid19296" id="tmpid19296"></a>Select to show a leading zero in amounts less than one
+                                    (1). For example, <span class="quote">“<span class="quote">0.03</span>”</span>.
+                                 </p>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" rowspan="2"><a name="tmpid19299" id="tmpid19299"></a><strong class="guilabel" data-cid="Array_variable_list_format">Array variable list format</strong></td>
+                              <td style=""><a name="tmpid19301" id="tmpid19301"></a><strong class="guilabel" data-cid="Delimiter">Delimiter</strong></td>
+                              <td style=""><p><a name="tmpid19303" id="tmpid19303"></a><a name="tmpid19304" id="tmpid19304"></a>The separator character used for displaying lists of
+                                    values from array variables. For example, <span class="quote">“<span class="quote">,&nbsp;</span>”</span> or <span class="quote">“<span class="quote">;&nbsp;</span>”</span>.
+                                 </p> 
+                                 <div class="note">
+                                    <p class="title"><strong><a name="tmp4ref226" id="tmp4ref226"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                                    </strong></p>
+                                    <p><a name="tmpid19308" id="tmpid19308"></a>Although not required, if you want the separator to include
+                                       a space, as seen above, it needs to be included in this field.
+                                    </p>
+                                 </div>
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid19310" id="tmpid19310"></a><strong class="guilabel" data-cid="Conjunction">Conjunction</strong></td>
+                              <td style=""><p><a name="tmpid19312" id="tmpid19312"></a><a name="tmpid19313" id="tmpid19313"></a>The final conjunction used for displaying lists of values
+                                    from array variables. For example, <span class="quote">“<span class="quote">,&nbsp;and&nbsp;</span>”</span> for locales where the primary language is English or <span class="quote">“<span class="quote">,&nbsp;y&nbsp;</span>”</span> for locales where the primary language is Spanish.
+                                 </p> 
+                                 <div class="note">
+                                    <p class="title"><strong><a name="tmp4ref227" id="tmp4ref227"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                                    </strong></p>
+                                    <p><a name="tmpid19317" id="tmpid19317"></a>Although not required, if you want the conjunction to include
+                                       spaces, as seen above, they need to be included in this field.
+                                    </p>
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </li>
+            </ol>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv150">
+         <h2 class="bridgehead subheading2"><a name="dl2vl-155" id="dl2vl-155"></a>Using locale objects for design
+            variations and data mapping
+         </h2>
+         <p><a name="tmpid19341" id="tmpid19341"></a>When you create a locale object, its name is automatically added
+            as a <a class="link" href="updatingvariableproperties.html#staticselectionlist">static selection list</a> item in the <em class="emphasis">SYS_LocaleCustomer</em> system variable,
+            which controls which locale object to use at engine run time. If the <em class="emphasis">SYS_LocaleCustomer</em> variable is then added as a variation
+            to a communication set, any <span class="namestring" data-cid="Designer">Designer</span> designs or <span class="namestring" data-cid="Content_Author">Content Author</span> templates
+            based on that communication set will include those locale objects
+            as variation options.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref228" id="tmp4ref228"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid19348" id="tmpid19348"></a>In order to use <em class="emphasis">SYS_LocaleCustomer</em> in <span class="namestring" data-cid="Content_Author">Content Author</span>,
+               the <a class="link" href="configuringcommunicationsets.html#includeforca" title="Making resources available in Content Author">Include for Content Author</a> option needs to be enabled for the variable in the communication
+               set.
+            </p>
+         </div>
+         <p><a name="tmpid19352" id="tmpid19352"></a>Keep the following recommendations in mind when creating variations
+            using the <em class="emphasis">SYS_LocaleCustomer</em> variable:
+         </p>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid19356" id="tmpid19356"></a>If you create a design variation using a locale as
+                     an attribute, the language property of that locale object dictates
+                     the spelling dictionary used during editing. If multiple locales are
+                     used in a variation, then the default locale spelling dictionary is
+                     used.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid19358" id="tmpid19358"></a>If you are using both the <em class="emphasis">SYS_LocaleCustomer</em> and <em class="emphasis">SYS_LanguageCustomer</em> variables, and you
+                     want to create a variation using only one of them, <span class="namestring" data-cid="OpenText">OpenText</span> recommends
+                     that you use the <em class="emphasis">SYS_LocaleCustomer</em> variable;
+                     otherwise you might see incorrect formatting in your output.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid19364" id="tmpid19364"></a>If you create a variation using both the <em class="emphasis">SYS_LocaleCustomer</em> and <em class="emphasis">SYS_LanguageCustomer</em> variables, the language setting for both should match. For example,
+                     both should be set to English or both to French.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid19368" id="tmpid19368"></a>In order to ensure you get the correct formatting
+                     and language in your output, either map the <em class="emphasis">SYS_LocaleCustomer</em> variable in your data source or use a targeting rule to set the
+                     correct values for the variable.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid19371" id="tmpid19371"></a>If you include a language variation in a design, <span class="namestring" data-cid="OpenText">OpenText</span> strongly
+                     recommends that you specify a default locale for the communication.
+                     A default locale can be designated from <span class="namestring" data-cid="Designer">Designer</span>, in <strong class="guilabel" data-cid="Communication_Composer">Communication
+                        Composer</strong>, on the <strong class="guilabel" data-cid="General">General</strong> properties
+                     panel of the communication.
+                  </p>
+               </li>
+            </ul>
+         </div>
+         <p><a name="tmpid19376" id="tmpid19376"></a>For more information on using variations in a communication,
+            see 
+            <data-xpi><data-xproc name="ExtXrefStart" href="cccd250100-h-ugd.-" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+               ><A class="otModuleHide if-cccd-h-ugd-oto-show"  TARGET="_blank" HREF="../../../../../cccd/v250100/cccd-h-ugd/en/ofh/index.html"><i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></A
+               ><SPAN class="otModuleShow if-cccd-h-ugd-hide"><i>OpenText Communications - Designer User Help (CCCD250100-H-UGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="cccd250100-h-ugd.-" fmt=""></data-xproc></data-xpi>.
+         </p>
+         <p><a name="tmpid19378" id="tmpid19378"></a>If you <a class="link" href="mappingavariable.html" title="4.2.3 &nbsp; Mapping data sources">map</a> <strong class="guilabel" data-cid="Date">Date</strong>, <strong class="guilabel" data-cid="Currency">Currency</strong>, or <strong class="guilabel" data-cid="Float">Float</strong> type variables whose output format is set to <strong class="guilabel" data-cid="Use_locale_specification">Use locale
+               specification</strong>, and then use those variables in a communication
+            design that is associated with one of the <em class="emphasis">SYS_LocaleCustomer</em> locale variations, then the engine will use the settings in the
+            locale object properties to properly display the data in the output.
+         </p></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv151">
+         <h2 class="bridgehead subheading2"><a name="dl2vl-156" id="dl2vl-156"></a>Duplicating a locale object
+         </h2>
+         <p><a name="tmpid19388" id="tmpid19388"></a>If you want to create a copy of a locale object, you can duplicate
+            it. This might be useful if you want a similar locale object with
+            only minor modifications.
+         </p>
+         <p><a name="tmpid19389" id="tmpid19389"></a>To duplicate a locale object, in the <strong class="guilabel" data-cid="Region">Region</strong> panel, select the locale object that you want to copy and click <strong class="guilabel" data-cid="Duplicate">Duplicate</strong>. You can then <a class="link" href="creatinglocaleobjects.html#localesettings">update the settings</a> for the new locale object.
+         </p></div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.14</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating locale objects</span></div>
+         <div class="pgPrev"><a title="Preceding page: 4.13 &nbsp; Creating language objects" aria-label="Preceding page: 4.13 &nbsp; Creating language objects" href="creatinglanguageobjects.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 4 – Managing communication resources" aria-label="Section one level up: Chapter 4 – Managing communication resources" href="addingcommunicationassets.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: Chapter 5 – Managing design resources" aria-label="Next page: Chapter 5 – Managing design resources" href="addingdesignassets.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

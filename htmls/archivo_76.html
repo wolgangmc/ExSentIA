@@ -1,0 +1,498 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="2.4.1.3 ">2.4.1.3 Creating configurations to monitor orchestration jobs</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="creatingconfigurations.html" title="2.4.1 &nbsp; Creating configurations"> -->
+      <link rel="prev" href="creatingconfigurations-bca.html" title="2.4.1.2 &nbsp; Creating configurations for Content Author">
+      <link rel="next" href="creatingconfigurations-das.html" title="2.4.1.4 &nbsp; Creating configurations for Design asset library view">
+   <link rel="stylesheet" type="text/css" href="../../../../../ccmce/v250100/ccmce-igd/en/ofh/dynData/condstyles.css">
+
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wwhw-f-1a8a3fb7b-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":6,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d1fa045","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61182,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741379830","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==Z3F7iPYQYwkET59ZKGwRyNIaiIxp3gTHY+/xZWuqRUu0r90Jat0xvSwgRrDrpiunYC/JJGLt91PVWFHNnHZU0vYC2OWV7ldy5CZXY+Q+dYGDHWu4UKSdAHp+HAUI8HVWecWMKF9yGN3BgMlbUyoodPyyF6gmxXKJbpBQxihySSEwLG9XmGk8HgNPgfc5AlT3tczllEZFeghoq5rKEvRo6CiJzGa0EU9yAzvf0ghHbYN018v3qCz1zI+UDRe9pzCtb71g9Z2ipv6VWqeSyn4dearvzVXyrEL/7507rq2zMLKhOiiFJ/WOxVTgmaOrDUGuqAyOCxHIek+gHtlMjKsoKZLTzqcUknj+hyc/b2UQwa3hBO6we57ot6LltU9t/I9vdrX7Rl4TQgPkrv+K0hY13fpo+OSiP59YQBSXielFB/U=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="creatingconfigurations-monitor">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.4.1.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating configurations
+            to monitor orchestration jobs</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.4.1.2 &nbsp; Creating configurations&#xA;for Content Author" aria-label="Preceding page: 2.4.1.2 &nbsp; Creating configurations&#xA;for Content Author" href="creatingconfigurations-bca.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.4.1 &nbsp; Creating configurations" aria-label="Section one level up: 2.4.1 &nbsp; Creating configurations" href="creatingconfigurations.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.4.1.4 &nbsp; Creating configurations&#xA;for Design asset library view" aria-label="Next page: 2.4.1.4 &nbsp; Creating configurations&#xA;for Design asset library view" href="creatingconfigurations-das.html">Next</a></div>
+      </div>
+      <div class="sect3 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="creatingconfigurations-monitor" id="creatingconfigurations-monitor"></a><span class="otsLbl"><span class="otlbl-num">2.4.1.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating configurations
+                     to monitor orchestration jobs</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid5470" id="tmpid5470"></a>You can use the <strong class="guilabel" data-cid="Configurations">Configurations</strong> panel in Tenant management view to
+            set up scheduled tasks that process completed orchestration jobs on
+            a regular basis. The scheduled tasks that you set up use standard <a class="link" href="creatingconfigurations-monitor.html#cronexpressions">cron expressions</a> to either delete
+            completed jobs or to wipe already deleted jobs. Wiped orchestration
+            jobs, along with their flow instances and flow steps, are fully deleted
+            from the database.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref75" id="tmp4ref75"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid5474" id="tmpid5474"></a>If you use Core Communications, then this feature might not
+               be available in your subscription.
+            </p>
+         </div>
+         <p><a name="tmpid5475" id="tmpid5475"></a>By default, the cleanup cron job for the orchestration service
+            in a deployment runs every 60 minutes, and is configured in the helm
+            chart when you deploy <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span>. You must ensure that
+            the cron expressions for your scheduled tasks are <a class="link" href="creatingconfigurations-monitor.html#examplecronexpressions">in sync</a> with the cleanup cron
+            job for the orchestration service, or else you will see unexpected
+            results. If you have questions about the timing of the cleanup cron
+            job for your deployment, see your system administrator. For more information
+            about making helm chart configurations, see 
+            <data-xpi><data-xproc name="ExtXrefStart" href="ccmce250100-igd.-" fmt="auto" no1st="yes" tgtag="?"></data-xproc
+               ><A class="otModuleHide if-ccmce-igd-oto-show"  TARGET="_blank" HREF="../../../../../ccmce/v250100/ccmce-igd/en/ofh/index.html"><i>OpenText Communications - Cloud Deployment Guide (CCMCE250100-IGD)</i></A
+               ><SPAN class="otModuleShow if-ccmce-igd-hide"><i>OpenText Communications - Cloud Deployment Guide (CCMCE250100-IGD)</i></SPAN><data-xproc name="ExtXrefEnd" href="ccmce250100-igd.-" fmt=""></data-xproc></data-xpi>.
+         </p>
+         <div class="tip">
+            <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Tip</span></span></strong></p>
+            <p><a name="tmpid5485" id="tmpid5485"></a>For best performance, it is recommended to not exceed four million
+               flow instances or orchestration jobs. If necessary, you can adjust
+               the timing interval of the orchestration cleanup&nbsp;cron&nbsp;job
+               to achieve this.
+            </p>
+         </div>
+         <div class="procedure"><h2 class="title"><a name="d0e9799" id="d0e9799"></a><b><span class="otlbl-ttl">To create configurations to monitor orchestration jobs:</span></b></h2>
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid5489" id="tmpid5489"></a>In Tenant management view, on the <strong class="guilabel" data-cid="Configurations">Configurations</strong> panel, click <strong class="guilabel" data-cid="Monitor">Monitor</strong>.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid5493" id="tmpid5493"></a>On the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, on the <strong class="guilabel" data-cid="General">General</strong> tab, click the plus button <img src="./img/b_WebApps_ScheduledCronTask.png" class="igrph" alt="" width="20" height="20">.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid5498" id="tmpid5498"></a>In the <strong class="guilabel" data-cid="Scheduled_task">Scheduled task</strong> dialog, specify
+                     a name for your task, and then specify a <a class="link" href="creatingconfigurations-monitor.html#cronexpressions">cron expression</a> and a type of action:
+                  </p>
+                  <div class="variablelist standard lvl1 lvlmax1">
+                     <dl class="variablelist standard">
+                        <dt class="varlistentry"><a name="tmp4ref76" id="tmp4ref76"></a><span class="term"><a name="tmpid5503" id="tmpid5503"></a>Mark for deletion</span></dt>
+                        <dd class="varlistentry">
+                           <p><a name="tmpid5505" id="tmpid5505"></a>When you select <strong class="guilabel" data-cid="Mark_for_deletion">Mark for deletion</strong>, any
+                              qualifying jobs are tagged for removal but not removed from the database.
+                              When you select the <strong class="guilabel" data-cid="Mark_for_deletion">Mark for deletion</strong> option,
+                              the following additional options become available:
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid5510" id="tmpid5510"></a><strong class="guilabel" data-cid="Start">Start</strong>—The <strong class="guilabel" data-cid="Start">Start</strong> options let you specify the start dates for the orchestration jobs
+                                       that you want to process.
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid5515" id="tmpid5515"></a><strong class="guilabel" data-cid="More_than_..._days_before">More than ... days before</strong>—Specify
+                                                the number of days that an orchestration job started before the scheduled
+                                                task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid5518" id="tmpid5518"></a><strong class="guilabel" data-cid="More_than_..._hours_before">More than ... hours before</strong>—Specify the number of hours that an orchestration job started
+                                                before the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid5521" id="tmpid5521"></a><strong class="guilabel" data-cid="More_than_..._minutes_before">More than ... minutes
+                                                   before</strong>—Specify the number of minutes that an orchestration
+                                                job started before the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid5524" id="tmpid5524"></a><strong class="guilabel" data-cid="Fixed_dates">Fixed dates</strong>—Select a specific
+                                                range of dates during which an orchestration job started. When you
+                                                select this option, you can use the calendar controls in the <strong class="guilabel" data-cid="From">From</strong> and <strong class="guilabel" data-cid="To">To</strong> fields to select specific
+                                                dates.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid5529" id="tmpid5529"></a><strong class="guilabel" data-cid="Finish">Finish</strong>—The <strong class="guilabel" data-cid="Finish">Finish</strong> options let you specify the completion dates for the orchestration
+                                       jobs that you want to process.
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid5534" id="tmpid5534"></a><strong class="guilabel" data-cid="More_than_..._days_before">More than ... days before</strong>—Specify
+                                                the number of days that an orchestration job completed before the
+                                                scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid5537" id="tmpid5537"></a><strong class="guilabel" data-cid="More_than_..._hours_before">More than ... hours before</strong>—Specify the number of hours that an orchestration job completed
+                                                before the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid5540" id="tmpid5540"></a><strong class="guilabel" data-cid="More_than_..._minutes_before">More than ... minutes
+                                                   before</strong>—Specify the number of minutes that an orchestration
+                                                job completed before the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid5543" id="tmpid5543"></a><strong class="guilabel" data-cid="Fixed_dates">Fixed dates</strong>—Select a specific
+                                                range of dates during which an orchestration job completed. When you
+                                                select this option, you can use the calendar controls in the <strong class="guilabel" data-cid="From">From</strong> and <strong class="guilabel" data-cid="To">To</strong> fields to select specific
+                                                dates.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid5548" id="tmpid5548"></a><strong class="guilabel" data-cid="Mode">Mode</strong>—The <strong class="guilabel" data-cid="Mode">Mode</strong> options let you specify which types of orchestration jobs should
+                                       be processed whenever the scheduled task runs.
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid5553" id="tmpid5553"></a><strong class="guilabel" data-cid="Any">Any</strong>—Select this option
+                                                to process all jobs (batch and on-demand)&nbsp;that meet the criteria
+                                                for the scheduled task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid5556" id="tmpid5556"></a><strong class="guilabel" data-cid="Batch">Batch</strong>—Select this option
+                                                to process only batch jobs that meet the criteria for the scheduled
+                                                task.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid5559" id="tmpid5559"></a><strong class="guilabel" data-cid="On_demand">On demand</strong>—Select this option
+                                                to process only on-demand jobs that meet the criteria for the scheduled
+                                                task.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid5562" id="tmpid5562"></a><strong class="guilabel" data-cid="Statuses">Statuses</strong>—You can use the <strong class="guilabel" data-cid="Statuses">Statuses</strong> options to specify whether to process jobs that
+                                       ran successfully or unsuccessfully as part of your scheduled task.
+                                       Both options will be processed if you select neither check box or
+                                       both check boxes.
+                                    </p>
+                                    <div class="itemizedlist">
+                                       <ul class="itemizedlist">
+                                          <li class="listitem">
+                                             <p><a name="tmpid5567" id="tmpid5567"></a><strong class="guilabel" data-cid="Complete">Complete</strong>—Select this option
+                                                to process only orchestration jobs that completed successfully.
+                                             </p>
+                                          </li>
+                                          <li class="listitem">
+                                             <p><a name="tmpid5570" id="tmpid5570"></a><strong class="guilabel" data-cid="Error">Error</strong>—Select this option
+                                                to process only orchestration jobs that encountered errors when they
+                                                ran.
+                                             </p>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                        </dd>
+                        <dt class="varlistentry"><a name="tmp4ref77" id="tmp4ref77"></a><span class="term"><a name="tmpid5573" id="tmpid5573"></a> Wipe </span></dt>
+                        <dd class="varlistentry">
+                           <p><a name="tmpid5575" id="tmpid5575"></a>This action removes from the database any qualifying jobs that
+                              have previously been marked for deletion. Additionally, wiping a job
+                              deletes any files and folders from NFS that are associated with the
+                              job. This option runs according to the cron expression that you specify
+                              and does not have additional settings associated with it.
+                           </p>
+                        </dd>
+                     </dl>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid5577" id="tmpid5577"></a>Click <strong class="guilabel" data-cid="OK">OK</strong>, and then click <strong class="guilabel" data-cid="Save">Save</strong>.
+                  </p>
+               </li>
+            </ol>
+         </div>
+         <p><a name="tmpid5580" id="tmpid5580"></a>After you've set up a scheduled task, you will see it in the
+            list of tasks on the <strong class="guilabel" data-cid="Properties">Properties</strong> panel for Monitor
+            configurations. You can toggle a task on or off by clicking the slider
+            in the <strong class="guilabel" data-cid="Enabled">Enabled</strong> column for the task. Additionally,
+            when you point at the task on the <strong class="guilabel" data-cid="Properties">Properties</strong> panel,
+            you can click the options button <img src="./img/b_WebApps_ScheduledCronTaskEdit.png" class="igrph" alt="" width="21" height="21"> to edit or remove the task.
+         </p>
+         <div class="variablelist standard lvl1 lvlmax1">
+            <dl class="variablelist standard">
+               <dt class="varlistentry"><a name="tmp4ref78" id="tmp4ref78"></a><span class="term"><a name="tmpid5587" id="tmpid5587"></a> Supported cron expressions </span></dt>
+               <dd class="varlistentry">
+                  <p><a name="cronexpressions" id="cronexpressions"></a>Cron expressions for scheduled tasks must
+                     have five fields (minutes, hours, day of month, month, day of week).
+                     The task scheduler supports the following standard cron expressions:
+                  </p>
+                  <div class="informaltable">
+                     <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                        <colgroup>
+                           <col class="col1">
+                           <col class="col2">
+                           <col class="col3">
+                           <col class="COLSPEC0">
+                        </colgroup>
+                        <thead>
+                           <tr class="row">
+                              <th style=""><a name="tmpid5598" id="tmpid5598"></a>Field
+                              </th>
+                              <th style=""><a name="tmpid5599" id="tmpid5599"></a>Required
+                              </th>
+                              <th style=""><a name="tmpid5600" id="tmpid5600"></a>Values
+                              </th>
+                              <th style=""><a name="tmpid5601" id="tmpid5601"></a>Special characters
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="row">
+                              <td style=""><a name="tmpid5604" id="tmpid5604"></a>Minutes
+                              </td>
+                              <td style=""><a name="tmpid5605" id="tmpid5605"></a>Yes
+                              </td>
+                              <td style=""><a name="tmpid5606" id="tmpid5606"></a>0-59
+                              </td>
+                              <td style=""><a name="tmpid5607" id="tmpid5607"></a><span class="keycap"><strong>* , -</strong></span></td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid5610" id="tmpid5610"></a>Hours
+                              </td>
+                              <td style=""><a name="tmpid5611" id="tmpid5611"></a>Yes
+                              </td>
+                              <td style=""><a name="tmpid5612" id="tmpid5612"></a>0-23
+                              </td>
+                              <td style=""><a name="tmpid5613" id="tmpid5613"></a><span class="keycap"><strong>* , -</strong></span></td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid5616" id="tmpid5616"></a>Day of month
+                              </td>
+                              <td style=""><a name="tmpid5617" id="tmpid5617"></a>Yes
+                              </td>
+                              <td style=""><a name="tmpid5618" id="tmpid5618"></a>1-31
+                              </td>
+                              <td style=""><a name="tmpid5619" id="tmpid5619"></a><span class="keycap"><strong>* , -</strong></span></td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid5622" id="tmpid5622"></a>Month
+                              </td>
+                              <td style=""><a name="tmpid5623" id="tmpid5623"></a>Yes
+                              </td>
+                              <td style=""><a name="tmpid5624" id="tmpid5624"></a>1-12 or JAN-DEC
+                              </td>
+                              <td style=""><a name="tmpid5625" id="tmpid5625"></a><span class="keycap"><strong>* , -</strong></span></td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid5628" id="tmpid5628"></a>Day of week
+                              </td>
+                              <td style=""><a name="tmpid5629" id="tmpid5629"></a>Yes
+                              </td>
+                              <td style=""><a name="tmpid5630" id="tmpid5630"></a>0-6 or SUN-SAT
+                              </td>
+                              <td style=""><a name="tmpid5631" id="tmpid5631"></a><span class="keycap"><strong>* , -</strong></span></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="tip">
+                     <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Tip</span></span></strong></p>
+                     <p><a name="tmpid5634" id="tmpid5634"></a>You can combine slashes ( <span class="keycap"><strong>/</strong></span> ) with ranges to
+                        specify incremental values. For example, <span class="keycap"><strong>*/5</strong></span> in the
+                        minutes field indicates an event that happens every 5 minutes. <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> does not support other non-standard characters for cron expressions.
+                     </p>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="tmp4ref79" id="tmp4ref79"></a><span class="term"><a name="tmpid5644" id="tmpid5644"></a>Examples of cron expressions</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="examplecronexpressions" id="examplecronexpressions"></a>The cron expression for each scheduled
+                     task must be in sync with the cleanup cron job for the orchestration
+                     service in order to be executed. If you have questions about the timing
+                     of the cleanup cron job for your deployment, see your system administrator.
+                     The following table provides some examples of how cron expressions
+                     for scheduled tasks are actually executed based on the frequency of
+                     the cleanup cron job for the orchestration service.
+                  </p>
+                  <div class="informaltable">
+                     <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                        <colgroup>
+                           <col class="col1">
+                           <col class="col2">
+                           <col class="col3">
+                           <col class="col4">
+                        </colgroup>
+                        <thead>
+                           <tr class="row">
+                              <th style=""><a name="tmpid5655" id="tmpid5655"></a>Cleanup cron job frequency
+                              </th>
+                              <th style=""><a name="tmpid5656" id="tmpid5656"></a>Cron expression for scheduled task
+                              </th>
+                              <th style=""><a name="tmpid5657" id="tmpid5657"></a>Expected result
+                              </th>
+                              <th style=""><a name="tmpid5658" id="tmpid5658"></a>Actual behavior
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="row">
+                              <td style="" rowspan="3"><a name="tmpid5661" id="tmpid5661"></a>Every 60 minutes (at minute 0)
+                              </td>
+                              <td style=""><a name="tmpid5662" id="tmpid5662"></a><span class="keycap"><strong>0 * * * *</strong></span></td>
+                              <td style=""><a name="tmpid5664" id="tmpid5664"></a>Runs at minute 0 of each hour
+                              </td>
+                              <td style=""><a name="tmpid5665" id="tmpid5665"></a>Runs at minute 0 of each hour
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid5667" id="tmpid5667"></a><span class="keycap"><strong>*/5 * * * *</strong></span></td>
+                              <td style=""><a name="tmpid5669" id="tmpid5669"></a>Runs every five minutes
+                              </td>
+                              <td style=""><a name="tmpid5670" id="tmpid5670"></a>Runs once each hour, at minute 0, because the cleanup cron
+                                 job runs only at minute 0
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid5672" id="tmpid5672"></a><span class="keycap"><strong>5 * * * *</strong></span></td>
+                              <td style=""><a name="tmpid5674" id="tmpid5674"></a>Runs every hour, at minute 5
+                              </td>
+                              <td style=""><a name="tmpid5675" id="tmpid5675"></a>Never runs, because the cleanup cron job runs at minute 0,
+                                 not minute 5
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style="" rowspan="3"><a name="tmpid5677" id="tmpid5677"></a>Every 15 minutes (at minute 0, 15, 30, and 45)
+                              </td>
+                              <td style=""><a name="tmpid5678" id="tmpid5678"></a><span class="keycap"><strong>*/15 * * * *</strong></span></td>
+                              <td style=""><a name="tmpid5680" id="tmpid5680"></a>Runs every 15 minutes
+                              </td>
+                              <td style=""><a name="tmpid5681" id="tmpid5681"></a>Runs every 15 minutes
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid5683" id="tmpid5683"></a><span class="keycap"><strong>0 * * * *</strong></span></td>
+                              <td style=""><a name="tmpid5685" id="tmpid5685"></a>Runs at minute 0 of each hour
+                              </td>
+                              <td style=""><a name="tmpid5686" id="tmpid5686"></a>Runs at minute 0 of each hour
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid5688" id="tmpid5688"></a><span class="keycap"><strong>*/20 * * * *</strong></span></td>
+                              <td style=""><a name="tmpid5690" id="tmpid5690"></a>Runs every 20 minutes, starting at minute 0
+                              </td>
+                              <td style=""><a name="tmpid5691" id="tmpid5691"></a>Runs once an hour, at minute 0, because the cleanup cron job
+                                 does not run at minutes 20 and 40
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <p><a name="tmpid5692" id="tmpid5692"></a>Assuming that you use the default timing for your cleanup cron
+                     job (every 60 minutes, at minute 0), the following sample cron expressions
+                     might be useful when setting up scheduled tasks:
+                  </p>
+                  <div class="informaltable">
+                     <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                        <colgroup>
+                           <col class="col1">
+                           <col class="col2">
+                        </colgroup>
+                        <thead>
+                           <tr class="row">
+                              <th style=""><a name="tmpid5699" id="tmpid5699"></a>Cron expression
+                              </th>
+                              <th style=""><a name="tmpid5700" id="tmpid5700"></a>Timing for scheduled task
+                              </th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr class="row">
+                              <td style=""><a name="tmpid5703" id="tmpid5703"></a><span class="keycap"><strong>0 2 * * 6</strong></span></td>
+                              <td style=""><a name="tmpid5705" id="tmpid5705"></a>Runs at 2:00 a.m. every Saturday
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid5707" id="tmpid5707"></a><span class="keycap"><strong>0 2 * * 1-5</strong></span></td>
+                              <td style=""><a name="tmpid5709" id="tmpid5709"></a>Runs at 2:00 a.m. every Monday-Friday
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid5711" id="tmpid5711"></a><span class="keycap"><strong>0 23 * * *</strong></span></td>
+                              <td style=""><a name="tmpid5713" id="tmpid5713"></a>Runs daily at 11:00 p.m.
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid5715" id="tmpid5715"></a><span class="keycap"><strong>0 2 1 * *</strong></span></td>
+                              <td style=""><a name="tmpid5717" id="tmpid5717"></a>Runs on first day of the month at 2:00 a.m.
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid5719" id="tmpid5719"></a><span class="keycap"><strong>0 1 */14 * *</strong></span></td>
+                              <td style=""><a name="tmpid5721" id="tmpid5721"></a>Runs twice a month, on day 14 and day 28, at 1:00 a.m.
+                              </td>
+                           </tr>
+                           <tr class="row">
+                              <td style=""><a name="tmpid5723" id="tmpid5723"></a><span class="keycap"><strong>0 1 1,15 * *</strong></span></td>
+                              <td style=""><a name="tmpid5725" id="tmpid5725"></a>Runs twice a month, on day 1 and day 15, at 1:00 a.m.
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </dd>
+            </dl>
+         </div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.4.1.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating configurations
+            to monitor orchestration jobs</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.4.1.2 &nbsp; Creating configurations&#xA;for Content Author" aria-label="Preceding page: 2.4.1.2 &nbsp; Creating configurations&#xA;for Content Author" href="creatingconfigurations-bca.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.4.1 &nbsp; Creating configurations" aria-label="Section one level up: 2.4.1 &nbsp; Creating configurations" href="creatingconfigurations.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.4.1.4 &nbsp; Creating configurations&#xA;for Design asset library view" aria-label="Next page: 2.4.1.4 &nbsp; Creating configurations&#xA;for Design asset library view" href="creatingconfigurations-das.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

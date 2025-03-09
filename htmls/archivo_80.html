@@ -1,0 +1,483 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="2.4.4 ">2.4.4 Setting up email notifications for workflow changes</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="configuringtenantwidedefaults.html" title="2.4 &nbsp; Configuring tenant-wide defaults"> -->
+      <link rel="prev" href="settingdefaultfont.html" title="2.4.3 &nbsp; Setting the default font and list formats for Designer">
+      <link rel="next" href="managingdictionaries.html" title="2.4.5 &nbsp; Managing dictionaries for spell checking">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wwh2-f-53f78b3ff-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":6,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d20046a","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61187,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741379834","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==4cbBDJsk/2b3Tm9DKwfBxuyiRibg1mtb3nuag0DM92ZTfusWlDBgo0++903j2ku66ACx1QnJwRalF9Yot0VDg6syCHjXopVFoAtgLpztoo98j5QeHAPOWx1mZQnUpGPz6P/qy5OIdUaguSpZP46j9xCeEPQyDE6Qbi3QiW36V62U4XwWbG23grgzwH8DsKNRZgeXs4SjarTbyWlBoCmFRRnL0+67MlOvh3t3CeQ31xhbUJ6WEWV4bXLMVRatoFZWzwW1rqbxs5o3i4jMvWmGppMDWbWie3AY+qUARJCS55qc8cDRlpMHr3cppCrlWYyGfu2yqH6gvX54A/5Q2EbYaqvBwqH6yGprNVFYGhDPb/lnKTZF0o6QGztsEs4IGS+S3aqHadLWx8p6NRd+b6UT95EbOZwi0JIi1sAd0jYaG/A=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="settingupemailnotifications">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.4.4</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Setting up email
+            notifications for workflow changes</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.4.3 &nbsp; Setting the default font and&#xA;list formats for Designer" aria-label="Preceding page: 2.4.3 &nbsp; Setting the default font and&#xA;list formats for Designer" href="settingdefaultfont.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.4 &nbsp; Configuring tenant-wide&#xA;defaults" aria-label="Section one level up: 2.4 &nbsp; Configuring tenant-wide&#xA;defaults" href="configuringtenantwidedefaults.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.4.5 &nbsp; Managing dictionaries for&#xA;spell checking" aria-label="Next page: 2.4.5 &nbsp; Managing dictionaries for&#xA;spell checking" href="managingdictionaries.html">Next</a></div>
+      </div>
+      <div class="sect2 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="settingupemailnotifications" id="settingupemailnotifications"></a><span class="otsLbl"><span class="otlbl-num">2.4.4</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Setting up email
+                     notifications for workflow changes</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid6362" id="tmpid6362"></a>You can use Tenant management view to configure <span class="phrase">your <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> deployment</span> to send out notifications to
+            specified email distribution lists when specific design resources
+            are submitted for approval. For example, when a user submits a <span class="namestring" data-cid="Content_Author">Content Author</span> communication
+            for approval, an automated email notification is sent to approvers
+            on a distribution list to prompt them to review that communication.
+         </p>
+         <p><a name="tmpid6370" id="tmpid6370"></a>Notification emails contain content and use settings that you
+            specify when you add or edit a notification on the <strong class="guilabel" data-cid="Notifications">Notifications</strong> panel. Each notification email also automatically includes a redirect
+            link for the submitted resource so that approvers can access and review
+            the resource directly. From the redirect link, resources open in the
+            context that makes the most sense for each type—for example, <span class="namestring" data-cid="Content_Author">Content Author</span> communications
+            open in Communication view in <span class="namestring" data-cid="Content_Author">Content Author</span>; <span class="namestring" data-cid="Designer">Designer</span> pages open in Design view in <span class="namestring" data-cid="Designer">Designer</span>;
+            and so on.
+         </p>
+         <p><a name="tmpid6376" id="tmpid6376"></a>To prevent an excessive number of emails being sent to a distribution
+            list, when a resource is approved or rejected, an email is sent only
+            to the user who originally submitted the resource for approval. In
+            that case, <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> checks <span class="phrase"> <span class="namestring" data-cid="OTDS">OTDS</span></span> for the email address
+            that is associated with the user who submitted the resource for approval.
+            If no email address is available<span class="phrase"> in <span class="namestring" data-cid="OTDS">OTDS</span></span>, then <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> does not send a notification. <span class="phrase">You should ensure that approvers on a distribution
+               list do not have the <a class="link" href="managinguserpermissions.html" title="2.3.1 &nbsp; Configuring roles and permissions">permissions</a> required to change the workflow
+               state for a submitted resource back to draft.</span> If an approver
+            returns a submitted resource to draft state, then no email notifications
+            will be sent to any user about the change.
+         </p>
+         <div class="important">
+            <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Important</span></span></strong></p>
+            <p><a name="tmpid6396" id="tmpid6396"></a>If more than one notification exists for a resource type, then
+               the user who submits a resource of that type for approval will receive
+               more than one email when the resource is approved or rejected. For
+               example, suppose that a notification is configured for only <span class="namestring" data-cid="Content_Author">Content Author</span> resource
+               types, but another is configured for both <span class="namestring" data-cid="Content_Author">Content Author</span> and <span class="namestring" data-cid="Designer">Designer</span> resource
+               types. In that scenario, when a user submits a <span class="namestring" data-cid="Content_Author">Content Author</span> resource
+               for approval, then that user will receive two email notifications
+               for the same resource.
+            </p>
+         </div>
+         <p><a name="tmpid6401" id="tmpid6401"></a>There are three basic steps involved in setting up a new notification:
+         </p>
+         <div class="variablelist standard lvl1 lvlmax1">
+            <dl class="variablelist standard">
+               <dt class="varlistentry"><a name="dl2vl-364" id="dl2vl-364"></a><span class="term"><a name="tmpid6404" id="tmpid6404"></a>Step 1:&nbsp;Specify parameters
+                     and activate the notification</span></dt>
+               <dd class="varlistentry">
+                  <div class="procedure">
+                     <ol class="procedure" type="1">
+                        <li class="step">
+                           <p><a name="tmpid6408" id="tmpid6408"></a>In the <strong class="guilabel" data-cid="Notifications">Notifications</strong> panel in Tenant management view,
+                              click <strong class="guilabel" data-cid="Add">Add</strong>.
+                           </p>
+                        </li>
+                        <li class="step"><p><a name="approver-distribution-list" id="approver-distribution-list"></a><a name="tmpid6412" id="tmpid6412"></a>In the <strong class="guilabel" data-cid="Approver_distribution_list">Approver
+                                 distribution list</strong> box, enter the email address for the
+                              distribution list that will receive notifications. The address for
+                              the distribution list is not validated or maintained in DAS; it must
+                              exist in your mail server. If the distribution list is incorrect or
+                              does not exist, then the notification will not be sent.
+                           </p>
+                           <div class="note">
+                              <p class="title"><strong><a name="tmp4ref89" id="tmp4ref89"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                              </strong></p>
+                              <div class="itemizedlist">
+                                 <ul class="itemizedlist">
+                                    <li class="listitem">
+                                       <p><a name="tmpid6417" id="tmpid6417"></a>You can enter one email address only in the <strong class="guilabel" data-cid="Approver_distribution_list">Approver distribution list</strong> box. If you need to add recipients
+                                          for a notification, add their email addresses to the specified distribution
+                                          list on the <a class="link" href="settingupemailnotifications.html#dl2vl-366">SMTP server</a>.
+                                       </p>
+                                    </li>
+                                    <li class="listitem">
+                                       <p><a name="tmpid6421" id="tmpid6421"></a>The address that you enter in the <strong class="guilabel" data-cid="Approver_distribution_list">Approver
+                                             distribution list</strong> box also serves as the notification name,
+                                          so it must be unique.
+                                       </p>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid6424" id="tmpid6424"></a><span class="boxed-text optional">Optional</span> In the <strong class="guilabel" data-cid="Domains">Domains</strong> list, select one or more domains. After that, the notification is
+                              sent only when an object that is associated with any of the specified
+                              domains changes state.
+                           </p>
+                           <p><a name="tmpid6426" id="tmpid6426"></a>The <strong class="guilabel" data-cid="All_domains">All domains</strong> default setting sends the
+                              notification when any object changes state, regardless of its associated
+                              domains.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid6429" id="tmpid6429"></a>In the <strong class="guilabel" data-cid="Resource_types">Resource types</strong> section, select
+                              the types of resources that will be included in the notifications:
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid6433" id="tmpid6433"></a><strong class="guilabel" data-cid="All">All</strong>—Select this option
+                                       to send notifications whenever any of the resources in the list are
+                                       submitted for approval. Note that selecting no options in the list
+                                       is the same as selecting <strong class="guilabel" data-cid="All">All</strong>.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid6437" id="tmpid6437"></a><strong class="guilabel" data-cid="Designer"><span class="namestring">Designer</span></strong>—Select this option
+                                       to send notifications whenever a <span class="namestring" data-cid="Designer">Designer</span> asset is submitted for
+                                       approval. <span class="namestring" data-cid="Designer">Designer</span> assets are listed on the <strong class="guilabel" data-cid="Designer">Designer</strong> panel in <a class="link" href="aboutassetmanagementviews.html#designassetview">Design asset library view</a>.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid6445" id="tmpid6445"></a><strong class="guilabel" data-cid="Content_Author"><span class="namestring">Content Author</span></strong>—Select this option
+                                       to send notifications whenever a <span class="namestring" data-cid="Content_Author">Content Author</span> asset is submitted for
+                                       approval. <span class="namestring" data-cid="Content_Author">Content Author</span> assets are listed on the <strong class="guilabel" data-cid="Author">Author</strong> panel in <a class="link" href="aboutassetmanagementviews.html#designassetview">Design asset library view</a>.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid6453" id="tmpid6453"></a><strong class="guilabel" data-cid="Communication_Asset">Communication Asset</strong>—Select
+                                       this option to send notifications whenever a communication asset is
+                                       submitted for approval. Communication assets are listed on the panels
+                                       found in <a class="link" href="aboutassetmanagementviews.html#commassetview">Communication asset library view</a>.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid6457" id="tmpid6457"></a><strong class="guilabel" data-cid="Design_Asset">Design Asset</strong>—Select this
+                                       option to send notifications whenever a design asset is submitted
+                                       for approval. Design assets are listed on the <strong class="guilabel" data-cid="Common">Common</strong> panel in <a class="link" href="aboutassetmanagementviews.html#designassetview">Design asset library view</a>.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid6462" id="tmpid6462"></a><strong class="guilabel" data-cid="Orchestration_Asset">Orchestration Asset</strong>—Select this option to send notifications whenever an orchestration
+                                       asset is submitted for approval. Orchestration assets are listed on
+                                       the panels in <a class="link" href="aboutassetmanagementviews.html#orchassetview">Orchestration asset library view</a>.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                     </ol>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="dl2vl-366" id="dl2vl-366"></a><span class="term"><a name="tmpid6466" id="tmpid6466"></a>Step 2:&nbsp;Configure global SMTP
+                     settings for notifications</span></dt>
+               <dd class="varlistentry">
+                  <p><a name="tmpid6468" id="tmpid6468"></a>The <strong class="guilabel" data-cid="Properties">Properties</strong> panel for a notification
+                     includes a <strong class="guilabel" data-cid="Global">Global</strong> tab with settings that connect <span class="phrase">the <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> deployment</span> to an SMTP email server. The
+                     SMTP server forwards notifications sent from <span class="phrase">the <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> deployment</span> to the email address specified
+                     in the <a class="link" href="settingupemailnotifications.html#approver-distribution-list" title="step 2: "><strong class="guilabel" data-cid="Approver_distribution_list">Approver
+                           distribution list</strong></a> for the notification. 
+                  </p>
+                  <p><a name="tmpid6485" id="tmpid6485"></a>Each notification is registered to the single, unique email
+                     address in the <strong class="guilabel" data-cid="Approver_distribution_list">Approver distribution list</strong> box
+                     on the <strong class="guilabel" data-cid="General">General</strong> tab, but all notifications use
+                     the same SMTP settings on the <strong class="guilabel" data-cid="Global">Global</strong> tab.
+                  </p>
+                  <div class="important">
+                     <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Important</span></span></strong></p>
+                     <p><a name="tmpid6490" id="tmpid6490"></a>Changing SMTP settings on the <strong class="guilabel" data-cid="Global">Global</strong> tab
+                        changes the SMTP settings for all notifications in the tenant.
+                     </p>
+                  </div>
+                  <p><a name="tmpid6492" id="tmpid6492"></a>To configure the global SMTP&nbsp;settings:
+                  </p>
+                  <div class="orderedlist">
+                     <ol class="orderedlist" type="1">
+                        <li class="listitem">
+                           <p><a name="tmpid6495" id="tmpid6495"></a>In the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, click
+                              the <strong class="guilabel" data-cid="Global">Global</strong> tab.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid6499" id="tmpid6499"></a>Configure the following settings to connect to the
+                              SMTP email server that DAS uses to send email notifications:
+                           </p>
+                           <div class="informaltable">
+                              <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                                 <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                 </colgroup>
+                                 <thead>
+                                    <tr class="row">
+                                       <th style="" valign="top"><a name="tmpid6506" id="tmpid6506"></a>Setting
+                                       </th>
+                                       <th style="" valign="top"><a name="tmpid6507" id="tmpid6507"></a>Description
+                                       </th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr class="row">
+                                       <td style=""><p><a name="tmpid6510" id="tmpid6510"></a><a name="tmpid6511" id="tmpid6511"></a>Host
+                                          </p>
+                                       </td>
+                                       <td style=""><p><a name="tmpid6512" id="tmpid6512"></a><a name="tmpid6513" id="tmpid6513"></a>The host name of the SMTP&nbsp;server
+                                          </p>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><p><a name="tmpid6515" id="tmpid6515"></a><a name="tmpid6516" id="tmpid6516"></a>Port
+                                          </p>
+                                       </td>
+                                       <td style=""><p><a name="tmpid6517" id="tmpid6517"></a><a name="tmpid6518" id="tmpid6518"></a>The SMTP&nbsp;listener port
+                                          </p>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><p><a name="tmpid6520" id="tmpid6520"></a><a name="tmpid6521" id="tmpid6521"></a>Authentication type
+                                          </p>
+                                       </td>
+                                       <td style=""><p><a name="tmpid6522" id="tmpid6522"></a><a name="tmpid6523" id="tmpid6523"></a>The method to use for authenticating to the SMTP server
+                                          </p>
+                                          <p><a name="tmpid6524" id="tmpid6524"></a>This setting includes the following options:
+                                          </p>
+                                          <div class="itemizedlist">
+                                             <ul class="itemizedlist">
+                                                <li class="listitem">
+                                                   <p><a name="tmpid6527" id="tmpid6527"></a><strong class="guilabel" data-cid="Basic_Authentication">Basic Authentication</strong>—Exposes
+                                                      the <strong class="guilabel" data-cid="Username">Username</strong> and <strong class="guilabel" data-cid="Password">Password</strong> settings for connecting to the SMTP server
+                                                   </p>
+                                                </li>
+                                                <li class="listitem">
+                                                   <p><a name="tmpid6532" id="tmpid6532"></a><strong class="guilabel" data-cid="No_authentication">No authentication</strong>—Allows
+                                                      the notification configuration to be saved without a username and
+                                                      password
+                                                   </p>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><p><a name="tmpid6535" id="tmpid6535"></a><a name="tmpid6536" id="tmpid6536"></a>From
+                                          </p>
+                                       </td>
+                                       <td style=""><p><a name="tmpid6537" id="tmpid6537"></a><a name="tmpid6538" id="tmpid6538"></a>The email address for the notification sender
+                                          </p>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid6540" id="tmpid6540"></a>Click <strong class="guilabel" data-cid="Save">Save</strong>.
+                           </p>
+                        </li>
+                     </ol>
+                  </div>
+                  <div class="note">
+                     <p class="title"><strong><a name="tmp4ref90" id="tmp4ref90"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                     </strong></p>
+                     <p><a name="tmpid6543" id="tmpid6543"></a>The global SMTP settings persist in DAS even after all notifications
+                        are deleted. To access the global SMTP settings if no notifications
+                        exist, add a notification to the tenant and then click the <strong class="guilabel" data-cid="Global">Global</strong> tab on the notification <strong class="guilabel" data-cid="Properties">Properties</strong> panel. Any changes you make to the global SMTP settings are saved
+                        when you save the new notification properties.
+                     </p>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="step3" id="step3"></a><span class="term"><a name="tmpid6547" id="tmpid6547"></a>Step 3:&nbsp;Configure the email layout</span></dt>
+               <dd class="varlistentry">
+                  <div class="procedure">
+                     <ol class="procedure" type="1">
+                        <li class="step">
+                           <p><a name="tmpid6551" id="tmpid6551"></a>In the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, click the <strong class="guilabel" data-cid="Layout">Layout</strong> panel.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid6555" id="tmpid6555"></a>Enter the subject line and content of the email notification
+                              in the <strong class="guilabel" data-cid="Email_subject">Email subject</strong> box and <strong class="guilabel" data-cid="Email_body">Email
+                                 body</strong> box, respectively. These are required fields and cannot
+                              be blank.
+                           </p>
+                           <p><a name="tmpid6558" id="tmpid6558"></a>When you place your cursor in the <strong class="guilabel" data-cid="Email_subject">Email subject</strong> or the <strong class="guilabel" data-cid="Email_body">Email body</strong> box, you can also enter resource
+                              properties from the <strong class="guilabel" data-cid="Resource_property_variables">Resource property variables</strong> list. These properties are treated as resource-specific variables
+                              where they appear in the email content. When each notification is
+                              sent, the variable values are populated with the current information
+                              for the resource that triggered the notification. The following table
+                              lists the resource properties that are available as variables. No
+                              other variables can be used in email notifications.
+                           </p>
+                           <div class="note">
+                              <p class="title"><strong><a name="tmp4ref91" id="tmp4ref91"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                              </strong></p>
+                              <p><a name="tmpid6563" id="tmpid6563"></a>The variables that appear in the <strong class="guilabel" data-cid="Resource_property_variables">Resource property
+                                    variables</strong> list have user-friendly names that don't necessarily
+                                 match the information inside the brackets after you place a variable.
+                                 For example, the <strong class="guilabel" data-cid="Updated_by">Updated by</strong> variable in the list
+                                 appears as <span class="keycap"><strong>{{LASTMODIFIEDBY}}</strong></span> when
+                                 placed in the <strong class="guilabel" data-cid="Email_subject">Email subject</strong> or <strong class="guilabel" data-cid="Email_body">Email
+                                    body</strong> fields. The names in the brackets represent actual
+                                 field names in the DAS database.
+                              </p>
+                           </div>
+                           <div class="informaltable">
+                              <table style="border-collapse: collapse;border-top: 0.5pt solid ; border-bottom: 0.5pt solid ; border-left: 0.5pt solid ; border-right: 0.5pt solid ; ">
+                                 <colgroup>
+                                    <col class="col1">
+                                    <col class="col2">
+                                 </colgroup>
+                                 <thead>
+                                    <tr class="row">
+                                       <th style=""><a name="tmpid6575" id="tmpid6575"></a>Resource property
+                                       </th>
+                                       <th style=""><a name="tmpid6576" id="tmpid6576"></a>Description
+                                       </th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr class="row">
+                                       <td style=""><p><a name="tmpid6579" id="tmpid6579"></a><a name="tmpid6580" id="tmpid6580"></a><strong class="guilabel" data-cid="Created_By">Created By</strong></p>
+                                       </td>
+                                       <td style=""><p><a name="tmpid6582" id="tmpid6582"></a><a name="tmpid6583" id="tmpid6583"></a>The user that created the resource
+                                          </p>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><p><a name="tmpid6585" id="tmpid6585"></a><a name="tmpid6586" id="tmpid6586"></a><strong class="guilabel" data-cid="Description">Description</strong></p>
+                                       </td>
+                                       <td style=""><p><a name="tmpid6588" id="tmpid6588"></a><a name="tmpid6589" id="tmpid6589"></a>The description of the resource, if any
+                                          </p>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><p><a name="tmpid6591" id="tmpid6591"></a><a name="tmpid6592" id="tmpid6592"></a><strong class="guilabel" data-cid="Domain">Domain</strong></p>
+                                       </td>
+                                       <td style=""><p><a name="tmpid6594" id="tmpid6594"></a><a name="tmpid6595" id="tmpid6595"></a>The domain in which the resource was created or updated
+                                          </p>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><p><a name="tmpid6597" id="tmpid6597"></a><a name="tmpid6598" id="tmpid6598"></a><strong class="guilabel" data-cid="Effective_date">Effective date</strong></p>
+                                       </td>
+                                       <td style=""><p><a name="tmpid6600" id="tmpid6600"></a><a name="tmpid6601" id="tmpid6601"></a>The start date on which the resource is available to
+                                             be included in customer output. This option is available in the list
+                                             only if effectivity is enabled for the current tenant.
+                                          </p>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><p><a name="tmpid6603" id="tmpid6603"></a><a name="tmpid6604" id="tmpid6604"></a><strong class="guilabel" data-cid="Expiration_date">Expiration date</strong></p>
+                                       </td>
+                                       <td style=""><p><a name="tmpid6606" id="tmpid6606"></a><a name="tmpid6607" id="tmpid6607"></a>The date on which the resource is no longer available
+                                             to be included in customer output. This option is available in the
+                                             list only if effectivity is enabled for the current tenant.
+                                          </p>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><p><a name="tmpid6609" id="tmpid6609"></a><a name="tmpid6610" id="tmpid6610"></a><strong class="guilabel" data-cid="ID">ID</strong></p>
+                                       </td>
+                                       <td style=""><p><a name="tmpid6612" id="tmpid6612"></a><a name="tmpid6613" id="tmpid6613"></a>The DAS resource identifier string for the resource
+                                          </p>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><p><a name="tmpid6615" id="tmpid6615"></a><a name="tmpid6616" id="tmpid6616"></a><strong class="guilabel" data-cid="Name">Name</strong></p>
+                                       </td>
+                                       <td style=""><p><a name="tmpid6618" id="tmpid6618"></a><a name="tmpid6619" id="tmpid6619"></a>The name of the resource
+                                          </p>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><p><a name="tmpid6621" id="tmpid6621"></a><a name="tmpid6622" id="tmpid6622"></a><strong class="guilabel" data-cid="Updated">Updated</strong></p>
+                                       </td>
+                                       <td style=""><p><a name="tmpid6624" id="tmpid6624"></a><a name="tmpid6625" id="tmpid6625"></a>The date and time when the resource was last updated
+                                          </p>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><p><a name="tmpid6627" id="tmpid6627"></a><a name="tmpid6628" id="tmpid6628"></a><strong class="guilabel" data-cid="Updated_by">Updated by</strong></p>
+                                       </td>
+                                       <td style=""><p><a name="tmpid6630" id="tmpid6630"></a><a name="tmpid6631" id="tmpid6631"></a>The user that last modified the resource
+                                          </p>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><p><a name="tmpid6633" id="tmpid6633"></a><a name="tmpid6634" id="tmpid6634"></a><strong class="guilabel" data-cid="Version">Version</strong></p>
+                                       </td>
+                                       <td style=""><p><a name="tmpid6636" id="tmpid6636"></a><a name="tmpid6637" id="tmpid6637"></a>The current version of the resource
+                                          </p>
+                                       </td>
+                                    </tr>
+                                    <tr class="row">
+                                       <td style=""><p><a name="tmpid6639" id="tmpid6639"></a><a name="tmpid6640" id="tmpid6640"></a><strong class="guilabel" data-cid="Workflow_comment">Workflow comment</strong></p>
+                                       </td>
+                                       <td style=""><p><a name="tmpid6642" id="tmpid6642"></a><a name="tmpid6643" id="tmpid6643"></a>The comment, if any, in the workflow state change that
+                                             triggered the notification
+                                          </p>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid6645" id="tmpid6645"></a>Click <strong class="guilabel" data-cid="Create">Create</strong>.
+                           </p>
+                           <p><a name="tmpid6647" id="tmpid6647"></a>The notification is created. On the <strong class="guilabel" data-cid="General">General</strong> tab, the <strong class="guilabel" data-cid="Active">Active</strong> indicator in the <strong class="guilabel" data-cid="Notification_status">Notification status</strong> section turns green to indicate that
+                              the notification has been activated. To deactivate the notification
+                              in the future, simply click the <strong class="guilabel" data-cid="Inactive">Inactive</strong> indicator.
+                           </p>
+                        </li>
+                     </ol>
+                  </div>
+               </dd>
+            </dl>
+         </div>
+         <p><a name="tmpid6652" id="tmpid6652"></a>With the notification in place, whenever a specified resource
+            type is submitted for approval, an email will be sent to the distribution
+            list. The email body will contain the text that you specified, including
+            any populated variables. Additionally, the email will contain a link
+            to the object that was submitted so that it can be accessed directly
+            from the notification email.
+         </p>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">2.4.4</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Setting up email
+            notifications for workflow changes</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 2.4.3 &nbsp; Setting the default font and&#xA;list formats for Designer" aria-label="Preceding page: 2.4.3 &nbsp; Setting the default font and&#xA;list formats for Designer" href="settingdefaultfont.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 2.4 &nbsp; Configuring tenant-wide&#xA;defaults" aria-label="Section one level up: 2.4 &nbsp; Configuring tenant-wide&#xA;defaults" href="configuringtenantwidedefaults.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 2.4.5 &nbsp; Managing dictionaries for&#xA;spell checking" aria-label="Next page: 2.4.5 &nbsp; Managing dictionaries for&#xA;spell checking" href="managingdictionaries.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

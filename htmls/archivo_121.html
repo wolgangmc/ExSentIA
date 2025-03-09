@@ -1,0 +1,266 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="3.9.3 ">3.9.3 Searching text in multiple content resources</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="search-replace-content-24-2.html" title="3.9 &nbsp; Searching and replacing text in multiple content resources"> -->
+      <link rel="prev" href="advanced-search-options-24-2.html" title="3.9.2 &nbsp; Specifying advanced search options">
+      <link rel="next" href="search-replacing-text-24-2.html" title="3.9.4 &nbsp; Replacing text in multiple content resources">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wxhl-f-4551fe4fb-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":7,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9d83f719","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":61796,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741380843","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==zedIs4eDoQsO+zCWpyygYRBvplJ3cWbe0Ul9gz7EjQ6UNPfbuYcJrFgnvvpPGfs1p3SxDCkMaXmvlud9AWC40lchiRhGDmVqwDJQ//+WNz/NopMiNceNxaO0ZPnIIb2ntiizqRNl/Wts4+QLjy4k0LMvlxMPI3lDIHV4GMB8vjcOEMy6kTKJNWpqB2ikR3TXBbFkPhxZCC3HQULkbWXn+CmtW+1hgmbqZhsOOBrN2KETpKS7+IHaBfw1w9GyzQNZkafvASkRnQk13U04TQ4Jn7oXbmAzo64Je/7xNTmyViaXIdm2CEs4Jh3soKnxCInltvISL7oovX7tFLksvRkMNcein+ij4Kjj7DnrGJ8B0ZgaQDoJ/gfSfXOFbLABs1AU2LXVhvLUdr3wNjNWP6/TFg2thub/RTuYYOg5041VRLY=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="search-text-and-filter-24-2">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">3.9.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Searching text in
+            multiple content resources</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 3.9.2 &nbsp; Specifying advanced&#xA;search options" aria-label="Preceding page: 3.9.2 &nbsp; Specifying advanced&#xA;search options" href="advanced-search-options-24-2.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 3.9 &nbsp; Searching and replacing text in multiple content resources" aria-label="Section one level up: 3.9 &nbsp; Searching and replacing text in multiple content resources" href="search-replace-content-24-2.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 3.9.4 &nbsp; Replacing text in&#xA;multiple content resources" aria-label="Next page: 3.9.4 &nbsp; Replacing text in&#xA;multiple content resources" href="search-replacing-text-24-2.html">Next</a></div>
+      </div>
+      <div class="sect2 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="search-text-and-filter-24-2" id="search-text-and-filter-24-2"></a><span class="otsLbl"><span class="otlbl-num">3.9.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Searching text in
+                     multiple content resources</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid11284" id="tmpid11284"></a>You can find content resources that contain the search text
+            in their name or description properties, and also filter lists of
+            content resources based on their workflow state, quick tags, and update
+            status. Searching and filtering can be done separately, or in the
+            same operation.
+         </p>
+         <p><a name="tmpid11285" id="tmpid11285"></a><span class="phrase">If the <a class="link" href="advanced-search-options-24-2.html" title="3.9.2 &nbsp; Specifying advanced search options"><strong class="guilabel" data-cid="Search_text_within_content">Search text within
+                     content</strong></a> option is enabled,</span> then you can find resources
+            that contain the search text in their editable content instead of
+            their name or description properties. For example, you can find clauses
+            that contain the search text in one or more paragraph locations. In
+            addition, when you search for text within content, the results can
+            include instances where the matching text appears in the standard
+            variation, alternate variations, or both.
+         </p>
+         <h4 class="bridgehead boldpara"><a name="tmp4ref153" id="tmp4ref153"></a>This section includes the following procedures:
+         </h4>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a href="search-text-and-filter-24-2.html#tmp4ref155" class="xref2 varlistentry auto xstd"><span class="otlbl-ttl">Searching in content resource names or descriptions</span></a></p>
+               </li>
+               <li class="listitem">
+                  <p><a href="search-text-and-filter-24-2.html#tmp4ref156" class="xref2 varlistentry auto xstd"><span class="otlbl-ttl">Searching within editable text in multiple content
+                        resources</span></a></p>
+               </li>
+               <li class="listitem">
+                  <p><a href="search-text-and-filter-24-2.html#filtering-adv-search-opt" class="xref2 varlistentry auto xstd"><span class="otlbl-ttl">Filtering content
+                        resources using advanced search options</span></a></p>
+               </li>
+            </ul>
+         </div>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref154" id="tmp4ref154"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid11295" id="tmpid11295"></a>If the <strong class="guilabel" data-cid="Search_text_within_content">Search text within content</strong> option is enabled, you can also <a class="link" href="search-replacing-text-24-2.html" title="3.9.4 &nbsp; Replacing text in multiple content resources">replace text</a> in editable
+               text content.
+            </p>
+         </div>
+         <div class="variablelist standard lvl1 lvlmax1"><a name="searching-text-procedures-24-2" id="searching-text-procedures-24-2"></a><dl class="variablelist standard">
+               <dt class="varlistentry"><a name="tmp4ref155" id="tmp4ref155"></a><span class="term"><a name="tmpid11303" id="tmpid11303"></a>Searching in content resource names or descriptions</span></dt>
+               <dd class="varlistentry">
+                  <div class="procedure"><a name="search-in-name-description-24-2" id="search-in-name-description-24-2"></a><ol class="procedure" type="1">
+                        <li class="step">
+                           <p><a name="tmpid11307" id="tmpid11307"></a>In the <strong class="guilabel" data-cid="Search">Search</strong> box, <a class="link" href="specify-search-text-24-2.html" title="3.9.1 &nbsp; Specifying the text to find or replace">enter the search text</a>.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid11311" id="tmpid11311"></a>Click the search button <img src="./img/b_WebApps_Search.png" class="igrph" alt="" width="15" height="15">. The
+                              search results list all content resources that contain the search
+                              text in their name or description.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid11314" id="tmpid11314"></a><span class="boxed-text optional">Optional</span> In the <strong class="guilabel" data-cid="Search">Search</strong> box, click the arrow, and then do the following in the <strong class="guilabel" data-cid="Advanced_search_options">Advanced search options</strong> dialog box:
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid11319" id="tmpid11319"></a>Ensure that the <strong class="guilabel" data-cid="Search_text_within_content">Search text within content</strong> check box is cleared.
+                                    </p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid11322" id="tmpid11322"></a>Select any advanced search options.
+                                    </p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid11324" id="tmpid11324"></a>Click <strong class="guilabel" data-cid="Search">Search</strong>.
+                           </p>
+                           <p><a name="tmpid11326" id="tmpid11326"></a>In the <strong class="guilabel" data-cid="Search">Search</strong> box, the search button <img src="./img/b_WebApps_Search.png" class="igrph" alt="" width="15" height="15"> changes
+                              to the advanced search button <img src="./img/b_WebApps_SearchAdvanced.png" class="igrph" alt="" width="21" height="19"> to indicate that advanced search options are selected.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid11331" id="tmpid11331"></a>To search again with the same options selected and new
+                              search text, enter the new search text in the <strong class="guilabel" data-cid="Search">Search</strong> box and then click the advanced search button <img src="./img/b_WebApps_SearchAdvanced.png" class="igrph" alt="" width="21" height="19">.
+                           </p>
+                           <p><a name="tmpid11334" id="tmpid11334"></a>Any advanced search options that you select apply to your searches
+                              until you change the selection.
+                           </p>
+                        </li>
+                     </ol>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="tmp4ref156" id="tmp4ref156"></a><span class="term"><a name="tmpid11336" id="tmpid11336"></a>Searching within editable text in multiple content
+                     resources</span></dt>
+               <dd class="varlistentry">
+                  <div class="procedure"><a name="search-within-content-24-2" id="search-within-content-24-2"></a><ol class="procedure" type="1">
+                        <li class="step">
+                           <p><a name="tmpid11340" id="tmpid11340"></a>In the <strong class="guilabel" data-cid="Search">Search</strong> box, <a class="link" href="specify-search-text-24-2.html" title="3.9.1 &nbsp; Specifying the text to find or replace">enter the search text</a>, and
+                              then click the down arrow.
+                           </p>
+                           <p><a name="tmpid11343" id="tmpid11343"></a>You can specify search text that appears within the standard
+                              variation or in any alternate variations of the content resources.
+                              For example, if some content resources have locale-specific text in
+                              their alternate variations, you can find resources that contain the
+                              locale-specific text.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid11345" id="tmpid11345"></a>In the <strong class="guilabel" data-cid="Advanced_search_options">Advanced search options</strong> dialog
+                              box, select the <strong class="guilabel" data-cid="Search_text_within_content">Search text within content</strong> check
+                              box.
+                           </p>
+                           <div class="note">
+                              <p class="title"><strong><a name="tmp4ref157" id="tmp4ref157"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+                              </strong></p>
+                              <p><a name="tmpid11349" id="tmpid11349"></a>If you do not see the <strong class="guilabel" data-cid="Search_text_within_content">Search text within content</strong> check box, then ask your administrator about adding this option.
+                              </p>
+                           </div>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid11353" id="tmpid11353"></a><span class="boxed-text optional">Optional</span> <a class="link" href="advanced-search-options-24-2.html" title="3.9.2 &nbsp; Specifying advanced search options">Select other advanced search
+                                 options</a>.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid11356" id="tmpid11356"></a>Click <strong class="guilabel" data-cid="Search">Search</strong>.
+                           </p>
+                           <p><a name="tmpid11358" id="tmpid11358"></a>In the <strong class="guilabel" data-cid="Search">Search</strong> box, the search button <img src="./img/b_WebApps_Search.png" class="igrph" alt="" width="15" height="15"> changes
+                              to the advanced search button <img src="./img/b_WebApps_SearchAdvanced.png" class="igrph" alt="" width="21" height="19">.
+                           </p>
+                           <p><a name="tmpid11362" id="tmpid11362"></a>Any advanced search options that you select apply to your searches
+                              until you change the selection.
+                           </p>
+                        </li>
+                     </ol>
+                  </div>
+               </dd>
+               <dt class="varlistentry"><a name="filtering-adv-search-opt" id="filtering-adv-search-opt"></a><span class="term"><a name="tmpid11364" id="tmpid11364"></a>Filtering content
+                     resources using advanced search options</span></dt>
+               <dd class="varlistentry">
+                  <div class="procedure"><a name="filter-list-of-content-24-2" id="filter-list-of-content-24-2"></a><ol class="procedure" type="1">
+                        <li class="step">
+                           <p><a name="tmpid11368" id="tmpid11368"></a>In the <strong class="guilabel" data-cid="Search">Search</strong> box, optionally <a class="link" href="specify-search-text-24-2.html" title="3.9.1 &nbsp; Specifying the text to find or replace">enter the search text</a>, and
+                              then click the down arrow.
+                           </p>
+                           <div class="tip">
+                              <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Tip</span></span></strong></p>
+                              <p><a name="tmpid11372" id="tmpid11372"></a>Entering search text allows you to search and filter content
+                                 resources in one operation.
+                              </p>
+                           </div>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid11374" id="tmpid11374"></a><span class="boxed-text optional">Optional</span> In the <strong class="guilabel" data-cid="Advanced_search_options">Advanced search
+                                 options</strong> dialog box, select the <strong class="guilabel" data-cid="Search_text_within_content">Search text within
+                                 content</strong> check box if you want to search and filter resources
+                              that contain the search text in any of their variations.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid11378" id="tmpid11378"></a>In the <strong class="guilabel" data-cid="Advanced_search_options">Advanced search options</strong> dialog
+                              box, select one or more check boxes in the following filter areas:
+                           </p>
+                           <div class="itemizedlist">
+                              <ul class="itemizedlist">
+                                 <li class="listitem">
+                                    <p><a name="tmpid11382" id="tmpid11382"></a><a class="link" href="advanced-search-options-24-2.html#workflow-state-filter-24-2"><strong class="guilabel" data-cid="Workflow_state">Workflow state</strong></a></p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid11386" id="tmpid11386"></a><a class="link" href="advanced-search-options-24-2.html#quick-tags-filter-24-2"><strong class="guilabel" data-cid="Quick_tags">Quick
+                                             tags</strong></a></p>
+                                 </li>
+                                 <li class="listitem">
+                                    <p><a name="tmpid11390" id="tmpid11390"></a><a class="link" href="advanced-search-options-24-2.html#my-objects-filter-24-2"><strong class="guilabel" data-cid="My_objects">My
+                                             objects</strong></a></p>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid11394" id="tmpid11394"></a>Click <strong class="guilabel" data-cid="Search">Search</strong>.
+                           </p>
+                           <p><a name="tmpid11396" id="tmpid11396"></a>In the <strong class="guilabel" data-cid="Search">Search</strong> box, the search button <img src="./img/b_WebApps_Search.png" class="igrph" alt="" width="15" height="15"> changes
+                              to the advanced search button <img src="./img/b_WebApps_SearchAdvanced.png" class="igrph" alt="" width="21" height="19"> to indicate that advanced search options (filters in this case)
+                              are selected.
+                           </p>
+                        </li>
+                        <li class="step">
+                           <p><a name="tmpid11401" id="tmpid11401"></a>To search again with the same filters selected and new
+                              search text, enter the new search text in the <strong class="guilabel" data-cid="Search">Search</strong> box and then click the advanced search button <img src="./img/b_WebApps_SearchAdvanced.png" class="igrph" alt="" width="21" height="19">.
+                           </p>
+                           <p><a name="tmpid11404" id="tmpid11404"></a>Any advanced search options that you select apply to your searches
+                              until you change the selection.
+                           </p>
+                        </li>
+                     </ol>
+                  </div>
+               </dd>
+            </dl>
+         </div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">3.9.3</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Searching text in
+            multiple content resources</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 3.9.2 &nbsp; Specifying advanced&#xA;search options" aria-label="Preceding page: 3.9.2 &nbsp; Specifying advanced&#xA;search options" href="advanced-search-options-24-2.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 3.9 &nbsp; Searching and replacing text in multiple content resources" aria-label="Section one level up: 3.9 &nbsp; Searching and replacing text in multiple content resources" href="search-replace-content-24-2.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 3.9.4 &nbsp; Replacing text in&#xA;multiple content resources" aria-label="Next page: 3.9.4 &nbsp; Replacing text in&#xA;multiple content resources" href="search-replacing-text-24-2.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

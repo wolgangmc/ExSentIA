@@ -1,0 +1,138 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="4.9.1 ">4.9.1 Creating an output object</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="settingupoutputs.html" title="4.9 &nbsp; Setting up outputs"> -->
+      <link rel="prev" href="settingupoutputs.html" title="4.9 &nbsp; Setting up outputs">
+      <link rel="next" href="afpoutput.html" title="4.9.2 &nbsp; AFP output">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wybz-f-0dffd2be3-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9dd7a54b","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":62294,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741381689","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==AS3/D3pCVrXEmegUc5aReLnsfTljLK+EYqdngA7IYQkpXKDaNplv9+eTxhQ/PAgZak2hA/4FRRqBcGpIq0Mmeii1s5yEMK3Z6KQ7Uh/4x58s/AQBZBI7lp9xJQnYQpMFGWizy1DDjyCWvr88mcdl3klQsAAHl5BivjWnri+d0RkHcFHjkBz87PGKwl6CHe9iFFsnWbh3C2UuZ38AX7jC20GsgqfhrLa0bIh205XQtjwrKfJPN1q91xiOBQL+wb079jec+sFX346GWe3/A2dAocXBvSJcw9M1/PLJOjgMfiIP/PhNvomX0zLRcFGRV8Bj9tlvbOyPBVlJ8Ye4hfHDhKCIsOolbaa6SgZ/U7Zp2aqff/BeEWRGC4GeiwY9uL74tyfoMqwq/9876QuQjzuA/Euh8Qf6wLr7rAbMmrEnfA0=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="creatinganoutputobject">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.9.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating an output
+            object</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 4.9 &nbsp; Setting up outputs" aria-label="Preceding page: 4.9 &nbsp; Setting up outputs" href="settingupoutputs.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 4.9 &nbsp; Setting up outputs" aria-label="Section one level up: 4.9 &nbsp; Setting up outputs" href="settingupoutputs.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.9.2 &nbsp; AFP output" aria-label="Next page: 4.9.2 &nbsp; AFP output" href="afpoutput.html">Next</a></div>
+      </div>
+      <div class="sect2 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="creatinganoutputobject" id="creatinganoutputobject"></a><span class="otsLbl"><span class="otlbl-num">4.9.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating an output
+                     object</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <div class="procedure">
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid16692" id="tmpid16692"></a>In the <strong class="guilabel" data-cid="Delivery">Delivery</strong> panel, click <strong class="guilabel" data-cid="Add">Add</strong>, then click <strong class="guilabel" data-cid="Output">Output</strong> in the selection
+                     list.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid16697" id="tmpid16697"></a>Specify a name and, optionally, a description for the
+                     output.
+                  </p>
+                  <p><a name="tmpid16698" id="tmpid16698"></a>Names do not support the following special characters: <code class="literal">&amp; / : * ! ? &gt; &lt; | + # %</code> 
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid16701" id="tmpid16701"></a>Select an output type.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid16703" id="tmpid16703"></a>Click <strong class="guilabel" data-cid="Create">Create</strong>.
+                  </p>
+               </li>
+            </ol></div>
+         <div class="vl2formalsect-list vl2bhseq" id="aid4pidiv117">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732631747-039" id="vle2s1732631747-039"></a> Updating output object properties 
+         </h2>
+         <p><a name="tmpid16709" id="tmpid16709"></a>If you want to change the properties of an output object, you
+            can do so by selecting the output object, making the necessary adjustments
+            in the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, and then clicking <strong class="guilabel" data-cid="Save">Save</strong>.
+         </p>
+         <p><a name="tmpid16712" id="tmpid16712"></a>Output object properties vary by output type. For more detail
+            on what properties are available for each type, see the individual
+            output.
+         </p>
+         <div class="note">
+            <p class="title"><strong><a name="tmp4ref211" id="tmp4ref211"></a><span class="otLbl"><span class="otlbl-kw">Note</span></span>
+            </strong></p>
+            <p><a name="tmpid16714" id="tmpid16714"></a>If the output object has been approved, or submitted for approval,
+               the properties cannot be changed.
+            </p>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv118">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732631747-040" id="vle2s1732631747-040"></a> Duplicating an output object 
+         </h2>
+         <p><a name="tmpid16718" id="tmpid16718"></a>If you want to create a copy of an output object, you can duplicate
+            it, rather than starting from defaults. This might be useful if you
+            have highly customized the properties of an output object, and need
+            another output object with similar properties but with minor modifications.
+         </p>
+         <p><a name="tmpid16719" id="tmpid16719"></a>To duplicate an output object, in the Communication asset library view, in
+            the <strong class="guilabel" data-cid="Delivery">Delivery</strong> panel, select the output object
+            that you want to copy and click <strong class="guilabel" data-cid="Duplicate">Duplicate</strong>.
+         </p></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv119">
+         <h2 class="bridgehead subheading2"><a name="vle2s1732631747-041" id="vle2s1732631747-041"></a> Deleting an output object 
+         </h2>
+         <p><a name="tmpid16725" id="tmpid16725"></a>If an output object is not needed, and is not used in any communication
+            objects, it can be deleted from the asset service.
+         </p>
+         <p><a name="tmpid16726" id="tmpid16726"></a>To delete an output object, in the Communication asset library view, in the <strong class="guilabel" data-cid="Delivery">Delivery</strong> panel, select the output object that you want
+            to delete and click the <strong class="guilabel" data-cid="Delete">Delete</strong> button in the <strong class="guilabel" data-cid="Properties">Properties</strong> panel.
+         </p>
+         <div class="tip">
+            <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Tip</span></span></strong></p>
+            <p><a name="tmpid16731" id="tmpid16731"></a>If the <strong class="guilabel" data-cid="Delete">Delete</strong> button is not available,
+               click the <strong class="guilabel" data-cid="Used_by">Used by</strong> button on the <strong class="guilabel" data-cid="References">References</strong> tab in the <strong class="guilabel" data-cid="Properties">Properties</strong> panel to see if the selected
+               object is used in the current version of a communication object.
+            </p>
+         </div></div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">4.9.1</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Creating an output
+            object</span>
+         </div>
+         <div class="pgPrev"><a title="Preceding page: 4.9 &nbsp; Setting up outputs" aria-label="Preceding page: 4.9 &nbsp; Setting up outputs" href="settingupoutputs.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: 4.9 &nbsp; Setting up outputs" aria-label="Section one level up: 4.9 &nbsp; Setting up outputs" href="settingupoutputs.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 4.9.2 &nbsp; AFP output" aria-label="Next page: 4.9.2 &nbsp; AFP output" href="afpoutput.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>

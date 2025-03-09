@@ -1,0 +1,162 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+      <title data-num="6.2 ">6.2 Exporting DAS resources</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="../../../../../_org/ofh1/cust/labels.en.css">
+      <link rel="stylesheet" type="text/css" href="./cust/pages.css">
+      <link rel="stylesheet" type="text/css" href="./cust/labels.en.css">
+      <meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+      <meta name="keywords" content="">
+      <link rel="home" href="index.html" title="OpenText™ Communications">
+      <!-- Hiding <link rel=up> since causing errors in some HTML validators (formally dropped for HTML4/5):
+      <link rel="up" href="transportingresources.html" title="Chapter 6 – Importing resources into the asset library"> -->
+      <link rel="prev" href="migratingcasresources.html" title="6.1 &nbsp; Migrating CAS&nbsp;resources">
+      <link rel="next" href="importingresourcesdas.html" title="6.3 &nbsp; Importing an export package">
+   
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"KPNUV-Y47D5-UZQSV-9X2AL-LUP8Y";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="fadba7qadpcqmkagcbym57qbq5t4wyom-f-8033399d5-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"1458721","ak.ai":parseInt("718874",10),"ak.ol":"0","ak.cr":4,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"9e01543d","ak.r":46038,"ak.a2":n,"ak.m":"dsca","ak.n":"essl","ak.bpcip":"2806:107e:1b:c506::","ak.cport":62542,"ak.gh":"189.247.197.93","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1741382092","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==EqfGeiUDLwf7uc37SVNWXQm1VPF4JiYfyqtrhncB3hLNkfngr5id8/TCBsLKDZLv27iq2Ol+MIBZwqdgoyd6Y1txS2AYBw7+8BxyXXJ2THa7m8bt6aVi81bhbdLpTRCBdkGVrxezKmtUW+n2G5jug9hDM9myj4Sitww7dw5cBvTtQ4sKtQrx/3TFYpMsORD4u2Lt9IjhGXUrGPjafLKxk0HRncntmh/7bmZxlTm4xwC2KxngXdLLjrqCKhtD0Jq+sg8KMOofx3lNgjB7tWDtJ+TW40JV6+xZe2/wB1I7sryIg9b6tCwCmZTSQeKmbAi/slBTVbdyXTbTXyTIO4Vdg7fMsyl3P9ZkTDN7axgRN3llb2BkhWLmnLtqZ/ex0+CFBb/L5Qk4H3CBV9E6UPA0jNKJ2/NUXTJpeWbiZWCt1qQ=","ak.pv":"9","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+   <body id="exportingdasresources">
+      <div id="navheader" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">6.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Exporting DAS&nbsp;resources</span></div>
+         <div class="pgPrev"><a title="Preceding page: 6.1 &nbsp; Migrating&#xA;CAS&nbsp;resources" aria-label="Preceding page: 6.1 &nbsp; Migrating&#xA;CAS&nbsp;resources" href="migratingcasresources.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 6 – Importing resources into the asset library" aria-label="Section one level up: Chapter 6 – Importing resources into the asset library" href="transportingresources.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 6.3 &nbsp; Importing an export package" aria-label="Next page: 6.3 &nbsp; Importing an export package" href="importingresourcesdas.html">Next</a></div>
+      </div>
+      <div class="sect1 pgContent" aria-labelledby="arl4contdiv" role="main"><a name="top" id="top"></a>
+         <div class="pgheading">
+           <h1 class="title"><a name="exportingdasresources" id="exportingdasresources"></a><span class="otsLbl"><span class="otlbl-num">6.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Exporting DAS&nbsp;resources</span></h1>
+         </div>      <div id="localtocTop">
+         <ul class="onpg">
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-001">Communication asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-002">Design asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#oalviewatglance">Orchestration asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-003">Monitor view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-004">Rationalization asset library view</a></li>
+            <li class="bridgehead subheading2"><a href="aboutassetmanagementviews.html#vle2s1732631747-005">Dashboards view</a></li>
+         </ul>
+         <ul class="subsects"></ul>
+      </div>
+
+         <p><a name="tmpid21794" id="tmpid21794"></a>You can use DAS&nbsp;functionality to create export packages
+            that you can use to move resources from one <span class="phrase">DAS tenant in <span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span> 25.1.</span> For example, if you are using multiple tenants to separate resources
+            for development, testing, and production.
+         </p>
+         <p><a name="tmpid21802" id="tmpid21802"></a>To move resources, you use the <strong class="guilabel" data-cid="Export_resource">Export resource</strong> option to create a resource package in the source DAS&nbsp;tenant,
+            and then use the <strong class="guilabel" data-cid="Import">Import</strong> option to <a class="link" href="importingresourcesdas.html" title="6.3 &nbsp; Importing an export package">import resources</a> from that
+            exported package into the destination DAS&nbsp;asset library. DAS
+            export packages can be created from any resource in the asset library.
+            When you export a resource, that resource and all of its dependent
+            resources are packaged into a ZIP&nbsp;file.</p>
+         <div class="vl2formalsect-list vl2bhseq" id="aid4pidiv171">
+         <h2 class="bridgehead subheading2"><a name="dl2vl-195" id="dl2vl-195"></a>Considerations when exporting DAS
+            resources
+         </h2>
+         <p><a name="tmpid21810" id="tmpid21810"></a>When you export DAS&nbsp;resources, keep the following considerations
+            in mind:&nbsp;
+         </p>
+         <div class="itemizedlist">
+            <ul class="itemizedlist">
+               <li class="listitem">
+                  <p><a name="tmpid21813" id="tmpid21813"></a><strong class="guilabel" data-cid="Workflow_status_of_versioned_resources">Workflow status of versioned resources</strong>—When you export DAS resources, you can choose whether to export
+                     the latest approved versions or the latest versions of a selected
+                     resource and its dependent resources. During import, the workflow
+                     status is retained for all resources.
+                  </p>
+               </li>
+               <li class="listitem">
+                  <p><a name="tmpid21816" id="tmpid21816"></a><strong class="guilabel" data-cid="User_permissions_for_locked_resources">User permissions for locked resources</strong>—If a export package contains a resource that is locked, then
+                     the import process breaks the lock and imports the resource in an
+                     unlocked state so that users in the target tenant can edit it.
+                  </p>
+               </li>
+            </ul>
+         </div></div><div class="vl2formalsect-list vl2bhseq" id="aid4pidiv172">
+         <h2 class="bridgehead subheading2"><a name="dl2vl-197" id="dl2vl-197"></a>Creating a DAS&nbsp;export package
+         </h2>
+         <div class="procedure">
+            <ol class="procedure" type="1">
+               <li class="step">
+                  <p><a name="tmpid21823" id="tmpid21823"></a>In the <span class="phrase"><span class="namestring" data-cid="OpenText">OpenText</span> <span class="namestring" data-cid="Communications">Communications</span></span> web client, select the resource
+                     that you want to export.
+                  </p>
+                  <div class="tip">
+                     <p class="title"><strong><span class="otLbl"><span class="otlbl-kw">Tip</span></span></strong></p>
+                     <p><a name="tmpid21831" id="tmpid21831"></a>You can select any resource in the asset library views. When
+                        the export package is created, that resource and all of its dependent
+                        resources are packaged into the ZIP&nbsp;file.
+                     </p>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21833" id="tmpid21833"></a>On the <strong class="guilabel" data-cid="General">General</strong> tab in the <strong class="guilabel" data-cid="Properties">Properties</strong> panel, click the <strong class="guilabel" data-cid="Export_resource">Export resource</strong> button.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21838" id="tmpid21838"></a>In the <strong class="guilabel" data-cid="Export">Export</strong> dialog box, select
+                     a resource export type:
+                  </p>
+                  <div class="itemizedlist">
+                     <ul class="itemizedlist">
+                        <li class="listitem">
+                           <p><a name="tmpid21842" id="tmpid21842"></a><strong class="guilabel" data-cid="Latest_approved_version">Latest approved version</strong>—Exports
+                              the latest approved versions of the selected resource and all of its
+                              dependent resources. If you select this option, and if a latest approved
+                              version doesn't exist for a resource to be exported, then an error
+                              is displayed.
+                           </p>
+                        </li>
+                        <li class="listitem">
+                           <p><a name="tmpid21845" id="tmpid21845"></a><strong class="guilabel" data-cid="Latest_version">Latest version</strong>—Exports
+                              the latest versions of the selected resource and all of its dependent
+                              resources, regardless of the workflow state. If you select this option,
+                              and if the latest version of a resource to be exported is not in an
+                              approved state, then the export package will also contain the latest
+                              approved version for that resource.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21848" id="tmpid21848"></a>If you want to add security to the export package ZIP
+                     file, then select <strong class="guilabel" data-cid="Enable_password_protection">Enable password protection</strong> and
+                     use the resulting fields to enter and confirm a password.
+                  </p>
+               </li>
+               <li class="step">
+                  <p><a name="tmpid21851" id="tmpid21851"></a>Click <strong class="guilabel" data-cid="Export">Export</strong>.
+                  </p>
+                  <p><a name="tmpid21853" id="tmpid21853"></a>A ZIP&nbsp;file containing the exported resources is created
+                     and saved based on the default file download behavior for your web
+                     browser.
+                  </p>
+               </li>
+            </ol>
+         </div></div>
+      </div>
+      <div class="cust" id="c-postConts"></div>
+      <div class="cust" id="c-preRelTopics"></div>
+      <div class="cust" id="c-postRelTopics"></div>
+      <!-- end of #dbxixos-content -->
+      <div id="copyr-top-footer">
+         <div class="copyr-info" data-piref="xlm_Copyright" aria-label="Copyright information"><span class="prelabel"></span><a data-popup="true" href="cprght4otdocs.html" class="copyrLink" id="a2copyr"><span class="otLbl"><span class="copyrDate"> © 2025</span> Open Text</span></a><span class="postlabel"><span class="otLbl"> </span></span></div>
+         <div class="link2top" data-piref="topLink8ft" aria-label="Top of page."><a href="#top"></a></div>
+      </div>
+      <!-- end of #dbxixos-footer -->
+      <!-- end of #dbxixos-container -->
+      <div id="navfooter" data-piref="xlm_NavNeighb" role="navigation" aria-label="Navigation to nearby pages">
+         <div class="pgCur"><span class="otsLbl"><span class="otlbl-num">6.2</span><span class="otlbl-sep"> &nbsp; </span></span><span class="otlbl-ttl">Exporting DAS&nbsp;resources</span></div>
+         <div class="pgPrev"><a title="Preceding page: 6.1 &nbsp; Migrating&#xA;CAS&nbsp;resources" aria-label="Preceding page: 6.1 &nbsp; Migrating&#xA;CAS&nbsp;resources" href="migratingcasresources.html">Prev</a></div>
+         <div class="pgUp"><a title="Section one level up: Chapter 6 – Importing resources into the asset library" aria-label="Section one level up: Chapter 6 – Importing resources into the asset library" href="transportingresources.html">Up</a></div>
+         <div class="pgHome"><a title="Home: OpenText™ Communications" aria-label="Home: OpenText™ Communications" href="index.html">Home</a></div>
+         <div class="pgNext"><a title="Next page: 6.3 &nbsp; Importing an export package" aria-label="Next page: 6.3 &nbsp; Importing an export package" href="importingresourcesdas.html">Next</a></div>
+      </div><script type="text/javascript" src="./cust/cust.js"></script></body>
+</html>
