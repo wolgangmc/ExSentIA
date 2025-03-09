@@ -14,8 +14,16 @@ import chromadb  # ✅ Se importa correctamente chromadb
 # 📌 Cargar la API Key de OpenAI
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
+# 🔍 Agregar log de depuración
+print(f"🔍 OPENAI_API_KEY en Railway: {openai_api_key}")
+
 if not openai_api_key:
     raise ValueError("❌ ERROR: No se encontró la API Key en Railway.")
+
+
+# 📌 Cargar la URL de ChromaDB desde NGROK o usar localmente
+chroma_host = os.getenv("CHROMADB_HOST", "b8cc-200-56-234-177.ngrok-free.app")
+chroma_port = os.getenv("CHROMADB_PORT", "443")
 
 # Inicializar OpenAI
 client = openai.OpenAI(api_key=openai_api_key)
@@ -44,13 +52,21 @@ def load_vector_store():
     try:
         embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
         
-        # 🚀 Conectar a ChromaDB localmente
-        chroma_client = chromadb.PersistentClient(path="chroma_db")
-        
+        if "ngrok-free.app" in chroma_host:
+            # 🚀 Conectar a ChromaDB expuesto en NGROK
+            chroma_client = chromadb.HttpClient(
+                host=chroma_host.replace("https://", "").replace("http://", ""),
+                port=int(chroma_port)
+            )
+            print(f"🌍 Conectado a ChromaDB en NGROK: {chroma_host}:{chroma_port}")
+        else:
+            # 🏠 Conectar a ChromaDB localmente
+            chroma_client = chromadb.PersistentClient(path="chroma_db")
+            print("✅ Conectado a ChromaDB localmente.")
+
         vector_store = Chroma(client=chroma_client, embedding_function=embeddings)
         retriever = vector_store.as_retriever(search_type="similarity", search_kwargs={"k": 5})
 
-        print("✅ Conectado a ChromaDB localmente.")
         return vector_store, retriever
     except Exception as e:
         print(f"⚠️ No se pudo conectar a ChromaDB. Usando solo GPT-4. Error: {e}")
