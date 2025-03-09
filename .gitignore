@@ -13,3 +13,5 @@ docsexs.zip
 *.zip
 .env
 documentos/
+*.html
+htmls/
